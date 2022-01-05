@@ -1,0 +1,368 @@
+## --------------------------- ## 
+#  medusa_addons                #
+## --------------------------- ## 
+#wifi_acoustic_safety:
+
+#addons/rosbridge_server:
+
+addons/console_path_parser:
+    node_frequency: 5
+    topics:
+        subscribers: 
+            Mission_String: "/Mission_String"
+            state: /nav/filter/state
+            flag: /Flag
+        publishers:
+            Path_Section: /addons/path_section
+            Formation: /addons/formation
+            biased_formation: /addons/biased_formation
+            WPRef: /addons/WPRef
+            DepthRef: /ref/depth
+            AltRef: /ref/altitude
+            FullMission: /addons/full_mission
+        services:
+            reset_path: "/ResetPath"
+            arc2d_path: "/SpawnArc2DPath"
+            line_path: "/SpawnLinePath"
+            pf_start: "/PFStart"
+            pf_stop: "/PFStop"
+            set_speed: "/SetConstVdVehicle"
+
+addons/console_server:
+    topics:
+      services:
+          wp_standard: "/controls/send_wp_standard"
+          wp_loose: "/controls/send_wp_loose"
+          wp_heading: "/controls/send_wp_heading"
+      console:
+          waypoint: "wp_standard"
+    
+addons/aggregator:
+    pub_rate: 2.0
+
+## --------------------------- ## 
+#  medusa_sim                   #
+## --------------------------- ## 
+## dynamic model
+sim/dsor_sim:
+    frame_id: "medusa"
+    node_frequency: 100 # (Hz)
+    topics:
+        subscribers:
+            thrusters: "/thrusters/rpm_command"
+        publishers:
+            odometry: "/sim/dynamics/position"
+        services:
+            start_pause: "/sim/pause_start"
+
+## sensor simulator
+sim/sensors:
+    node_frequency: 10
+    # topics
+    #   subscribers: [ (std::vector<std::strings>) Subscriber: vehicle state in nav_msgs::Odometry, thruster output from innerloops in medusa_msgs::Thruster]
+    #   publishers : [ (std::vector<std::strings>) Publishers: sensors (position, velocity, orientation, gnss, range), model, thrusters (value and status)
+    topics:
+        subscribers: [ "/sim/dynamics/position"]
+        publishers : [
+            "/measurement/position",
+            "/measurement/velocity",
+            "/measurement/orientation",
+            "/sensors/gnss",
+            "/sensors/range",
+            "/sim/model/state",
+            "/diagnostics/thrusterStatus"
+        ]
+    services:
+      enable_dvl: "/sim/enable_dvl"
+      enable_altimeter: "/sim/enable_altimeter"
+     
+
+## --------------------------- ## 
+#  medusa_nav                   #
+## --------------------------- ## 
+### Sensor Fusion for the frame "odom"
+nav/filter:
+    node_frequency: 10      # ROS node rate
+    topics:
+        subscribers: [       # reset, position topic, velocity topic and orientation and acceleration (optional) topic
+            "/nav/reset", "/measurement/position", "/measurement/velocity", "/measurement/orientation"
+        ]
+        publishers: [        # state topic, debug topic
+            "/nav/filter/state", "/nav/filter/debug"
+        ]
+        currents: "/nav/filter/currents"
+    topics_dr:
+       velocity: "/measurement/velocity"
+       orientation: "/measurement/orientation"
+       true_state: "/nav/filter/state"
+       flag: "/Flag"
+       dead_reckoning: "/nav/filter/state_dr"
+       dead_reckoning_console: "/State_dr"
+    services_dr:
+       reset_filter_dr: "/nav/reset_filter_dr"
+
+### Converting sensor_msgs::NavSatFix to medusa_msgs::Measurement data type
+nav/gnss2utm:
+    node_frequency: 10
+    topics:
+        subscribers: [ "/sensors/gnss" ]
+        publishers: [ "/measurement/position" ]
+        ground_truth: "/State_gt"
+    services:
+        enable_gps: "/sensor/enable_gps"
+
+nav/usbl2pos:
+    node_frequency: 10
+    topics:
+        subscribers: [
+            "/sensors/usbl_fix", "/acomms/nav/filter/state", "/nav/filter/state"
+        ]
+        publishers: [ "/measurement/position", "/State_usbl_est", "/nav/filter/usbl_est" ]
+
+nav/range2pos:
+    node_frequency: 10
+    t_sync: 2
+    topics:
+        subscribers: [ "/sensors/range", "/nav/filter/state" ]
+        publishers: [ "/measurement/position" ]
+
+nav/auvstate2mstate:
+    node_frequency: 10
+    topics:
+        subscribers: [ "/nav/filter/state", "/drivers/inside_pressure/data", "/sensors/gnss" ]
+        publishers:  [ "/State" ]
+
+
+## --------------------------- ## 
+#  medusa_control               #
+## --------------------------- ## 
+### Inner Loops
+controls/inner_loops:
+    node_frequency: 10.0 # Time parameters
+    topics:
+        subscribers:
+            state: "/nav/filter/state"
+            surge: "/ref/surge"
+            yaw: "/ref/yaw"
+            yaw_rate: "/ref/yaw_rate"
+            depth: "/ref/depth"
+            altitude_ref: "/ref/altitude"
+            altitude: "Altitude"
+            altimeter: "Altimeter"
+        publishers:
+            thrusters: "/thrusters/rpm_command"
+            thrusters_model: "/thrusters/model"
+
+controls/inner_loops_forces:
+    # ROS node rate 
+    node_frequency: 10.0 # Time parameters
+    # ROS Topics
+    topics:
+        subscribers:
+            yaw: "/ref/yaw"
+            pitch: "/ref/pitch"
+            roll: "/ref/roll"
+            yaw_rate: "/ref/yaw_rate"
+            pich_rate: "/ref/pitch_rate"
+            roll_rate: "/ref/roll_rate"
+            surge: "/ref/surge"
+            sway: "/ref/sway"
+            heave: "/ref/heave"
+            depth: "/ref/depth"
+            altitude: "/ref/altitude"
+            altitude_safety: "/ref/altitude_safety"
+            depth_safety: "/ref/depth_safety"
+            state: "/nav/filter/state"
+        publishers:
+            thrust_body_request: "thrust_body_request"
+            thrusters: "/thrusters/rpm_command"
+
+### Way Point
+controls/waypoint:
+    node_frequency: 10.0
+    topics:
+        publishers:
+            yaw_ref: "/ref/yaw"
+            yaw_rate_ref: "/ref/yaw_rate"
+            u_ref: "/ref/surge"
+            v_ref: "/ref/sway"
+            flag: "/Flag"
+        subscribers:
+            flag: "/Flag"
+            state: "/nav/filter/state"
+        services:
+            wp_standard: "/controls/send_wp_standard"
+            wp_loose: "/controls/send_wp_loose"
+            wp_heading: "/controls/send_wp_heading"
+
+### Path Following
+controls/path_following:
+    node_frequency: 10.0
+    flag: "/Flag"
+    topics:
+        subscribers:
+            state: "/nav/filter/state"
+            path: "/PathData"
+            vc: "/PF/vc"
+        publishers:
+            # Publishers for linear motion
+            surge: "/ref/surge"
+            sway: "/ref/sway"
+            heave: "/ref/heave"
+    
+            # Publishers for angular motion
+            roll: "/ref/roll"
+            roll_rate: "/ref/roll_rate"
+            pitch: "/ref/pitch"
+            pitch_rate: "/ref/pitch_rate"
+            yaw: "/ref/yaw"
+            yaw_rate: "/ref/yaw_rate"
+    
+            # Publishers for the virtual target
+            rabbit: "/Gamma"
+
+            # Observer for the currents
+            observer:
+                x: "/current/x"
+                y: "/current/y"
+            
+            # Publish info for plots
+            pfollowing_debug: "/controls/path_following/debug"
+        # Define here the service names to switch between controllers 
+        services:
+            # Service names to start and stop the path following algorithm
+            start_pf: "/PFStart"
+            stop_pf: "/PFStop"
+            updates_gains_pf: "/PFUpdateGains"
+            reset_vt_pf: "/ResetVT"
+                
+            # Service names to switch the path following algorithm
+            marcelo_pf: "/PFSetMarcelo"
+            aguiar_pf: "/PFSetAguiar"
+            brevik_pf: "/PFSetBrevik"
+            fossen_pf: "/PFSetFossen"
+            romulo_pf: "/PFSetRomulo"
+            lapierre_pf: "/PFSetLapierre"
+            pramod_pf: "/PFSetPramod"
+            samson_pf: "/PFSetSamson"
+            # Service names related to the path
+            reset_path: "/ResetPath"
+            set_path_mode: "/SetMode"
+            # Service names related to the waypoint
+            wp_standard: "/controls/send_wp_standard"
+
+### Cooperative control law
+controls/cpf_control:
+    node_frequency: 10
+    topics:
+        publishers: 
+            vc: "/PF/vc"
+            cpf_server_input: "/Internal/Gamma"
+        subscribers:
+            internal_gamma: "/PathData"
+            external_gamma: "/External/Gamma"
+        services:
+        # Service names to start and stop the path following algorithm
+            start_cpf: "/CPFStart"
+            stop_cpf: "/CPFStop"
+            change_topology: "/CPFChangeTopology"
+
+
+## --------------------------- ## 
+#  medusa_planning              #
+## --------------------------- ##
+planning/dsor_paths:
+    node_frequency: 10.0
+    frame_id: "Path_frame"
+    topics:
+        subscribers:
+            gamma: "/Gamma"
+            vehicle_state: "/nav/filter/state" 
+        publishers:
+            path_data: "/PathData"
+            virtual_target_state: "/Virtual/State"
+        # Services for constructing a path
+        services:
+            reset_path: "/ResetPath"
+            set_mode: "/SetMode"
+            arc2d_path: "/SpawnArc2DPath"
+            bernoulli_path: "/SpawnBernoulliPath"
+            circle2d_path: "/SpawnCircle2DPath"
+            line_path: "/SpawnLinePath"
+            speed:
+                const_rabbit_speed: "/SetConstVdRabbit"
+                const_vehicle_speed: "/SetConstVdVehicle"
+
+## --------------------------- ## 
+#  medusa_comms                #
+## --------------------------- ## 
+#acomms/modem:
+
+acomms/pinger:
+    topics:
+        publishers:
+            modem_send: "/acomms/modem/send"
+            meas_usbl_fix: "/sensors/usbl_fix"
+            trigger_serialization: "/acomms/scheme/trigger_serialization"
+            deserialize: "/acomms/scheme/payload_to_deserialize"
+        subscribers:
+            enable: "/acomms/scheme/enable"
+            modem_recv: "/acomms/modem/recv"
+            payload: "/acomms/serializer/payload_to_transmit"
+
+acomms/replier:
+    topics:
+        publishers:
+            modem_send: "/acomms/modem/send"
+            meas_usbl_fix: "/sensors/usbl_fix"
+            trigger_serialization: "/acomms/scheme/trigger_serialization"
+            deserialize: "/acomms/scheme/payload_to_deserialize"
+        subscribers:
+            modem_recv: "/acomms/modem/recv"
+            payload: "/acomms/serializer/payload_to_transmit"
+
+acomms/data_serializer:
+    topics:
+        publishers:
+            to_modem: "/acomms/serializer/payload_to_transmit"
+        subscribers:
+            from_modem: "/acomms/scheme/payload_to_deserialize"
+            trigger: "/acomms/scheme/trigger_serialization"
+        
+acomms/dmac2medusa:
+    topics:
+        publishers:
+            medusa_fix: "/sensors/usbl_fix"
+        subscribers:
+            dmac_fix: "/acomms/modem/measurement/usbl_fix"
+
+acomms/gnss2state:
+    topics:
+        subscribers: [
+            "/acomms/nav/filter/gnss"
+        ]
+        publishers: [
+            "/acomms/nav/filter/state",
+            "state/utmzone"
+        ]
+
+acomms/pos2sim_modem:
+    topics/subscribers/position: "/sim/dynamics/position"
+
+acomms/cpf_gamma_client:
+    node_frequency: 10
+    topics:
+      subscribers:
+        internal_gamma: "/Internal/Gamma"
+      publishers:
+        cpf_gamma: "/External/Gamma"
+
+acomms/cpf_gamma_server:
+    node_frequency: 10
+    topics:
+      subscribers:
+        internal_gamma: "/Internal/Gamma"
+      publishers:
+        cpf_gamma: "/External/Gamma"
+
+

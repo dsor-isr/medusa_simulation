@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- Parameters and Arguments -->
+    <arg name="name"               default="mblack" /> <!-- Name of the vehicle being launched -->   
+    <arg name="config_package"     default="medusa_sim_bringup"/>  <!-- Name of the package where the configuration files are stored -->
+    <arg name="folder"             default="simulation" />         <!-- Name of the folder for the configuration files -->     
+    <arg name="namepsace"          default="true" />
+
+    <!-- Load topic names and Common configurations for all topics -->
+    <rosparam command="load" file="$(find $(arg config_package))/config/dev_configs/ros_$(arg name).yaml" />
+    <rosparam command="load" file="$(find $(arg config_package))/config/$(arg folder)/$(arg name)/common.yaml" />
+
+    <!-- Simulation -->
+    <node pkg="medusa_bringup" type="medusa_bringup_node" name="medusa_bringup" respawn="false" output="screen">
+        <rosparam command="load" file="$(find $(arg config_package))/config/$(arg folder)/$(arg name)/process_gazebo.yaml"/>
+        <param name="name"            value="$(arg name)"/>
+        <param name="config_package"  value="$(arg config_package)"/>
+        <param name="folder"          value="$(arg simulation)" />
+        <param name="namespace"       value="$(arg namespace)"/>
+        <param name="process_state_publish_rate" type="double" value="0.33" />
+    </node>
+
+</launch>

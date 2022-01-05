@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<launch>
+
+	<!-- small description about your node -->
+
+	<!-- Parameters and Arguments -->
+	<arg name="name" 	 default="mred"/> 	<!-- mred, mblack, myellow -->
+	<arg name="multiple" default="false" />  	<!-- multiple vehicles launch -->
+    <arg name="gazebo"   default="false" />  	<!-- if true doesnt launch dynamic's package from medusa's stack -->
+
+  	<group ns="$(arg name)" if="$(eval arg('multiple'))">
+
+		<rosparam command="load" file="$(find medusa_bringup)/config/dev_configs/ros_$(arg name).yaml" />
+		<rosparam command="load" file="$(find medusa_bringup)/config/simulation/multiple_vehicle/$(arg name)/common.yaml" />
+
+		<!-- Simulation -->
+		<node pkg="medusa_bringup" type="medusa_bringup_node" name="medusa_bringup" respawn="false" output="screen">
+      		<rosparam command="load" file="$(find medusa_bringup)/config/simulation/multiple_vehicle/$(arg name)/process.yaml"/>
+			<param name="name" value="$(arg name)"/>
+      		<param name="type" value="simulation/multiple_vehicle"/>
+			<param name="package_name" value="$()"
+      		<param name="gazebo" value="$(arg gazebo)"/>
+      		<param name="process_state_publish_rate" type="double" value="0.33" />
+		</node>
+  	</group>
+
+  <group unless="$(eval arg('multiple'))">
+
+		<rosparam command="load" file="$(find medusa_bringup)/config/dev_configs/ros.yaml" />
+		<rosparam command="load" file="$(find medusa_bringup)/config/simulation/single_vehicle/$(arg name)/common.yaml" />
+		
+		<!-- Simulation -->
+		<node pkg="medusa_bringup" type="medusa_bringup_node" name="medusa_bringup" respawn="false" output="screen">
+			<rosparam command="load" file="$(find medusa_bringup)/config/simulation/single_vehicle/$(arg name)/process.yaml"/>
+			<param name="name" value="$(arg name)"/>
+			<param name="type" value="simulation/single_vehicle"/>
+			<param name="gazebo" value="$(arg gazebo)"/>
+			<param name="process_state_publish_rate" type="double" value="0.33" />
+		</node>
+  </group>
+
+</launch>

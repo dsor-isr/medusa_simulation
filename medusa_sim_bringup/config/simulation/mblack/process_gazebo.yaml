@@ -1,0 +1,92 @@
+processes:
+    - name: 'gazebo_simulation'
+      launch_on_startup: true
+      delay_before_start: 0.0
+      cmd: 'roslaunch medusa_sim_bringup gazebo_simulation.launch'
+      args:
+            - x:= 0.0
+            - y:= 0.0
+            - z:= 0.0
+            - roll:= 0.0
+            - pitch:= 0.0
+            - yaw:= 0.0
+            - mode:= default
+      dependencies:
+            []
+    - name: 'bags'
+      launch_on_startup: false
+      delay_before_start: 0.0
+      cmd: 'roslaunch medusa_bringup bags.launch'
+      args:
+            - prefix:= sim
+            - onebag:= true
+      dependencies:
+            []
+    - name: 'tfs'
+      launch_on_startup: true
+      delay_before_start: 0.0
+      cmd: 'roslaunch medusa_bringup simulation_tfs.launch'
+      args:
+            - broadcast_tf:= true
+      dependencies:
+            []
+    - name: 'addons'
+      launch_on_startup: true
+      delay_before_start: 0.0
+      cmd: 'roslaunch medusa_bringup addons.launch'
+      args:
+            - console_path_parser:= true
+            - console_server:= true
+      dependencies:
+            []
+    - name: 'navigation'
+      launch_on_startup: true
+      delay_before_start: 4.0
+      cmd: 'roslaunch medusa_bringup nav.launch'
+      args:
+            - filter:= true
+            - gnss2utm:= true
+            - auvstate2mstate:= true
+            - usbl2pos:= true
+      dependencies:
+            - 'simulation'
+    - name: 'controllers'
+      launch_on_startup: true
+      delay_before_start: 5.0
+      cmd: 'roslaunch medusa_bringup controls.launch'
+      args:
+            - inner_loops_forces:= true
+            - waypoint:= true
+            - path_following:= true
+      dependencies:
+            []
+    - name: 'cooperative'
+      launch_on_startup: true
+      delay_before_start: 5.0
+      cmd: 'roslaunch medusa_bringup cooperative.launch'
+      args:
+            - cpf_control:=true
+            - cpf_wifi_receiver:=true
+            - cpf_wifi_broadcaster:=true
+    - name: 'acomms'
+      launch_on_startup: false
+      delay_before_start: 6.0
+      cmd: 'roslaunch medusa_bringup comms.launch'
+      args:
+            - dmac:= true
+            - data_serializer:= true
+            - replier:= true
+            - pinger:= false
+            - pos2sim_modem:= true
+            - dmac2medusa:= true
+            - gnss2state:= true
+      dependencies:
+            []
+    - name: 'planning'
+      launch_on_startup: true
+      delay_before_start: 5.0
+      cmd: 'roslaunch medusa_bringup planning.launch'
+      args:
+            - dsor_paths:= true
+      dependencies:
+            []

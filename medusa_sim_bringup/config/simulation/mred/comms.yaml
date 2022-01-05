@@ -1,0 +1,39 @@
+modem/modem_config:
+    tcp_config/ip: mredMF
+    local_address: 1
+    hasAHRS: true
+    initializer: "{'@ZA': '1', '@ZX': '1', '@ZU': '1'}"
+
+replier:
+    tslack: 1.0
+    modem_id: 2
+
+data_serializer:
+    vehicle_id: 1
+
+pos2sim_modem:
+    ip: mredMF
+    port: 11000
+
+dmac2medusa:
+    # false, vehicle acts as an achor, estimates other vehicles position 
+    # true, vehicle estimates its own position with respect to an anchor   
+    fix_type: false
+    # true, real vehcile
+    # false, simulation scenarios with evo emulator
+    real: false
+    installation_matrix: [-0.7854, 0, 0]
+
+gnss2state:
+    default_depth: 0.2    
+
+# Used for cooperative path following
+cpf_gamma_client:
+    broadcast_port: 2808
+    broadcast_address: "127.255.255.255"
+    ID: 1 
+
+cpf_gamma_server:
+    broadcast_port: 2808
+    broadcast_address: "127.255.255.255"
+    ID: 1 

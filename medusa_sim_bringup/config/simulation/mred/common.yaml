@@ -1,0 +1,10 @@
+originLat: 38.765852
+originLon: -9.09281873
+vehicle:
+  control:
+    SURGE_TO_RPM: 101
+  safety_features:
+    max_depth: 5.0 # [m]
+    min_altitude: 1.0 # [m]
+    min_altitude_ref: 1.5 # [m]
+    parallel_port_output: 200

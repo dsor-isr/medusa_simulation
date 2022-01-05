@@ -1,0 +1,364 @@
+## --------------------------- ## 
+#  medusa_addons                #
+## --------------------------- ## 
+#wifi_acoustic_safety:
+
+#addons/rosbridge_server:
+
+addons/console_path_parser:
+    node_frequency: 5
+    topics:
+        subscribers: 
+            Mission_String: /myellow/addons/Mission_String
+            state: /myellow/nav/filter/state
+            flag: /myellow/Flag
+        publishers:
+            Path_Section: /myellow/addons/path_section
+            Formation: /myellow/addons/formation
+            biased_formation: /myellow/addons/biased_formation
+            WPRef: /myellow/addons/WPRef
+            DepthRef: /myellow/ref/depth
+            AltRef: /myellow/ref/altitude
+            FullMission: /myellow/addons/full_mission
+        services:
+            reset_path: "/myellow/ResetPath"
+            arc2d_path: "/myellow/SpawnArc2DPath"
+            line_path: "/myellow/SpawnLinePath"
+            pf_start: "/myellow/PFStart"
+            pf_stop: "/myellow/PFStop"
+            set_speed: "/myellow/SetConstVdVehicle"
+
+
+addons/console_server:
+    topics:
+      services:
+          wp_standard: "/myellow/controls/send_wp_standard"
+          wp_loose: "/myellow/controls/send_wp_loose"
+          wp_heading: "/myellow/controls/send_wp_heading"
+      console:
+          waypoint: "wp_standard"
+    
+addons/aggregator:
+    pub_rate: 2.0
+
+## --------------------------- ## 
+#  medusa_sim                   #
+## --------------------------- ## 
+## dynamic model
+sim/dsor_sim:
+    frame_id: "myellow"
+    node_frequency: 100 # (Hz)
+    topics:
+        subscribers:
+            thrusters: "/myellow/thrusters/rpm_command"
+        publishers:
+            odometry: "/myellow/sim/dynamics/position"
+        services:
+            start_pause: "/myellow/sim/pause_start"
+
+## sensor simulator
+sim/sensors:
+    node_frequency: 10
+    # topics
+    #   subscribers: [ (std::vector<std::strings>) Subscriber: vehicle state in nav_msgs::Odometry, thruster output from innerloops in medusa_msgs::Thruster]
+    #   publishers : [ (std::vector<std::strings>) Publishers: sensors (position, velocity, orientation, gnss, range), model, thrusters (value and status)
+    topics:
+        subscribers: [ "/myellow/sim/dynamics/position"]
+        publishers : [
+            "/myellow/measurement/position",
+            "/myellow/measurement/velocity",
+            "/myellow/measurement/orientation",
+            "/myellow/sensors/gnss",
+            "/myellow/sensors/range",
+            "/myellow/sim/model/state",
+            "/myellow/diagnostics/thrusterStatus"
+        ]
+    services:
+      enable_dvl: "/myellow/sim/enable_dvl"
+      enable_altimeter: "/myellow/sim/enable_altimeter"
+
+## --------------------------- ## 
+#  medusa_nav                   #
+## --------------------------- ## 
+### Sensor Fusion for the frame "odom"
+nav/filter:
+    node_frequency: 10      # ROS node rate
+    topics:
+        subscribers: [       # reset, position topic, velocity topic and orientation and acceleration (optional) topic
+            "/myellow/nav/reset", "/myellow/measurement/position", "/myellow/measurement/velocity", "/myellow/measurement/orientation"
+        ]
+        publishers: [        # state topic, debug topic
+            "/myellow/nav/filter/state", "/myellow/nav/filter/debug"
+        ]
+        currents: "/myellow/nav/filter/currents"
+     topics_dr:
+       velocity: "/myellow/measurement/velocity"
+       orientation: "/myellow/measurement/orientation"
+       true_state: "/myellow/nav/filter/state"
+       flag: "/myellow/Flag"
+       dead_reckoning: "/myellow/nav/filter/state_dr"
+       dead_reckoning_console: "/myellow/State_dr"
+     services_dr:
+       reset_filter_dr: "/myellow/nav/reset_filter_dr"
+        
+### Converting sensor_msgs::NavSatFix to medusa_msgs::Measurement data type
+nav/gnss2utm:
+    node_frequency: 10
+    topics:
+        subscribers: [ "/myellow/sensors/gnss" ]
+        publishers: [ "/myellow/measurement/position" ]
+        ground_truth: "/myellow/State_gt"
+    services:
+        enable_gps: "/myellow/sensor/enable_gps"
+
+nav/usbl2pos:
+    node_frequency: 10
+    topics:
+        subscribers: [
+            "/myellow/sensors/usbl_fix", "/myellow/acomms/nav/filter/state", "/myellow/nav/filter/state"
+        ]
+        publishers: [ "/myellow/measurement/position", "/myellow/State_usbl_est", "/myellow/nav/filter/usbl_est" ]
+
+nav/range2pos:
+    node_frequency: 10
+    t_sync: 2
+    topics:
+        subscribers: [ "/myellow/sensors/range", "/myellow/nav/filter/state" ]
+        publishers: [ "/myellow/measurement/position" ]
+
+nav/auvstate2mstate:
+    node_frequency: 10
+    topics:
+        subscribers: [ "/myellow/nav/filter/state", "/myellow/drivers/inside_pressure/data", "/myellow/sensors/gnss" ]
+        publishers:  [ "/myellow/State" ]
+
+## --------------------------- ## 
+#  medusa_control               #
+## --------------------------- ## 
+### Inner Loops
+controls/inner_loops:
+    node_frequency: 10.0 # Time parameters
+    topics:
+        subscribers:
+            state: "/myellow/nav/filter/state"
+            surge: "/myellow/ref/surge"
+            yaw: "/myellow/ref/yaw"
+            yaw_rate: "/myellow/ref/yaw_rate"
+            depth: "/myellow/ref/depth"
+            altitude_ref: "/myellow/ref/altitude"
+            altitude: "/myellow/controls/Altitude"
+            altimeter: "/myellow/controls/Altimeter"
+        publishers:
+            thrusters: "/myellow/thrusters/rpm_command"
+            thrusters_model: "/myellow/thrusters/model"
+
+controls/inner_loops_forces:
+    # ROS node rate 
+    node_frequency: 10.0 # Time parameters
+    # ROS Topics
+    topics:
+        subscribers:
+            yaw: "/myellow/ref/yaw"
+            pitch: "/myellow/ref/pitch"
+            roll: "/myellow/ref/roll"
+            yaw_rate: "/myellow/ref/yaw_rate"
+            pich_rate: "/myellow/ref/pitch_rate"
+            roll_rate: "/myellow/ref/roll_rate"
+            surge: "/myellow/ref/surge"
+            sway: "/myellow/ref/sway"
+            heave: "/myellow/ref/heave"
+            depth: "/myellow/ref/depth"
+            altitude: "/myellow/ref/altitude"
+            altitude_safety: "/myellow/ref/altitude_safety"
+            depth_safety: "/myellow/ref/depth_safety"
+            state: "/myellow/nav/filter/state"
+        publishers:
+            thrust_body_request: "/myellow/thrust_body_request"
+            thrusters: "/myellow/thrusters/rpm_command"
+
+### Way Point
+controls/waypoint:
+    node_frequency: 10.0
+    topics:
+        publishers:
+            yaw_ref: "/myellow/ref/yaw"
+            yaw_rate_ref: "/myellow/ref/yaw_rate"
+            u_ref: "/myellow/ref/surge"
+            v_ref: "/myellow/ref/sway"
+            flag: "/myellow/Flag"
+        subscribers:
+            flag: "/myellow/Flag"
+            state: "/myellow/nav/filter/state"
+        services:
+            wp_standard: "/myellow/controls/send_wp_standard"
+            wp_loose: "/myellow/controls/send_wp_loose"
+            wp_heading: "/myellow/controls/send_wp_heading"
+
+### Path Following
+controls/path_following:
+    node_frequency: 10.0
+    flag: "/myellow/Flag" 
+    topics:
+        subscribers:
+            state: "/myellow/nav/filter/state"
+            path: "/myellow/PathData"
+            vc: "/myellow/PF/vc"
+        publishers:
+            # Publishers for linear motion
+            surge: "/myellow/ref/surge"
+            sway: "/myellow/ref/sway"
+            heave: "/myellow/ref/heave"
+    
+            # Publishers for angular motion
+            roll: "/myellow/ref/roll"
+            roll_rate: "/myellow/ref/roll_rate"
+            pitch: "/myellow/ref/pitch"
+            pitch_rate: "/myellow/ref/pitch_rate"
+            yaw: "/myellow/ref/yaw"
+            yaw_rate: "/myellow/ref/yaw_rate"
+    
+            # Publishers for the virtual target
+            rabbit: "/myellow/Gamma"
+
+            # Observer for the currents
+            observer:
+                x: "/myellow/current/x"
+                y: "/myellow/current/y"
+            
+            # Publish info for plots
+            pfollowing_debug: "/myellow/pfollowing/debug"
+        # Define here the service names to switch between controllers 
+        services:
+            # Service names to start and stop the path following algorithm
+            start_pf: "/myellow/PFStart"
+            stop_pf: "/myellow/PFStop"
+            updates_gains_pf: "/myellow/PFUpdateGains"
+            reset_vt_pf: "/myellow/ResetVT"
+    
+            # Service names to switch the path following algorithm
+            marcelo_pf: "/myellow/PFSetMarcelo"
+            aguiar_pf: "/myellow/PFSetAguiar"
+            brevik_pf: "/myellow/PFSetBrevik"
+            fossen_pf: "/myellow/PFSetFossen"
+            romulo_pf: "/myellow/PFSetRomulo"
+            lapierre_pf: "/myellow/PFSetLapierre"
+            pramod_pf: "/myellow/PFSetPramod"
+            samson_pf: "/myellow/PFSetSamson"
+            # Service names related to the path
+            reset_path: "/myellow/ResetPath"
+            set_path_mode: "/myellow/SetMode"
+            # Service names related to the waypoint
+            wp_standard: "/myellow/controls/send_wp_standard"
+
+### Cooperative control law
+controls/cpf_control:
+    node_frequency: 10
+    topics:
+        publishers: 
+            vc: "/myellow/PF/vc"
+            cpf_server_input: "/myellow/Internal/Gamma"
+        subscribers:
+            internal_gamma: "/myellow/PathData"
+            external_gamma: "/myellow/External/Gamma"
+        services:
+        # Service names to start and stop the path following algorithm
+            start_cpf: "/myellow/CPFStart"
+            stop_cpf: "/myellow/CPFStop"
+            change_topology: "/myellow/CPFChangeTopology"
+
+## --------------------------- ## 
+#  medusa_planning              #
+## --------------------------- ##
+planning/dsor_paths:
+    node_frequency: 10.0
+    frame_id: "Path_frame"
+    topics:
+        subscribers:
+            gamma: "/myellow/Gamma"
+            vehicle_state: "/myellow/nav/filter/state"
+        publishers:
+            path_data: "/myellow/PathData"
+            virtual_target_state: "/myellow/Virtual/State"
+        # Services for constructing a path
+        services:
+            reset_path: "/myellow/ResetPath"
+            set_mode: "/myellow/SetMode"
+            arc2d_path: "/myellow/SpawnArc2DPath"
+            bernoulli_path: "/myellow/SpawnBernoulliPath"
+            circle2d_path: "/myellow/SpawnCircle2DPath"
+            line_path: "/myellow/SpawnLinePath"
+            speed:
+                const_rabbit_speed: "/myellow/SetConstVdRabbit"
+                const_vehicle_speed: "/myellow/SetConstVdVehicle"
+
+## --------------------------- ## 
+#  medusa_comms                #
+## --------------------------- ## 
+#acomms/modem:
+
+acomms/pinger:
+    topics:
+        publishers:
+            modem_send: "/myellow/acomms/modem/send"
+            meas_usbl_fix: "/myellow/sensors/usbl_fix"
+            trigger_serialization: "/myellow/acomms/scheme/trigger_serialization"
+            deserialize: "/myellow/acomms/scheme/payload_to_deserialize"
+        subscribers:
+            enable: "/myellow/acomms/scheme/enable"
+            modem_recv: "/myellow/acomms/modem/recv"
+            payload: "/myellow/acomms/serializer/payload_to_transmit"
+
+acomms/replier:
+    topics:
+        publishers:
+            modem_send: "/myellow/acomms/modem/send"
+            meas_usbl_fix: "/myellow/sensors/usbl_fix"
+            trigger_serialization: "/myellow/acomms/scheme/trigger_serialization"
+            deserialize: "/myellow/acomms/scheme/payload_to_deserialize"
+        subscribers:
+            modem_recv: "/myellow/acomms/modem/recv"
+            serialize: "/myellow/acomms/serializer/payload_to_transmit"
+
+acomms/data_serializer:
+    topics:
+        publishers:
+            to_modem: "/myellow/acomms/serializer/payload_to_transmit"
+        subscribers:
+            from_modem: "/myellow/acomms/scheme/payload_to_deserialize"
+            trigger: "/myellow/acomms/scheme/trigger_serialization"
+        
+acomms/dmac2medusa:
+    topics:
+        publishers:
+            medusa_fix: "/myellow/sensors/usbl_fix"
+        subscribers:
+            dmac_fix: "/myellow/acomms/modem/measurement/usbl_fix"
+
+acomms/gnss2state:
+    topics:
+        subscribers: [
+            "/myellow/acomms/nav/filter/gnss"
+        ]
+        publishers: [
+            "/myellow/acomms/nav/filter/state",
+            "/myellow/state/utmzone"
+        ]
+
+acomms/pos2sim_modem:
+    topics/subscribers/position: "/myellow/sim/dynamics/position"
+    
+acomms/cpf_gamma_client:
+    node_frequency: 10
+    topics:
+      subscribers:
+        internal_gamma: "/myellow/Internal/Gamma"
+      publishers:
+        cpf_gamma: "/myellow/External/Gamma"
+        
+acomms/cpf_gamma_server:
+    node_frequency: 10
+    topics:
+      subscribers:
+        internal_gamma: "/myellow/Internal/Gamma"
+      publishers:
+        cpf_gamma: "/myellow/External/Gamma"
