@@ -1,0 +1,31 @@
+modem/modem_config:
+    tcp_config/ip: mvectorMF
+    local_address: 3
+    hasAHRS: true
+    initializer: "{'@ZA': '1', '@ZX': '1', '@ZU': '1'}"
+
+pinger:
+    tslack: 1.0
+    modem_name: "mvectorMF"
+    modems_list: ["2", "2"]
+    timeout_list: [4.0, 4.0]
+
+replier:
+    tslack: 1.0
+    modem_id: 3
+
+data_serializer:
+    vehicle_id: 3
+
+pos2sim_modem:
+    ip: mvectorMF
+    port: 11000
+
+dmac2medusa:
+    # false, vehicle acts as an achor, estimates other vehicles position 
+    # true, vehicle estimates its own position with respect to an anchor   
+    fix_type: true
+    # true, real vehcile
+    # false, simulation scenarios with evo emulator
+    real: false
+    installation_matrix: [-0.7854, 0, 3.1415]

@@ -2,26 +2,28 @@
 <launch>
 
     <!-- Parameters and Arguments -->
-    <arg name="name"               default="mblack" /> <!-- Name of the vehicle being launched -->   
+    <arg name="name"               default="myellow" /> <!-- Name of the vehicle being launched -->   
     <arg name="config_package"     default="medusa_sim_bringup"/>  <!-- Name of the package where the configuration files are stored -->
     <arg name="folder"             default="simulation" />         <!-- Name of the folder for the configuration files -->     
-    <arg name="namespace"          default="true" />
 
-    <!-- Load topic names and Common configurations for all topics -->
     <arg name="dollar" value="$" />
     <arg name="config_package_path"  value="(find $(arg config_package)" />
 
-    <rosparam command="load" file="$(arg dollar)$(arg config_package_path))/config/dev_configs/ros_$(arg name).yaml" />
-    <rosparam command="load" file="$(arg dollar)$(arg config_package_path))/config/$(arg folder)/$(arg name)/common.yaml" />
+    <!-- Launch the Processes in process_gazebo -->
+    <group ns="$(arg name)">
 
-    <!-- Simulation -->
-    <node pkg="medusa_bringup" type="medusa_bringup_node" name="medusa_bringup" respawn="false" output="screen">
-        <rosparam command="load" file="$(arg dollar)$(arg config_package_path))/config/$(arg folder)/$(arg name)/process_gazebo.yaml"/>
-        <param name="name"            value="$(arg name)"/>
-        <param name="config_package"  value="$(arg config_package)"/>
-        <param name="folder"          value="$(arg simulation)" />
-        <param name="namespace"       value="$(arg namespace)"/>
-        <param name="process_state_publish_rate" type="double" value="0.33" />
-    </node>
+        <!-- Load topic names and Common configurations for all topics -->
+        <rosparam command="load" file="$(arg dollar)$(arg config_package_path))/config/dev_configs/ros_$(arg name).yaml" />
+        <rosparam command="load" file="$(arg dollar)$(arg config_package_path))/config/$(arg folder)/$(arg name)/common.yaml" />
+
+        <node pkg="medusa_bringup" type="medusa_bringup_node" name="medusa_bringup" respawn="false" output="screen">
+            <rosparam command="load" file="$(arg dollar)$(arg config_package_path))/config/$(arg folder)/$(arg name)/process_gazebo.yaml"/>
+            <param name="name"                  value="$(arg name)"/>
+            <param name="config_package_path"   value="$(arg config_package_path)"/>
+            <param name="folder"                value="$(arg folder)" />
+            <param name="namespace"             value="true"/>
+            <param name="process_state_publish_rate" type="double" value="0.33" />
+        </node>
+    </group>
 
 </launch>

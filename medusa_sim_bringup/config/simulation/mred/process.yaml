@@ -1,4 +1,13 @@
 processes:
+    - name: 'simulation'
+      launch_on_startup: true
+      delay_before_start: 0.0
+      cmd: 'roslaunch medusa_bringup sim.launch'
+      args:
+            - dynamics:= true
+            - sensors:= true
+      dependencies:
+            []
     - name: 'bags'
       launch_on_startup: false
       delay_before_start: 0.0
@@ -11,9 +20,9 @@ processes:
     - name: 'tfs'
       launch_on_startup: true
       delay_before_start: 0.0
-      cmd: 'roslaunch medusa_bringup tfs.launch'
+      cmd: 'roslaunch medusa_bringup simulation_tfs.launch'
       args:
-            - real:= false
+            - broadcast_tf:= true
       dependencies:
             []
     - name: 'addons'
@@ -21,20 +30,8 @@ processes:
       delay_before_start: 0.0
       cmd: 'roslaunch medusa_bringup addons.launch'
       args:
-            - aggregator:= false
             - console_path_parser:= true
             - console_server:= true
-            - wifi_acoustic_safety:= false
-            - rosbridge_server:= false
-      dependencies:
-            []
-    - name: 'simulation'
-      launch_on_startup: true
-      delay_before_start: 0.0
-      cmd: 'roslaunch medusa_bringup sim.launch'
-      args:
-            - dynamics:= true
-            - sensors:= true
       dependencies:
             []
     - name: 'navigation'
@@ -45,31 +42,37 @@ processes:
             - filter:= true
             - gnss2utm:= true
             - auvstate2mstate:= true
+            - usbl2pos:= true
       dependencies:
-            - 'simulation'
+            []
     - name: 'controllers'
       launch_on_startup: true
-      delay_before_start: 5.0
+      delay_before_start: 1.0
       cmd: 'roslaunch medusa_bringup controls.launch'
       args:
             - inner_loops_forces:= true
             - waypoint:= true
             - path_following:= true
-            - cpf_control:= false
+      dependencies:
+            []
+    - name: 'cooperative'
+      launch_on_startup: true
+      delay_before_start: 1.0
+      cmd: 'roslaunch medusa_bringup cooperative.launch'
+      args:
+            - cpf_control:=true
+            - cpf_wifi_receiver:=true
+            - cpf_wifi_broadcaster:=true
       dependencies:
             []
     - name: 'acomms'
       launch_on_startup: false
-      delay_before_start: 6.0
+      delay_before_start: 1.0
       cmd: 'roslaunch medusa_bringup comms.launch'
       args:
-            - dmac:= true
-            - data_serializer:= true
-            - replier:= true
-            - pinger:= false
-            - pos2sim_modem:= true
-            - dmac2medusa:= true
-            - cpf_gamma:= false
+            - data_serializer:= false
+            - dmac2medusa:= false
+            - gnss2state:= false
       dependencies:
             []
     - name: 'planning'
@@ -80,6 +83,3 @@ processes:
             - dsor_paths:= true
       dependencies:
             []
-
-
-

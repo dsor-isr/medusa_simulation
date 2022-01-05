@@ -1,21 +1,5 @@
-modem/modem_config:
-    tcp_config/ip: mvectorMF
-    local_address: 3
-    hasAHRS: true
-    initializer: "{'@ZA': '1', '@ZX': '1', '@ZU': '1'}"
-
-pinger:
-    tslack: 1.0
-    modem_name: "mvectorMF"
-    modems_list: ["2", "2"]
-    timeout_list: [4.0, 4.0]
-
 data_serializer:
     vehicle_id: 3
-
-pos2sim_modem:
-    ip: mvectorMF
-    port: 11000
 
 dmac2medusa:
     # false, vehicle acts as an achor, estimates other vehicles position 
@@ -24,15 +8,4 @@ dmac2medusa:
     # true, real vehcile
     # false, simulation scenarios with evo emulator
     real: false
-    installation_matrix: [-0.7854, 0, 3.1415]
-
-# Only used for cooperative path following
-cpf_gamma_client:      
-    broadcast_port: 2808
-    broadcast_address: "127.255.255.255"
-    ID: 3
-
-cpf_gamma_server:
-    broadcast_port: 2808
-    broadcast_address: "127.255.255.255"
-    ID: 3
+    installation_matrix: [0, 0, 0]

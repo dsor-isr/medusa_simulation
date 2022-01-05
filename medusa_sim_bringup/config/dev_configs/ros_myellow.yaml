@@ -28,7 +28,6 @@ addons/console_path_parser:
             pf_stop: "/myellow/PFStop"
             set_speed: "/myellow/SetConstVdVehicle"
 
-
 addons/console_server:
     topics:
       services:
@@ -45,7 +44,7 @@ addons/aggregator:
 #  medusa_sim                   #
 ## --------------------------- ## 
 ## dynamic model
-sim/dsor_sim:
+sim/auv_sim:
     frame_id: "myellow"
     node_frequency: 100 # (Hz)
     topics:
@@ -80,7 +79,7 @@ sim/sensors:
 ## --------------------------- ## 
 #  medusa_nav                   #
 ## --------------------------- ## 
-### Sensor Fusion for the frame "odom"
+### Sensor myellow for the frame "odom"
 nav/filter:
     node_frequency: 10      # ROS node rate
     topics:
@@ -89,18 +88,17 @@ nav/filter:
         ]
         publishers: [        # state topic, debug topic
             "/myellow/nav/filter/state", "/myellow/nav/filter/debug"
-        ]
-        currents: "/myellow/nav/filter/currents"
-     topics_dr:
+        ]     
+    topics_dr:
        velocity: "/myellow/measurement/velocity"
        orientation: "/myellow/measurement/orientation"
        true_state: "/myellow/nav/filter/state"
        flag: "/myellow/Flag"
        dead_reckoning: "/myellow/nav/filter/state_dr"
        dead_reckoning_console: "/myellow/State_dr"
-     services_dr:
+    services_dr:
        reset_filter_dr: "/myellow/nav/reset_filter_dr"
-        
+
 ### Converting sensor_msgs::NavSatFix to medusa_msgs::Measurement data type
 nav/gnss2utm:
     node_frequency: 10
@@ -194,10 +192,11 @@ controls/waypoint:
             wp_loose: "/myellow/controls/send_wp_loose"
             wp_heading: "/myellow/controls/send_wp_heading"
 
+
 ### Path Following
 controls/path_following:
     node_frequency: 10.0
-    flag: "/myellow/Flag" 
+    flag: "/myellow/Flag"
     topics:
         subscribers:
             state: "/myellow/nav/filter/state"
@@ -219,14 +218,14 @@ controls/path_following:
     
             # Publishers for the virtual target
             rabbit: "/myellow/Gamma"
-
+            
             # Observer for the currents
             observer:
                 x: "/myellow/current/x"
                 y: "/myellow/current/y"
-            
+
             # Publish info for plots
-            pfollowing_debug: "/myellow/pfollowing/debug"
+            pfollowing_debug: "myellow/pfollowing/debug"
         # Define here the service names to switch between controllers 
         services:
             # Service names to start and stop the path following algorithm
@@ -249,9 +248,9 @@ controls/path_following:
             set_path_mode: "/myellow/SetMode"
             # Service names related to the waypoint
             wp_standard: "/myellow/controls/send_wp_standard"
-
+   
 ### Cooperative control law
-controls/cpf_control:
+cooperative/cpf_control:
     node_frequency: 10
     topics:
         publishers: 
@@ -265,6 +264,22 @@ controls/cpf_control:
             start_cpf: "/myellow/CPFStart"
             stop_cpf: "/myellow/CPFStop"
             change_topology: "/myellow/CPFChangeTopology"
+
+cooperative/cpf_wifi_server:
+    node_frequency: 10
+    topics:
+      subscribers:
+        internal_gamma: "/myellow/Internal/Gamma"
+      publishers:
+        cpf_gamma: "/myellow/External/Gamma"
+        
+cooperative/cpf_wifi_client:
+    node_frequency: 10
+    topics:
+      subscribers:
+        internal_gamma: "/myellow/Internal/Gamma"
+      publishers:
+        cpf_gamma: "/myellow/External/Gamma"
 
 ## --------------------------- ## 
 #  medusa_planning              #
@@ -346,19 +361,3 @@ acomms/gnss2state:
 
 acomms/pos2sim_modem:
     topics/subscribers/position: "/myellow/sim/dynamics/position"
-    
-acomms/cpf_gamma_client:
-    node_frequency: 10
-    topics:
-      subscribers:
-        internal_gamma: "/myellow/Internal/Gamma"
-      publishers:
-        cpf_gamma: "/myellow/External/Gamma"
-        
-acomms/cpf_gamma_server:
-    node_frequency: 10
-    topics:
-      subscribers:
-        internal_gamma: "/myellow/Internal/Gamma"
-      publishers:
-        cpf_gamma: "/myellow/External/Gamma"

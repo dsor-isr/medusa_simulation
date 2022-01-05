@@ -44,7 +44,7 @@ addons/aggregator:
 #  medusa_sim                   #
 ## --------------------------- ## 
 ## dynamic model
-sim/dsor_sim:
+sim/auv_sim:
     frame_id: "medusa"
     node_frequency: 100 # (Hz)
     topics:
@@ -252,7 +252,7 @@ controls/path_following:
             wp_standard: "/controls/send_wp_standard"
 
 ### Cooperative control law
-controls/cpf_control:
+cooperative/cpf_control:
     node_frequency: 10
     topics:
         publishers: 
@@ -266,6 +266,22 @@ controls/cpf_control:
             start_cpf: "/CPFStart"
             stop_cpf: "/CPFStop"
             change_topology: "/CPFChangeTopology"
+
+cooperative/cpf_gamma_client:
+    node_frequency: 10
+    topics:
+      subscribers:
+        internal_gamma: "/Internal/Gamma"
+      publishers:
+        cpf_gamma: "/External/Gamma"
+
+cooperative/cpf_gamma_server:
+    node_frequency: 10
+    topics:
+      subscribers:
+        internal_gamma: "/Internal/Gamma"
+      publishers:
+        cpf_gamma: "/External/Gamma"
 
 
 ## --------------------------- ## 
@@ -348,21 +364,3 @@ acomms/gnss2state:
 
 acomms/pos2sim_modem:
     topics/subscribers/position: "/sim/dynamics/position"
-
-acomms/cpf_gamma_client:
-    node_frequency: 10
-    topics:
-      subscribers:
-        internal_gamma: "/Internal/Gamma"
-      publishers:
-        cpf_gamma: "/External/Gamma"
-
-acomms/cpf_gamma_server:
-    node_frequency: 10
-    topics:
-      subscribers:
-        internal_gamma: "/Internal/Gamma"
-      publishers:
-        cpf_gamma: "/External/Gamma"
-
-

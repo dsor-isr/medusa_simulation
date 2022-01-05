@@ -45,7 +45,7 @@ addons/aggregator:
 #  medusa_sim                   #
 ## --------------------------- ## 
 ## dynamic model
-sim/dsor_sim:
+sim/auv_sim:
     frame_id: "mred"
     node_frequency: 100 # (Hz)
     topics:
@@ -251,7 +251,7 @@ controls/path_following:
             wp_standard: "/mred/controls/send_wp_standard"
 
 ### Cooperative control law
-controls/cpf_control:
+cooperative/cpf_control:
     node_frequency: 10
     topics:
         publishers: 
@@ -265,6 +265,22 @@ controls/cpf_control:
             start_cpf: "/mred/CPFStart"
             stop_cpf: "/mred/CPFStop"
             change_topology: "/mred/CPFChangeTopology"
+
+cooperative/cpf_wifi_client:
+    node_frequency: 10
+    topics:
+      subscribers:
+        internal_gamma: "/mred/Internal/Gamma"
+      publishers:
+        cpf_gamma: "/mred/External/Gamma"
+        
+cooperative/cpf_wifi_server:
+    node_frequency: 10
+    topics:
+      subscribers:
+        internal_gamma: "/mred/Internal/Gamma"
+      publishers:
+        cpf_gamma: "/mred/External/Gamma"
 
 ## --------------------------- ## 
 #  medusa_planning              #
@@ -347,22 +363,3 @@ acomms/gnss2state:
 acomms/pos2sim_modem:
     topics/subscribers/position: "/mred/sim/dynamics/position"
     
-acomms/cpf_gamma_client:
-    node_frequency: 10
-    topics:
-      subscribers:
-        internal_gamma: "/mred/Internal/Gamma"
-      publishers:
-        cpf_gamma: "/mred/External/Gamma"
-        
-acomms/cpf_gamma_server:
-    node_frequency: 10
-    topics:
-      subscribers:
-        internal_gamma: "/mred/Internal/Gamma"
-      publishers:
-        cpf_gamma: "/mred/External/Gamma"
-
-
-
-

@@ -44,7 +44,7 @@ addons/aggregator:
 #  medusa_sim                   #
 ## --------------------------- ## 
 ## dynamic model
-sim/dsor_sim:
+sim/auv_sim:
     frame_id: "mblack"
     node_frequency: 100 # (Hz)
     topics:
@@ -252,7 +252,7 @@ controls/path_following:
             wp_standard: "/mblack/controls/send_wp_standard"
    
 ### Cooperative control law
-controls/cpf_control:
+cooperative/cpf_control:
     node_frequency: 10
     topics:
         publishers: 
@@ -266,6 +266,22 @@ controls/cpf_control:
             start_cpf: "/mblack/CPFStart"
             stop_cpf: "/mblack/CPFStop"
             change_topology: "/mblack/CPFChangeTopology"
+
+cooperative/cpf_wifi_server:
+    node_frequency: 10
+    topics:
+      subscribers:
+        internal_gamma: "/mblack/Internal/Gamma"
+      publishers:
+        cpf_gamma: "/mblack/External/Gamma"
+        
+cooperative/cpf_wifi_client:
+    node_frequency: 10
+    topics:
+      subscribers:
+        internal_gamma: "/mblack/Internal/Gamma"
+      publishers:
+        cpf_gamma: "/mblack/External/Gamma"
 
 ## --------------------------- ## 
 #  medusa_planning              #
@@ -334,6 +350,7 @@ acomms/dmac2medusa:
             medusa_fix: "/mblack/sensors/usbl_fix"
         subscribers:
             dmac_fix: "/mblack/acomms/modem/measurement/usbl_fix"
+            state: "/mblack/nav/filter/state"
 
 acomms/gnss2state:
     topics:
@@ -347,22 +364,3 @@ acomms/gnss2state:
 
 acomms/pos2sim_modem:
     topics/subscribers/position: "/mblack/sim/dynamics/position"
-
-acomms/cpf_gamma_server:
-    node_frequency: 10
-    topics:
-      subscribers:
-        internal_gamma: "/mblack/Internal/Gamma"
-      publishers:
-        cpf_gamma: "/mblack/External/Gamma"
-        
-acomms/cpf_gamma_client:
-    node_frequency: 10
-    topics:
-      subscribers:
-        internal_gamma: "/mblack/Internal/Gamma"
-      publishers:
-        cpf_gamma: "/mblack/External/Gamma"
-
-
-    

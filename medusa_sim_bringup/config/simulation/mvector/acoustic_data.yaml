@@ -7,37 +7,20 @@
 #
 # Check the following document for the acoustic description
 # https://docs.google.com/spreadsheets/d/1o_p9rl8eRqVtl4L3G4qtig7R__WBa42d7-IvHyCSmr0/edit#gid=0
-
-acoustic_data_channels:
-  # Send Navigation Data in WGS84 from mblack (surface) to mvector (underwater)
-  - from: [2]
-    to: [3]
-    msg: "auv_msgs/NavigationStatus"
-    topic_in: "/nav/filter/state"
-    topic_out: "/acomms/nav/filter/gnss"
-    latch: 5
-    fields:
-      - field_name: "global_position.latitude"
-        min: -90
-        max: 90
-        bits: 25
-      - field_name: "global_position.longitude"
-        min: -180
-        max: 180
-        bits: 26
-  #- from: [2]
-    #to: [3]
-    #msg: "auv_msgs/NavigationStatus"
-    #topic_in: "/nav/filter/state"
-    #topic_out: "/acomms/nav/filter/gnss"
-    #latch: 5
-    #fields:
-      #- field_name: "global_position.latitude"
-        #min: -90
-        #max: 90
-        #bits: 25
-      #- field_name: "global_position.longitude"
-        #min: -180
-        #max: 180
-        #bits: 26
-
+data_serializer:
+  acoustic_data_channels:
+    - from: [2]
+      to: [3]
+      msg: "auv_msgs/NavigationStatus"
+      topic_in: "/mvector/nav/filter/state"
+      topic_out: "/mvector/acomms/nav/filter/gnss"
+      latch: 5
+      fields:
+        - field_name: "global_position.latitude"
+          min: -90
+          max: 90
+          bits: 25
+        - field_name: "global_position.longitude"
+          min: -180
+          max: 180
+          bits: 26

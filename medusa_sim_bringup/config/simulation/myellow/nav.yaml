@@ -2,7 +2,7 @@ filter:
     tf:                         # TF publishers
         broadcast: true         # flag to publish TF
         frames: [               # <base_link, odom, map, world>
-            "base_link", "null", "map", "map"
+            "myellow_base_link", "null", "myellow_map", "myellow_map"
         ]
     kalman_filter:
         # reset filter if no measurement is received for a certain period (any measurement). 0 for no reset
@@ -30,9 +30,8 @@ filter:
         # If a frame_id is given ("gnss") the initial position of the filter comes from the sensor.
         # Filter won't work without a initial position
         manually_initialization:
-                frame_id: "gnss"
+                frame_id: "myellow_gnss"
                 value: [4290797.17, 491932.75, -0.1,    # Position - x, y, z
-                #value: [0, 0, 0,    # Position - x, y, z
                         0.0, 0, 0,    # Velocity - dx, dy, dz
                         0, 0, 0,    # Orientation - r, p, ya
                         0, 0, 0,    # Orientation Rate - dr, dp, dya
@@ -45,39 +44,39 @@ filter:
 
 #NOTE: The real dvl give us 3 velocities (vx,vy, vz), but we are just using only the 2D velocities. To use the vz is necessary to change the sensorSplit method in FilterNode (in the next iterations of the code :) ). 
         sensors:
-            -   frame_id:   "gnss"
+            -   frame_id:   "myellow_gnss"
                 config:     "Hposition"            # [x, y]
                 noise:      [0.001, 0.001]         # if you want to use the noise directly from the sensor, fill the noise with zeros
                 outlier_tolerance: 0.2
                 reject_counter: 8
-            -   frame_id:   "usbl"
+            -   frame_id:   "myellow_usbl"
                 config:     "Hposition"            # [x, y]
                 noise:      [1, 1]
                 outlier_tolerance: 1.0
                 reject_counter: 10
                 outlier_increase: 0.3              # value that we assume that will increase over time (0.3m/s)
-            -   frame_id:   "dvl_bt"
+            -   frame_id:   "myellow_dvl_bt"
                 config:     "Hvelocity"            # [vx, vy]
                 noise:      [0.0225, 0.0225]
                 outlier_tolerance: 0.2
                 reject_counter: 200
-            -   frame_id:   "dvl_wt"
+            -   frame_id:   "myellow_dvl_wt"
                 config:     "Hvelocity"            # [vx, vy]
                 noise:      [0.0225, 0.0225]
                 outlier_tolerance: 0.2
                 reject_counter: 200
-            -   frame_id:   "depth" 
+            -   frame_id:   "myellow_depth" 
                 config:     "Vposition"            # [z]
                 noise:      [0.1]
                 outlier_tolerance: 0.2
                 reject_counter: 8
-            -   frame_id:   "ahrs"  
+            -   frame_id:   "myellow_ahrs"  
                 config:     "orientation"          
                 noise:      [0.001, 0.001, 0.001,  # [roll, pitch, yaw]
                             1.0, 1.0, 1.0]         # roll_rate, picth_rate, yaw_rate]
                 outlier_tolerance: 0.5
                 reject_counter: 12
-            -   frame_id:   "altimeter"            # [altitude]
+            -   frame_id:   "myellow_altimeter"            # [altitude]
                 config:     "altitude"
                 noise:      [0.1]
                 outlier_tolerance: 0.3
@@ -86,14 +85,9 @@ filter:
     dvl:
       body_frame: false  # If dvl values are in inercial frame, you need to put false here!!!
 
-
-range2pos:
-    beacon:
-        position: [4290771, 491886]
-
 usbl2pos:
     t_sync: 2
     # false, vehicle acts as an achor, estimates other vehicles position 
     # true, vehicle estimates its own position with respect to an anchor    
-    fix_type: false
+    fix_type: true
     meas_noise: 0.001

@@ -1,4 +1,4 @@
-dsor_sim:
+auv_sim:
 
   # General simulation environment constants
   fluid_density: 1.025 # (kg/l)
@@ -41,21 +41,21 @@ dsor_sim:
     minimum: [0.0, 0.0, 0.0]
     maximum: [0.0, 0.0, 0.0]
 
-world_frame: "world"
-base_link: "base_link"
+world_frame: "mblack_world"
+base_link: "mblack_base_link"
 
 sensors:
     water_column: 100
     sensors:
         - type     : "GNSS"
-          frame_id : "gnss"
+          frame_id : "mblack_gnss"
           frequency: 10.0
           count    : 0        # After n measumerements sensor is discarded
           noise    : 0.00
           variance : 0.03
           debug    : true     # Full gps even when diving
         - type     : "DVL_BT"
-          frame_id : "dvl_bt"
+          frame_id : "mblack_dvl_bt"
           frequency: 5.0
           noise    : 0.10
           variance : 0.05
@@ -63,25 +63,25 @@ sensors:
           debug    : true     # works regardless of depth
           count    : 0
         - type     : "DVL_WT"
-          frame_id : "dvl_wt"
+          frame_id : "mblack_dvl_wt"
           frequency: 5.0
           noise    : 0.01
           variance : 0.0
           altitude : 110.0
           count    : 0        # After n measumerements sensor is discarded
         - type     : "AHRS"
-          frame_id : "ahrs"
+          frame_id : "mblack_ahrs"
           frequency: 5.0
           noise    : [0.051, 0.017]
           variance : 0.001
         - type     : "DEPTH"
-          frame_id : "depth"
+          frame_id : "mblack_depth"
           frequency: 5.0
           noise    : 0.01
           variance : 0.005
           count    : 0        # After n measumerements sensor is discarded
         - type     : "ALTIMETER"
-          frame_id : "altimeter"
+          frame_id : "mblack_altimeter"
           frequency: 5.0
           noise    : 0.1
           variance : 0.01

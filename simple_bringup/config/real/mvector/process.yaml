@@ -70,9 +70,13 @@ processes:
       delay_before_start: 1.0
       cmd: 'roslaunch medusa_bringup comms.launch'
       args:
-            - data_serializer:= false
-            - dmac2medusa:= false
-            - gnss2state:= false
+            - dmac:= false
+            - data_serializer:= true
+            - replier:= false
+            - pinger:= true
+            - pos2sim_modem:= true
+            - dmac2medusa:= true
+            - gnss2state:= true
       dependencies:
             []
     - name: 'planning'
