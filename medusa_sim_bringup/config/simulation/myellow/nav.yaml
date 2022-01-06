@@ -83,7 +83,7 @@ filter:
                 reject_counter: 20
 
     dvl:
-      body_frame: false  # If dvl values are in inercial frame, you need to put false here!!!
+      body_frame: true  # If dvl values are in inercial frame, you need to put false here!!!
 
 usbl2pos:
     t_sync: 2
