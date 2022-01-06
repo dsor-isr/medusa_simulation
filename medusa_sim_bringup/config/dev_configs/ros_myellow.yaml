@@ -348,6 +348,7 @@ acomms/dmac2medusa:
             medusa_fix: "/myellow/sensors/usbl_fix"
         subscribers:
             dmac_fix: "/myellow/acomms/modem/measurement/usbl_fix"
+            state: "/myellow/nav/filter/state"
 
 acomms/gnss2state:
     topics:

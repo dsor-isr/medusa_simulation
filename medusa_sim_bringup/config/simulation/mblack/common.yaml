@@ -1,5 +1,5 @@
-originLat: 38.765852
-originLon: -9.09281873
+originLat: 38.765824
+originLon: -9.092815
 vehicle:
   control:
     SURGE_TO_RPM: 101
@@ -9,3 +9,5 @@ vehicle:
     min_altitude_ref: 1.5 # [m]
     wifi_timeout: 10.0 # [s]
     acoustic_timeout: 15.0 # [s]
+
+    

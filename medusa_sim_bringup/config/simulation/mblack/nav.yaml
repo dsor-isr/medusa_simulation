@@ -31,8 +31,7 @@ filter:
         # Filter won't work without a initial position
         manually_initialization:
                 frame_id: "mblack_gnss"
-                value: [4290797.17, 491932.75, -0.1,    # Position - x, y, z
-                #value: [0, 0, 0,                       # Position - x, y, z
+                value: [4290794.432828665, 491936.5610790758, -0.1,    # Position - x, y, z
                         0.0, 0, 0,                      # Velocity - dx, dy, dz
                         0, 0, 0,                        # Orientation - r, p, ya
                         0, 0, 0,                        # Orientation Rate - dr, dp, dya

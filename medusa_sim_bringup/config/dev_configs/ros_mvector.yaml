@@ -348,6 +348,7 @@ acomms/dmac2medusa:
             medusa_fix: "/mvector/sensors/usbl_fix"
         subscribers:
             dmac_fix: "/mvector/acomms/modem/measurement/usbl_fix"
+            state: "/mvector/nav/filter/state"
 
 acomms/gnss2state:
     topics:
