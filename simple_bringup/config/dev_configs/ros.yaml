@@ -267,7 +267,7 @@ cooperative/cpf_control:
             stop_cpf: "/CPFStop"
             change_topology: "/CPFChangeTopology"
 
-cooperative/cpf_gamma_client:
+cooperative/cpf_wifi_client:
     node_frequency: 10
     topics:
       subscribers:
@@ -275,7 +275,7 @@ cooperative/cpf_gamma_client:
       publishers:
         cpf_gamma: "/External/Gamma"
 
-cooperative/cpf_gamma_server:
+cooperative/cpf_wifi_server:
     node_frequency: 10
     topics:
       subscribers:
