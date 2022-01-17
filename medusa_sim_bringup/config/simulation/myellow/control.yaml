@@ -1,6 +1,13 @@
 inner_loops_forces:
     #minimum altitude safety
     min_alt: 2.0
+
+    #timout for references [s]
+    timout_ref: 0.5
+
+    # bypass forces (hard - ignores inner-loop / soft - sums inner-loop and manual forces value)
+    forces_hard_bypass: false
+
     # Yaw Params
     controllers:
         yaw:
