@@ -50,7 +50,8 @@ processes:
       delay_before_start: 1.0
       cmd: 'roslaunch medusa_bringup controls.launch'
       args:
-            - inner_loops_forces:= true
+            - static_thruster_allocation:= true
+            - inner_loops_pid:= true
             - waypoint:= true
             - path_following:= true
       dependencies:

@@ -1,10 +1,6 @@
 ## --------------------------- ## 
 #  medusa_addons                #
 ## --------------------------- ## 
-#wifi_acoustic_safety:
-
-#addons/rosbridge_server:
-
 addons/console_path_parser:
     node_frequency: 5
     topics:
@@ -58,9 +54,6 @@ sim/auv_sim:
 ## sensor simulator
 sim/sensors:
     node_frequency: 10
-    # topics
-    #   subscribers: [ (std::vector<std::strings>) Subscriber: vehicle state in nav_msgs::Odometry, thruster output from innerloops in medusa_msgs::Thruster]
-    #   publishers : [ (std::vector<std::strings>) Publishers: sensors (position, velocity, orientation, gnss, range), model, thrusters (value and status)
     topics:
         subscribers: [ "/myellow/sim/dynamics/position"]
         publishers : [
@@ -133,24 +126,17 @@ nav/auvstate2mstate:
 ## --------------------------- ## 
 #  medusa_control               #
 ## --------------------------- ## 
-### Inner Loops
-controls/inner_loops:
-    node_frequency: 10.0 # Time parameters
+
+### Static Thruster Allocation
+controls/static_thruster_allocation:
     topics:
         subscribers:
-            state: "/myellow/nav/filter/state"
-            surge: "/myellow/ref/surge"
-            yaw: "/myellow/ref/yaw"
-            yaw_rate: "/myellow/ref/yaw_rate"
-            depth: "/myellow/ref/depth"
-            altitude_ref: "/myellow/ref/altitude"
-            altitude: "/myellow/controls/Altitude"
-            altimeter: "/myellow/controls/Altimeter"
+            thrust_body_request: "/myellow/thrust_body_request"
         publishers:
             thrusters: "/myellow/thrusters/rpm_command"
-            thrusters_model: "/myellow/thrusters/model"
 
-controls/inner_loops_forces:
+### Inner Loops PID
+controls/inner_loops_pid:
     # ROS node rate 
     node_frequency: 10.0 # Time parameters
     # ROS Topics
@@ -172,7 +158,6 @@ controls/inner_loops_forces:
             state: "/myellow/nav/filter/state"
         publishers:
             thrust_body_request: "/myellow/thrust_body_request"
-            thrusters: "/myellow/thrusters/rpm_command"
 
 ### Way Point
 controls/waypoint:

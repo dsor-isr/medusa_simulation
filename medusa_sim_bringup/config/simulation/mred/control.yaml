@@ -1,4 +1,19 @@
-inner_loops_forces:
+static_thruster_allocation:
+  thrusters:
+    # Allocation matrix
+    # For each thruster [ Fx, Fy, Fz, lx, ly, lz ] where F = forces and l = moments arms
+        allocation_matrix: [1.0, 0.0, 0.0, -0.25, -0.15, 0.0,  
+                            1.0, 0.0, 0.0, -0.25,  0.15, 0.0]
+            #Forces (N) = ct[0]*RPM^2 + c[1]*RPM + c[2]
+        ctf: [0.00000177778, 0.0, 0.0]     # parameters for medusa seabotix, eqn -> Thrust = f(rpm)
+        ctb: [-0.00000177778, 0.0, 0.0]     # parameters for medusa seabotix, eqn -> Thrust = f(rpm)
+          #Maximum thrust each thruster is capable of outputting (N)
+        max_thrust_norm:  36.0
+        min_thrust_norm: -36.0
+        # RPM max value /100
+        actuators_gain: [45.0, 45.0, 45.0, 45.0]            # Inputs to actuators will be scaled to actuators_gain
+
+inner_loops_pid:
     # minimum altitude safety
     min_alt: 2.0
 
@@ -75,19 +90,6 @@ inner_loops_forces:
             max_out:  50.0 # N
             min_out: -50.0 # N
             max_depth: 30.0 # m
-    thrusters:
-    # Allocation matrix
-    # For each thruster [ Fx, Fy, Fz, lx, ly, lz ] where F = forces and l = moments arms
-        allocation_matrix: [1.0, 0.0, 0.0, -0.25, -0.15, 0.0,  
-                            1.0, 0.0, 0.0, -0.25,  0.15, 0.0]
-            #Forces (N) = ct[0]*RPM^2 + c[1]*RPM + c[2]
-        ctf: [0.00000177778, 0.0, 0.0]     # parameters for medusa seabotix, eqn -> Thrust = f(rpm)
-        ctb: [-0.00000177778, 0.0, 0.0]     # parameters for medusa seabotix, eqn -> Thrust = f(rpm)
-          #Maximum thrust each thruster is capable of outputting (N)
-        max_thrust_norm:  36.0
-        min_thrust_norm: -36.0
-        # RPM max value /100
-        actuators_gain: [45.0, 45.0, 45.0, 45.0]            # Inputs to actuators will be scaled to actuators_gain
 
 waypoint:
     cdist: 1.5
