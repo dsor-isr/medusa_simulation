@@ -81,8 +81,7 @@ nav/filter:
             "/nav/reset", "/measurement/position", "/measurement/velocity", "/measurement/orientation"
         ]
         publishers: [        # state topic, debug topic
-            "/nav/filter/state", "/nav/filter/debug"
-        ]
+            "/nav/filter/state", "/nav/filter/debug"]
         currents: "/nav/filter/currents"
     topics_dr:
        velocity: "/measurement/velocity"
@@ -228,6 +227,7 @@ controls/path_following:
             lapierre_pf: "/PFSetLapierre"
             pramod_pf: "/PFSetPramod"
             samson_pf: "/PFSetSamson"
+            relative_heading_pf: "/PFSetRelativeHeading"
             # Service names related to the path
             reset_path: "/ResetPath"
             set_path_mode: "/SetMode"
