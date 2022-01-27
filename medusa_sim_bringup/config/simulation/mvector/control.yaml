@@ -59,7 +59,7 @@ inner_loops_pid:
         # Sway Params
         sway:
             kp: 26.0
-            ki: 3.0 
+            ki: 50.0 
             max_ref:  0.5  # m/s
             min_ref: -0.5 # m/s
             max_err:  0.2 # m/s
@@ -110,12 +110,6 @@ path_following:
       k3: 0.3
       theta: 0.8
       k_delta: 1.0
-    relative_heading:
-      kx: 0.05
-      ky: 0.05
-      kz: 0.2
-      yaw_offset: 0.0
-      p_sat: [10.0, 10.0]
     marcelo:
       delta: -1.0
       kx: 0.5
@@ -145,8 +139,8 @@ path_following:
       theta: 0.8
       k_delta: 1.0
     relative_heading:
-      kx: 0.05
-      ky: 0.05
+      kx: 0.5
+      ky: 0.1
       kz: 0.2
-      yaw_offset: 0.0
-      p_sat: [10.0, 10.0] #x, y
+      yaw_offset: 0.785
+      p_sat: [1.0, 1.0] #x, y
