@@ -220,6 +220,7 @@ controls/path_following:
             reset_vt_pf: "/mvector/ResetVT"
     
             # Service names to switch the path following algorithm
+            relative_heading_pf: "/mvector/PFSetRelativeHeading"
             marcelo_pf: "/mvector/PFSetMarcelo"
             aguiar_pf: "/mvector/PFSetAguiar"
             brevik_pf: "/mvector/PFSetBrevik"
