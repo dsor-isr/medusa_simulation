@@ -230,6 +230,7 @@ controls/path_following:
             lapierre_pf: "/mred/PFSetLapierre"
             pramod_pf: "/mred/PFSetPramod"
             samson_pf: "/mred/PFSetSamson"
+            relative_heading_pf: "/mred/PFSetRelativeHeading"
             # Service names related to the path
             reset_path: "/mred/ResetPath"
             set_path_mode: "/mred/SetMode"

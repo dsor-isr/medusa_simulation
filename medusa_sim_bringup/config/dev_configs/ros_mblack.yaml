@@ -63,8 +63,7 @@ sim/sensors:
             "/mblack/sensors/gnss",
             "/mblack/sensors/range",
             "/mblack/sim/model/state",
-            "/mblack/diagnostics/thrusterStatus"
-        ]    
+            "/mblack/diagnostics/thrusterStatus"]    
     services:
       enable_dvl: "/mblack/sim/enable_dvl"
       enable_altimeter: "/mblack/sim/enable_altimeter"
@@ -76,12 +75,9 @@ sim/sensors:
 nav/filter:
     node_frequency: 10      # ROS node rate
     topics:
-        subscribers: [       # reset, position topic, velocity topic and orientation and acceleration (optional) topic
-            "/mblack/nav/reset", "/mblack/measurement/position", "/mblack/measurement/velocity", "/mblack/measurement/orientation"
-        ]
-        publishers: [        # state topic, debug topic
-            "/mblack/nav/filter/state", "/mblack/nav/filter/debug"
-        ]
+        # reset, position topic, velocity topic and orientation and acceleration (optional) topic
+        subscribers: ["/mblack/nav/reset", "/mblack/measurement/position", "/mblack/measurement/velocity", "/mblack/measurement/orientation"]
+        publishers: ["/mblack/nav/filter/state", "/mblack/nav/filter/debug"] # state topic, debug topic
         currents: "/mblack/nav/filter/currents"
     topics_dr:
        velocity: "/mblack/measurement/velocity"
@@ -97,8 +93,8 @@ nav/filter:
 nav/gnss2utm:
     node_frequency: 10
     topics:
-        subscribers: [ "/mblack/sensors/gnss" ]
-        publishers: [ "/mblack/measurement/position" ]
+        subscribers: ["/mblack/sensors/gnss"]
+        publishers: ["/mblack/measurement/position"]
         ground_truth: "/mblack/State_gt"
     services:
         enable_gps: "/mblack/sensor/enable_gps"
@@ -106,23 +102,21 @@ nav/gnss2utm:
 nav/usbl2pos:
     node_frequency: 10
     topics:
-        subscribers: [
-            "/mblack/sensors/usbl_fix", "/mblack/acomms/nav/filter/state", "/mblack/nav/filter/state"
-        ]
-        publishers: [ "/mblack/measurement/position", "/mblack/State_usbl_est", "/mblack/nav/filter/usbl_est" ]
+        subscribers: ["/mblack/sensors/usbl_fix", "/mblack/acomms/nav/filter/state", "/mblack/nav/filter/state"]
+        publishers: ["/mblack/measurement/position", "/mblack/State_usbl_est", "/mblack/nav/filter/usbl_est"]
 
 nav/range2pos:
     node_frequency: 10
     t_sync: 2
     topics:
-        subscribers: [ "/mblack/sensors/range", "/mblack/nav/filter/state" ]
-        publishers: [ "/mblack/measurement/position" ]
+        subscribers: ["/mblack/sensors/range", "/mblack/nav/filter/state"]
+        publishers: ["/mblack/measurement/position"]
 
 nav/auvstate2mstate:
     node_frequency: 10
     topics:
-        subscribers: [ "/mblack/nav/filter/state", "/mblack/drivers/inside_pressure/data", "/mblack/sensors/gnss" ]
-        publishers:  [ "/mblack/State" ]
+        subscribers: ["/mblack/nav/filter/state", "/mblack/drivers/inside_pressure/data", "/mblack/sensors/gnss"]
+        publishers:  ["/mblack/State"]
 
 ## --------------------------- ## 
 #  medusa_control               #
@@ -230,6 +224,7 @@ controls/path_following:
             lapierre_pf: "/mblack/PFSetLapierre"
             pramod_pf: "/mblack/PFSetPramod"
             samson_pf: "/mblack/PFSetSamson"
+            relative_heading_pf: "/mblack/PFSetRelativeHeading"
             # Service names related to the path
             reset_path: "/mblack/ResetPath"
             set_path_mode: "/mblack/SetMode"
