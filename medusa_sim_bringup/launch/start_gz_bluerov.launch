@@ -3,7 +3,7 @@
 
     <!-- Parameters and Arguments -->
     <arg name="name"                   default="bluerov" />            <!-- Name of the vehicle being launched -->   
-    <arg name="config_package"         default="medusa_sim_bringup"/>   <!-- Name of the package where the configuration files are stored -->
+    <arg name="config_package"         default="medusa_sim_bringup"/>  <!-- Name of the package where the configuration files are stored -->
     <arg name="folder"                 default="simulation" />         <!-- Name of the folder for the configuration files -->     
     <arg name="vehicle_configuration"  default="bluerov_heavy" />      <!-- 6 or 8 thruster configuration (supports: 'regular' and 'heavy') -->
 
