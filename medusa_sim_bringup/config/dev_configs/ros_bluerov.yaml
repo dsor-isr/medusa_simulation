@@ -1,0 +1,199 @@
+## --------------------------- ## 
+#  medusa_addons                #
+## --------------------------- ## 
+console_path_parser:
+  node_frequency: 5
+  topics:
+    subscribers: 
+      Mission_String: /bluerov/addons/Mission_String
+      state: /bluerov/nav/filter/state
+      flag: /bluerov/Flag
+    publishers:
+      Path_Section: /bluerov/addons/path_section
+      Formation: /bluerov/addons/formation
+      biased_formation: /bluerov/addons/biased_formation
+      WPRef: /bluerov/addons/WPRef
+      DepthRef: /bluerov/ref/depth
+      AltRef: /bluerov/ref/altitude
+      FullMission: /bluerov/addons/full_mission
+    services:
+      reset_path: "/bluerov/ResetPath"
+      arc2d_path: "/bluerov/SpawnArc2DPath"
+      line_path: "/bluerov/SpawnLinePath"
+      pf_start: "/bluerov/PFStart"
+      pf_stop: "/bluerov/PFStop"
+      set_speed: "/bluerov/SetConstVdVehicle"
+
+console_server:
+    topics:
+      services:
+        wp_standard: "/bluerov/controls/send_wp_standard"
+        wp_loose: "/bluerov/controls/send_wp_loose"
+        wp_heading: "/bluerov/controls/send_wp_heading"
+      console:
+        waypoint: "wp_standard"
+
+## --------------------------- ## 
+#  medusa_nav                   #
+## --------------------------- ## 
+auvstate2mstate:
+    node_frequency: 10
+    topics:
+        subscribers: ["/bluerov/nav/filter/state", "/bluerov/drivers/inside_pressure/data", "/bluerov/sensors/gnss"]
+        publishers:  ["/bluerov/State"]
+
+filter:
+  node_frequency: 10
+  topics:
+    subscribers: ["/bluerov/nav/reset", "/bluerov/measurement/position", "/bluerov/measurement/velocity", "/bluerov/measurement/orientation"]
+    publishers: ["/bluerov/nav/filter/state", "/bluerov/nav/filter/debug"]     
+  topics_dr:
+    velocity: "/bluerov/measurement/velocity"
+    orientation: "/bluerov/measurement/orientation"
+    true_state: "/bluerov/nav/filter/state"
+    flag: "/bluerov/Flag"
+    dead_reckoning: "/bluerov/nav/filter/state_dr"
+    dead_reckoning_console: "/bluerov/State_dr"
+  services_dr:
+    reset_filter_dr: "/bluerov/nav/reset_filter_dr"
+
+# Convert sensor_msgs::NavSatFix to medusa_msgs::Measurement data type
+gnss2utm:
+  node_frequency: 10
+  topics:
+    subscribers: [ "/bluerov/sensors/gnss" ]
+    publishers: [ "/bluerov/measurement/position" ]
+    ground_truth: "/bluerov/State_gt"
+  services:
+    enable_gps: "/bluerov/sensor/enable_gps"
+
+## --------------------------- ## 
+#  medusa_control               #
+## --------------------------- ##
+static_thruster_allocation:
+  topics:
+    subscribers:
+      thrust_body_request: "/bluerov/thrust_body_request"
+    publishers:
+      thrusters: "/bluerov/thrusters/rpm_command"
+
+inner_loops_pid:
+  node_frequency: 10.0 
+  topics:
+    subscribers:
+      yaw: "/bluerov/ref/yaw"
+      pitch: "/bluerov/ref/pitch"
+      roll: "/bluerov/ref/roll"
+      yaw_rate: "/bluerov/ref/yaw_rate"
+      pich_rate: "/bluerov/ref/pitch_rate"
+      roll_rate: "/bluerov/ref/roll_rate"
+      surge: "/bluerov/ref/surge"
+      sway: "/bluerov/ref/sway"
+      heave: "/bluerov/ref/heave"
+      depth: "/bluerov/ref/depth"
+      altitude: "/bluerov/ref/altitude"
+      altitude_safety: "/bluerov/ref/altitude_safety"
+      depth_safety: "/bluerov/ref/depth_safety"
+      state: "/bluerov/nav/filter/state"
+      force_bypass: "/bluerov/force_bypass"
+    publishers:
+      thrust_body_request: "/bluerov/thrust_body_request"
+
+### Way Point
+waypoint:
+  node_frequency: 10.0
+  topics:
+    publishers:
+      yaw_ref: "/bluerov/ref/yaw"
+      yaw_rate_ref: "/bluerov/ref/yaw_rate"
+      u_ref: "/bluerov/ref/surge"
+      v_ref: "/bluerov/ref/sway"
+      flag: "/bluerov/Flag"
+    subscribers:
+      flag: "/bluerov/Flag"
+      state: "/bluerov/nav/filter/state"
+    services:
+      wp_standard: "/bluerov/controls/send_wp_standard"
+      wp_loose: "/bluerov/controls/send_wp_loose"
+      wp_heading: "/bluerov/controls/send_wp_heading"
+
+### Path Following
+path_following:
+  node_frequency: 10.0
+  flag: "/bluerov/Flag"
+  topics:
+    subscribers:
+      state: "/bluerov/nav/filter/state"
+      path: "/bluerov/PathData"
+      vc: "/bluerov/PF/vc"
+    publishers:
+      # Publishers for linear motion
+      surge: "/bluerov/ref/surge"
+      sway: "/bluerov/ref/sway"
+      heave: "/bluerov/ref/heave"
+
+      # Publishers for angular motion
+      roll: "/bluerov/ref/roll"
+      roll_rate: "/bluerov/ref/roll_rate"
+      pitch: "/bluerov/ref/pitch"
+      pitch_rate: "/bluerov/ref/pitch_rate"
+      yaw: "/bluerov/ref/yaw"
+      yaw_rate: "/bluerov/ref/yaw_rate"
+
+      # Publishers for the virtual target
+      rabbit: "/bluerov/Gamma"
+      
+      # Observer for the currents
+      observer:
+        x: "/bluerov/current/x"
+        y: "/bluerov/current/y"
+
+      # Publish info for plots
+      pfollowing_debug: "bluerov/pfollowing/debug"
+    # Define here the service names to switch between controllers 
+    services:
+      # Service names to start and stop the path following algorithm
+      start_pf: "/bluerov/PFStart"
+      stop_pf: "/bluerov/PFStop"
+      updates_gains_pf: "/bluerov/PFUpdateGains"
+      reset_vt_pf: "/bluerov/ResetVT"
+
+      # Service names to switch the path following algorithm
+      marcelo_pf: "/bluerov/PFSetMarcelo"
+      aguiar_pf: "/bluerov/PFSetAguiar"
+      brevik_pf: "/bluerov/PFSetBrevik"
+      fossen_pf: "/bluerov/PFSetFossen"
+      romulo_pf: "/bluerov/PFSetRomulo"
+      lapierre_pf: "/bluerov/PFSetLapierre"
+      pramod_pf: "/bluerov/PFSetPramod"
+      samson_pf: "/bluerov/PFSetSamson"
+      relative_heading_pf: "/bluerov/PFSetRelativeHeading"
+      # Service names related to the path
+      reset_path: "/bluerov/ResetPath"
+      set_path_mode: "/bluerov/SetMode"
+      # Service names related to the waypoint
+      wp_standard: "/bluerov/controls/send_wp_standard"
+
+## --------------------------- ## 
+#  medusa_planning              #
+## --------------------------- ##
+dsor_paths:
+  node_frequency: 10.0
+  frame_id: "Path_frame"
+  topics:
+    subscribers:
+      gamma: "/bluerov/Gamma"
+      vehicle_state: "/bluerov/nav/filter/state"
+    publishers:
+      path_data: "/bluerov/PathData"
+      virtual_target_state: "/bluerov/Virtual/State"
+    services:
+      reset_path: "/bluerov/ResetPath"
+      set_mode: "/bluerov/SetMode"
+      arc2d_path: "/bluerov/SpawnArc2DPath"
+      bernoulli_path: "/bluerov/SpawnBernoulliPath"
+      circle2d_path: "/bluerov/SpawnCircle2DPath"
+      line_path: "/bluerov/SpawnLinePath"
+      speed:
+        const_rabbit_speed: "/bluerov/SetConstVdRabbit"
+        const_vehicle_speed: "/bluerov/SetConstVdVehicle"

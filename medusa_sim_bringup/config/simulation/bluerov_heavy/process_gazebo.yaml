@@ -1,0 +1,41 @@
+processes:
+  - name: 'bluerov_gazebo_simulation'
+    launch_on_startup: true
+    delay_before_start: 0.0
+    cmd: 'roslaunch medusa_sim_bringup bluerov_simulation.launch'
+    args:
+          - x:= 0.0
+          - y:= 0.0
+          - z:= 0.0
+          - roll:= 0.0
+          - pitch:= 0.0
+          - yaw:= 0.0
+          - console_server:= true
+          - console_path_parser:= true
+          - filter:= true
+          - gnss2utm:= true
+          - static_thruster_allocation:= true
+          - inner_loops_pid:= true
+          - waypoint:= true
+          - path_following:= true
+          - dsor_paths:= true
+          - auvstate2mstate:= true
+    dependencies:
+          []
+  - name: 'bags'
+    launch_on_startup: false
+    delay_before_start: 0.0
+    cmd: 'roslaunch medusa_bringup bags.launch'
+    args:
+          - prefix:= sim
+          - onebag:= true
+    dependencies:
+          []
+  - name: 'tfs'
+    launch_on_startup: true
+    delay_before_start: 0.0
+    cmd: 'roslaunch medusa_bringup simulation_tfs.launch'
+    args:
+         - broadcast_tf:= true
+    dependencies:
+         []
