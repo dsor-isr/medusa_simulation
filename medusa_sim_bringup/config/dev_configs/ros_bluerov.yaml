@@ -70,6 +70,25 @@ gnss2utm:
 ## --------------------------- ## 
 #  medusa_control               #
 ## --------------------------- ##
+
+vehicle_stabilizer:
+  topics:
+    publishers:
+      surge: "ref/surge"
+      sway: "ref/heave"
+      heave: "ref/heave"
+
+      roll_rate: "ref/roll_rate"
+      pitch_rate: "ref/pitch_rate"
+      yaw_rate: "ref/yaw_rate"
+
+      roll: "ref/roll"
+      pitch: "ref/pitch"
+      yaw: "ref/yaw"
+
+      depth: "ref/depth"
+      altitude: "ref/altitude"
+
 static_thruster_allocation:
   topics:
     subscribers:
@@ -98,6 +117,15 @@ inner_loops_pid:
       force_bypass: "/bluerov/force_bypass"
     publishers:
       thrust_body_request: "/bluerov/thrust_body_request"
+      debug:
+        surge: "/bluerov/pid_debug/surge"
+        sway: "/bluerov/pid_debug/sway"
+        heave: "/bluerov/pid_debug/heave"
+        yaw: "/bluerov/pid_debug/yaw"
+        yaw_rate: "/bluerov/pid_debug/yaw_rate"
+        roll: "/bluerov/pid_debug/roll"
+        pitch: "/bluerov/pid_debug/pitch"
+        depth: "/bluerov/pid_debug/depth"
 
 ### Way Point
 waypoint:
@@ -126,6 +154,11 @@ path_following:
       state: "/bluerov/nav/filter/state"
       path: "/bluerov/PathData"
       vc: "/bluerov/PF/vc"
+      mission:
+        pos: "/bluerov/mission/pos"
+      target: 
+        pos: "/bluerov/target/pos"
+        vel: "/bluerov/target/vel"
     publishers:
       # Publishers for linear motion
       surge: "/bluerov/ref/surge"
@@ -149,7 +182,7 @@ path_following:
         y: "/bluerov/current/y"
 
       # Publish info for plots
-      pfollowing_debug: "bluerov/pfollowing/debug"
+      pfollowing_debug: "/bluerov/pfollowing/debug"
     # Define here the service names to switch between controllers 
     services:
       # Service names to start and stop the path following algorithm
@@ -167,6 +200,7 @@ path_following:
       lapierre_pf: "/bluerov/PFSetLapierre"
       pramod_pf: "/bluerov/PFSetPramod"
       samson_pf: "/bluerov/PFSetSamson"
+      potes_pf: "/bluerov/PFSetPotes"
       relative_heading_pf: "/bluerov/PFSetRelativeHeading"
       # Service names related to the path
       reset_path: "/bluerov/ResetPath"
