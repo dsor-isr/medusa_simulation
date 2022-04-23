@@ -1,5 +1,6 @@
 # Medusa Simulation
 This repository holds the Medusa Simulation code stack for underwater marine vehicles of DSOR-ISR (Dynamical Systems for Ocean Robotics - Institute for System Robotics). It contains the necessary components to simulate and control the MEDUSA class of marine vehicles. It provides 2 types of simulation. A matlab like simulation written in C++ and another using gazebo simulator.
+
 [![GitHub issues](https://img.shields.io/github/issues/dsor-isr/medusa_simulation)](https://github.com/dsor-isr/medusa_simulation/issues)
 [![GitHub forks](https://img.shields.io/github/forks/dsor-isr/medusa_simulation)](https://github.com/dsor-isr/medusa_simulation/network)
 [![GitHub stars](https://img.shields.io/github/stars/dsor-isr/medusa_simulation)](https://github.com/dsor-isr/medusa_simulation/stargazers)
