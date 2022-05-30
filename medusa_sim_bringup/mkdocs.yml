@@ -1,0 +1,4 @@
+site_name: Medusa Simulation Bringup System
+
+nav:
+  - Overview: "README.md"

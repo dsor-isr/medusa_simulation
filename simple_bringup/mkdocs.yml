@@ -1,0 +1,4 @@
+site_name: Simple Bringup System
+
+nav:
+  - Overview: "README.md"
