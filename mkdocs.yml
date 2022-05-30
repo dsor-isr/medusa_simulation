@@ -1,8 +1,8 @@
 # Site metadata
 site_name: Medusa SimulationDocumentation
-site_url: https://dsor-isr.github.io/medusa_gazebo/
-repo_url: https://github.com/dsor-isr/medusa_gazebo
-repo_name: medusa_gazebo
+site_url: https://dsor-isr.github.io/medusa_simulation/
+repo_url: https://github.com/dsor-isr/medusa_simulation
+repo_name: medusa_simulation
 edit_uri: edit/main/docs/
 site_author: The Medusa Team
 

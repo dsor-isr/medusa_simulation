@@ -141,7 +141,7 @@ for package_path in packages_with_docs:
                     --input ' + output_doxygen_directory + path_by_sub_strings_original + '/xml \
                     --output ' + output_markdown_dox_directory + path_by_sub_strings_original + ' \
                     --config docs/scripts/doxybook_conf.json \
-                    --config-data \'{"baseUrl": "/medusa_gazebo/api/markdown' + package_path + '/"}\''],
+                    --config-data \'{"baseUrl": "/medusa_simulation/api/markdown' + package_path + '/"}\''],
                     stdout=subprocess.PIPE, 
                     stderr=subprocess.PIPE, 
                     text=True,
