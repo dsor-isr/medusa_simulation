@@ -7,14 +7,6 @@
     <includedby refid="spherical__coordinates_8cpp" local="yes">src/spherical_coordinates.cpp</includedby>
     <includedby refid="test__frames_8cpp" local="yes">test/test_frames.cpp</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>rotations.hpp</label>
-        <link refid="rotations_8hpp_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
       <node id="5">
         <label>cmath</label>
       </node>
@@ -27,6 +19,14 @@
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>rotations.hpp</label>
+        <link refid="rotations_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="2">

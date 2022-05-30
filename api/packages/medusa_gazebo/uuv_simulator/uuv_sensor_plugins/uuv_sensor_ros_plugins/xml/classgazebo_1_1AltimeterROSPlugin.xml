@@ -1,0 +1,572 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classgazebo_1_1AltimeterROSPlugin" kind="class" language="C++" prot="public">
+    <compoundname>gazebo::AltimeterROSPlugin</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">RayPlugin</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a7feb3de6baf025bb14c394ec23a5f76f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gazebo::AltimeterROSPlugin::range_connect_count_</definition>
+        <argsstring></argsstring>
+        <name>range_connect_count_</name>
+        <briefdescription>
+<para>Keep track of number of connctions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="88" column="18" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a415a65b28a5639a08a207abebaf3f880" prot="private" static="no" mutable="no">
+        <type>physics::WorldPtr</type>
+        <definition>physics::WorldPtr gazebo::AltimeterROSPlugin::world_</definition>
+        <argsstring></argsstring>
+        <name>world_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="93" column="32" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a96fd85c85991ba83b27e8397815b2ff0" prot="private" static="no" mutable="no">
+        <type>sensors::SensorPtr</type>
+        <definition>sensors::SensorPtr gazebo::AltimeterROSPlugin::parent_sensor_</definition>
+        <argsstring></argsstring>
+        <name>parent_sensor_</name>
+        <briefdescription>
+<para>The parent sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="95" column="33" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a9d2aa619a4926b7036505202763b455a" prot="private" static="no" mutable="no">
+        <type>sensors::RaySensorPtr</type>
+        <definition>sensors::RaySensorPtr gazebo::AltimeterROSPlugin::parent_ray_sensor_</definition>
+        <argsstring></argsstring>
+        <name>parent_ray_sensor_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="96" column="36" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1ad5781e82536f044f3aad7830c17b2fe3" prot="private" static="no" mutable="no">
+        <type>ros::NodeHandle *</type>
+        <definition>ros::NodeHandle* gazebo::AltimeterROSPlugin::rosnode_</definition>
+        <argsstring></argsstring>
+        <name>rosnode_</name>
+        <briefdescription>
+<para>pointer to ros node </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="99" column="30" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a5426ed55d7ad6ca398249006509b7cc4" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher gazebo::AltimeterROSPlugin::pub_</definition>
+        <argsstring></argsstring>
+        <name>pub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="100" column="29" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1ae3e051d84554838ed7f37b7b27503b16" prot="private" static="no" mutable="no">
+        <type>dsor_msgs::Measurement</type>
+        <definition>dsor_msgs::Measurement gazebo::AltimeterROSPlugin::range_msg_</definition>
+        <argsstring></argsstring>
+        <name>range_msg_</name>
+        <briefdescription>
+<para>ros message </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="106" column="37" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a0a535cd21675d8f38fb66c491fe78f4f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::AltimeterROSPlugin::topic_name_</definition>
+        <argsstring></argsstring>
+        <name>topic_name_</name>
+        <briefdescription>
+<para>topic name </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="109" column="26" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1aad2b28ffa1d5fe6024b688a275b14ed4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::AltimeterROSPlugin::frame_name_</definition>
+        <argsstring></argsstring>
+        <name>frame_name_</name>
+        <briefdescription>
+<para>frame transform name, should match link name </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="112" column="26" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1aea0ab8ce48b651f3aa719046a24278d7" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::AltimeterROSPlugin::namespace_frame_</definition>
+        <argsstring></argsstring>
+        <name>namespace_frame_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="114" column="26" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1ae798b55742e515077b16641e093f4f64" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::AltimeterROSPlugin::radiation_</definition>
+        <argsstring></argsstring>
+        <name>radiation_</name>
+        <briefdescription>
+<para>radiation type : ultrasound or infrared </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="117" column="26" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a3861e7c0e4cb291da507199855e06a2d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gazebo::AltimeterROSPlugin::fov_</definition>
+        <argsstring></argsstring>
+        <name>fov_</name>
+        <briefdescription>
+<para>sensor field of view </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="120" column="21" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a216292797158dc49e3e4b42ca5121096" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gazebo::AltimeterROSPlugin::gaussian_noise_</definition>
+        <argsstring></argsstring>
+        <name>gaussian_noise_</name>
+        <briefdescription>
+<para>Gaussian noise. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="122" column="21" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a7b78a294d69fb45b78a4d44298434106" prot="private" static="no" mutable="no">
+        <type>boost::mutex</type>
+        <definition>boost::mutex gazebo::AltimeterROSPlugin::lock_</definition>
+        <argsstring></argsstring>
+        <name>lock_</name>
+        <briefdescription>
+<para>mutex to lock access to fields that are used in message callbacks </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="128" column="27" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a11d1f8f0c85caa6ef8a56c3279c0bd8e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gazebo::AltimeterROSPlugin::hokuyo_min_intensity_</definition>
+        <argsstring></argsstring>
+        <name>hokuyo_min_intensity_</name>
+        <briefdescription>
+<para>hack to mimic hokuyo intensity cutoff of 100 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="131" column="21" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a4647e71637e1678819add208d37c5667" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gazebo::AltimeterROSPlugin::update_rate_</definition>
+        <argsstring></argsstring>
+        <name>update_rate_</name>
+        <briefdescription>
+<para>update rate of this sensor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="134" column="21" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a780abaf6ed6f1d26f014cc48fc253015" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gazebo::AltimeterROSPlugin::update_period_</definition>
+        <argsstring></argsstring>
+        <name>update_period_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="135" column="21" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a89e3d32786e8af46cec409f639314ea0" prot="private" static="no" mutable="no">
+        <type>common::Time</type>
+        <definition>common::Time gazebo::AltimeterROSPlugin::last_update_time_</definition>
+        <argsstring></argsstring>
+        <name>last_update_time_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="136" column="27" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a350196160651e6c7e0b03224fffc8fd2" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::AltimeterROSPlugin::robot_namespace_</definition>
+        <argsstring></argsstring>
+        <name>robot_namespace_</name>
+        <briefdescription>
+<para>for setting ROS name space </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="139" column="26" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1ac7690e0e03ba8cd761e33f4f74be80a7" prot="private" static="no" mutable="no">
+        <type>ros::CallbackQueue</type>
+        <definition>ros::CallbackQueue gazebo::AltimeterROSPlugin::range_queue_</definition>
+        <argsstring></argsstring>
+        <name>range_queue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="141" column="33" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a0b5d95359b6ab7af8cc9ada4c3fb5271" prot="private" static="no" mutable="no">
+        <type>boost::thread</type>
+        <definition>boost::thread gazebo::AltimeterROSPlugin::callback_queue_thread_</definition>
+        <argsstring></argsstring>
+        <name>callback_queue_thread_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="143" column="28" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1aa677599e9e6738998975f6f197369d1b" prot="private" static="no" mutable="no">
+        <type>sdf::ElementPtr</type>
+        <definition>sdf::ElementPtr gazebo::AltimeterROSPlugin::sdf</definition>
+        <argsstring></argsstring>
+        <name>sdf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="146" column="30" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a206e2a81a37c78f4f090630fa08526fc" prot="private" static="no" mutable="no">
+        <type>boost::thread</type>
+        <definition>boost::thread gazebo::AltimeterROSPlugin::deferred_load_thread_</definition>
+        <argsstring></argsstring>
+        <name>deferred_load_thread_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="148" column="28" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgazebo_1_1AltimeterROSPlugin_1a866ea0303e525e3b6cf88a0d230f4b39" prot="protected" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher gazebo::AltimeterROSPlugin::medusaStackAltimeterPub</definition>
+        <argsstring></argsstring>
+        <name>medusaStackAltimeterPub</name>
+        <briefdescription>
+<para>Additional Measurement ROS topic specific for altimeter msgs into medusa stack. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="103" column="31" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgazebo_1_1AltimeterROSPlugin_1ab1ffb09eb1e1d95aab75d3195c228414" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gazebo::AltimeterROSPlugin::AltimeterROSPlugin</definition>
+        <argsstring>()</argsstring>
+        <name>AltimeterROSPlugin</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="72" column="13" bodyfile="src/AltimeterROSPlugin.cc" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1AltimeterROSPlugin_1aef99812aafbd7baace5a167db16fcfc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gazebo::AltimeterROSPlugin::~AltimeterROSPlugin</definition>
+        <argsstring>()</argsstring>
+        <name>~AltimeterROSPlugin</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="75" column="13" bodyfile="src/AltimeterROSPlugin.cc" bodystart="68" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1AltimeterROSPlugin_1a00a19be5391c6355de30e51292a97be0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gazebo::AltimeterROSPlugin::Load</definition>
+        <argsstring>(sensors::SensorPtr _parent, sdf::ElementPtr _sdf)</argsstring>
+        <name>Load</name>
+        <param>
+          <type>sensors::SensorPtr</type>
+          <declname>_parent</declname>
+        </param>
+        <param>
+          <type>sdf::ElementPtr</type>
+          <declname>_sdf</declname>
+        </param>
+        <briefdescription>
+<para>Load the plugin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>take</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in SDF root element </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="79" column="18" bodyfile="src/AltimeterROSPlugin.cc" bodystart="80" bodyend="188"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgazebo_1_1AltimeterROSPlugin_1ac91cbcef93448e5c57490223ad313258" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gazebo::AltimeterROSPlugin::OnNewLaserScans</definition>
+        <argsstring>()</argsstring>
+        <name>OnNewLaserScans</name>
+        <briefdescription>
+<para>Update the controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="82" column="29" bodyfile="src/AltimeterROSPlugin.cc" bodystart="241" bodyend="268"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgazebo_1_1AltimeterROSPlugin_1aadbc69a96b61e0667ecdc81cf2b5d41a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gazebo::AltimeterROSPlugin::PutRangeData</definition>
+        <argsstring>(common::Time &amp;_updateTime)</argsstring>
+        <name>PutRangeData</name>
+        <param>
+          <type>common::Time &amp;</type>
+          <declname>_updateTime</declname>
+        </param>
+        <briefdescription>
+<para>Put range data to the ROS topic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="85" column="19" bodyfile="src/AltimeterROSPlugin.cc" bodystart="272" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1AltimeterROSPlugin_1adc7f3419145647318e75e8bc356d0426" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gazebo::AltimeterROSPlugin::RangeConnect</definition>
+        <argsstring>()</argsstring>
+        <name>RangeConnect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="89" column="19" bodyfile="src/AltimeterROSPlugin.cc" bodystart="223" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1AltimeterROSPlugin_1aec7fe33162b3b281fce89010fbec0084" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gazebo::AltimeterROSPlugin::RangeDisconnect</definition>
+        <argsstring>()</argsstring>
+        <name>RangeDisconnect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="90" column="19" bodyfile="src/AltimeterROSPlugin.cc" bodystart="230" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1AltimeterROSPlugin_1a143d391fc690d5dcb865da8f70d59479" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double gazebo::AltimeterROSPlugin::GaussianKernel</definition>
+        <argsstring>(double mu, double sigma)</argsstring>
+        <name>GaussianKernel</name>
+        <param>
+          <type>double</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sigma</declname>
+        </param>
+        <briefdescription>
+<para>Gaussian noise generator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="125" column="21" bodyfile="src/AltimeterROSPlugin.cc" bodystart="318" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1AltimeterROSPlugin_1a525a7b2a7e24f1dd122e77ec5e74432d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gazebo::AltimeterROSPlugin::RangeQueueThread</definition>
+        <argsstring>()</argsstring>
+        <name>RangeQueueThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="142" column="19" bodyfile="src/AltimeterROSPlugin.cc" bodystart="340" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1AltimeterROSPlugin_1adb6748c5ec00102d2ee48ee2d6e9d676" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gazebo::AltimeterROSPlugin::LoadThread</definition>
+        <argsstring>()</argsstring>
+        <name>LoadThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="147" column="19" bodyfile="src/AltimeterROSPlugin.cc" bodystart="192" bodyend="219"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>gazebo::AltimeterROSPlugin</label>
+        <link refid="classgazebo_1_1AltimeterROSPlugin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>RayPlugin</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>gazebo::AltimeterROSPlugin</label>
+        <link refid="classgazebo_1_1AltimeterROSPlugin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>RayPlugin</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="69" column="1" bodyfile="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" bodystart="68" bodyend="149"/>
+    <listofallmembers>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1ab1ffb09eb1e1d95aab75d3195c228414" prot="public" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>AltimeterROSPlugin</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a0b5d95359b6ab7af8cc9ada4c3fb5271" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>callback_queue_thread_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a206e2a81a37c78f4f090630fa08526fc" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>deferred_load_thread_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a3861e7c0e4cb291da507199855e06a2d" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>fov_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1aad2b28ffa1d5fe6024b688a275b14ed4" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>frame_name_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a216292797158dc49e3e4b42ca5121096" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>gaussian_noise_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a143d391fc690d5dcb865da8f70d59479" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>GaussianKernel</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a11d1f8f0c85caa6ef8a56c3279c0bd8e" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>hokuyo_min_intensity_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a89e3d32786e8af46cec409f639314ea0" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>last_update_time_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a00a19be5391c6355de30e51292a97be0" prot="public" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>Load</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1adb6748c5ec00102d2ee48ee2d6e9d676" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>LoadThread</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a7b78a294d69fb45b78a4d44298434106" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>lock_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a866ea0303e525e3b6cf88a0d230f4b39" prot="protected" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>medusaStackAltimeterPub</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1aea0ab8ce48b651f3aa719046a24278d7" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>namespace_frame_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1ac91cbcef93448e5c57490223ad313258" prot="protected" virt="virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>OnNewLaserScans</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a9d2aa619a4926b7036505202763b455a" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>parent_ray_sensor_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a96fd85c85991ba83b27e8397815b2ff0" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>parent_sensor_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a5426ed55d7ad6ca398249006509b7cc4" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>pub_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1aadbc69a96b61e0667ecdc81cf2b5d41a" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>PutRangeData</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1ae798b55742e515077b16641e093f4f64" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>radiation_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a7feb3de6baf025bb14c394ec23a5f76f" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>range_connect_count_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1ae3e051d84554838ed7f37b7b27503b16" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>range_msg_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1ac7690e0e03ba8cd761e33f4f74be80a7" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>range_queue_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1adc7f3419145647318e75e8bc356d0426" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>RangeConnect</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1aec7fe33162b3b281fce89010fbec0084" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>RangeDisconnect</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a525a7b2a7e24f1dd122e77ec5e74432d" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>RangeQueueThread</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a350196160651e6c7e0b03224fffc8fd2" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>robot_namespace_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1ad5781e82536f044f3aad7830c17b2fe3" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>rosnode_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1aa677599e9e6738998975f6f197369d1b" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>sdf</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a0a535cd21675d8f38fb66c491fe78f4f" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>topic_name_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a780abaf6ed6f1d26f014cc48fc253015" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>update_period_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a4647e71637e1678819add208d37c5667" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>update_rate_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1a415a65b28a5639a08a207abebaf3f880" prot="private" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>world_</name></member>
+      <member refid="classgazebo_1_1AltimeterROSPlugin_1aef99812aafbd7baace5a167db16fcfc4" prot="public" virt="non-virtual"><scope>gazebo::AltimeterROSPlugin</scope><name>~AltimeterROSPlugin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

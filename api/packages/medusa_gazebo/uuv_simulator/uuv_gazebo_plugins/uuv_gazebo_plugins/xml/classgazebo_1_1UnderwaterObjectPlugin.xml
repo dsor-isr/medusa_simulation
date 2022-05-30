@@ -1,0 +1,505 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classgazebo_1_1UnderwaterObjectPlugin" kind="class" language="C++" prot="public">
+    <compoundname>gazebo::UnderwaterObjectPlugin</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ModelPlugin</basecompoundref>
+    <includes refid="UnderwaterObjectPlugin_8hh" local="no">UnderwaterObjectPlugin.hh</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgazebo_1_1UnderwaterObjectPlugin_1abbc883398252e410563c657648743e3e" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; gazebo::physics::LinkPtr, <ref refid="HydrodynamicModel_8hh_1ab7e72448c3e86f93ab214d73c0cd4414" kindref="member">HydrodynamicModelPtr</ref> &gt;</type>
+        <definition>std::map&lt;gazebo::physics::LinkPtr, HydrodynamicModelPtr&gt; gazebo::UnderwaterObjectPlugin::models</definition>
+        <argsstring></argsstring>
+        <name>models</name>
+        <briefdescription>
+<para>Pairs of links &amp; corresponding hydrodynamic models. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="94" column="2" bodyfile="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1UnderwaterObjectPlugin_1ac5bf6578ef4434438ba7d7647b69b971" prot="protected" static="no" mutable="no">
+        <type>ignition::math::Vector3d</type>
+        <definition>ignition::math::Vector3d gazebo::UnderwaterObjectPlugin::flowVelocity</definition>
+        <argsstring></argsstring>
+        <name>flowVelocity</name>
+        <briefdescription>
+<para>Flow velocity vector read from topic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="97" column="39" bodyfile="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1UnderwaterObjectPlugin_1a1a4d81782ad2d21fc01598e0d9b42d27" prot="protected" static="no" mutable="no">
+        <type>gazebo::event::ConnectionPtr</type>
+        <definition>gazebo::event::ConnectionPtr gazebo::UnderwaterObjectPlugin::updateConnection</definition>
+        <argsstring></argsstring>
+        <name>updateConnection</name>
+        <briefdescription>
+<para>Update event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="100" column="43" bodyfile="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1UnderwaterObjectPlugin_1a9f16fc2908d17c0975331cc825d14cb0" prot="protected" static="no" mutable="no">
+        <type>gazebo::physics::WorldPtr</type>
+        <definition>gazebo::physics::WorldPtr gazebo::UnderwaterObjectPlugin::world</definition>
+        <argsstring></argsstring>
+        <name>world</name>
+        <briefdescription>
+<para>Pointer to the world plugin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="103" column="40" bodyfile="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1UnderwaterObjectPlugin_1a896d92ed527a0d9f7b47208614eaba0c" prot="protected" static="no" mutable="no">
+        <type>gazebo::physics::ModelPtr</type>
+        <definition>gazebo::physics::ModelPtr gazebo::UnderwaterObjectPlugin::model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <briefdescription>
+<para>Pointer to the model structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="106" column="40" bodyfile="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1UnderwaterObjectPlugin_1a5422d922731696d2767e5be09c2cb5c2" prot="protected" static="no" mutable="no">
+        <type>gazebo::transport::NodePtr</type>
+        <definition>gazebo::transport::NodePtr gazebo::UnderwaterObjectPlugin::node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+<para>Gazebo node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="109" column="41" bodyfile="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1UnderwaterObjectPlugin_1a08b0e6dfab6a63945ea6d1c71c858df1" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::UnderwaterObjectPlugin::baseLinkName</definition>
+        <argsstring></argsstring>
+        <name>baseLinkName</name>
+        <briefdescription>
+<para>Name of vehicle&apos;s base_link. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="112" column="26" bodyfile="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1UnderwaterObjectPlugin_1adb22008a9f57f11659e2b2a18d57bcc6" prot="protected" static="no" mutable="no">
+        <type>gazebo::transport::SubscriberPtr</type>
+        <definition>gazebo::transport::SubscriberPtr gazebo::UnderwaterObjectPlugin::flowSubscriber</definition>
+        <argsstring></argsstring>
+        <name>flowSubscriber</name>
+        <briefdescription>
+<para>Subcriber to flow message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="115" column="47" bodyfile="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1UnderwaterObjectPlugin_1a0bfd19ce74a42666f26fefa0ded488f3" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gazebo::UnderwaterObjectPlugin::useGlobalCurrent</definition>
+        <argsstring></argsstring>
+        <name>useGlobalCurrent</name>
+        <briefdescription>
+<para>Flag to use the global current velocity or the individually assigned current velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="119" column="19" bodyfile="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1UnderwaterObjectPlugin_1a33989646c81bc47fe86dae3052846ea2" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; std::string, gazebo::transport::PublisherPtr &gt;</type>
+        <definition>std::map&lt;std::string, gazebo::transport::PublisherPtr&gt; gazebo::UnderwaterObjectPlugin::hydroPub</definition>
+        <argsstring></argsstring>
+        <name>hydroPub</name>
+        <briefdescription>
+<para>Publishers of hydrodynamic and hydrostatic forces and torques in the case the debug flag is on. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="123" column="23" bodyfile="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgazebo_1_1UnderwaterObjectPlugin_1ac875088ebde0583e6f3e07cdeaea53ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gazebo::UnderwaterObjectPlugin::UnderwaterObjectPlugin</definition>
+        <argsstring>()</argsstring>
+        <name>UnderwaterObjectPlugin</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="37" column="11" bodyfile="src/UnderwaterObjectPlugin.cc" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1UnderwaterObjectPlugin_1af97f83bac0327ebc2671839c56f44207" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>gazebo::UnderwaterObjectPlugin::~UnderwaterObjectPlugin</definition>
+        <argsstring>()</argsstring>
+        <name>~UnderwaterObjectPlugin</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="40" column="19" bodyfile="src/UnderwaterObjectPlugin.cc" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1UnderwaterObjectPlugin_1acaa3bd6b66429cb588fbcba3ae70be74" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gazebo::UnderwaterObjectPlugin::Load</definition>
+        <argsstring>(gazebo::physics::ModelPtr _model, sdf::ElementPtr _sdf)</argsstring>
+        <name>Load</name>
+        <param>
+          <type>gazebo::physics::ModelPtr</type>
+          <declname>_model</declname>
+        </param>
+        <param>
+          <type>sdf::ElementPtr</type>
+          <declname>_sdf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="43" column="24" bodyfile="src/UnderwaterObjectPlugin.cc" bodystart="42" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1UnderwaterObjectPlugin_1afbe0672e704e832adf5619fd7c34cd5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gazebo::UnderwaterObjectPlugin::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="47" column="24" bodyfile="src/UnderwaterObjectPlugin.cc" bodystart="149" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1UnderwaterObjectPlugin_1ad5893829b75bed2bb052bef467d6dcf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gazebo::UnderwaterObjectPlugin::Update</definition>
+        <argsstring>(const gazebo::common::UpdateInfo &amp;_info)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>const gazebo::common::UpdateInfo &amp;</type>
+          <declname>_info</declname>
+        </param>
+        <briefdescription>
+<para>Update the simulation state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">_info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Information used in the update event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="51" column="24" bodyfile="src/UnderwaterObjectPlugin.cc" bodystart="154" bodyend="173"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgazebo_1_1UnderwaterObjectPlugin_1a7497acca39dc0a4f338bd863b002ec33" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gazebo::UnderwaterObjectPlugin::Connect</definition>
+        <argsstring>()</argsstring>
+        <name>Connect</name>
+        <briefdescription>
+<para>Connects the update event callback. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="54" column="27" bodyfile="src/UnderwaterObjectPlugin.cc" bodystart="176" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1UnderwaterObjectPlugin_1a22bb6d230cc76b4a838ffffe5a6ba722" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gazebo::UnderwaterObjectPlugin::UpdateFlowVelocity</definition>
+        <argsstring>(ConstVector3dPtr &amp;_msg)</argsstring>
+        <name>UpdateFlowVelocity</name>
+        <param>
+          <type>ConstVector3dPtr &amp;</type>
+          <declname>_msg</declname>
+        </param>
+        <briefdescription>
+<para>Reads flow velocity topic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="57" column="19" bodyfile="src/UnderwaterObjectPlugin.cc" bodystart="194" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1UnderwaterObjectPlugin_1a89d8430bc839e0ff477fd893be829060" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gazebo::UnderwaterObjectPlugin::PublishCurrentVelocityMarker</definition>
+        <argsstring>()</argsstring>
+        <name>PublishCurrentVelocityMarker</name>
+        <briefdescription>
+<para>Publish current velocity marker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="60" column="27" bodyfile="src/UnderwaterObjectPlugin.cc" bodystart="182" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1UnderwaterObjectPlugin_1adc2e3f16a6fa8ce79497b5664fb66b82" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gazebo::UnderwaterObjectPlugin::PublishIsSubmerged</definition>
+        <argsstring>()</argsstring>
+        <name>PublishIsSubmerged</name>
+        <briefdescription>
+<para>Publishes the state of the vehicle (is submerged) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="63" column="27" bodyfile="src/UnderwaterObjectPlugin.cc" bodystart="188" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1UnderwaterObjectPlugin_1ae5da81b93706dded6de765628f57ad05" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gazebo::UnderwaterObjectPlugin::PublishRestoringForce</definition>
+        <argsstring>(gazebo::physics::LinkPtr _link)</argsstring>
+        <name>PublishRestoringForce</name>
+        <param>
+          <type>gazebo::physics::LinkPtr</type>
+          <declname>_link</declname>
+        </param>
+        <briefdescription>
+<para>Publish restoring force. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">_link</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the link where the force information will be extracted from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="68" column="27" bodyfile="src/UnderwaterObjectPlugin.cc" bodystart="204" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1UnderwaterObjectPlugin_1af1b5370bf8ebd626fd9eafb2b46075b9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gazebo::UnderwaterObjectPlugin::PublishHydrodynamicWrenches</definition>
+        <argsstring>(gazebo::physics::LinkPtr _link)</argsstring>
+        <name>PublishHydrodynamicWrenches</name>
+        <param>
+          <type>gazebo::physics::LinkPtr</type>
+          <declname>_link</declname>
+        </param>
+        <briefdescription>
+<para>Publish hydrodynamic wrenches. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">_link</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the link where the force information will be extracted from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="74" column="27" bodyfile="src/UnderwaterObjectPlugin.cc" bodystart="219" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1UnderwaterObjectPlugin_1a6deb4663c719f288b671539020257bb0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gazebo::UnderwaterObjectPlugin::GenWrenchMsg</definition>
+        <argsstring>(ignition::math::Vector3d _force, ignition::math::Vector3d _torque, gazebo::msgs::WrenchStamped &amp;_output)</argsstring>
+        <name>GenWrenchMsg</name>
+        <param>
+          <type>ignition::math::Vector3d</type>
+          <declname>_force</declname>
+        </param>
+        <param>
+          <type>ignition::math::Vector3d</type>
+          <declname>_torque</declname>
+        </param>
+        <param>
+          <type>gazebo::msgs::WrenchStamped &amp;</type>
+          <declname>_output</declname>
+        </param>
+        <briefdescription>
+<para>Returns the wrench message for debugging topics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">_force</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Force vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">_torque</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Torque vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">_output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stamped wrench message to be updated </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="81" column="27" bodyfile="src/UnderwaterObjectPlugin.cc" bodystart="251" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1UnderwaterObjectPlugin_1a86136f608b56ecd79bd6530f92724a75" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gazebo::UnderwaterObjectPlugin::InitDebug</definition>
+        <argsstring>(gazebo::physics::LinkPtr _link, gazebo::HydrodynamicModelPtr _hydro)</argsstring>
+        <name>InitDebug</name>
+        <param>
+          <type>gazebo::physics::LinkPtr</type>
+          <declname>_link</declname>
+        </param>
+        <param>
+          <type><ref refid="HydrodynamicModel_8hh_1ab7e72448c3e86f93ab214d73c0cd4414" kindref="member">gazebo::HydrodynamicModelPtr</ref></type>
+          <declname>_hydro</declname>
+        </param>
+        <briefdescription>
+<para>Sets the topics used for publishing the intermediate data during the simulation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">_link</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the link </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">_hydro</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the hydrodynamic model </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="89" column="27" bodyfile="src/UnderwaterObjectPlugin.cc" bodystart="127" bodyend="146"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Gazebo model plugin class for underwater objects. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>gazebo::UnderwaterObjectPlugin</label>
+        <link refid="classgazebo_1_1UnderwaterObjectPlugin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gazebo::ModelPlugin</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>gazebo::UnderwaterObjectPlugin</label>
+        <link refid="classgazebo_1_1UnderwaterObjectPlugin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gazebo::ModelPlugin</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" line="35" column="56" bodyfile="include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh" bodystart="35" bodyend="124"/>
+    <listofallmembers>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1a08b0e6dfab6a63945ea6d1c71c858df1" prot="protected" virt="non-virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>baseLinkName</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1a7497acca39dc0a4f338bd863b002ec33" prot="protected" virt="virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>Connect</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1adb22008a9f57f11659e2b2a18d57bcc6" prot="protected" virt="non-virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>flowSubscriber</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1ac5bf6578ef4434438ba7d7647b69b971" prot="protected" virt="non-virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>flowVelocity</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1a6deb4663c719f288b671539020257bb0" prot="protected" virt="virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>GenWrenchMsg</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1a33989646c81bc47fe86dae3052846ea2" prot="protected" virt="non-virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>hydroPub</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1afbe0672e704e832adf5619fd7c34cd5c" prot="public" virt="virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>Init</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1a86136f608b56ecd79bd6530f92724a75" prot="protected" virt="virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>InitDebug</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1acaa3bd6b66429cb588fbcba3ae70be74" prot="public" virt="virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>Load</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1a896d92ed527a0d9f7b47208614eaba0c" prot="protected" virt="non-virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>model</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1abbc883398252e410563c657648743e3e" prot="protected" virt="non-virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>models</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1a5422d922731696d2767e5be09c2cb5c2" prot="protected" virt="non-virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>node</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1a89d8430bc839e0ff477fd893be829060" prot="protected" virt="virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>PublishCurrentVelocityMarker</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1af1b5370bf8ebd626fd9eafb2b46075b9" prot="protected" virt="virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>PublishHydrodynamicWrenches</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1adc2e3f16a6fa8ce79497b5664fb66b82" prot="protected" virt="virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>PublishIsSubmerged</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1ae5da81b93706dded6de765628f57ad05" prot="protected" virt="virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>PublishRestoringForce</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1ac875088ebde0583e6f3e07cdeaea53ae" prot="public" virt="non-virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>UnderwaterObjectPlugin</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1ad5893829b75bed2bb052bef467d6dcf4" prot="public" virt="virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>Update</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1a1a4d81782ad2d21fc01598e0d9b42d27" prot="protected" virt="non-virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>updateConnection</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1a22bb6d230cc76b4a838ffffe5a6ba722" prot="protected" virt="non-virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>UpdateFlowVelocity</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1a0bfd19ce74a42666f26fefa0ded488f3" prot="protected" virt="non-virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>useGlobalCurrent</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1a9f16fc2908d17c0975331cc825d14cb0" prot="protected" virt="non-virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>world</name></member>
+      <member refid="classgazebo_1_1UnderwaterObjectPlugin_1af97f83bac0327ebc2671839c56f44207" prot="public" virt="virtual"><scope>gazebo::UnderwaterObjectPlugin</scope><name>~UnderwaterObjectPlugin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

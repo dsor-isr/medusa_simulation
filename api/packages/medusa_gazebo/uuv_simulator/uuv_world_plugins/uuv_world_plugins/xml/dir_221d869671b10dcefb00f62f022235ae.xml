@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_221d869671b10dcefb00f62f022235ae" kind="dir">
+    <compoundname>include/uuv_world_plugins</compoundname>
+    <innerfile refid="GaussMarkovProcess_8hh">GaussMarkovProcess.hh</innerfile>
+    <innerfile refid="UnderwaterCurrentPlugin_8hh">UnderwaterCurrentPlugin.hh</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uuv_world_plugins/"/>
+  </compounddef>
+</doxygen>

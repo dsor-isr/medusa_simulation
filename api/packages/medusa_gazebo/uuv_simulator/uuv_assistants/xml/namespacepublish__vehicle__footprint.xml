@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacepublish__vehicle__footprint" kind="namespace" language="Python">
+    <compoundname>publish_vehicle_footprint</compoundname>
+    <innerclass refid="classpublish__vehicle__footprint_1_1VehicleFootprint" prot="public">publish_vehicle_footprint::VehicleFootprint</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="publish__vehicle__footprint_8py_1a135ce28508b65937e92f4e4031d4fcf5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>publish_vehicle_footprint.node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <initializer>=  <ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint" kindref="compound">VehicleFootprint</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_vehicle_footprint.py" line="133" column="1" bodyfile="scripts/publish_vehicle_footprint.py" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="scripts/publish_vehicle_footprint.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -6,6 +6,12 @@
     <includes local="no">Eigen/Dense</includes>
     <includes local="no">gtest/gtest.h</includes>
     <incdepgraph>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="3">
+        <label>Eigen/Core</label>
+      </node>
       <node id="2">
         <label>dsor_utils/rotations.hpp</label>
         <link refid="rotations_8hpp_source"/>
@@ -14,11 +20,8 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>cmath</label>
-      </node>
-      <node id="3">
-        <label>Eigen/Core</label>
+      <node id="5">
+        <label>Eigen/Dense</label>
       </node>
       <node id="1">
         <label>test/test_rotations.cpp</label>
@@ -29,9 +32,6 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-      </node>
-      <node id="5">
-        <label>Eigen/Dense</label>
       </node>
       <node id="6">
         <label>gtest/gtest.h</label>

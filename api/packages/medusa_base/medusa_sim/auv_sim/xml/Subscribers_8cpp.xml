@@ -4,20 +4,6 @@
     <compoundname>Subscribers.cpp</compoundname>
     <includes refid="SimulationNode_8h" local="yes">SimulationNode.h</includes>
     <incdepgraph>
-      <node id="2">
-        <label>SimulationNode.h</label>
-        <link refid="SimulationNode_8h_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
       <node id="5">
         <label>dsor_msgs/Thruster.h</label>
       </node>
@@ -45,15 +31,6 @@
       <node id="11">
         <label>tuple</label>
       </node>
-      <node id="10">
-        <label>vector</label>
-      </node>
-      <node id="6">
-        <label>auv_sim/StartPause.h</label>
-      </node>
-      <node id="4">
-        <label>ros/ros.h</label>
-      </node>
       <node id="7">
         <label>AUV.h</label>
         <link refid="AUV_8h_source"/>
@@ -67,6 +44,29 @@
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
+      </node>
+      <node id="2">
+        <label>SimulationNode.h</label>
+        <link refid="SimulationNode_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+      <node id="6">
+        <label>auv_sim/StartPause.h</label>
+      </node>
+      <node id="4">
+        <label>ros/ros.h</label>
       </node>
       <node id="3">
         <label>memory</label>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_acb707371df93f51fc894ca4ed70aa5d" kind="dir">
+    <compoundname>include/uuv_gazebo_ros_plugins</compoundname>
+    <innerfile refid="AccelerationsTestPlugin_8hh">AccelerationsTestPlugin.hh</innerfile>
+    <innerfile refid="CustomBatteryConsumerROSPlugin_8hh">CustomBatteryConsumerROSPlugin.hh</innerfile>
+    <innerfile refid="FinROSPlugin_8hh">FinROSPlugin.hh</innerfile>
+    <innerfile refid="JointStatePublisher_8hh">JointStatePublisher.hh</innerfile>
+    <innerfile refid="LinearBatteryROSPlugin_8hh">LinearBatteryROSPlugin.hh</innerfile>
+    <innerfile refid="ThrusterManagerROSPlugin_8hh">ThrusterManagerROSPlugin.hh</innerfile>
+    <innerfile refid="ThrusterROSPlugin_8hh">ThrusterROSPlugin.hh</innerfile>
+    <innerfile refid="UnderwaterObjectROSPlugin_8hh">UnderwaterObjectROSPlugin.hh</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uuv_gazebo_ros_plugins/"/>
+  </compounddef>
+</doxygen>

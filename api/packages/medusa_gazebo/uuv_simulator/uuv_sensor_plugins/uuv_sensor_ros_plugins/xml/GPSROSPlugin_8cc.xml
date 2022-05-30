@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="GPSROSPlugin_8cc" kind="file" language="C++">
+    <compoundname>GPSROSPlugin.cc</compoundname>
+    <includes local="no">eigen3/Eigen/Dense</includes>
+    <includes refid="GPSROSPlugin_8hh" local="no">uuv_sensor_ros_plugins/GPSROSPlugin.hh</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>gazebo/common/Plugin.hh</label>
+      </node>
+      <node id="11">
+        <label>gazebo/common/common.hh</label>
+      </node>
+      <node id="20">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="16">
+        <label>std_msgs/Bool.h</label>
+      </node>
+      <node id="10">
+        <label>uuv_sensor_ros_plugins/ROSBasePlugin.hh</label>
+        <link refid="ROSBasePlugin_8hh_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uuv_sensor_ros_plugins/GPSROSPlugin.hh</label>
+        <link refid="GPSROSPlugin_8hh_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="13">
+        <label>string</label>
+      </node>
+      <node id="26">
+        <label>map</label>
+      </node>
+      <node id="23">
+        <label>tf/tf.h</label>
+      </node>
+      <node id="4">
+        <label>gazebo/gazebo.hh</label>
+      </node>
+      <node id="25">
+        <label>random</label>
+      </node>
+      <node id="14">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="18">
+        <label>geometry_msgs/TransformStamped.h</label>
+      </node>
+      <node id="19">
+        <label>gazebo/sensors/Noise.hh</label>
+      </node>
+      <node id="1">
+        <label>src/GPSROSPlugin.cc</label>
+        <link refid="GPSROSPlugin_8cc"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>uuv_sensor_ros_plugins_msgs/ChangeSensorState.h</label>
+      </node>
+      <node id="6">
+        <label>sensor_msgs/NavSatFix.h</label>
+      </node>
+      <node id="15">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="12">
+        <label>uuv_sensor_ros_plugins/Common.hh</label>
+        <link refid="Common_8hh_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>gazebo/sensors/sensors.hh</label>
+      </node>
+      <node id="21">
+        <label>boost/bind.hpp</label>
+      </node>
+      <node id="24">
+        <label>chrono</label>
+      </node>
+      <node id="9">
+        <label>gazebo/physics/physics.hh</label>
+      </node>
+      <node id="22">
+        <label>tf/tfMessage.h</label>
+      </node>
+      <node id="7">
+        <label>uuv_sensor_ros_plugins/ROSBaseSensorPlugin.hh</label>
+        <link refid="ROSBaseSensorPlugin_8hh_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacegazebo">gazebo</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2016<sp/>The<sp/>UUV<sp/>Simulator<sp/>Authors.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;eigen3/Eigen/Dense&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uuv_sensor_ros_plugins/GPSROSPlugin.hh&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacegazebo" kindref="compound">gazebo</ref><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><ref refid="classgazebo_1_1GPSROSPlugin_1ab969180b479e77d98f8cb29e8c94b269" kindref="member">GPSROSPlugin::GPSROSPlugin</ref>()<sp/>:<sp/>ROSBaseSensorPlugin()<sp/>{}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="classgazebo_1_1GPSROSPlugin_1ae4a602032a43f1a3cc904fa4ff938fc3" kindref="member">GPSROSPlugin::~GPSROSPlugin</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1GPSROSPlugin_1ac59efd08373c7f691308609836a2a03d" kindref="member">GPSROSPlugin::Load</ref>(sensors::SensorPtr<sp/>_parent,<sp/>sdf::ElementPtr<sp/>_sdf)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>gzmsg<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;GPSROSPlugin<sp/>-<sp/>Loading<sp/>base<sp/>sensor<sp/>plugin&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><ref refid="classgazebo_1_1ROSBaseSensorPlugin_1a2ad16341faa4fadef2e3347ce2c8907a" kindref="member">ROSBaseSensorPlugin::Load</ref>(_parent,<sp/>_sdf);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>gzmsg<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;GPSROSPlugin<sp/>-<sp/>Converting<sp/>GPS<sp/>sensor<sp/>pointer&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aaa97f3a5236f6c5d9914d042848f97d6" kindref="member">gazeboGPSSensor</ref><sp/>=<sp/>std::dynamic_pointer_cast&lt;sensors::GpsSensor&gt;(_parent);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>gzmsg<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;GPSROSPlugin<sp/>-<sp/>Initialize<sp/>sensor<sp/>topic<sp/>publisher&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1aff7eafda5f899aa2304a870d1418a300" kindref="member">rosSensorOutputPub</ref><sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a6b907bcd7669d3907f3c78e654fcca88" kindref="member">rosNode</ref>-&gt;advertise&lt;sensor_msgs::NavSatFix&gt;(this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a818f107bc9e165a3cc8016fd6859f86a" kindref="member">sensorOutputTopic</ref>,<sp/>10);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>frame<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aa365281835351f7720482bd36611733d" kindref="member">gpsMessage</ref>.header.frame_id<sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a9a9e059aec0a41dd012223d3ea3c9fe9" kindref="member">robotNamespace</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;_gnss&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Get<sp/>the<sp/>position<sp/>covariance<sp/>from<sp/>the<sp/>GPS<sp/>sensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aa365281835351f7720482bd36611733d" kindref="member">gpsMessage</ref>.position_covariance_type<sp/>=<sp/>sensor_msgs::NavSatFix::COVARIANCE_TYPE_KNOWN;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>horizontalPosStdDev<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="namespacegazebo_1acd5769609414bbc3be35ee1457d0d417" kindref="member">GetSDFParam</ref>(_sdf,<sp/></highlight><highlight class="stringliteral">&quot;horizontal_pos_std_dev&quot;</highlight><highlight class="normal">,<sp/>horizontalPosStdDev,<sp/>0.0);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>verticalPosStdDev<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="namespacegazebo_1acd5769609414bbc3be35ee1457d0d417" kindref="member">GetSDFParam</ref>(_sdf,<sp/></highlight><highlight class="stringliteral">&quot;vertical_pos_std_dev&quot;</highlight><highlight class="normal">,<sp/>verticalPosStdDev,<sp/>0.0);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aa365281835351f7720482bd36611733d" kindref="member">gpsMessage</ref>.position_covariance[0]<sp/>=<sp/>horizontalPosStdDev<sp/>*<sp/>horizontalPosStdDev;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aa365281835351f7720482bd36611733d" kindref="member">gpsMessage</ref>.position_covariance[4]<sp/>=<sp/>horizontalPosStdDev<sp/>*<sp/>horizontalPosStdDev;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aa365281835351f7720482bd36611733d" kindref="member">gpsMessage</ref>.position_covariance[8]<sp/>=<sp/>verticalPosStdDev<sp/>*<sp/>verticalPosStdDev;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Configurable<sp/>status<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aa365281835351f7720482bd36611733d" kindref="member">gpsMessage</ref>.status.status<sp/>=<sp/>sensor_msgs::NavSatStatus::STATUS_FIX;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aa365281835351f7720482bd36611733d" kindref="member">gpsMessage</ref>.status.service<sp/>=<sp/>sensor_msgs::NavSatStatus::SERVICE_GPS;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Connect<sp/>to<sp/>the<sp/>sensor<sp/>update<sp/>event.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a1d7b676bec7c29b2bd021b47ecd32bb5" kindref="member">updateConnection</ref><sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aaa97f3a5236f6c5d9914d042848f97d6" kindref="member">gazeboGPSSensor</ref>-&gt;ConnectUpdated(boost::bind(&amp;<ref refid="classgazebo_1_1GPSROSPlugin_1a255822b5790c6202d5ab5f3bca0eca8b" kindref="member">GPSROSPlugin::OnUpdateGPS</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1GPSROSPlugin_1a255822b5790c6202d5ab5f3bca0eca8b" kindref="member">GPSROSPlugin::OnUpdateGPS</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Publish<sp/>sensor<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a0185c958f2ce8b30a1c5dc078bbd7b0e" kindref="member">PublishState</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>current<sp/>time<sp/>from<sp/>ros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>ros::Time<sp/>currentTime<sp/>=<sp/>ros::Time().now();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aa365281835351f7720482bd36611733d" kindref="member">gpsMessage</ref>.header.stamp.sec<sp/>=<sp/>currentTime.sec;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aa365281835351f7720482bd36611733d" kindref="member">gpsMessage</ref>.header.stamp.nsec<sp/>=<sp/>currentTime.nsec;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lat_origin<sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a24f910550057c819c246f5c3f74dae5a" kindref="member">world</ref>-&gt;SphericalCoords()-&gt;LatitudeReference().Degree();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>longt_origin<sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a24f910550057c819c246f5c3f74dae5a" kindref="member">world</ref>-&gt;SphericalCoords()-&gt;LongitudeReference().Degree();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>last<sp/>term<sp/>is<sp/>needed<sp/>to<sp/>shift<sp/>the<sp/>origin<sp/>in<sp/>order<sp/>to<sp/>have<sp/>the<sp/>GPS<sp/>represented<sp/>in<sp/>NED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aa365281835351f7720482bd36611733d" kindref="member">gpsMessage</ref>.latitude<sp/>=<sp/>-this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aaa97f3a5236f6c5d9914d042848f97d6" kindref="member">gazeboGPSSensor</ref>-&gt;Latitude().Degree()<sp/>+<sp/>2*lat_origin;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aa365281835351f7720482bd36611733d" kindref="member">gpsMessage</ref>.longitude<sp/>=<sp/>-this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aaa97f3a5236f6c5d9914d042848f97d6" kindref="member">gazeboGPSSensor</ref>-&gt;Longitude().Degree()<sp/>+<sp/>2*longt_origin;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aa365281835351f7720482bd36611733d" kindref="member">gpsMessage</ref>.altitude<sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aaa97f3a5236f6c5d9914d042848f97d6" kindref="member">gazeboGPSSensor</ref>-&gt;Altitude();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>the<sp/>statuc<sp/>message<sp/>of<sp/>unaugmented<sp/>fix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aa365281835351f7720482bd36611733d" kindref="member">gpsMessage</ref>.status.status<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Lose<sp/>connection<sp/>if<sp/>completely<sp/>submerged</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>order<sp/>to<sp/>simulate<sp/>losing<sp/>connection<sp/>to<sp/>the<sp/>GPS<sp/>(like<sp/>in<sp/>real<sp/>life)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aa365281835351f7720482bd36611733d" kindref="member">gpsMessage</ref>.altitude<sp/>&lt;<sp/>-0.6)<sp/>{<sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Modify<sp/>the<sp/>status<sp/>message<sp/>of<sp/>unable<sp/>to<sp/>fix<sp/>position,<sp/>such<sp/>that<sp/>the<sp/>medusa<sp/>stack<sp/>ignores<sp/>this<sp/>message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aa365281835351f7720482bd36611733d" kindref="member">gpsMessage</ref>.status.status<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//Publish<sp/>the<sp/>message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1aff7eafda5f899aa2304a870d1418a300" kindref="member">rosSensorOutputPub</ref>.publish(this-&gt;<ref refid="classgazebo_1_1GPSROSPlugin_1aa365281835351f7720482bd36611733d" kindref="member">gpsMessage</ref>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">GZ_REGISTER_SENSOR_PLUGIN(GPSROSPlugin)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/GPSROSPlugin.cc"/>
+  </compounddef>
+</doxygen>

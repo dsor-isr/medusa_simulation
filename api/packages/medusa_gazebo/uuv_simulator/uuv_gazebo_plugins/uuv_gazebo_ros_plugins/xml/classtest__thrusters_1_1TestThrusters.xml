@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classtest__thrusters_1_1TestThrusters" kind="class" language="Python" prot="public">
+    <compoundname>test_thrusters::TestThrusters</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TestCase</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classtest__thrusters_1_1TestThrusters_1a80e39ca1de5e38ea28d0f647e85e56bb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>test_thrusters.TestThrusters::thruster_input_pub</definition>
+        <argsstring></argsstring>
+        <name>thruster_input_pub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_thrusters.py" line="36" column="1" bodyfile="test/test_thrusters.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtest__thrusters_1_1TestThrusters_1aae347e5c7ac825914e5f0259a9cbac5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_thrusters.TestThrusters.__init__</definition>
+        <argsstring>(self, *args)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>*</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_thrusters.py" line="32" column="1" bodyfile="test/test_thrusters.py" bodystart="32" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__thrusters_1_1TestThrusters_1adad9e2d942d4069545a88a3715c61a99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_thrusters.TestThrusters.test_input_output_topics_exist</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_input_output_topics_exist</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_thrusters.py" line="41" column="1" bodyfile="test/test_thrusters.py" bodystart="41" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__thrusters_1_1TestThrusters_1a52d931f8194f3769811f7778b5a903a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_thrusters.TestThrusters.test_convertion_fcn_parameters</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_convertion_fcn_parameters</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_thrusters.py" line="62" column="1" bodyfile="test/test_thrusters.py" bodystart="62" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__thrusters_1_1TestThrusters_1a84e0827fc5d36d2941497f26dd755c93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_thrusters.TestThrusters.test_change_thruster_state</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_change_thruster_state</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_thrusters.py" line="119" column="1" bodyfile="test/test_thrusters.py" bodystart="119" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__thrusters_1_1TestThrusters_1a0a44c9100649b587dd922a28da7ce034" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_thrusters.TestThrusters.test_change_thrust_efficiency</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_change_thrust_efficiency</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_thrusters.py" line="141" column="1" bodyfile="test/test_thrusters.py" bodystart="141" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__thrusters_1_1TestThrusters_1aff485c831f1a9583063a18a17ade7909" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_thrusters.TestThrusters.test_change_dyn_state_efficiency</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_change_dyn_state_efficiency</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_thrusters.py" line="163" column="1" bodyfile="test/test_thrusters.py" bodystart="163" bodyend="185"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>test_thrusters.TestThrusters</label>
+        <link refid="classtest__thrusters_1_1TestThrusters"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TestCase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>test_thrusters.TestThrusters</label>
+        <link refid="classtest__thrusters_1_1TestThrusters"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TestCase</label>
+      </node>
+    </collaborationgraph>
+    <location file="test/test_thrusters.py" line="31" column="1" bodyfile="test/test_thrusters.py" bodystart="31" bodyend="186"/>
+    <listofallmembers>
+      <member refid="classtest__thrusters_1_1TestThrusters_1aae347e5c7ac825914e5f0259a9cbac5e" prot="public" virt="non-virtual"><scope>test_thrusters::TestThrusters</scope><name>__init__</name></member>
+      <member refid="classtest__thrusters_1_1TestThrusters_1aff485c831f1a9583063a18a17ade7909" prot="public" virt="non-virtual"><scope>test_thrusters::TestThrusters</scope><name>test_change_dyn_state_efficiency</name></member>
+      <member refid="classtest__thrusters_1_1TestThrusters_1a0a44c9100649b587dd922a28da7ce034" prot="public" virt="non-virtual"><scope>test_thrusters::TestThrusters</scope><name>test_change_thrust_efficiency</name></member>
+      <member refid="classtest__thrusters_1_1TestThrusters_1a84e0827fc5d36d2941497f26dd755c93" prot="public" virt="non-virtual"><scope>test_thrusters::TestThrusters</scope><name>test_change_thruster_state</name></member>
+      <member refid="classtest__thrusters_1_1TestThrusters_1a52d931f8194f3769811f7778b5a903a7" prot="public" virt="non-virtual"><scope>test_thrusters::TestThrusters</scope><name>test_convertion_fcn_parameters</name></member>
+      <member refid="classtest__thrusters_1_1TestThrusters_1adad9e2d942d4069545a88a3715c61a99" prot="public" virt="non-virtual"><scope>test_thrusters::TestThrusters</scope><name>test_input_output_topics_exist</name></member>
+      <member refid="classtest__thrusters_1_1TestThrusters_1a80e39ca1de5e38ea28d0f647e85e56bb" prot="public" virt="non-virtual"><scope>test_thrusters::TestThrusters</scope><name>thruster_input_pub</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

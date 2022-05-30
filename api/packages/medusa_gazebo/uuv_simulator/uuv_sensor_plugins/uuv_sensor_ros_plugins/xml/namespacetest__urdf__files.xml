@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacetest__urdf__files" kind="namespace" language="Python">
+    <compoundname>test_urdf_files</compoundname>
+    <innerclass refid="classtest__urdf__files_1_1TestURDFFiles" prot="public">test_urdf_files::TestURDFFiles</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="test__urdf__files_8py_1a68184102c61ac7e73ba03d92907af407" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string test_urdf_files.PKG</definition>
+        <argsstring></argsstring>
+        <name>PKG</name>
+        <initializer>=  &apos;uuv_sensor_ros_plugins&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_urdf_files.py" line="23" column="1" bodyfile="test/test_urdf_files.py" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test__urdf__files_8py_1ad4ebb2ab8b06be236cc055450ec4463c" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string test_urdf_files.NAME</definition>
+        <argsstring></argsstring>
+        <name>NAME</name>
+        <initializer>=  &apos;test_urdf_files&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_urdf_files.py" line="24" column="1" bodyfile="test/test_urdf_files.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="test__urdf__files_8py_1a241d0f71a7db084279bc1c84aeec1306" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_urdf_files.call_xacro</definition>
+        <argsstring>(xml_file)</argsstring>
+        <name>call_xacro</name>
+        <param>
+          <type>xml_file</type>
+          <defname>xml_file</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_urdf_files.py" line="30" column="1" bodyfile="test/test_urdf_files.py" bodystart="30" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="test/test_urdf_files.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

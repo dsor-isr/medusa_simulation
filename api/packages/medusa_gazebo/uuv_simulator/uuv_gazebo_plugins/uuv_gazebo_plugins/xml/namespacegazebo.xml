@@ -1,0 +1,413 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacegazebo" kind="namespace" language="C++">
+    <compoundname>gazebo</compoundname>
+    <innerclass refid="classgazebo_1_1BuoyantObject" prot="public">gazebo::BuoyantObject</innerclass>
+    <innerclass refid="classgazebo_1_1ConversionFunction" prot="public">gazebo::ConversionFunction</innerclass>
+    <innerclass refid="classgazebo_1_1ConversionFunctionBasic" prot="public">gazebo::ConversionFunctionBasic</innerclass>
+    <innerclass refid="classgazebo_1_1ConversionFunctionBessa" prot="public">gazebo::ConversionFunctionBessa</innerclass>
+    <innerclass refid="classgazebo_1_1ConversionFunctionFactory" prot="public">gazebo::ConversionFunctionFactory</innerclass>
+    <innerclass refid="classgazebo_1_1ConversionFunctionLinearInterp" prot="public">gazebo::ConversionFunctionLinearInterp</innerclass>
+    <innerclass refid="classgazebo_1_1Dynamics" prot="public">gazebo::Dynamics</innerclass>
+    <innerclass refid="classgazebo_1_1DynamicsFactory" prot="public">gazebo::DynamicsFactory</innerclass>
+    <innerclass refid="classgazebo_1_1DynamicsFirstOrder" prot="public">gazebo::DynamicsFirstOrder</innerclass>
+    <innerclass refid="classgazebo_1_1DynamicsZeroOrder" prot="public">gazebo::DynamicsZeroOrder</innerclass>
+    <innerclass refid="classgazebo_1_1FinPlugin" prot="public">gazebo::FinPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1HMBox" prot="public">gazebo::HMBox</innerclass>
+    <innerclass refid="classgazebo_1_1HMCylinder" prot="public">gazebo::HMCylinder</innerclass>
+    <innerclass refid="classgazebo_1_1HMFossen" prot="public">gazebo::HMFossen</innerclass>
+    <innerclass refid="classgazebo_1_1HMSphere" prot="public">gazebo::HMSphere</innerclass>
+    <innerclass refid="classgazebo_1_1HMSpheroid" prot="public">gazebo::HMSpheroid</innerclass>
+    <innerclass refid="classgazebo_1_1HydrodynamicModel" prot="public">gazebo::HydrodynamicModel</innerclass>
+    <innerclass refid="classgazebo_1_1HydrodynamicModelFactory" prot="public">gazebo::HydrodynamicModelFactory</innerclass>
+    <innerclass refid="classgazebo_1_1LiftDrag" prot="public">gazebo::LiftDrag</innerclass>
+    <innerclass refid="classgazebo_1_1LiftDragFactory" prot="public">gazebo::LiftDragFactory</innerclass>
+    <innerclass refid="classgazebo_1_1LiftDragQuadratic" prot="public">gazebo::LiftDragQuadratic</innerclass>
+    <innerclass refid="classgazebo_1_1LiftDragTwoLines" prot="public">gazebo::LiftDragTwoLines</innerclass>
+    <innerclass refid="classgazebo_1_1ThrusterDynamicsBessa" prot="public">gazebo::ThrusterDynamicsBessa</innerclass>
+    <innerclass refid="classgazebo_1_1ThrusterDynamicsYoerger" prot="public">gazebo::ThrusterDynamicsYoerger</innerclass>
+    <innerclass refid="classgazebo_1_1ThrusterPlugin" prot="public">gazebo::ThrusterPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1UmbilicalModel" prot="public">gazebo::UmbilicalModel</innerclass>
+    <innerclass refid="classgazebo_1_1UmbilicalModelBerg" prot="public">gazebo::UmbilicalModelBerg</innerclass>
+    <innerclass refid="classgazebo_1_1UmbilicalModelFactory" prot="public">gazebo::UmbilicalModelFactory</innerclass>
+    <innerclass refid="classgazebo_1_1UmbilicalPlugin" prot="public">gazebo::UmbilicalPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1UmbilicalSegment" prot="public">gazebo::UmbilicalSegment</innerclass>
+    <innerclass refid="classgazebo_1_1UnderwaterObjectPlugin" prot="public">gazebo::UnderwaterObjectPlugin</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="Dynamics_8hh_1a8e7489c3c056152b0a8b80ffe77c5567" prot="public" static="no">
+        <type><ref refid="classgazebo_1_1Dynamics" kindref="compound">Dynamics</ref> *(*</type>
+        <definition>typedef Dynamics*(* gazebo::DynamicsCreator) (sdf::ElementPtr)</definition>
+        <argsstring>)(sdf::ElementPtr)</argsstring>
+        <name>DynamicsCreator</name>
+        <briefdescription>
+<para>Function pointer to create a certain thruster dynamics object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="56" column="9" bodyfile="include/uuv_gazebo_plugins/Dynamics.hh" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="HydrodynamicModel_8hh_1ab7e72448c3e86f93ab214d73c0cd4414" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgazebo_1_1HydrodynamicModel" kindref="compound">HydrodynamicModel</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;HydrodynamicModel&gt; gazebo::HydrodynamicModelPtr</definition>
+        <argsstring></argsstring>
+        <name>HydrodynamicModelPtr</name>
+        <briefdescription>
+<para>Pointer to model. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/HydrodynamicModel.hh" line="104" column="27" bodyfile="include/uuv_gazebo_plugins/HydrodynamicModel.hh" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="HydrodynamicModel_8hh_1a194f8f65c5742548df2f40575c3a243a" prot="public" static="no">
+        <type><ref refid="classgazebo_1_1HydrodynamicModel" kindref="compound">HydrodynamicModel</ref> *(*</type>
+        <definition>typedef HydrodynamicModel*(* gazebo::HydrodynamicModelCreator) (sdf::ElementPtr, physics::LinkPtr)</definition>
+        <argsstring>)(sdf::ElementPtr, physics::LinkPtr)</argsstring>
+        <name>HydrodynamicModelCreator</name>
+        <briefdescription>
+<para>Function pointer to create a certain a model. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/HydrodynamicModel.hh" line="107" column="9" bodyfile="include/uuv_gazebo_plugins/HydrodynamicModel.hh" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="LiftDragModel_8hh_1a0f875f2388cacda1cc18a2084bf6fb39" prot="public" static="no">
+        <type><ref refid="classgazebo_1_1LiftDrag" kindref="compound">LiftDrag</ref> *(*</type>
+        <definition>typedef LiftDrag*(* gazebo::LiftDragCreator) (sdf::ElementPtr)</definition>
+        <argsstring>)(sdf::ElementPtr)</argsstring>
+        <name>LiftDragCreator</name>
+        <briefdescription>
+<para>Function pointer to create a certain <ref refid="classgazebo_1_1LiftDrag" kindref="compound">LiftDrag</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/LiftDragModel.hh" line="66" column="9" bodyfile="include/uuv_gazebo_plugins/LiftDragModel.hh" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ThrusterConversionFcn_8hh_1a8dbde708b15603a355a927eb4fa22060" prot="public" static="no">
+        <type><ref refid="classgazebo_1_1ConversionFunction" kindref="compound">ConversionFunction</ref> *(*</type>
+        <definition>typedef ConversionFunction*(* gazebo::ConversionFunctionCreator) (sdf::ElementPtr)</definition>
+        <argsstring>)(sdf::ElementPtr)</argsstring>
+        <name>ConversionFunctionCreator</name>
+        <briefdescription>
+<para>Function pointer to create a certain conversion function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/ThrusterConversionFcn.hh" line="55" column="9" bodyfile="include/uuv_gazebo_plugins/ThrusterConversionFcn.hh" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UmbilicalModel_8hh_1ac83d0f2a8002f70380344d41af30a20d" prot="public" static="no">
+        <type><ref refid="classgazebo_1_1UmbilicalModel" kindref="compound">UmbilicalModel</ref> *(*</type>
+        <definition>typedef UmbilicalModel*(* gazebo::UmbilicalModelCreator) (sdf::ElementPtr, physics::ModelPtr)</definition>
+        <argsstring>)(sdf::ElementPtr, physics::ModelPtr)</argsstring>
+        <name>UmbilicalModelCreator</name>
+        <briefdescription>
+<para>Function pointer to create a certain conversion function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UmbilicalModel.hh" line="55" column="9" bodyfile="include/uuv_gazebo_plugins/UmbilicalModel.hh" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="UmbilicalPlugin_8hh_1ace27208bf80d280bc41a57056340385c" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgazebo_1_1UmbilicalSegment" kindref="compound">UmbilicalSegment</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;UmbilicalSegment&gt; gazebo::UmbilicalSegmentPtr</definition>
+        <argsstring></argsstring>
+        <name>UmbilicalSegmentPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/UmbilicalPlugin.hh" line="58" column="27" bodyfile="include/uuv_gazebo_plugins/UmbilicalPlugin.hh" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="FinPlugin_8hh_1afa6a0f30dfb21026b93060aeadb7a087" prot="public" static="no" mutable="no">
+        <type>const typedef boost::shared_ptr&lt; const uuv_gazebo_plugins_msgs::msgs::Double &gt;</type>
+        <definition>const typedef boost::shared_ptr&lt; const uuv_gazebo_plugins_msgs::msgs::Double &gt; gazebo::ConstDoublePtr</definition>
+        <argsstring></argsstring>
+        <name>ConstDoublePtr</name>
+        <briefdescription>
+<para>Definition of a pointer to the floating point message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/FinPlugin.hh" line="35" column="33" bodyfile="include/uuv_gazebo_plugins/FinPlugin.hh" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Def_8hh_1a2cebe56ebe3fea83f705b81b63478ab3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; gazebo::Str2Vector</definition>
+        <argsstring>(std::string _input)</argsstring>
+        <name>Str2Vector</name>
+        <param>
+          <type>std::string</type>
+          <declname>_input</declname>
+        </param>
+        <briefdescription>
+<para>Conversion of a string to a double vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Def.hh" line="55" column="20" bodyfile="include/uuv_gazebo_plugins/Def.hh" bodystart="55" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="Def_8hh_1af0c92548f7f8577ab4baf1e3ea1bad8c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Eigen::Matrix3d</type>
+        <definition>Eigen::Matrix3d gazebo::CrossProductOperator</definition>
+        <argsstring>(Eigen::Vector3d _x)</argsstring>
+        <name>CrossProductOperator</name>
+        <param>
+          <type>Eigen::Vector3d</type>
+          <declname>_x</declname>
+        </param>
+        <briefdescription>
+<para>Returns the cross product operator matrix for Eigen vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Def.hh" line="65" column="24" bodyfile="include/uuv_gazebo_plugins/Def.hh" bodystart="65" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="Def_8hh_1afdae7b4473d28927d48943e02ffb6997" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Eigen::Matrix3d</type>
+        <definition>Eigen::Matrix3d gazebo::CrossProductOperator</definition>
+        <argsstring>(ignition::math::Vector3d _x)</argsstring>
+        <name>CrossProductOperator</name>
+        <param>
+          <type>ignition::math::Vector3d</type>
+          <declname>_x</declname>
+        </param>
+        <briefdescription>
+<para>Returns the cross product operator matrix for Gazebo vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Def.hh" line="74" column="24" bodyfile="include/uuv_gazebo_plugins/Def.hh" bodystart="74" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="Def_8hh_1a1ef93fe6b4298908bce62e78f6ccbec1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Eigen::Vector3d</type>
+        <definition>Eigen::Vector3d gazebo::ToEigen</definition>
+        <argsstring>(const ignition::math::Vector3d &amp;_x)</argsstring>
+        <name>ToEigen</name>
+        <param>
+          <type>const ignition::math::Vector3d &amp;</type>
+          <declname>_x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Def.hh" line="82" column="24" bodyfile="include/uuv_gazebo_plugins/Def.hh" bodystart="82" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="Def_8hh_1a6e99d53b62183beec10906544a332398" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Eigen::Matrix3d</type>
+        <definition>Eigen::Matrix3d gazebo::ToEigen</definition>
+        <argsstring>(const ignition::math::Matrix3d &amp;_x)</argsstring>
+        <name>ToEigen</name>
+        <param>
+          <type>const ignition::math::Matrix3d &amp;</type>
+          <declname>_x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Def.hh" line="86" column="24" bodyfile="include/uuv_gazebo_plugins/Def.hh" bodystart="86" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="Def_8hh_1a0bfe56e41fbcc76d068fdb8c64bc9658" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="Def_8hh_1a09219f5e0b822edbf24b125e0e2a4fe0" kindref="member">Eigen::Vector6d</ref></type>
+        <definition>Eigen::Vector6d gazebo::EigenStack</definition>
+        <argsstring>(const ignition::math::Vector3d &amp;_x, const ignition::math::Vector3d &amp;_y)</argsstring>
+        <name>EigenStack</name>
+        <param>
+          <type>const ignition::math::Vector3d &amp;</type>
+          <declname>_x</declname>
+        </param>
+        <param>
+          <type>const ignition::math::Vector3d &amp;</type>
+          <declname>_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Def.hh" line="95" column="24" bodyfile="include/uuv_gazebo_plugins/Def.hh" bodystart="95" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="Def_8hh_1abf74a848ac8e88250e20d2f9c527a035" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ignition::math::Vector3d</type>
+        <definition>ignition::math::Vector3d gazebo::Vec3dToGazebo</definition>
+        <argsstring>(const Eigen::Vector3d &amp;_x)</argsstring>
+        <name>Vec3dToGazebo</name>
+        <param>
+          <type>const Eigen::Vector3d &amp;</type>
+          <declname>_x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Def.hh" line="103" column="33" bodyfile="include/uuv_gazebo_plugins/Def.hh" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="Def_8hh_1ab6be531ba3f076aa302787cc0f08b8a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ignition::math::Matrix3d</type>
+        <definition>ignition::math::Matrix3d gazebo::Mat3dToGazebo</definition>
+        <argsstring>(const Eigen::Matrix3d &amp;_x)</argsstring>
+        <name>Mat3dToGazebo</name>
+        <param>
+          <type>const Eigen::Matrix3d &amp;</type>
+          <declname>_x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Def.hh" line="107" column="33" bodyfile="include/uuv_gazebo_plugins/Def.hh" bodystart="107" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="HydrodynamicModel_8cc_1a389aad33a29388be8ba649233c4b2388" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gazebo::REGISTER_HYDRODYNAMICMODEL_CREATOR</definition>
+        <argsstring>(HMFossen, &amp;HMFossen::create)</argsstring>
+        <name>REGISTER_HYDRODYNAMICMODEL_CREATOR</name>
+        <param>
+          <type><ref refid="classgazebo_1_1HMFossen" kindref="compound">HMFossen</ref></type>
+        </param>
+        <param>
+          <type>&amp;<ref refid="classgazebo_1_1HMFossen_1a4473fe62590315c62a74d57a49561c3d" kindref="member">HMFossen::create</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HydrodynamicModel.cc" line="187" column="1" declfile="src/HydrodynamicModel.cc" declline="187" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="HydrodynamicModel_8cc_1aa9493417a195f7fa86f7be6e3df8733f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gazebo::REGISTER_HYDRODYNAMICMODEL_CREATOR</definition>
+        <argsstring>(HMSphere, &amp;HMSphere::create)</argsstring>
+        <name>REGISTER_HYDRODYNAMICMODEL_CREATOR</name>
+        <param>
+          <type><ref refid="classgazebo_1_1HMSphere" kindref="compound">HMSphere</ref></type>
+        </param>
+        <param>
+          <type>&amp;<ref refid="classgazebo_1_1HMSphere_1aba02ae4b4e986947c89b3552b2661ddf" kindref="member">HMSphere::create</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HydrodynamicModel.cc" line="579" column="1" declfile="src/HydrodynamicModel.cc" declline="579" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="HydrodynamicModel_8cc_1ad4101ddb1453ef95ec71ca2e1c15b6bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gazebo::REGISTER_HYDRODYNAMICMODEL_CREATOR</definition>
+        <argsstring>(HMCylinder, &amp;HMCylinder::create)</argsstring>
+        <name>REGISTER_HYDRODYNAMICMODEL_CREATOR</name>
+        <param>
+          <type><ref refid="classgazebo_1_1HMCylinder" kindref="compound">HMCylinder</ref></type>
+        </param>
+        <param>
+          <type>&amp;<ref refid="classgazebo_1_1HMCylinder_1a76f0a8d44b4bb95f0b6d4f854ce2be21" kindref="member">HMCylinder::create</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HydrodynamicModel.cc" line="655" column="1" declfile="src/HydrodynamicModel.cc" declline="655" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="HydrodynamicModel_8cc_1a099465f483f1fcfc9ef96bbcbe6c10d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gazebo::REGISTER_HYDRODYNAMICMODEL_CREATOR</definition>
+        <argsstring>(HMSpheroid, &amp;HMSpheroid::create)</argsstring>
+        <name>REGISTER_HYDRODYNAMICMODEL_CREATOR</name>
+        <param>
+          <type><ref refid="classgazebo_1_1HMSpheroid" kindref="compound">HMSpheroid</ref></type>
+        </param>
+        <param>
+          <type>&amp;<ref refid="classgazebo_1_1HMSpheroid_1acca3b046f41e6fc364d744bc3e6d0486" kindref="member">HMSpheroid::create</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HydrodynamicModel.cc" line="793" column="1" declfile="src/HydrodynamicModel.cc" declline="793" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="HydrodynamicModel_8cc_1a615420bd928f57d2284854fac4973f4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gazebo::REGISTER_HYDRODYNAMICMODEL_CREATOR</definition>
+        <argsstring>(HMBox,&amp;HMBox::create)</argsstring>
+        <name>REGISTER_HYDRODYNAMICMODEL_CREATOR</name>
+        <param>
+          <type><ref refid="classgazebo_1_1HMBox" kindref="compound">HMBox</ref></type>
+        </param>
+        <param>
+          <type>&amp;<ref refid="classgazebo_1_1HMBox_1a7e70ec74041e24838fb2597020444bc3" kindref="member">HMBox::create</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HydrodynamicModel.cc" line="876" column="1" declfile="src/HydrodynamicModel.cc" declline="876" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="UmbilicalPlugin_8cc_1aa0457d29fbe099affb59c08843bb121a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gazebo::GZ_REGISTER_MODEL_PLUGIN</definition>
+        <argsstring>(UmbilicalPlugin)</argsstring>
+        <name>GZ_REGISTER_MODEL_PLUGIN</name>
+        <param>
+          <type><ref refid="classgazebo_1_1UmbilicalPlugin" kindref="compound">UmbilicalPlugin</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/UmbilicalPlugin.cc" line="69" column="1" declfile="src/UmbilicalPlugin.cc" declline="69" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uuv_gazebo_plugins/BuoyantObject.hh" line="37" column="1"/>
+  </compounddef>
+</doxygen>

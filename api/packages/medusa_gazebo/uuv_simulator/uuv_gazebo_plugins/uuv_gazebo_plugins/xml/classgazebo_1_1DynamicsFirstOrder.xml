@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classgazebo_1_1DynamicsFirstOrder" kind="class" language="C++" prot="public">
+    <compoundname>gazebo::DynamicsFirstOrder</compoundname>
+    <basecompoundref refid="classgazebo_1_1Dynamics" prot="public" virt="non-virtual">gazebo::Dynamics</basecompoundref>
+    <includes refid="Dynamics_8hh" local="no">Dynamics.hh</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classgazebo_1_1DynamicsFirstOrder_1a705d661095e9222d2865163d0f640caf" prot="private" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string gazebo::DynamicsFirstOrder::IDENTIFIER</definition>
+        <argsstring></argsstring>
+        <name>IDENTIFIER</name>
+        <initializer>= &quot;FirstOrder&quot;</initializer>
+        <briefdescription>
+<para>Unique identifier for this dynamical model. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="124" column="37" bodyfile="include/uuv_gazebo_plugins/Dynamics.hh" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgazebo_1_1DynamicsFirstOrder_1aa1178a7a1fc884b3e4658dbc3150dca3" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gazebo::DynamicsFirstOrder::tau</definition>
+        <argsstring></argsstring>
+        <name>tau</name>
+        <briefdescription>
+<para>Time constant tau. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="130" column="19" bodyfile="include/uuv_gazebo_plugins/Dynamics.hh" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgazebo_1_1DynamicsFirstOrder_1ab5d2f4af592decf7b75baf782db2397d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgazebo_1_1Dynamics" kindref="compound">Dynamics</ref> *</type>
+        <definition>Dynamics * gazebo::DynamicsFirstOrder::create</definition>
+        <argsstring>(sdf::ElementPtr _sdf)</argsstring>
+        <name>create</name>
+        <param>
+          <type>sdf::ElementPtr</type>
+          <declname>_sdf</declname>
+        </param>
+        <briefdescription>
+<para>Create thruster model of this type with parameter values from sdf. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="112" column="27" bodyfile="src/Dynamics.cc" bodystart="82" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgazebo_1_1DynamicsFirstOrder_1a976f58c938b8ca01939d2e9590b75998" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string gazebo::DynamicsFirstOrder::GetType</definition>
+        <argsstring>()</argsstring>
+        <name>GetType</name>
+        <reimplements refid="classgazebo_1_1Dynamics_1ae9efe1854032da39ab230063c0303549">GetType</reimplements>
+        <briefdescription>
+<para>Return (derived) type of dynamic system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="115" column="31" bodyfile="include/uuv_gazebo_plugins/Dynamics.hh" bodystart="115" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1DynamicsFirstOrder_1af22a9290175ba3af09ef326bd136dd7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double gazebo::DynamicsFirstOrder::update</definition>
+        <argsstring>(double _cmd, double _t)</argsstring>
+        <name>update</name>
+        <reimplements refid="classgazebo_1_1Dynamics_1a7cae772ac89944d52757c7883d75f93a">update</reimplements>
+        <param>
+          <type>double</type>
+          <declname>_cmd</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>_t</declname>
+        </param>
+        <briefdescription>
+<para>Update dynamical model given input value and time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="118" column="26" bodyfile="src/Dynamics.cc" bodystart="94" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgazebo_1_1DynamicsFirstOrder_1aa1e44293875790faab5a753e06f01884" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gazebo::DynamicsFirstOrder::REGISTER_DYNAMICS</definition>
+        <argsstring>(DynamicsFirstOrder)</argsstring>
+        <name>REGISTER_DYNAMICS</name>
+        <param>
+          <type><ref refid="classgazebo_1_1DynamicsFirstOrder" kindref="compound">DynamicsFirstOrder</ref></type>
+        </param>
+        <briefdescription>
+<para>Register this model with the factory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="121" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1DynamicsFirstOrder_1adb7d4d4306b902b6c80ef0713567992d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gazebo::DynamicsFirstOrder::DynamicsFirstOrder</definition>
+        <argsstring>(double _tau)</argsstring>
+        <name>DynamicsFirstOrder</name>
+        <param>
+          <type>double</type>
+          <declname>_tau</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="127" column="12" bodyfile="src/Dynamics.cc" bodystart="112" bodyend="112"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>First-order dynamic system. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>gazebo::DynamicsFirstOrder</label>
+        <link refid="classgazebo_1_1DynamicsFirstOrder"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gazebo::Dynamics</label>
+        <link refid="classgazebo_1_1Dynamics"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>gazebo::DynamicsFirstOrder</label>
+        <link refid="classgazebo_1_1DynamicsFirstOrder"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gazebo::Dynamics</label>
+        <link refid="classgazebo_1_1Dynamics"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="110" column="41" bodyfile="include/uuv_gazebo_plugins/Dynamics.hh" bodystart="110" bodyend="131"/>
+    <listofallmembers>
+      <member refid="classgazebo_1_1DynamicsFirstOrder_1ab5d2f4af592decf7b75baf782db2397d" prot="public" virt="non-virtual"><scope>gazebo::DynamicsFirstOrder</scope><name>create</name></member>
+      <member refid="classgazebo_1_1Dynamics_1a4e590f9f7264d3d7e22c08d9b7737f1a" prot="protected" virt="non-virtual"><scope>gazebo::DynamicsFirstOrder</scope><name>Dynamics</name></member>
+      <member refid="classgazebo_1_1DynamicsFirstOrder_1adb7d4d4306b902b6c80ef0713567992d" prot="private" virt="non-virtual"><scope>gazebo::DynamicsFirstOrder</scope><name>DynamicsFirstOrder</name></member>
+      <member refid="classgazebo_1_1DynamicsFirstOrder_1a976f58c938b8ca01939d2e9590b75998" prot="public" virt="virtual"><scope>gazebo::DynamicsFirstOrder</scope><name>GetType</name></member>
+      <member refid="classgazebo_1_1DynamicsFirstOrder_1a705d661095e9222d2865163d0f640caf" prot="private" virt="non-virtual"><scope>gazebo::DynamicsFirstOrder</scope><name>IDENTIFIER</name></member>
+      <member refid="classgazebo_1_1Dynamics_1a27de443c5e85c6ab6ddcbb31e880d4b2" prot="protected" virt="non-virtual"><scope>gazebo::DynamicsFirstOrder</scope><name>prevTime</name></member>
+      <member refid="classgazebo_1_1DynamicsFirstOrder_1aa1e44293875790faab5a753e06f01884" prot="private" virt="non-virtual"><scope>gazebo::DynamicsFirstOrder</scope><name>REGISTER_DYNAMICS</name></member>
+      <member refid="classgazebo_1_1Dynamics_1a4ca9ecc33bdd2e3cf8a42a928a9eec8f" prot="public" virt="virtual"><scope>gazebo::DynamicsFirstOrder</scope><name>Reset</name></member>
+      <member refid="classgazebo_1_1Dynamics_1a4c2f128d2d0ef4d312936f66106cf229" prot="protected" virt="non-virtual"><scope>gazebo::DynamicsFirstOrder</scope><name>state</name></member>
+      <member refid="classgazebo_1_1DynamicsFirstOrder_1aa1178a7a1fc884b3e4658dbc3150dca3" prot="private" virt="non-virtual"><scope>gazebo::DynamicsFirstOrder</scope><name>tau</name></member>
+      <member refid="classgazebo_1_1DynamicsFirstOrder_1af22a9290175ba3af09ef326bd136dd7f" prot="public" virt="virtual"><scope>gazebo::DynamicsFirstOrder</scope><name>update</name></member>
+      <member refid="classgazebo_1_1Dynamics_1a93c023678bcde05d9cc280afe071b889" prot="public" virt="virtual"><scope>gazebo::DynamicsFirstOrder</scope><name>~Dynamics</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

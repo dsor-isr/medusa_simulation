@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classpublish__world__models_1_1WorldPublisher" kind="class" language="Python" prot="public">
+    <compoundname>publish_world_models::WorldPublisher</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpublish__world__models_1_1WorldPublisher_1a3d42a1c01d6f302d3db2e05f3e1f7b08" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>publish_world_models.WorldPublisher::_model_paths</definition>
+        <argsstring></argsstring>
+        <name>_model_paths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_world_models.py" line="26" column="1" bodyfile="scripts/publish_world_models.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpublish__world__models_1_1WorldPublisher_1af98d7375dcd7fe4242f230615fa1cbe6" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>publish_world_models.WorldPublisher::_get_model_state</definition>
+        <argsstring></argsstring>
+        <name>_get_model_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_world_models.py" line="31" column="1" bodyfile="scripts/publish_world_models.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpublish__world__models_1_1WorldPublisher_1a17ec1c8cc451dfe01c3c0c9b63cf77ec" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>publish_world_models.WorldPublisher::_mesh_topic</definition>
+        <argsstring></argsstring>
+        <name>_mesh_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_world_models.py" line="43" column="1" bodyfile="scripts/publish_world_models.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpublish__world__models_1_1WorldPublisher_1a98e899c286a0adfbcee2ba000df4ca09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def publish_world_models.WorldPublisher.__init__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_world_models.py" line="25" column="1" bodyfile="scripts/publish_world_models.py" bodystart="25" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classpublish__world__models_1_1WorldPublisher_1af6e357a8f15dfacf29ef99274248a521" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def publish_world_models.WorldPublisher.add_meshes</definition>
+        <argsstring>(self, models)</argsstring>
+        <name>add_meshes</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>models</type>
+          <defname>models</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_world_models.py" line="50" column="1" bodyfile="scripts/publish_world_models.py" bodystart="50" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classpublish__world__models_1_1WorldPublisher_1a60d5c7293fb82c4dcac9564292e12e29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def publish_world_models.WorldPublisher.publish_meshes</definition>
+        <argsstring>(self)</argsstring>
+        <name>publish_meshes</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_world_models.py" line="109" column="1" bodyfile="scripts/publish_world_models.py" bodystart="109" bodyend="150"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="scripts/publish_world_models.py" line="24" column="1" bodyfile="scripts/publish_world_models.py" bodystart="24" bodyend="151"/>
+    <listofallmembers>
+      <member refid="classpublish__world__models_1_1WorldPublisher_1a98e899c286a0adfbcee2ba000df4ca09" prot="public" virt="non-virtual"><scope>publish_world_models::WorldPublisher</scope><name>__init__</name></member>
+      <member refid="classpublish__world__models_1_1WorldPublisher_1af98d7375dcd7fe4242f230615fa1cbe6" prot="private" virt="non-virtual"><scope>publish_world_models::WorldPublisher</scope><name>_get_model_state</name></member>
+      <member refid="classpublish__world__models_1_1WorldPublisher_1a17ec1c8cc451dfe01c3c0c9b63cf77ec" prot="private" virt="non-virtual"><scope>publish_world_models::WorldPublisher</scope><name>_mesh_topic</name></member>
+      <member refid="classpublish__world__models_1_1WorldPublisher_1a3d42a1c01d6f302d3db2e05f3e1f7b08" prot="private" virt="non-virtual"><scope>publish_world_models::WorldPublisher</scope><name>_model_paths</name></member>
+      <member refid="classpublish__world__models_1_1WorldPublisher_1af6e357a8f15dfacf29ef99274248a521" prot="public" virt="non-virtual"><scope>publish_world_models::WorldPublisher</scope><name>add_meshes</name></member>
+      <member refid="classpublish__world__models_1_1WorldPublisher_1a60d5c7293fb82c4dcac9564292e12e29" prot="public" virt="non-virtual"><scope>publish_world_models::WorldPublisher</scope><name>publish_meshes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

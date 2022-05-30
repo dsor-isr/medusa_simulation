@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceuuv__gazebo__ros__plugins__msgs_1_1srv" kind="namespace" language="Python">
+    <compoundname>uuv_gazebo_ros_plugins_msgs::srv</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="test/test_default_fossen_vehicle.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

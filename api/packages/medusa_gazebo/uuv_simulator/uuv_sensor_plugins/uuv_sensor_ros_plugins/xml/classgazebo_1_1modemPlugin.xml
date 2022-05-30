@@ -1,0 +1,606 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classgazebo_1_1modemPlugin" kind="class" language="C++" prot="public">
+    <compoundname>gazebo::modemPlugin</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ModelPlugin</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a960cfb87f8a9dfe0617a566b35446f6c" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::modemPlugin::m_namespace</definition>
+        <argsstring></argsstring>
+        <name>m_namespace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="42" column="19" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a1c72a9ce94c5e75677a1ef367ab93c6d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::modemPlugin::m_modemDevice</definition>
+        <argsstring></argsstring>
+        <name>m_modemDevice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="43" column="19" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1ad168bb6b8e08d5ec3d77802edf7995e3" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::modemPlugin::m_modemID</definition>
+        <argsstring></argsstring>
+        <name>m_modemID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="44" column="19" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1add643d65ccad168db158bb477a8bcea0" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::modemPlugin::m_usblDevice</definition>
+        <argsstring></argsstring>
+        <name>m_usblDevice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="45" column="19" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a99f78832a84fb731da4ff51852132aaf" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::modemPlugin::m_usblID</definition>
+        <argsstring></argsstring>
+        <name>m_usblID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="46" column="19" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a27d00f8c07563f17ac7569c33c865d00" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::modemPlugin::m_modemAttachedObject</definition>
+        <argsstring></argsstring>
+        <name>m_modemAttachedObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="47" column="19" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a5ad816eaf060e1ac2ebd3633a7477bf5" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::modemPlugin::m_usblAttachedObject</definition>
+        <argsstring></argsstring>
+        <name>m_usblAttachedObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="48" column="19" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1adbf5a807b917999394323b4731053fc1" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::modemPlugin::m_delayUntilAnswer</definition>
+        <argsstring></argsstring>
+        <name>m_delayUntilAnswer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="49" column="19" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a9b2c1d894372b272943ea86b96fe965e" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::modemPlugin::aux_usbl_id</definition>
+        <argsstring></argsstring>
+        <name>aux_usbl_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="51" column="19" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a27efbe12c59c703ad430683805eb730f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::modemPlugin::aux_usbl_frame_id</definition>
+        <argsstring></argsstring>
+        <name>aux_usbl_frame_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="52" column="19" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a0964c68fc1f196dccb205a4f864ebefa" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gazebo::modemPlugin::m_temperature</definition>
+        <argsstring></argsstring>
+        <name>m_temperature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="55" column="14" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a7933fa2d1be30863234987d830bcaa81" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gazebo::modemPlugin::m_soundSpeed</definition>
+        <argsstring></argsstring>
+        <name>m_soundSpeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="56" column="14" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1ac9f5930470ac609696912eca8666928e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gazebo::modemPlugin::m_noiseMu</definition>
+        <argsstring></argsstring>
+        <name>m_noiseMu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="57" column="14" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1abe8d1835958b393c0e046e0257d577aa" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gazebo::modemPlugin::m_noiseSigma</definition>
+        <argsstring></argsstring>
+        <name>m_noiseSigma</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="58" column="14" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1abe9ae3fae51e735b855f6fd983d1d600" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gazebo::modemPlugin::m_hasUSBL</definition>
+        <argsstring></argsstring>
+        <name>m_hasUSBL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="59" column="12" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1ac9b98a7dbbb7bc9f7c84c46fa5b4f9e6" prot="private" static="no" mutable="no">
+        <type>physics::ModelPtr</type>
+        <definition>physics::ModelPtr gazebo::modemPlugin::m_model</definition>
+        <argsstring></argsstring>
+        <name>m_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="62" column="25" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a243f751644ace66f7f17b39e2828b0bc" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher gazebo::modemPlugin::m_commandResponsePub</definition>
+        <argsstring></argsstring>
+        <name>m_commandResponsePub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="65" column="22" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a2656f245b15051d4f061421ffdf1cd16" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher gazebo::modemPlugin::m_trigger_serialization</definition>
+        <argsstring></argsstring>
+        <name>m_trigger_serialization</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="66" column="22" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a3999befab7e37d113a6948dc3faee215" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher gazebo::modemPlugin::m_payload_to_deserialize</definition>
+        <argsstring></argsstring>
+        <name>m_payload_to_deserialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="67" column="22" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a44ea0e851f0957cb4f9c4efc9fd52499" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher gazebo::modemPlugin::m_globalPosPub2</definition>
+        <argsstring></argsstring>
+        <name>m_globalPosPub2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="68" column="22" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1afa8938d760e1e7afd64a05950fb7f309" prot="private" static="no" mutable="no">
+        <type>ros::Subscriber</type>
+        <definition>ros::Subscriber gazebo::modemPlugin::m_iisSub</definition>
+        <argsstring></argsstring>
+        <name>m_iisSub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="69" column="23" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1af0218074fe768f8c7238b929efc7a949" prot="private" static="no" mutable="no">
+        <type>ros::Subscriber</type>
+        <definition>ros::Subscriber gazebo::modemPlugin::m_cisSub</definition>
+        <argsstring></argsstring>
+        <name>m_cisSub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="70" column="23" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a7962c026d65ad3f829ce171b2013979e" prot="private" static="no" mutable="no">
+        <type>ros::Subscriber</type>
+        <definition>ros::Subscriber gazebo::modemPlugin::m_commandSub</definition>
+        <argsstring></argsstring>
+        <name>m_commandSub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="71" column="23" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a932407b1bd0a13988dd04a7596d497ab" prot="private" static="no" mutable="no">
+        <type>ros::Subscriber</type>
+        <definition>ros::Subscriber gazebo::modemPlugin::m_payload_to_transmit</definition>
+        <argsstring></argsstring>
+        <name>m_payload_to_transmit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="72" column="23" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a4506fc73e5df1bdf47eebb0f5f17c41b" prot="private" static="no" mutable="no">
+        <type>ros::CallbackQueue</type>
+        <definition>ros::CallbackQueue gazebo::modemPlugin::m_rosQueue</definition>
+        <argsstring></argsstring>
+        <name>m_rosQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="73" column="26" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1aa216d73efeb7484132009da0422cba0f" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher gazebo::modemPlugin::m_usbl_fix</definition>
+        <argsstring></argsstring>
+        <name>m_usbl_fix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="75" column="22" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1a89a39e0719df55f0e5df4ca14f6e1b78" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; ros::NodeHandle &gt;</type>
+        <definition>std::unique_ptr&lt;ros::NodeHandle&gt; gazebo::modemPlugin::m_rosNode</definition>
+        <argsstring></argsstring>
+        <name>m_rosNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="77" column="23" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1modemPlugin_1aaa1220e875dab7e0b98024eaebde42c1" prot="private" static="no" mutable="no">
+        <type>std::thread</type>
+        <definition>std::thread gazebo::modemPlugin::m_rosQueueThread</definition>
+        <argsstring></argsstring>
+        <name>m_rosQueueThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="78" column="19" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgazebo_1_1modemPlugin_1ae7da5ea417c28d482a10068bd97ced52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>modemPlugin::modemPlugin</definition>
+        <argsstring>()</argsstring>
+        <name>modemPlugin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="29" column="7" bodyfile="src/modemPlugin.cc" bodystart="7" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1modemPlugin_1addec909bcba18360e1ead31012318292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>modemPlugin::~modemPlugin</definition>
+        <argsstring>()</argsstring>
+        <name>~modemPlugin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="30" column="7" bodyfile="src/modemPlugin.cc" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1modemPlugin_1a00e7d3e07480575eb609704eb81b6323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void modemPlugin::Load</definition>
+        <argsstring>(physics::ModelPtr _model, sdf::ElementPtr _sdf)</argsstring>
+        <name>Load</name>
+        <param>
+          <type>physics::ModelPtr</type>
+          <declname>_model</declname>
+        </param>
+        <param>
+          <type>sdf::ElementPtr</type>
+          <declname>_sdf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="32" column="12" bodyfile="src/modemPlugin.cc" bodystart="10" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1modemPlugin_1a99dce810be91ec0cf56070ab0aaf02a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void modemPlugin::iisRosCallback</definition>
+        <argsstring>(uuv_sensor_ros_plugins_msgs::modemLocationConstPtr modem_position)</argsstring>
+        <name>iisRosCallback</name>
+        <param>
+          <type>uuv_sensor_ros_plugins_msgs::modemLocationConstPtr</type>
+          <declname>modem_position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="33" column="12" bodyfile="src/modemPlugin.cc" bodystart="196" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1modemPlugin_1aa1c30212329e3eb262790571e30a94c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void modemPlugin::cisRosCallback</definition>
+        <argsstring>(uuv_sensor_ros_plugins_msgs::modemLocationConstPtr modem_position)</argsstring>
+        <name>cisRosCallback</name>
+        <param>
+          <type>uuv_sensor_ros_plugins_msgs::modemLocationConstPtr</type>
+          <declname>modem_position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="34" column="12" bodyfile="src/modemPlugin.cc" bodystart="228" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1modemPlugin_1afa26dbd1cb7ac33bb14c786b562beeaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void modemPlugin::payloadToTransmitCallback</definition>
+        <argsstring>(const std_msgs::StringConstPtr &amp;payload)</argsstring>
+        <name>payloadToTransmitCallback</name>
+        <param>
+          <type>const std_msgs::StringConstPtr &amp;</type>
+          <declname>payload</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="35" column="12" bodyfile="src/modemPlugin.cc" bodystart="256" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1modemPlugin_1a7611481db157c99a9ae30a410dbdafad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void modemPlugin::queueThread</definition>
+        <argsstring>()</argsstring>
+        <name>queueThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="36" column="12" bodyfile="src/modemPlugin.cc" bodystart="288" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1modemPlugin_1a41f52c889ede966a5f2b65ac20088987" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void modemPlugin::publishPosition</definition>
+        <argsstring>(double &amp;bearing, double &amp;range, double &amp;elevation)</argsstring>
+        <name>publishPosition</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>bearing</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>elevation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="38" column="12" bodyfile="src/modemPlugin.cc" bodystart="311" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1modemPlugin_1acbe1563589080a66f48f95351bda3674" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void modemPlugin::calcuateRelativePose</definition>
+        <argsstring>(ignition::math::Vector3d position, double &amp;bearing, double &amp;range, double &amp;elevation)</argsstring>
+        <name>calcuateRelativePose</name>
+        <param>
+          <type>ignition::math::Vector3d</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>bearing</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>elevation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="39" column="12" bodyfile="src/modemPlugin.cc" bodystart="297" bodyend="307"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>gazebo::modemPlugin</label>
+        <link refid="classgazebo_1_1modemPlugin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ModelPlugin</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>gazebo::modemPlugin</label>
+        <link refid="classgazebo_1_1modemPlugin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ModelPlugin</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/uuv_sensor_ros_plugins/modemPlugin.hh" line="27" column="1" bodyfile="include/uuv_sensor_ros_plugins/modemPlugin.hh" bodystart="26" bodyend="79"/>
+    <listofallmembers>
+      <member refid="classgazebo_1_1modemPlugin_1a27efbe12c59c703ad430683805eb730f" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>aux_usbl_frame_id</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a9b2c1d894372b272943ea86b96fe965e" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>aux_usbl_id</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1acbe1563589080a66f48f95351bda3674" prot="public" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>calcuateRelativePose</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1aa1c30212329e3eb262790571e30a94c8" prot="public" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>cisRosCallback</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a99dce810be91ec0cf56070ab0aaf02a0" prot="public" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>iisRosCallback</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a00e7d3e07480575eb609704eb81b6323" prot="public" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>Load</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1af0218074fe768f8c7238b929efc7a949" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_cisSub</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a243f751644ace66f7f17b39e2828b0bc" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_commandResponsePub</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a7962c026d65ad3f829ce171b2013979e" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_commandSub</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1adbf5a807b917999394323b4731053fc1" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_delayUntilAnswer</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a44ea0e851f0957cb4f9c4efc9fd52499" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_globalPosPub2</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1abe9ae3fae51e735b855f6fd983d1d600" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_hasUSBL</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1afa8938d760e1e7afd64a05950fb7f309" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_iisSub</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1ac9b98a7dbbb7bc9f7c84c46fa5b4f9e6" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_model</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a27d00f8c07563f17ac7569c33c865d00" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_modemAttachedObject</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a1c72a9ce94c5e75677a1ef367ab93c6d" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_modemDevice</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1ad168bb6b8e08d5ec3d77802edf7995e3" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_modemID</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a960cfb87f8a9dfe0617a566b35446f6c" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_namespace</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1ac9f5930470ac609696912eca8666928e" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_noiseMu</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1abe8d1835958b393c0e046e0257d577aa" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_noiseSigma</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a3999befab7e37d113a6948dc3faee215" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_payload_to_deserialize</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a932407b1bd0a13988dd04a7596d497ab" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_payload_to_transmit</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a89a39e0719df55f0e5df4ca14f6e1b78" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_rosNode</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a4506fc73e5df1bdf47eebb0f5f17c41b" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_rosQueue</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1aaa1220e875dab7e0b98024eaebde42c1" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_rosQueueThread</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a7933fa2d1be30863234987d830bcaa81" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_soundSpeed</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a0964c68fc1f196dccb205a4f864ebefa" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_temperature</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a2656f245b15051d4f061421ffdf1cd16" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_trigger_serialization</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1aa216d73efeb7484132009da0422cba0f" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_usbl_fix</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a5ad816eaf060e1ac2ebd3633a7477bf5" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_usblAttachedObject</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1add643d65ccad168db158bb477a8bcea0" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_usblDevice</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a99f78832a84fb731da4ff51852132aaf" prot="private" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>m_usblID</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1ae7da5ea417c28d482a10068bd97ced52" prot="public" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>modemPlugin</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1afa26dbd1cb7ac33bb14c786b562beeaa" prot="public" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>payloadToTransmitCallback</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a41f52c889ede966a5f2b65ac20088987" prot="public" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>publishPosition</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1a7611481db157c99a9ae30a410dbdafad" prot="public" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>queueThread</name></member>
+      <member refid="classgazebo_1_1modemPlugin_1addec909bcba18360e1ead31012318292" prot="public" virt="non-virtual"><scope>gazebo::modemPlugin</scope><name>~modemPlugin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

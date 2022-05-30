@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacegazebo" kind="namespace" language="C++">
+    <compoundname>gazebo</compoundname>
+    <innerclass refid="classgazebo_1_1AccelerationsTestPlugin" prot="public">gazebo::AccelerationsTestPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1CustomBatteryConsumerROSPlugin" prot="public">gazebo::CustomBatteryConsumerROSPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1LinearBatteryROSPlugin" prot="public">gazebo::LinearBatteryROSPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1ThrusterManagerROSPlugin" prot="public">gazebo::ThrusterManagerROSPlugin</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacegazebo_1a5463c8c5b3e3efe4238a6ab8d7a7488c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>geometry_msgs::Accel</type>
+        <definition>geometry_msgs::Accel gazebo::accelFromEigen</definition>
+        <argsstring>(const Eigen::Vector6d &amp;acc)</argsstring>
+        <name>accelFromEigen</name>
+        <param>
+          <type>const Eigen::Vector6d &amp;</type>
+          <declname>acc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AccelerationsTestPlugin.cc" line="110" column="22" bodyfile="src/AccelerationsTestPlugin.cc" bodystart="110" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegazebo_1ac2ca911914770b251917b341cab3341c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Eigen::Matrix3d</type>
+        <definition>Eigen::Matrix3d gazebo::Matrix3ToEigen</definition>
+        <argsstring>(const ignition::math::Matrix3d &amp;m)</argsstring>
+        <name>Matrix3ToEigen</name>
+        <param>
+          <type>const ignition::math::Matrix3d &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/AccelerationsTestPlugin.cc" line="122" column="17" bodyfile="src/AccelerationsTestPlugin.cc" bodystart="122" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Authors: Andre Potes (<ulink url="mailto:andre.potes@tecnico.ulisboa.pt">andre.potes@tecnico.ulisboa.pt</ulink>) Marcelo Jacinto (<ulink url="mailto:marcelo.jacinto@tecnico.ulisboa.pt">marcelo.jacinto@tecnico.ulisboa.pt</ulink>) Maintained by: Andre Potes (<ulink url="mailto:andre.potes@tecnico.ulisboa.pt">andre.potes@tecnico.ulisboa.pt</ulink>) Last Update: 14/12/2021 License: MIT File: ThrusterManager.hpp Brief: Defines a thruster manager ROS plugin that translates the desired forces for the vehicle thrusters, from the DSOR stack to the UUV simulator </para>
+    </detaileddescription>
+    <location file="include/uuv_gazebo_ros_plugins/AccelerationsTestPlugin.hh" line="29" column="1"/>
+  </compounddef>
+</doxygen>

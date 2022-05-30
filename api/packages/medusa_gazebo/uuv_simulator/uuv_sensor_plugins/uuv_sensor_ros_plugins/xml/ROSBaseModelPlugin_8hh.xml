@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ROSBaseModelPlugin_8hh" kind="file" language="C++">
+    <compoundname>ROSBaseModelPlugin.hh</compoundname>
+    <includes local="no">gazebo/common/Plugin.hh</includes>
+    <includes local="no">gazebo/gazebo.hh</includes>
+    <includes local="no">gazebo/physics/physics.hh</includes>
+    <includes refid="ROSBasePlugin_8hh" local="no">uuv_sensor_ros_plugins/ROSBasePlugin.hh</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">tf/transform_datatypes.h</includes>
+    <includes local="no">tf/tfMessage.h</includes>
+    <includes local="no">tf/transform_listener.h</includes>
+    <includes local="no">tf/tf.h</includes>
+    <includes local="no">tf/transform_broadcaster.h</includes>
+    <includedby refid="CPCROSPlugin_8hh" local="no">include/uuv_sensor_ros_plugins/CPCROSPlugin.hh</includedby>
+    <includedby refid="DVLROSPlugin_8hh" local="no">include/uuv_sensor_ros_plugins/DVLROSPlugin.hh</includedby>
+    <includedby refid="IMUROSPlugin_8hh" local="no">include/uuv_sensor_ros_plugins/IMUROSPlugin.hh</includedby>
+    <includedby refid="MagnetometerROSPlugin_8hh" local="no">include/uuv_sensor_ros_plugins/MagnetometerROSPlugin.hh</includedby>
+    <includedby refid="PoseGTROSPlugin_8hh" local="no">include/uuv_sensor_ros_plugins/PoseGTROSPlugin.hh</includedby>
+    <includedby refid="RPTROSPlugin_8hh" local="no">include/uuv_sensor_ros_plugins/RPTROSPlugin.hh</includedby>
+    <includedby refid="SubseaPressureROSPlugin_8hh" local="no">include/uuv_sensor_ros_plugins/SubseaPressureROSPlugin.hh</includedby>
+    <includedby refid="ROSBaseModelPlugin_8cc" local="no">src/ROSBaseModelPlugin.cc</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>gazebo/common/Plugin.hh</label>
+      </node>
+      <node id="6">
+        <label>gazebo/common/common.hh</label>
+      </node>
+      <node id="22">
+        <label>functional</label>
+      </node>
+      <node id="15">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="25">
+        <label>tf/transform_listener.h</label>
+      </node>
+      <node id="26">
+        <label>tf/transform_broadcaster.h</label>
+      </node>
+      <node id="11">
+        <label>std_msgs/Bool.h</label>
+      </node>
+      <node id="5">
+        <label>uuv_sensor_ros_plugins/ROSBasePlugin.hh</label>
+        <link refid="ROSBasePlugin_8hh_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="21">
+        <label>map</label>
+      </node>
+      <node id="18">
+        <label>tf/tf.h</label>
+      </node>
+      <node id="3">
+        <label>gazebo/gazebo.hh</label>
+      </node>
+      <node id="20">
+        <label>random</label>
+      </node>
+      <node id="9">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="13">
+        <label>geometry_msgs/TransformStamped.h</label>
+      </node>
+      <node id="24">
+        <label>tf/transform_datatypes.h</label>
+      </node>
+      <node id="14">
+        <label>gazebo/sensors/Noise.hh</label>
+      </node>
+      <node id="12">
+        <label>uuv_sensor_ros_plugins_msgs/ChangeSensorState.h</label>
+      </node>
+      <node id="1">
+        <label>include/uuv_sensor_ros_plugins/ROSBaseModelPlugin.hh</label>
+        <link refid="ROSBaseModelPlugin_8hh"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="7">
+        <label>uuv_sensor_ros_plugins/Common.hh</label>
+        <link refid="Common_8hh_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>boost/bind.hpp</label>
+      </node>
+      <node id="19">
+        <label>chrono</label>
+      </node>
+      <node id="4">
+        <label>gazebo/physics/physics.hh</label>
+      </node>
+      <node id="17">
+        <label>tf/tfMessage.h</label>
+      </node>
+      <node id="23">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/uuv_sensor_ros_plugins/CPCROSPlugin.hh</label>
+        <link refid="CPCROSPlugin_8hh_source"/>
+      </node>
+      <node id="5">
+        <label>include/uuv_sensor_ros_plugins/MagnetometerROSPlugin.hh</label>
+        <link refid="MagnetometerROSPlugin_8hh_source"/>
+      </node>
+      <node id="3">
+        <label>include/uuv_sensor_ros_plugins/DVLROSPlugin.hh</label>
+        <link refid="DVLROSPlugin_8hh_source"/>
+      </node>
+      <node id="8">
+        <label>include/uuv_sensor_ros_plugins/SubseaPressureROSPlugin.hh</label>
+        <link refid="SubseaPressureROSPlugin_8hh_source"/>
+      </node>
+      <node id="1">
+        <label>include/uuv_sensor_ros_plugins/ROSBaseModelPlugin.hh</label>
+        <link refid="ROSBaseModelPlugin_8hh"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>include/uuv_sensor_ros_plugins/RPTROSPlugin.hh</label>
+        <link refid="RPTROSPlugin_8hh_source"/>
+      </node>
+      <node id="4">
+        <label>include/uuv_sensor_ros_plugins/IMUROSPlugin.hh</label>
+        <link refid="IMUROSPlugin_8hh_source"/>
+      </node>
+      <node id="6">
+        <label>include/uuv_sensor_ros_plugins/PoseGTROSPlugin.hh</label>
+        <link refid="PoseGTROSPlugin_8hh_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgazebo_1_1ROSBaseModelPlugin" prot="public">gazebo::ROSBaseModelPlugin</innerclass>
+    <innernamespace refid="namespacegazebo">gazebo</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2016<sp/>The<sp/>UUV<sp/>Simulator<sp/>Authors.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__ROS_BASE_MODEL_PLUGIN_HH__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ROS_BASE_MODEL_PLUGIN_HH__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gazebo/common/Plugin.hh&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gazebo/gazebo.hh&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gazebo/physics/physics.hh&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uuv_sensor_ros_plugins/ROSBasePlugin.hh&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf/transform_datatypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf/tfMessage.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf/transform_listener.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf/tf.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf/transform_broadcaster.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacegazebo" kindref="compound">gazebo</ref><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classgazebo_1_1ROSBaseModelPlugin" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgazebo_1_1ROSBaseModelPlugin" kindref="compound">ROSBaseModelPlugin</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1ROSBasePlugin" kindref="compound">ROSBasePlugin</ref>,<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>ModelPlugin<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/><ref refid="classgazebo_1_1ROSBaseModelPlugin_1ab63bd687291a8642150cb00a94900014" kindref="member">ROSBaseModelPlugin</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1ROSBaseModelPlugin_1a3e34768f99ceff93e43a6befc5ca1c03" kindref="member">~ROSBaseModelPlugin</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1ROSBaseModelPlugin_1a9201b96ddee1a64ce43e59f3cf1ff2e9" kindref="member">Load</ref>(physics::ModelPtr<sp/>_model,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sdf::ElementPtr<sp/>_sdf);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1ROSBaseModelPlugin_1a51b6e630508d410ddfe1a76573ef75fb" kindref="member">OnUpdate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>common::UpdateInfo&amp;);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classgazebo_1_1ROSBaseModelPlugin_1af03370cfa624905d6098556d815828b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>physics::ModelPtr<sp/><ref refid="classgazebo_1_1ROSBaseModelPlugin_1af03370cfa624905d6098556d815828b3" kindref="member">model</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classgazebo_1_1ROSBaseModelPlugin_1ac405387fd2fcf90b48b368104031367d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>physics::LinkPtr<sp/><ref refid="classgazebo_1_1ROSBaseModelPlugin_1ac405387fd2fcf90b48b368104031367d" kindref="member">link</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classgazebo_1_1ROSBaseModelPlugin_1a3ebccbacd16defded57b77d970bcb95c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1ROSBaseModelPlugin_1a3ebccbacd16defded57b77d970bcb95c" kindref="member">enableLocalNEDFrame</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classgazebo_1_1ROSBaseModelPlugin_1ab2ee1727cd20681c8a5f3a33462cc694" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>tf::TransformBroadcaster<sp/>*<sp/><ref refid="classgazebo_1_1ROSBaseModelPlugin_1ab2ee1727cd20681c8a5f3a33462cc694" kindref="member">tfBroadcaster</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classgazebo_1_1ROSBaseModelPlugin_1abc302dfd65e4b45c3e11721afedb21d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>ignition::math::Pose3d<sp/><ref refid="classgazebo_1_1ROSBaseModelPlugin_1abc302dfd65e4b45c3e11721afedb21d7" kindref="member">localNEDFrame</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classgazebo_1_1ROSBaseModelPlugin_1a3648c84096f1fff1390c53557a782fd1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>tf::StampedTransform<sp/><ref refid="classgazebo_1_1ROSBaseModelPlugin_1a3648c84096f1fff1390c53557a782fd1" kindref="member">tfLocalNEDFrame</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1ROSBaseModelPlugin_1a11c3832798f58c446a5d0d69343ad181" kindref="member">SendLocalNEDTransform</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__ROS_BASE_MODEL_PLUGIN_HH__</highlight></codeline>
+    </programlisting>
+    <location file="include/uuv_sensor_ros_plugins/ROSBaseModelPlugin.hh"/>
+  </compounddef>
+</doxygen>

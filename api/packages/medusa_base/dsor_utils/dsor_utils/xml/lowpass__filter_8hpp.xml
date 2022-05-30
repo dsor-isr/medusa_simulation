@@ -21,6 +21,12 @@
       <node id="3">
         <label>stdexcept</label>
       </node>
+      <node id="1">
+        <label>include/dsor_utils/filters/lowpass_filter.hpp</label>
+        <link refid="lowpass__filter_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="5">
         <label>dsor_utils/data_structures/circular_buffer.hpp</label>
         <link refid="circular__buffer_8hpp_source"/>
@@ -31,12 +37,6 @@
       </node>
       <node id="6">
         <label>cstdlib</label>
-      </node>
-      <node id="1">
-        <label>include/dsor_utils/filters/lowpass_filter.hpp</label>
-        <link refid="lowpass__filter_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
       </node>
     </incdepgraph>
     <innerclass refid="classLowPassFilter" prot="public">LowPassFilter</innerclass>

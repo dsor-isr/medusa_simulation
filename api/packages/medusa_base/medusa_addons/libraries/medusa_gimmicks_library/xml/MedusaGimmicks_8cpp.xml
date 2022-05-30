@@ -4,24 +4,10 @@
     <compoundname>MedusaGimmicks.cpp</compoundname>
     <includes refid="MedusaGimmicks_8h" local="yes">medusa_gimmicks_library/MedusaGimmicks.h</includes>
     <incdepgraph>
-      <node id="2">
-        <label>medusa_gimmicks_library/MedusaGimmicks.h</label>
-        <link refid="MedusaGimmicks_8h_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
+      <node id="1">
+        <label>src/MedusaGimmicks.cpp</label>
+        <link refid="MedusaGimmicks_8cpp"/>
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -42,17 +28,31 @@
       <node id="5">
         <label>ros/ros.h</label>
       </node>
+      <node id="2">
+        <label>medusa_gimmicks_library/MedusaGimmicks.h</label>
+        <link refid="MedusaGimmicks_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
       <node id="7">
         <label>tf2_ros/transform_listener.h</label>
       </node>
       <node id="8">
         <label>tf2_ros/transform_broadcaster.h</label>
-      </node>
-      <node id="1">
-        <label>src/MedusaGimmicks.cpp</label>
-        <link refid="MedusaGimmicks_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
       </node>
     </incdepgraph>
     <briefdescription>

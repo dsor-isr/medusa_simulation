@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classtest__sphere__vehicle_1_1TestSphereVehicle" kind="class" language="Python" prot="public">
+    <compoundname>test_sphere_vehicle::TestSphereVehicle</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TestCase</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtest__sphere__vehicle_1_1TestSphereVehicle_1a127f64f85508f72abf55c89f4528c34e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_sphere_vehicle.TestSphereVehicle.test_get_model_parameters</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_get_model_parameters</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_sphere_vehicle.py" line="41" column="1" bodyfile="test/test_sphere_vehicle.py" bodystart="41" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__sphere__vehicle_1_1TestSphereVehicle_1aa35c004da91064665b1fe57a9d85cc1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_sphere_vehicle.TestSphereVehicle.test_added_mass_coefs</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_added_mass_coefs</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_sphere_vehicle.py" line="83" column="1" bodyfile="test/test_sphere_vehicle.py" bodystart="83" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__sphere__vehicle_1_1TestSphereVehicle_1a778e75a8c7a474358d959c144ca1fa00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_sphere_vehicle.TestSphereVehicle.test_nonlinear_damping_coefs</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_nonlinear_damping_coefs</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_sphere_vehicle.py" line="99" column="1" bodyfile="test/test_sphere_vehicle.py" bodystart="99" bodyend="116"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>test_sphere_vehicle.TestSphereVehicle</label>
+        <link refid="classtest__sphere__vehicle_1_1TestSphereVehicle"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>unittest::TestCase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>test_sphere_vehicle.TestSphereVehicle</label>
+        <link refid="classtest__sphere__vehicle_1_1TestSphereVehicle"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>unittest::TestCase</label>
+      </node>
+    </collaborationgraph>
+    <location file="test/test_sphere_vehicle.py" line="35" column="1" bodyfile="test/test_sphere_vehicle.py" bodystart="35" bodyend="117"/>
+    <listofallmembers>
+      <member refid="classtest__sphere__vehicle_1_1TestSphereVehicle_1aa35c004da91064665b1fe57a9d85cc1c" prot="public" virt="non-virtual"><scope>test_sphere_vehicle::TestSphereVehicle</scope><name>test_added_mass_coefs</name></member>
+      <member refid="classtest__sphere__vehicle_1_1TestSphereVehicle_1a127f64f85508f72abf55c89f4528c34e" prot="public" virt="non-virtual"><scope>test_sphere_vehicle::TestSphereVehicle</scope><name>test_get_model_parameters</name></member>
+      <member refid="classtest__sphere__vehicle_1_1TestSphereVehicle_1a778e75a8c7a474358d959c144ca1fa00" prot="public" virt="non-virtual"><scope>test_sphere_vehicle::TestSphereVehicle</scope><name>test_nonlinear_damping_coefs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

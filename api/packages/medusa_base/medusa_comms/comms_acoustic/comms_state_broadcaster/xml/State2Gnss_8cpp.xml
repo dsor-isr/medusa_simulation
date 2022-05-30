@@ -4,14 +4,14 @@
     <compoundname>State2Gnss.cpp</compoundname>
     <includes refid="State2Gnss_8h" local="yes">State2Gnss.h</includes>
     <incdepgraph>
+      <node id="11">
+        <label>medusa_gimmicks_library/MedusaGimmicks.h</label>
+      </node>
       <node id="1">
         <label>src/State2Gnss.cpp</label>
         <link refid="State2Gnss_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="11">
-        <label>medusa_gimmicks_library/MedusaGimmicks.h</label>
       </node>
       <node id="4">
         <label>stdlib.h</label>

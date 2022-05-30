@@ -11,6 +11,12 @@
       <node id="3">
         <label>Eigen/Core</label>
       </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="5">
+        <label>array</label>
+      </node>
       <node id="2">
         <label>CPFControl.h</label>
         <link refid="CPFControl_8h_source"/>
@@ -26,12 +32,6 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-      </node>
-      <node id="4">
-        <label>vector</label>
-      </node>
-      <node id="5">
-        <label>array</label>
       </node>
     </incdepgraph>
     <invincdepgraph>

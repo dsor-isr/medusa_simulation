@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classgazebo_1_1ThrusterManagerROSPlugin" kind="class" language="C++" prot="public">
+    <compoundname>gazebo::ThrusterManagerROSPlugin</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ModelPlugin</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgazebo_1_1ThrusterManagerROSPlugin_1a6598c526d3f059e828fae7715c7b2988" prot="protected" static="no" mutable="no">
+        <type>boost::scoped_ptr&lt; ros::NodeHandle &gt;</type>
+        <definition>boost::scoped_ptr&lt;ros::NodeHandle&gt; gazebo::ThrusterManagerROSPlugin::rosNode</definition>
+        <argsstring></argsstring>
+        <name>rosNode</name>
+        <briefdescription>
+<para>Pointer to this ROS node&apos;s handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" line="48" column="32" bodyfile="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1ThrusterManagerROSPlugin_1aacac9b073d224730df72be9bed0586f5" prot="protected" static="no" mutable="no">
+        <type>transport::NodePtr</type>
+        <definition>transport::NodePtr gazebo::ThrusterManagerROSPlugin::node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+<para>Gazebo node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" line="51" column="33" bodyfile="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1ThrusterManagerROSPlugin_1a9e7f69b76ac2a3401372198c267e3946" prot="protected" static="no" mutable="no">
+        <type>event::ConnectionPtr</type>
+        <definition>event::ConnectionPtr gazebo::ThrusterManagerROSPlugin::updateConnection</definition>
+        <argsstring></argsstring>
+        <name>updateConnection</name>
+        <briefdescription>
+<para>Gazebo update event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" line="54" column="35" bodyfile="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1ThrusterManagerROSPlugin_1a3d935dc1a49afc9feb5fcfa4595f2ef2" prot="protected" static="no" mutable="no">
+        <type>ros::Subscriber</type>
+        <definition>ros::Subscriber gazebo::ThrusterManagerROSPlugin::thrusterStackSubscriber</definition>
+        <argsstring></argsstring>
+        <name>thrusterStackSubscriber</name>
+        <briefdescription>
+<para>Subscriber to the reference signal topic from DSOR stack. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" line="57" column="30" bodyfile="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1ThrusterManagerROSPlugin_1a9d48b219094998a32f4d1261e5255531" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; ros::Publisher &gt;</type>
+        <definition>std::vector&lt;ros::Publisher&gt; gazebo::ThrusterManagerROSPlugin::thrustInputPublisher</definition>
+        <argsstring></argsstring>
+        <name>thrustInputPublisher</name>
+        <briefdescription>
+<para>Vector of publishers to the output thrust topic for each thruster (ros) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" line="60" column="26" bodyfile="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1ThrusterManagerROSPlugin_1a1aa6350f07c1a561c2ca7411e4dd6e30" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gazebo::ThrusterManagerROSPlugin::thrustersNumber</definition>
+        <argsstring></argsstring>
+        <name>thrustersNumber</name>
+        <briefdescription>
+<para>: Number of thrusters in vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" line="63" column="18" bodyfile="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1ThrusterManagerROSPlugin_1a6ad0636d6e77419a410a9da1262e64bc" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::ThrusterManagerROSPlugin::dsorTopicThrusters</definition>
+        <argsstring></argsstring>
+        <name>dsorTopicThrusters</name>
+        <briefdescription>
+<para>: Thrusters topic from DSOR stack. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" line="66" column="26" bodyfile="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1ThrusterManagerROSPlugin_1ae7b2220e9350d8c6621971d4e9472ebc" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; gazebo::ThrusterManagerROSPlugin::thrustVector</definition>
+        <argsstring></argsstring>
+        <name>thrustVector</name>
+        <briefdescription>
+<para>: Vector of thrusters received from DSOR stack </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" line="69" column="26" bodyfile="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgazebo_1_1ThrusterManagerROSPlugin_1a245f029f6b34f47388e0264ddb1a4580" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gazebo::ThrusterManagerROSPlugin::ThrusterManagerROSPlugin</definition>
+        <argsstring>()</argsstring>
+        <name>ThrusterManagerROSPlugin</name>
+        <briefdescription>
+<para>Constrcutor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" line="32" column="11" bodyfile="src/ThrusterManagerROSPlugin.cc" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1ThrusterManagerROSPlugin_1a3ed48ea870b1ab31ff506f3315b42bdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gazebo::ThrusterManagerROSPlugin::~ThrusterManagerROSPlugin</definition>
+        <argsstring>()</argsstring>
+        <name>~ThrusterManagerROSPlugin</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" line="35" column="11" bodyfile="src/ThrusterManagerROSPlugin.cc" bodystart="37" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1ThrusterManagerROSPlugin_1ab43e47ed628a19980295ecbe9b8ac086" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gazebo::ThrusterManagerROSPlugin::Load</definition>
+        <argsstring>(physics::ModelPtr _model, sdf::ElementPtr _sdf)</argsstring>
+        <name>Load</name>
+        <param>
+          <type>physics::ModelPtr</type>
+          <declname>_model</declname>
+        </param>
+        <param>
+          <type>sdf::ElementPtr</type>
+          <declname>_sdf</declname>
+        </param>
+        <briefdescription>
+<para>Load module and read parameters from SDF. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" line="38" column="16" bodyfile="src/ThrusterManagerROSPlugin.cc" bodystart="45" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1ThrusterManagerROSPlugin_1ab7cef88187e03e2e351bddfa60eef17d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gazebo::ThrusterManagerROSPlugin::Update</definition>
+        <argsstring>(const common::UpdateInfo &amp;_info)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>const common::UpdateInfo &amp;</type>
+          <declname>_info</declname>
+        </param>
+        <briefdescription>
+<para>Update the simulation state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">_info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Information used in the update event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" line="42" column="16" bodyfile="src/ThrusterManagerROSPlugin.cc" bodystart="112" bodyend="112"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgazebo_1_1ThrusterManagerROSPlugin_1a18c74da30a38a27cdf953bba2ed3fdb4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gazebo::ThrusterManagerROSPlugin::SetThrustReference</definition>
+        <argsstring>(const dsor_msgs::Thruster &amp;_msg)</argsstring>
+        <name>SetThrustReference</name>
+        <param>
+          <type>const dsor_msgs::Thruster &amp;</type>
+          <declname>_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback for the input topic subscriber. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" line="45" column="19" bodyfile="src/ThrusterManagerROSPlugin.cc" bodystart="87" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>gazebo::ThrusterManagerROSPlugin</label>
+        <link refid="classgazebo_1_1ThrusterManagerROSPlugin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ModelPlugin</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>gazebo::ThrusterManagerROSPlugin</label>
+        <link refid="classgazebo_1_1ThrusterManagerROSPlugin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ModelPlugin</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" line="29" column="50" bodyfile="include/uuv_gazebo_ros_plugins/ThrusterManagerROSPlugin.hh" bodystart="29" bodyend="70"/>
+    <listofallmembers>
+      <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a6ad0636d6e77419a410a9da1262e64bc" prot="protected" virt="non-virtual"><scope>gazebo::ThrusterManagerROSPlugin</scope><name>dsorTopicThrusters</name></member>
+      <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1ab43e47ed628a19980295ecbe9b8ac086" prot="public" virt="non-virtual"><scope>gazebo::ThrusterManagerROSPlugin</scope><name>Load</name></member>
+      <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1aacac9b073d224730df72be9bed0586f5" prot="protected" virt="non-virtual"><scope>gazebo::ThrusterManagerROSPlugin</scope><name>node</name></member>
+      <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a6598c526d3f059e828fae7715c7b2988" prot="protected" virt="non-virtual"><scope>gazebo::ThrusterManagerROSPlugin</scope><name>rosNode</name></member>
+      <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a18c74da30a38a27cdf953bba2ed3fdb4" prot="protected" virt="non-virtual"><scope>gazebo::ThrusterManagerROSPlugin</scope><name>SetThrustReference</name></member>
+      <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a245f029f6b34f47388e0264ddb1a4580" prot="public" virt="non-virtual"><scope>gazebo::ThrusterManagerROSPlugin</scope><name>ThrusterManagerROSPlugin</name></member>
+      <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a1aa6350f07c1a561c2ca7411e4dd6e30" prot="protected" virt="non-virtual"><scope>gazebo::ThrusterManagerROSPlugin</scope><name>thrustersNumber</name></member>
+      <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a3d935dc1a49afc9feb5fcfa4595f2ef2" prot="protected" virt="non-virtual"><scope>gazebo::ThrusterManagerROSPlugin</scope><name>thrusterStackSubscriber</name></member>
+      <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a9d48b219094998a32f4d1261e5255531" prot="protected" virt="non-virtual"><scope>gazebo::ThrusterManagerROSPlugin</scope><name>thrustInputPublisher</name></member>
+      <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1ae7b2220e9350d8c6621971d4e9472ebc" prot="protected" virt="non-virtual"><scope>gazebo::ThrusterManagerROSPlugin</scope><name>thrustVector</name></member>
+      <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1ab7cef88187e03e2e351bddfa60eef17d" prot="public" virt="non-virtual"><scope>gazebo::ThrusterManagerROSPlugin</scope><name>Update</name></member>
+      <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a9e7f69b76ac2a3401372198c267e3946" prot="protected" virt="non-virtual"><scope>gazebo::ThrusterManagerROSPlugin</scope><name>updateConnection</name></member>
+      <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a3ed48ea870b1ab31ff506f3315b42bdf" prot="public" virt="non-virtual"><scope>gazebo::ThrusterManagerROSPlugin</scope><name>~ThrusterManagerROSPlugin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

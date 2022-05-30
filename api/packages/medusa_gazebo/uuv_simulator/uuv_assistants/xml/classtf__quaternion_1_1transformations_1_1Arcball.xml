@@ -1,0 +1,398 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classtf__quaternion_1_1transformations_1_1Arcball" kind="class" language="Python" prot="public">
+    <compoundname>tf_quaternion::transformations::Arcball</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtf__quaternion_1_1transformations_1_1Arcball_1a60ba74ff0532693bd4f17305511f1ba9" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>tf_quaternion.transformations.Arcball::_axis</definition>
+        <argsstring></argsstring>
+        <name>_axis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1386" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtf__quaternion_1_1transformations_1_1Arcball_1a38c8d595804ed99514eddb97f085c6eb" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>tf_quaternion.transformations.Arcball::_axes</definition>
+        <argsstring></argsstring>
+        <name>_axes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1387" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1387" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtf__quaternion_1_1transformations_1_1Arcball_1ad16d39f5af820bf504b1ba7a815c3394" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>tf_quaternion.transformations.Arcball::_radius</definition>
+        <argsstring></argsstring>
+        <name>_radius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1388" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1388" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtf__quaternion_1_1transformations_1_1Arcball_1ab1e8e28106f18d7e06515932e4aa51c2" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>tf_quaternion.transformations.Arcball::_center</definition>
+        <argsstring></argsstring>
+        <name>_center</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1389" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtf__quaternion_1_1transformations_1_1Arcball_1a425a773e487d2ff8e155d2abda08ed3c" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>tf_quaternion.transformations.Arcball::_vdown</definition>
+        <argsstring></argsstring>
+        <name>_vdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1390" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtf__quaternion_1_1transformations_1_1Arcball_1ab4e36944aa3b36adb8dd66c508ba464c" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>tf_quaternion.transformations.Arcball::_constrain</definition>
+        <argsstring></argsstring>
+        <name>_constrain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1391" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtf__quaternion_1_1transformations_1_1Arcball_1a53556780b35448f185b4f8b4ec948a7d" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>tf_quaternion.transformations.Arcball::_qdown</definition>
+        <argsstring></argsstring>
+        <name>_qdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1394" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtf__quaternion_1_1transformations_1_1Arcball_1a1709c200903d890cc187465f490d4205" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>tf_quaternion.transformations.Arcball::_qnow</definition>
+        <argsstring></argsstring>
+        <name>_qnow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1405" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtf__quaternion_1_1transformations_1_1Arcball_1afb1b380fdca25d52ed3f58df54a7b5fb" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>tf_quaternion.transformations.Arcball::_qpre</definition>
+        <argsstring></argsstring>
+        <name>_qpre</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1405" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1405" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtf__quaternion_1_1transformations_1_1Arcball_1a1601a290afef74788b0abfef850ce1d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.Arcball.__init__</definition>
+        <argsstring>(self, initial=None)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>initial</type>
+          <defname>initial</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initialize virtual trackball control.
+
+initial : quaternion or rotation matrix</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1380" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1380" bodyend="1406"/>
+      </memberdef>
+      <memberdef kind="function" id="classtf__quaternion_1_1transformations_1_1Arcball_1a8e92f92a8d536fdaf74ad019ac6bb8b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.Arcball.place</definition>
+        <argsstring>(self, center, radius)</argsstring>
+        <name>place</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>center</type>
+          <defname>center</defname>
+        </param>
+        <param>
+          <type>radius</type>
+          <defname>radius</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Place Arcball, e.g. when window size changes.
+
+center : sequence[2]
+    Window coordinates of trackball center.
+radius : float
+    Radius of trackball in window coordinates.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1407" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1407" bodyend="1419"/>
+      </memberdef>
+      <memberdef kind="function" id="classtf__quaternion_1_1transformations_1_1Arcball_1a588a6452bfaf8dbe4eb7be6c3227da39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.Arcball.setaxes</definition>
+        <argsstring>(self, *axes)</argsstring>
+        <name>setaxes</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>*</type>
+          <declname>axes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Set axes to constrain rotations.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1420" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1420" bodyend="1426"/>
+      </memberdef>
+      <memberdef kind="function" id="classtf__quaternion_1_1transformations_1_1Arcball_1a4762b0e43eb78f5618744916cc3a2b9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.Arcball.setconstrain</definition>
+        <argsstring>(self, constrain)</argsstring>
+        <name>setconstrain</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>constrain</type>
+          <defname>constrain</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Set state of constrain to axis mode.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1427" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1427" bodyend="1430"/>
+      </memberdef>
+      <memberdef kind="function" id="classtf__quaternion_1_1transformations_1_1Arcball_1a278a5ae4ec15e1b0f8944d6fb6648626" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.Arcball.getconstrain</definition>
+        <argsstring>(self)</argsstring>
+        <name>getconstrain</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return state of constrain to axis mode.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1431" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1431" bodyend="1434"/>
+      </memberdef>
+      <memberdef kind="function" id="classtf__quaternion_1_1transformations_1_1Arcball_1a445d569b9993205e78d50bc02285645b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.Arcball.down</definition>
+        <argsstring>(self, point)</argsstring>
+        <name>down</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>point</type>
+          <defname>point</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Set initial cursor window coordinates and pick constrain-axis.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1435" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1435" bodyend="1445"/>
+      </memberdef>
+      <memberdef kind="function" id="classtf__quaternion_1_1transformations_1_1Arcball_1a807e222958b07e81f76ddd3c1453e5f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.Arcball.drag</definition>
+        <argsstring>(self, point)</argsstring>
+        <name>drag</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>point</type>
+          <defname>point</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Update current cursor window coordinates.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1446" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1446" bodyend="1461"/>
+      </memberdef>
+      <memberdef kind="function" id="classtf__quaternion_1_1transformations_1_1Arcball_1a86d381f212c8419f323030bb7ababd5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.Arcball.next</definition>
+        <argsstring>(self, acceleration=0.0)</argsstring>
+        <name>next</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>acceleration</type>
+          <defname>acceleration</defname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Continue rotation in direction of last drag.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1462" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1462" bodyend="1466"/>
+      </memberdef>
+      <memberdef kind="function" id="classtf__quaternion_1_1transformations_1_1Arcball_1ae3843d15b32cebdf93221022a4e30b0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.Arcball.matrix</definition>
+        <argsstring>(self)</argsstring>
+        <name>matrix</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return homogeneous rotation matrix.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1467" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1467" bodyend="1471"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Virtual Trackball Control.
+
+&gt;&gt;&gt; ball = Arcball()
+&gt;&gt;&gt; ball = Arcball(initial=numpy.identity(4))
+&gt;&gt;&gt; ball.place([320, 320], 320)
+&gt;&gt;&gt; ball.down([500, 250])
+&gt;&gt;&gt; ball.drag([475, 275])
+&gt;&gt;&gt; R = ball.matrix()
+&gt;&gt;&gt; numpy.allclose(numpy.sum(R), 3.90583455)
+True
+&gt;&gt;&gt; ball = Arcball(initial=[0, 0, 0, 1])
+&gt;&gt;&gt; ball.place([320, 320], 320)
+&gt;&gt;&gt; ball.setaxes([1,1,0], [-1, 1, 0])
+&gt;&gt;&gt; ball.setconstrain(True)
+&gt;&gt;&gt; ball.down([400, 200])
+&gt;&gt;&gt; ball.drag([200, 400])
+&gt;&gt;&gt; R = ball.matrix()
+&gt;&gt;&gt; numpy.allclose(numpy.sum(R), 0.2055924)
+True
+&gt;&gt;&gt; ball.next()</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>tf_quaternion.transformations.Arcball</label>
+        <link refid="classtf__quaternion_1_1transformations_1_1Arcball"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>object</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>tf_quaternion.transformations.Arcball</label>
+        <link refid="classtf__quaternion_1_1transformations_1_1Arcball"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>object</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/tf_quaternion/transformations.py" line="1356" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1356" bodyend="1472"/>
+    <listofallmembers>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1a1601a290afef74788b0abfef850ce1d8" prot="public" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>__init__</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1a38c8d595804ed99514eddb97f085c6eb" prot="private" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>_axes</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1a60ba74ff0532693bd4f17305511f1ba9" prot="private" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>_axis</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1ab1e8e28106f18d7e06515932e4aa51c2" prot="private" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>_center</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1ab4e36944aa3b36adb8dd66c508ba464c" prot="private" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>_constrain</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1a53556780b35448f185b4f8b4ec948a7d" prot="private" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>_qdown</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1a1709c200903d890cc187465f490d4205" prot="private" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>_qnow</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1afb1b380fdca25d52ed3f58df54a7b5fb" prot="private" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>_qpre</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1ad16d39f5af820bf504b1ba7a815c3394" prot="private" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>_radius</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1a425a773e487d2ff8e155d2abda08ed3c" prot="private" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>_vdown</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1a445d569b9993205e78d50bc02285645b" prot="public" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>down</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1a807e222958b07e81f76ddd3c1453e5f7" prot="public" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>drag</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1a278a5ae4ec15e1b0f8944d6fb6648626" prot="public" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>getconstrain</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1ae3843d15b32cebdf93221022a4e30b0e" prot="public" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>matrix</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1a86d381f212c8419f323030bb7ababd5c" prot="public" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>next</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1a8e92f92a8d536fdaf74ad019ac6bb8b7" prot="public" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>place</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1a588a6452bfaf8dbe4eb7be6c3227da39" prot="public" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>setaxes</name></member>
+      <member refid="classtf__quaternion_1_1transformations_1_1Arcball_1a4762b0e43eb78f5618744916cc3a2b9d" prot="public" virt="non-virtual"><scope>tf_quaternion::transformations::Arcball</scope><name>setconstrain</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

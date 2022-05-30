@@ -1,0 +1,768 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="message__to__tf_8cc" kind="file" language="C++">
+    <compoundname>message_to_tf.cc</compoundname>
+    <includes local="no">ros/ros.h</includes>
+    <includes local="no">nav_msgs/Odometry.h</includes>
+    <includes local="no">geometry_msgs/PoseStamped.h</includes>
+    <includes local="no">geometry_msgs/Vector3Stamped.h</includes>
+    <includes local="no">geometry_msgs/TransformStamped.h</includes>
+    <includes local="no">sensor_msgs/Imu.h</includes>
+    <includes local="no">tf/transform_broadcaster.h</includes>
+    <includes local="no">tf/transform_listener.h</includes>
+    <includes local="no">tf/transform_datatypes.h</includes>
+    <includes local="no">topic_tools/shape_shifter.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/message_to_tf.cc</label>
+        <link refid="message__to__tf_8cc"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>tf/transform_listener.h</label>
+      </node>
+      <node id="8">
+        <label>tf/transform_broadcaster.h</label>
+      </node>
+      <node id="3">
+        <label>nav_msgs/Odometry.h</label>
+      </node>
+      <node id="7">
+        <label>sensor_msgs/Imu.h</label>
+      </node>
+      <node id="6">
+        <label>geometry_msgs/TransformStamped.h</label>
+      </node>
+      <node id="10">
+        <label>tf/transform_datatypes.h</label>
+      </node>
+      <node id="4">
+        <label>geometry_msgs/PoseStamped.h</label>
+      </node>
+      <node id="5">
+        <label>geometry_msgs/Vector3Stamped.h</label>
+      </node>
+      <node id="2">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="11">
+        <label>topic_tools/shape_shifter.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacetf">tf</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="message__to__tf_8cc_1a8dae956a31d41a9260f31afe355ab50d" prot="public" static="no">
+        <type>btScalar</type>
+        <definition>typedef btScalar tfScalar</definition>
+        <argsstring></argsstring>
+        <name>tfScalar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="57" column="20" bodyfile="src/message_to_tf.cc" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="message__to__tf_8cc_1abfbb776955e4e7d8353c6fe83b54f893" prot="public" static="no">
+        <type>btMatrix3x3</type>
+        <definition>typedef btMatrix3x3 tf::Matrix3x3</definition>
+        <argsstring></argsstring>
+        <name>Matrix3x3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="58" column="34" bodyfile="src/message_to_tf.cc" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="message__to__tf_8cc_1a959be3c1deb370697a8fc980ffa7d58c" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string g_odometry_topic</definition>
+        <argsstring></argsstring>
+        <name>g_odometry_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="38" column="13" bodyfile="src/message_to_tf.cc" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="message__to__tf_8cc_1aa585bc5af15b83d5409ddae1f953baae" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string g_pose_topic</definition>
+        <argsstring></argsstring>
+        <name>g_pose_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="39" column="13" bodyfile="src/message_to_tf.cc" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="message__to__tf_8cc_1a3731d1c2d54ddd7c5e97f5153b75e2f0" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string g_imu_topic</definition>
+        <argsstring></argsstring>
+        <name>g_imu_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="40" column="13" bodyfile="src/message_to_tf.cc" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="message__to__tf_8cc_1aa0b70ab95268813340785f3dbbf2adc1" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string g_topic</definition>
+        <argsstring></argsstring>
+        <name>g_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="41" column="13" bodyfile="src/message_to_tf.cc" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="message__to__tf_8cc_1a2f67396356a304476c028fc449b35874" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string g_frame_id</definition>
+        <argsstring></argsstring>
+        <name>g_frame_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="42" column="13" bodyfile="src/message_to_tf.cc" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="message__to__tf_8cc_1a870d1036c988f0bc37a8aa0d3271f149" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string g_footprint_frame_id</definition>
+        <argsstring></argsstring>
+        <name>g_footprint_frame_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="43" column="13" bodyfile="src/message_to_tf.cc" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="message__to__tf_8cc_1a4a881ffde8240214c225e72e699fc82e" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string g_position_frame_id</definition>
+        <argsstring></argsstring>
+        <name>g_position_frame_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="44" column="13" bodyfile="src/message_to_tf.cc" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="message__to__tf_8cc_1a297d72626ffe63e892a2d729ed14bb62" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string g_stabilized_frame_id</definition>
+        <argsstring></argsstring>
+        <name>g_stabilized_frame_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="45" column="13" bodyfile="src/message_to_tf.cc" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="message__to__tf_8cc_1a9a419cbc12aa3aa7b7985487988812e9" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string g_child_frame_id</definition>
+        <argsstring></argsstring>
+        <name>g_child_frame_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="46" column="13" bodyfile="src/message_to_tf.cc" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="message__to__tf_8cc_1a3b91762517cf70b4523565f14cca0993" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool g_publish_roll_pitch</definition>
+        <argsstring></argsstring>
+        <name>g_publish_roll_pitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="48" column="6" bodyfile="src/message_to_tf.cc" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="message__to__tf_8cc_1a055b3655f2f51f5a75d62315e8ad096c" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string g_tf_prefix</definition>
+        <argsstring></argsstring>
+        <name>g_tf_prefix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="50" column="13" bodyfile="src/message_to_tf.cc" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="message__to__tf_8cc_1abfb14a5fda9bbb67c5f21b0475482bad" prot="public" static="no" mutable="no">
+        <type>tf::TransformBroadcaster *</type>
+        <definition>tf::TransformBroadcaster* g_transform_broadcaster</definition>
+        <argsstring></argsstring>
+        <name>g_transform_broadcaster</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="52" column="26" bodyfile="src/message_to_tf.cc" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="message__to__tf_8cc_1ad42b1b1ce36198ff2616e11de96940f4" prot="public" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher g_pose_publisher</definition>
+        <argsstring></argsstring>
+        <name>g_pose_publisher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="53" column="16" bodyfile="src/message_to_tf.cc" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="message__to__tf_8cc_1ad44baf31af014661e2649aca34a919e8" prot="public" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher g_euler_publisher</definition>
+        <argsstring></argsstring>
+        <name>g_euler_publisher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="54" column="16" bodyfile="src/message_to_tf.cc" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="message__to__tf_8cc_1a58ba43dc96ec44a91f26da550c42eeae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addTransform</definition>
+        <argsstring>(std::vector&lt; geometry_msgs::TransformStamped &gt; &amp;transforms, const tf::StampedTransform &amp;tf)</argsstring>
+        <name>addTransform</name>
+        <param>
+          <type>std::vector&lt; geometry_msgs::TransformStamped &gt; &amp;</type>
+          <declname>transforms</declname>
+        </param>
+        <param>
+          <type>const tf::StampedTransform &amp;</type>
+          <declname>tf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="61" column="6" bodyfile="src/message_to_tf.cc" bodystart="61" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="message__to__tf_8cc_1afc400d9b9fa4e05b71e998619b78949d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendTransform</definition>
+        <argsstring>(geometry_msgs::Pose const &amp;pose, const std_msgs::Header &amp;header, std::string child_frame_id=&quot;&quot;)</argsstring>
+        <name>sendTransform</name>
+        <param>
+          <type>geometry_msgs::Pose const &amp;</type>
+          <declname>pose</declname>
+        </param>
+        <param>
+          <type>const std_msgs::Header &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>child_frame_id</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="67" column="6" bodyfile="src/message_to_tf.cc" bodystart="67" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="message__to__tf_8cc_1ad564495def3bb3acc749d655390eed6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void odomCallback</definition>
+        <argsstring>(nav_msgs::Odometry const &amp;odometry)</argsstring>
+        <name>odomCallback</name>
+        <param>
+          <type>nav_msgs::Odometry const &amp;</type>
+          <declname>odometry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="149" column="6" bodyfile="src/message_to_tf.cc" bodystart="149" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="message__to__tf_8cc_1a679c5d134035fa2838b06ecfeca2b918" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void poseCallback</definition>
+        <argsstring>(geometry_msgs::PoseStamped const &amp;pose)</argsstring>
+        <name>poseCallback</name>
+        <param>
+          <type>geometry_msgs::PoseStamped const &amp;</type>
+          <declname>pose</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="153" column="6" bodyfile="src/message_to_tf.cc" bodystart="153" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="message__to__tf_8cc_1a367a9c505be80eee62fe31a6ccd0f3e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tfCallback</definition>
+        <argsstring>(geometry_msgs::TransformStamped const &amp;tf)</argsstring>
+        <name>tfCallback</name>
+        <param>
+          <type>geometry_msgs::TransformStamped const &amp;</type>
+          <declname>tf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="157" column="6" bodyfile="src/message_to_tf.cc" bodystart="157" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="message__to__tf_8cc_1a0400eebf90f812eee4d857501a418c1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void imuCallback</definition>
+        <argsstring>(sensor_msgs::Imu const &amp;imu)</argsstring>
+        <name>imuCallback</name>
+        <param>
+          <type>sensor_msgs::Imu const &amp;</type>
+          <declname>imu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="167" column="6" bodyfile="src/message_to_tf.cc" bodystart="167" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="message__to__tf_8cc_1aa82c48f8425c74058b4b4e60961eb6cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void multiCallback</definition>
+        <argsstring>(topic_tools::ShapeShifter const &amp;input)</argsstring>
+        <name>multiCallback</name>
+        <param>
+          <type>topic_tools::ShapeShifter const &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="204" column="6" bodyfile="src/message_to_tf.cc" bodystart="204" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="message__to__tf_8cc_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="232" column="5" bodyfile="src/message_to_tf.cc" bodystart="232" bodyend="321"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2016<sp/>The<sp/>UUV<sp/>Simulator<sp/>Authors.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>source<sp/>code<sp/>is<sp/>derived<sp/>from<sp/>hector_localization</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>(https://github.com/tu-darmstadt-ros-pkg/hector_localization)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2012,<sp/>Johannes<sp/>Meyer,<sp/>TU<sp/>Darmstadt,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>licensed<sp/>under<sp/>the<sp/>BSD<sp/>3-Clause<sp/>license,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>cf.<sp/>3rd-party-licenses.txt<sp/>file<sp/>in<sp/>the<sp/>root<sp/>directory<sp/>of<sp/>this<sp/>source<sp/>tree.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>original<sp/>code<sp/>was<sp/>modified<sp/>to:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>be<sp/>more<sp/>consistent<sp/>with<sp/>other<sp/>sensor<sp/>plugins<sp/>within<sp/>uuv_simulator,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>adhere<sp/>to<sp/>Gazebo&apos;s<sp/>coding<sp/>standards.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ros/ros.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav_msgs/Odometry.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/PoseStamped.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/Vector3Stamped.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/TransformStamped.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sensor_msgs/Imu.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf/transform_broadcaster.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf/transform_listener.h&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>for<sp/>tf::getPrefixParam()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf/transform_datatypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;topic_tools/shape_shifter.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">std::string<sp/>g_odometry_topic;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">std::string<sp/>g_pose_topic;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">std::string<sp/>g_imu_topic;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">std::string<sp/>g_topic;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">std::string<sp/>g_frame_id;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">std::string<sp/>g_footprint_frame_id;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">std::string<sp/>g_position_frame_id;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">std::string<sp/>g_stabilized_frame_id;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">std::string<sp/>g_child_frame_id;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>g_publish_roll_pitch;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">std::string<sp/>g_tf_prefix;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">tf::TransformBroadcaster<sp/>*g_transform_broadcaster;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">ros::Publisher<sp/>g_pose_publisher;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">ros::Publisher<sp/>g_euler_publisher;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TF_MATRIX3x3_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>btScalar<sp/>tfScalar;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">tf<sp/>{<sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>btMatrix3x3<sp/>Matrix3x3;<sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>addTransform(std::vector&lt;geometry_msgs::TransformStamped&gt;&amp;<sp/>transforms,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>tf::StampedTransform&amp;<sp/>tf)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>transforms.push_back(geometry_msgs::TransformStamped());</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>tf::transformStampedTFToMsg(tf,<sp/>transforms.back());</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sendTransform(geometry_msgs::Pose<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;pose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std_msgs::Header&amp;<sp/>header,<sp/>std::string<sp/>child_frame_id<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>std::vector&lt;geometry_msgs::TransformStamped&gt;<sp/>transforms;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>tf::StampedTransform<sp/>tf;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>tf.stamp_<sp/>=<sp/>header.stamp;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>tf.frame_id_<sp/>=<sp/>header.frame_id;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!g_frame_id.empty())<sp/>tf.frame_id_<sp/>=<sp/>g_frame_id;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>tf.frame_id_<sp/>=<sp/>tf::resolve(g_tf_prefix,<sp/>tf.frame_id_);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!g_child_frame_id.empty())<sp/>child_frame_id<sp/>=<sp/>g_child_frame_id;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(child_frame_id.empty())<sp/>child_frame_id<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;base_link&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>tf::Quaternion<sp/>orientation;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>tf::quaternionMsgToTF(pose.orientation,<sp/>orientation);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>tfScalar<sp/>yaw,<sp/>pitch,<sp/>roll;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>tf::Matrix3x3(orientation).getEulerYPR(yaw,<sp/>pitch,<sp/>roll);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>tf::Point<sp/>position;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>tf::pointMsgToTF(pose.position,<sp/>position);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>position<sp/>intermediate<sp/>transform<sp/>(x,y,z)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>!g_position_frame_id.empty()<sp/>&amp;&amp;<sp/>child_frame_id<sp/>!=<sp/>g_position_frame_id)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.child_frame_id_<sp/>=<sp/>tf::resolve(g_tf_prefix,<sp/>g_position_frame_id);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.setOrigin(tf::Vector3(position.x(),<sp/>position.y(),<sp/>position.z()<sp/>));</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.setRotation(tf::Quaternion(0.0,<sp/>0.0,<sp/>0.0,<sp/>1.0));</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>addTransform(transforms,<sp/>tf);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>footprint<sp/>intermediate<sp/>transform<sp/>(x,y,yaw)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!g_footprint_frame_id.empty()<sp/>&amp;&amp;<sp/>child_frame_id<sp/>!=<sp/>g_footprint_frame_id)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.child_frame_id_<sp/>=<sp/>tf::resolve(g_tf_prefix,<sp/>g_footprint_frame_id);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.setOrigin(tf::Vector3(position.x(),<sp/>position.y(),<sp/>0.0));</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.setRotation(tf::createQuaternionFromRPY(0.0,<sp/>0.0,<sp/>yaw));</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>addTransform(transforms,<sp/>tf);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>yaw<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>position.setX(0.0);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>position.setY(0.0);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.frame_id_<sp/>=<sp/>tf::resolve(g_tf_prefix,<sp/>g_footprint_frame_id);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>stabilized<sp/>intermediate<sp/>transform<sp/>(z)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!g_footprint_frame_id.empty()<sp/>&amp;&amp;<sp/>child_frame_id<sp/>!=<sp/>g_stabilized_frame_id)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.child_frame_id_<sp/>=<sp/>tf::resolve(g_tf_prefix,<sp/>g_stabilized_frame_id);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.setOrigin(tf::Vector3(0.0,<sp/>0.0,<sp/>position.z()));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.setBasis(tf::Matrix3x3::getIdentity());</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>addTransform(transforms,<sp/>tf);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>position.setZ(0.0);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.frame_id_<sp/>=<sp/>tf::resolve(g_tf_prefix,<sp/>g_stabilized_frame_id);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>base_link<sp/>transform<sp/>(roll,<sp/>pitch)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_publish_roll_pitch)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.child_frame_id_<sp/>=<sp/>tf::resolve(g_tf_prefix,<sp/>child_frame_id);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.setOrigin(position);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.setRotation(tf::createQuaternionFromRPY(roll,<sp/>pitch,<sp/>yaw));</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>addTransform(transforms,<sp/>tf);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>g_transform_broadcaster-&gt;sendTransform(transforms);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>publish<sp/>pose<sp/>message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_pose_publisher)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry_msgs::PoseStamped<sp/>pose_stamped;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>pose_stamped.pose<sp/>=<sp/>pose;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>pose_stamped.header<sp/>=<sp/>header;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>g_pose_publisher.publish(pose_stamped);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>publish<sp/>pose<sp/>message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_euler_publisher)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry_msgs::Vector3Stamped<sp/>euler_stamped;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>euler_stamped.vector.x<sp/>=<sp/>roll;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>euler_stamped.vector.y<sp/>=<sp/>pitch;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>euler_stamped.vector.z<sp/>=<sp/>yaw;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>euler_stamped.header<sp/>=<sp/>header;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>g_euler_publisher.publish(euler_stamped);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>odomCallback(nav_msgs::Odometry<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;odometry)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>sendTransform(odometry.pose.pose,<sp/>odometry.header,<sp/>odometry.child_frame_id);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>poseCallback(geometry_msgs::PoseStamped<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;pose)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>sendTransform(pose.pose,<sp/>pose.header);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>tfCallback(geometry_msgs::TransformStamped<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;tf)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>geometry_msgs::Pose<sp/>pose;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>pose.position.x<sp/>=<sp/>tf.transform.translation.x;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>pose.position.y<sp/>=<sp/>tf.transform.translation.y;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>pose.position.z<sp/>=<sp/>tf.transform.translation.z;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>pose.orientation<sp/>=<sp/>tf.transform.rotation;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>sendTransform(pose,<sp/>tf.header);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>imuCallback(sensor_msgs::Imu<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;imu)<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/>std::vector&lt;geometry_msgs::TransformStamped&gt;<sp/>transforms;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>std::string<sp/>child_frame_id;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>tf::StampedTransform<sp/>tf;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>tf.stamp_<sp/>=<sp/>imu.header.stamp;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>tf.frame_id_<sp/>=<sp/>tf::resolve(g_tf_prefix,<sp/>g_stabilized_frame_id);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!g_child_frame_id.empty())<sp/>child_frame_id<sp/>=<sp/>g_child_frame_id;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(child_frame_id.empty())<sp/>child_frame_id<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;base_link&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>tf::Quaternion<sp/>orientation;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>tf::quaternionMsgToTF(imu.orientation,<sp/>orientation);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>tfScalar<sp/>yaw,<sp/>pitch,<sp/>roll;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>tf::Matrix3x3(orientation).getEulerYPR(yaw,<sp/>pitch,<sp/>roll);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>tf::Quaternion<sp/>rollpitch<sp/>=<sp/>tf::createQuaternionFromRPY(roll,<sp/>pitch,<sp/>0.0);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>base_link<sp/>transform<sp/>(roll,<sp/>pitch)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_publish_roll_pitch)<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.child_frame_id_<sp/>=<sp/>tf::resolve(g_tf_prefix,<sp/>child_frame_id);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.setOrigin(tf::Vector3(0.0,<sp/>0.0,<sp/>0.0));</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>tf.setRotation(rollpitch);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>addTransform(transforms,<sp/>tf);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!transforms.empty())<sp/>g_transform_broadcaster-&gt;sendTransform(transforms);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>publish<sp/>pose<sp/>message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_pose_publisher)<sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry_msgs::PoseStamped<sp/>pose_stamped;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>pose_stamped.header.stamp<sp/>=<sp/>imu.header.stamp;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>pose_stamped.header.frame_id<sp/>=<sp/>g_stabilized_frame_id;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>tf::quaternionTFToMsg(rollpitch,<sp/>pose_stamped.pose.orientation);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>g_pose_publisher.publish(pose_stamped);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>multiCallback(topic_tools::ShapeShifter<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;input)<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.getDataType()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;nav_msgs/Odometry&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>nav_msgs::Odometry::ConstPtr<sp/>odom<sp/>=<sp/>input.instantiate&lt;nav_msgs::Odometry&gt;();</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>odomCallback(*odom);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.getDataType()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;geometry_msgs/PoseStamped&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry_msgs::PoseStamped::ConstPtr<sp/>pose<sp/>=<sp/>input.instantiate&lt;geometry_msgs::PoseStamped&gt;();</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>poseCallback(*pose);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.getDataType()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;sensor_msgs/Imu&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_msgs::Imu::ConstPtr<sp/>imu<sp/>=<sp/>input.instantiate&lt;sensor_msgs::Imu&gt;();</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>imuCallback(*imu);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.getDataType()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;geometry_msgs/TransformStamped&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry_msgs::TransformStamped::ConstPtr<sp/>tf<sp/>=<sp/>input.instantiate&lt;geometry_msgs::TransformStamped&gt;();</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>tfCallback(*tf);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/>ROS_ERROR_THROTTLE(1.0,<sp/></highlight><highlight class="stringliteral">&quot;message_to_tf<sp/>received<sp/>a<sp/>%s<sp/>message.<sp/>Supported<sp/>message<sp/>types:<sp/>nav_msgs/Odometry<sp/>geometry_msgs/PoseStamped<sp/>geometry_msgs/TransformStamped<sp/>sensor_msgs/Imu&quot;</highlight><highlight class="normal">,<sp/>input.getDataType().c_str());</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/>ros::init(argc,<sp/>argv,<sp/></highlight><highlight class="stringliteral">&quot;message_to_tf&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/>g_footprint_frame_id<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;base_footprint&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/>g_stabilized_frame_id<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;base_stabilized&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>g_position_frame_id<sp/>=<sp/>&quot;base_position&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>g_child_frame_id<sp/>=<sp/>&quot;base_link&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/>ros::NodeHandle<sp/>priv_nh(</highlight><highlight class="stringliteral">&quot;~&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/>priv_nh.getParam(</highlight><highlight class="stringliteral">&quot;odometry_topic&quot;</highlight><highlight class="normal">,<sp/>g_odometry_topic);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/>priv_nh.getParam(</highlight><highlight class="stringliteral">&quot;pose_topic&quot;</highlight><highlight class="normal">,<sp/>g_pose_topic);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/>priv_nh.getParam(</highlight><highlight class="stringliteral">&quot;imu_topic&quot;</highlight><highlight class="normal">,<sp/>g_imu_topic);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/>priv_nh.getParam(</highlight><highlight class="stringliteral">&quot;topic&quot;</highlight><highlight class="normal">,<sp/>g_topic);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/>priv_nh.getParam(</highlight><highlight class="stringliteral">&quot;frame_id&quot;</highlight><highlight class="normal">,<sp/>g_frame_id);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/>priv_nh.getParam(</highlight><highlight class="stringliteral">&quot;footprint_frame_id&quot;</highlight><highlight class="normal">,<sp/>g_footprint_frame_id);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/>priv_nh.getParam(</highlight><highlight class="stringliteral">&quot;position_frame_id&quot;</highlight><highlight class="normal">,<sp/>g_position_frame_id);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/>priv_nh.getParam(</highlight><highlight class="stringliteral">&quot;stabilized_frame_id&quot;</highlight><highlight class="normal">,<sp/>g_stabilized_frame_id);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/>priv_nh.getParam(</highlight><highlight class="stringliteral">&quot;child_frame_id&quot;</highlight><highlight class="normal">,<sp/>g_child_frame_id);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>topic<sp/>from<sp/>the<sp/>commandline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc<sp/>&gt;<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>g_topic<sp/>=<sp/>argv[1];</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>g_odometry_topic.clear();</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>g_pose_topic.clear();</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>g_imu_topic.clear();</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/>g_publish_roll_pitch<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/>priv_nh.getParam(</highlight><highlight class="stringliteral">&quot;publish_roll_pitch&quot;</highlight><highlight class="normal">,<sp/>g_publish_roll_pitch);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/>g_tf_prefix<sp/>=<sp/>tf::getPrefixParam(priv_nh);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/>g_transform_broadcaster<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>tf::TransformBroadcaster;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/>ros::NodeHandle<sp/>node;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/>ros::Subscriber<sp/>sub1,<sp/>sub2,<sp/>sub3,<sp/>sub4;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>subscribers<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!g_odometry_topic.empty())<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sub1<sp/>=<sp/>node.subscribe(g_odometry_topic,<sp/>10,<sp/>&amp;odomCallback);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>subscribers++;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!g_pose_topic.empty())<sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sub2<sp/>=<sp/>node.subscribe(g_pose_topic,<sp/>10,<sp/>&amp;poseCallback);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>subscribers++;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!g_imu_topic.empty())<sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sub3<sp/>=<sp/>node.subscribe(g_imu_topic,<sp/>10,<sp/>&amp;imuCallback);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>subscribers++;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!g_topic.empty())<sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sub4<sp/>=<sp/>node.subscribe(g_topic,<sp/>10,<sp/>&amp;multiCallback);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>subscribers++;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(subscribers<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_FATAL(</highlight><highlight class="stringliteral">&quot;Usage:<sp/>rosrun<sp/>message_to_tf<sp/>message_to_tf<sp/>&lt;topic&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(subscribers<sp/>&gt;<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_FATAL(</highlight><highlight class="stringliteral">&quot;More<sp/>than<sp/>one<sp/>of<sp/>the<sp/>parameters<sp/>odometry_topic,<sp/>pose_topic,<sp/>imu_topic<sp/>and<sp/>topic<sp/>are<sp/>set.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Please<sp/>specify<sp/>exactly<sp/>one<sp/>of<sp/>them<sp/>or<sp/>simply<sp/>add<sp/>the<sp/>topic<sp/>name<sp/>to<sp/>the<sp/>command<sp/>line.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>publish_pose<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/>priv_nh.getParam(</highlight><highlight class="stringliteral">&quot;publish_pose&quot;</highlight><highlight class="normal">,<sp/>publish_pose);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(publish_pose)<sp/>{</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>publish_pose_topic;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/>priv_nh.getParam(</highlight><highlight class="stringliteral">&quot;publish_pose_topic&quot;</highlight><highlight class="normal">,<sp/>publish_pose_topic);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!publish_pose_topic.empty())</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>g_pose_publisher<sp/>=<sp/>node.advertise&lt;geometry_msgs::PoseStamped&gt;(publish_pose_topic,<sp/>10);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>g_pose_publisher<sp/>=<sp/>priv_nh.advertise&lt;geometry_msgs::PoseStamped&gt;(</highlight><highlight class="stringliteral">&quot;pose&quot;</highlight><highlight class="normal">,<sp/>10);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>publish_euler<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/>priv_nh.getParam(</highlight><highlight class="stringliteral">&quot;publish_euler&quot;</highlight><highlight class="normal">,<sp/>publish_euler);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(publish_euler)<sp/>{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>publish_euler_topic;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>priv_nh.getParam(</highlight><highlight class="stringliteral">&quot;publish_euler_topic&quot;</highlight><highlight class="normal">,<sp/>publish_euler_topic);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!publish_euler_topic.empty())</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>g_euler_publisher<sp/>=<sp/>node.advertise&lt;geometry_msgs::Vector3Stamped&gt;(publish_euler_topic,<sp/>10);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>g_euler_publisher<sp/>=<sp/>priv_nh.advertise&lt;geometry_msgs::Vector3Stamped&gt;(</highlight><highlight class="stringliteral">&quot;euler&quot;</highlight><highlight class="normal">,<sp/>10);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/>ros::spin();</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>g_transform_broadcaster;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/message_to_tf.cc"/>
+  </compounddef>
+</doxygen>

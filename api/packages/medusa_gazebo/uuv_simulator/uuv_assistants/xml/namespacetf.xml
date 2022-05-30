@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacetf" kind="namespace" language="C++">
+    <compoundname>tf</compoundname>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="message__to__tf_8cc_1abfbb776955e4e7d8353c6fe83b54f893" prot="public" static="no">
+        <type>btMatrix3x3</type>
+        <definition>typedef btMatrix3x3 tf::Matrix3x3</definition>
+        <argsstring></argsstring>
+        <name>Matrix3x3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_to_tf.cc" line="58" column="34" bodyfile="src/message_to_tf.cc" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/message_to_tf.cc" line="58" column="14"/>
+  </compounddef>
+</doxygen>

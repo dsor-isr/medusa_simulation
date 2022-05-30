@@ -1,0 +1,360 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="DVLROSPlugin_8hh" kind="file" language="C++">
+    <compoundname>DVLROSPlugin.hh</compoundname>
+    <includes local="no">gazebo/gazebo.hh</includes>
+    <includes local="no">ros/ros.h</includes>
+    <includes local="no">boost/bind.hpp</includes>
+    <includes local="no">boost/shared_ptr.hpp</includes>
+    <includes local="no">geometry_msgs/TwistWithCovarianceStamped.h</includes>
+    <includes local="no">geometry_msgs/PoseStamped.h</includes>
+    <includes local="no">sensor_msgs/Range.h</includes>
+    <includes refid="ROSBaseModelPlugin_8hh" local="no">uuv_sensor_ros_plugins/ROSBaseModelPlugin.hh</includes>
+    <includes local="no">uuv_sensor_ros_plugins_msgs/DVL.h</includes>
+    <includes local="no">uuv_sensor_ros_plugins_msgs/DVLBeam.h</includes>
+    <includes local="no">message_filters/subscriber.h</includes>
+    <includes local="no">message_filters/time_synchronizer.h</includes>
+    <includes local="no">tf/transform_listener.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">dsor_msgs/Measurement.h</includes>
+    <includes local="no">Eigen/Geometry</includes>
+    <includes local="no">Eigen/Dense</includes>
+    <includes local="yes">SensorDvl.pb.h</includes>
+    <includedby refid="DVLROSPlugin_8cc" local="no">src/DVLROSPlugin.cc</includedby>
+    <incdepgraph>
+      <node id="31">
+        <label>uuv_sensor_ros_plugins_msgs/DVL.h</label>
+      </node>
+      <node id="10">
+        <label>gazebo/common/Plugin.hh</label>
+      </node>
+      <node id="13">
+        <label>gazebo/common/common.hh</label>
+      </node>
+      <node id="26">
+        <label>functional</label>
+      </node>
+      <node id="5">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="38">
+        <label>SensorDvl.pb.h</label>
+      </node>
+      <node id="33">
+        <label>message_filters/subscriber.h</label>
+      </node>
+      <node id="6">
+        <label>geometry_msgs/TwistWithCovarianceStamped.h</label>
+      </node>
+      <node id="29">
+        <label>tf/transform_listener.h</label>
+      </node>
+      <node id="30">
+        <label>tf/transform_broadcaster.h</label>
+      </node>
+      <node id="36">
+        <label>dsor_msgs/Measurement.h</label>
+      </node>
+      <node id="17">
+        <label>std_msgs/Bool.h</label>
+      </node>
+      <node id="37">
+        <label>Eigen/Geometry</label>
+      </node>
+      <node id="12">
+        <label>uuv_sensor_ros_plugins/ROSBasePlugin.hh</label>
+        <link refid="ROSBasePlugin_8hh_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>string</label>
+      </node>
+      <node id="25">
+        <label>map</label>
+      </node>
+      <node id="22">
+        <label>tf/tf.h</label>
+      </node>
+      <node id="2">
+        <label>gazebo/gazebo.hh</label>
+      </node>
+      <node id="32">
+        <label>uuv_sensor_ros_plugins_msgs/DVLBeam.h</label>
+      </node>
+      <node id="24">
+        <label>random</label>
+      </node>
+      <node id="16">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="19">
+        <label>geometry_msgs/TransformStamped.h</label>
+      </node>
+      <node id="28">
+        <label>tf/transform_datatypes.h</label>
+      </node>
+      <node id="7">
+        <label>geometry_msgs/PoseStamped.h</label>
+      </node>
+      <node id="20">
+        <label>gazebo/sensors/Noise.hh</label>
+      </node>
+      <node id="8">
+        <label>sensor_msgs/Range.h</label>
+      </node>
+      <node id="35">
+        <label>vector</label>
+      </node>
+      <node id="34">
+        <label>message_filters/time_synchronizer.h</label>
+      </node>
+      <node id="1">
+        <label>include/uuv_sensor_ros_plugins/DVLROSPlugin.hh</label>
+        <link refid="DVLROSPlugin_8hh"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>uuv_sensor_ros_plugins_msgs/ChangeSensorState.h</label>
+      </node>
+      <node id="9">
+        <label>uuv_sensor_ros_plugins/ROSBaseModelPlugin.hh</label>
+        <link refid="ROSBaseModelPlugin_8hh_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="14">
+        <label>uuv_sensor_ros_plugins/Common.hh</label>
+        <link refid="Common_8hh_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>boost/bind.hpp</label>
+      </node>
+      <node id="23">
+        <label>chrono</label>
+      </node>
+      <node id="11">
+        <label>gazebo/physics/physics.hh</label>
+      </node>
+      <node id="21">
+        <label>tf/tfMessage.h</label>
+      </node>
+      <node id="27">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgazebo_1_1DVLROSPlugin" prot="public">gazebo::DVLROSPlugin</innerclass>
+    <innernamespace refid="namespacegazebo">gazebo</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="DVLROSPlugin_8hh_1a7ba6a2c25409854dc60bacee715dfe3d" prot="public" static="no">
+        <name>ALTITUDE_OUT_OF_RANGE</name>
+        <initializer>-1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/DVLROSPlugin.hh" line="38" column="9" bodyfile="include/uuv_sensor_ros_plugins/DVLROSPlugin.hh" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2016<sp/>The<sp/>UUV<sp/>Simulator<sp/>Authors.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__UUV_DVL_ROS_PLUGIN_HH__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__UUV_DVL_ROS_PLUGIN_HH__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gazebo/gazebo.hh&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ros/ros.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/bind.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/shared_ptr.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/TwistWithCovarianceStamped.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/PoseStamped.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sensor_msgs/Range.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uuv_sensor_ros_plugins/ROSBaseModelPlugin.hh&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uuv_sensor_ros_plugins_msgs/DVL.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uuv_sensor_ros_plugins_msgs/DVLBeam.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;message_filters/subscriber.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;message_filters/time_synchronizer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf/transform_listener.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dsor_msgs/Measurement.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Geometry&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Dense&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SensorDvl.pb.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALTITUDE_OUT_OF_RANGE<sp/>-1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacegazebo" kindref="compound">gazebo</ref><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="classgazebo_1_1DVLROSPlugin" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgazebo_1_1DVLROSPlugin" kindref="compound">DVLROSPlugin</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1ROSBaseModelPlugin" kindref="compound">ROSBaseModelPlugin</ref><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/><ref refid="classgazebo_1_1DVLROSPlugin_1aad4cc11ec091d06a2be743656c7bbcce" kindref="member">DVLROSPlugin</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1DVLROSPlugin_1a5941c8fe25d52a179799bb526dfd96de" kindref="member">~DVLROSPlugin</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1DVLROSPlugin_1ad64840822bab803a6f89d589fe6c0a9f" kindref="member">Load</ref>(physics::ModelPtr<sp/>_model,<sp/>sdf::ElementPtr<sp/>_sdf);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1DVLROSPlugin_1a2ce9099e6bd976d4d845bc9c16741125" kindref="member">OnUpdate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>common::UpdateInfo&amp;<sp/>_info);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1DVLROSPlugin_1a6196f3792d05d27c197321fa760b6e0f" kindref="member">OnBeamCallback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sensor_msgs::RangeConstPtr&amp;<sp/>_range0,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sensor_msgs::RangeConstPtr&amp;<sp/>_range1,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sensor_msgs::RangeConstPtr&amp;<sp/>_range2,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sensor_msgs::RangeConstPtr&amp;<sp/>_range3);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1DVLROSPlugin_1aafc0126ca7732b8f01ca383dc3ace22f" kindref="member">UpdateBeamTransforms</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>beamTransformsInitialized;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classgazebo_1_1DVLROSPlugin_1af131a2d137189651208e48467bdbad39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1DVLROSPlugin_1af131a2d137189651208e48467bdbad39" kindref="member">altitude</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classgazebo_1_1DVLROSPlugin_1a81fb6aaf15da16ca61e98ef9794a0835" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>uuv_sensor_ros_plugins_msgs::DVL<sp/><ref refid="classgazebo_1_1DVLROSPlugin_1a81fb6aaf15da16ca61e98ef9794a0835" kindref="member">dvlROSMsg</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>std::vector&lt;uuv_sensor_ros_plugins_msgs::DVLBeam&gt;<sp/>dvlBeamMsgs;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classgazebo_1_1DVLROSPlugin_1a9188a23e5c2833e0e824d7e688738dd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>dsor_msgs::Measurement<sp/><ref refid="classgazebo_1_1DVLROSPlugin_1a9188a23e5c2833e0e824d7e688738dd6" kindref="member">dvlMeasurementMsg</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classgazebo_1_1DVLROSPlugin_1a1767906cce2bf65ad1a47fb7590c2b61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>ros::Publisher<sp/><ref refid="classgazebo_1_1DVLROSPlugin_1a1767906cce2bf65ad1a47fb7590c2b61" kindref="member">medusaStackDVLPub</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classgazebo_1_1DVLROSPlugin_1ac2f169c3c79a3514cfdf497ce6a74e2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>ros::Publisher<sp/><ref refid="classgazebo_1_1DVLROSPlugin_1ac2f169c3c79a3514cfdf497ce6a74e2d" kindref="member">twistPub</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classgazebo_1_1DVLROSPlugin_1afaaaa0dcc7b097b488f60b7098ff8ec5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>geometry_msgs::TwistWithCovarianceStamped<sp/><ref refid="classgazebo_1_1DVLROSPlugin_1afaaaa0dcc7b097b488f60b7098ff8ec5" kindref="member">twistROSMsg</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classgazebo_1_1DVLROSPlugin_1ad08e09dd6d967aa9a2696065213c3493" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classgazebo_1_1DVLROSPlugin_1ad08e09dd6d967aa9a2696065213c3493" kindref="member">beamsLinkNames</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classgazebo_1_1DVLROSPlugin_1a4f5c496dc3d8efa87aadfa2f7d7b4c97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classgazebo_1_1DVLROSPlugin_1a4f5c496dc3d8efa87aadfa2f7d7b4c97" kindref="member">beamTopics</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="classgazebo_1_1DVLROSPlugin_1ad8ac639cddfd52b709b8e77712c72762" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>std::vector&lt;ignition::math::Pose3d&gt;<sp/><ref refid="classgazebo_1_1DVLROSPlugin_1ad8ac639cddfd52b709b8e77712c72762" kindref="member">beamPoses</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>boost::shared_ptr&lt;message_filters::TimeSynchronizer&lt;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sensor_msgs::Range,<sp/>sensor_msgs::Range,<sp/>sensor_msgs::Range,<sp/>sensor_msgs::Range&gt;&gt;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>syncBeamMessages;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>boost::shared_ptr&lt;message_filters::Subscriber&lt;sensor_msgs::Range&gt;&gt;<sp/>beamSub0;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>boost::shared_ptr&lt;message_filters::Subscriber&lt;sensor_msgs::Range&gt;&gt;<sp/>beamSub1;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>boost::shared_ptr&lt;message_filters::Subscriber&lt;sensor_msgs::Range&gt;&gt;<sp/>beamSub2;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>boost::shared_ptr&lt;message_filters::Subscriber&lt;sensor_msgs::Range&gt;&gt;<sp/>beamSub3;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>tf::TransformListener<sp/>transformListener;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__UUV_DVL_ROS_PLUGIN_HH__</highlight></codeline>
+    </programlisting>
+    <location file="include/uuv_sensor_ros_plugins/DVLROSPlugin.hh"/>
+  </compounddef>
+</doxygen>

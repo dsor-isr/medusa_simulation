@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="classgazebo_1_1SphericalCoordinatesROSInterfacePlugin" kind="class"><name>gazebo::SphericalCoordinatesROSInterfacePlugin</name>
+    <member refid="classgazebo_1_1SphericalCoordinatesROSInterfacePlugin_1aea70e85edc45f5c16f6b4aa0deee4fc4" kind="variable"><name>rosNode</name></member>
+    <member refid="classgazebo_1_1SphericalCoordinatesROSInterfacePlugin_1a7369e11fa96d90bfa45a24689869d719" kind="variable"><name>rosPublishConnection</name></member>
+    <member refid="classgazebo_1_1SphericalCoordinatesROSInterfacePlugin_1a92dbd263f77ee75c67dfa8f7dbe7f45d" kind="variable"><name>world</name></member>
+    <member refid="classgazebo_1_1SphericalCoordinatesROSInterfacePlugin_1a0f858a67ac5be296746f6b7075131261" kind="variable"><name>worldServices</name></member>
+    <member refid="classgazebo_1_1SphericalCoordinatesROSInterfacePlugin_1a6bf1a00d18fac3a015684a1afc0820c3" kind="function"><name>SphericalCoordinatesROSInterfacePlugin</name></member>
+    <member refid="classgazebo_1_1SphericalCoordinatesROSInterfacePlugin_1a0ea8367ff22eeeac89fb5db34e2cde81" kind="function"><name>~SphericalCoordinatesROSInterfacePlugin</name></member>
+    <member refid="classgazebo_1_1SphericalCoordinatesROSInterfacePlugin_1a8d0cef461af33093c256fdf1ccfd82c3" kind="function"><name>Load</name></member>
+    <member refid="classgazebo_1_1SphericalCoordinatesROSInterfacePlugin_1aa967b09744ddbe4072a4c8dc5e35a631" kind="function"><name>GetOriginSphericalCoord</name></member>
+    <member refid="classgazebo_1_1SphericalCoordinatesROSInterfacePlugin_1a0805453fc6658c5024cddf6907ca34bf" kind="function"><name>SetOriginSphericalCoord</name></member>
+    <member refid="classgazebo_1_1SphericalCoordinatesROSInterfacePlugin_1a3e480b1393af8868ee975a7c32638ac0" kind="function"><name>TransformToSphericalCoord</name></member>
+    <member refid="classgazebo_1_1SphericalCoordinatesROSInterfacePlugin_1aa314576c573c750cf0d32b1191e86d03" kind="function"><name>TransformFromSphericalCoord</name></member>
+  </compound>
+  <compound refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin" kind="class"><name>uuv_simulator_ros::UnderwaterCurrentROSPlugin</name>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1a2d4dd2eed1b5e2c0938cbd3f3f285a2f" kind="variable"><name>worldServices</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1a1349abdfb8b97ca86bdee32bbc6fddd1" kind="variable"><name>rosNode</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1a9ec4022645eac9fd1ca1f9d63b035e12" kind="variable"><name>rosPublishConnection</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1a7abf2a654b3b136c6fcc348af052e30b" kind="variable"><name>flowVelocityPub</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1aee023908d506f1a9f4f8a7b6b735cc9d" kind="variable"><name>rosPublishPeriod</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1a56af5484be854614581de36a6796b619" kind="variable"><name>lastRosPublishTime</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1a495903eb436982545dffaaf2ef685877" kind="function"><name>UnderwaterCurrentROSPlugin</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1a144781a36c5f5df6f71ffc43fc0a8eb1" kind="function"><name>~UnderwaterCurrentROSPlugin</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1a1a5b927b9afa3ad9e0ec3f37e47e4f67" kind="function"><name>Load</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1a703a1f33b7ba4a12bc337d01c923050c" kind="function"><name>UpdateCurrentVelocityModel</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1aa023f81b677c1599224b5cb61d2a998c" kind="function"><name>UpdateCurrentHorzAngleModel</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1a027e73b225b807cb2dc75baf1de9ec8c" kind="function"><name>UpdateCurrentVertAngleModel</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1a0063203dbdd0ff00cc0b9dd36cb6c203" kind="function"><name>GetCurrentVelocityModel</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1ac122dcc0b978614443ae85a7cf3e071c" kind="function"><name>GetCurrentHorzAngleModel</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1a6ca3823687f0c1bf3cf7b32cc9e7f438" kind="function"><name>GetCurrentVertAngleModel</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1a77152a67d11a9185b0caf2455afd5ce0" kind="function"><name>UpdateCurrentVelocity</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1ac0970ebff612f9682e833ad289698845" kind="function"><name>UpdateHorzAngle</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1ac1eabcb153dd2252519826766ac68252" kind="function"><name>UpdateVertAngle</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterCurrentROSPlugin_1a9793daad3e5a3bbdff32f31faf4c714d" kind="function"><name>OnUpdateCurrentVel</name></member>
+  </compound>
+  <compound refid="namespacegazebo" kind="namespace"><name>gazebo</name>
+  </compound>
+  <compound refid="namespaceuuv__simulator__ros" kind="namespace"><name>uuv_simulator_ros</name>
+  </compound>
+  <compound refid="SphericalCoordinatesROSInterfacePlugin_8hh" kind="file"><name>SphericalCoordinatesROSInterfacePlugin.hh</name>
+  </compound>
+  <compound refid="UnderwaterCurrentROSPlugin_8hh" kind="file"><name>UnderwaterCurrentROSPlugin.hh</name>
+  </compound>
+  <compound refid="SphericalCoordinatesROSInterfacePlugin_8cc" kind="file"><name>SphericalCoordinatesROSInterfacePlugin.cc</name>
+  </compound>
+  <compound refid="UnderwaterCurrentROSPlugin_8cc" kind="file"><name>UnderwaterCurrentROSPlugin.cc</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_d520494d914db9c94cd3f1db6b5d46a9" kind="dir"><name>include/uuv_world_ros_plugins</name>
+  </compound>
+</doxygenindex>

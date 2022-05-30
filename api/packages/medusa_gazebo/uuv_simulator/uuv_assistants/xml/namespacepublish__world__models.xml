@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacepublish__world__models" kind="namespace" language="Python">
+    <compoundname>publish_world_models</compoundname>
+    <innerclass refid="classpublish__world__models_1_1WorldPublisher" prot="public">publish_world_models::WorldPublisher</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="publish__world__models_8py_1adcb09a37a97f5f37e23ab6137302c75c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>publish_world_models.world_pub</definition>
+        <argsstring></argsstring>
+        <name>world_pub</name>
+        <initializer>=  <ref refid="classpublish__world__models_1_1WorldPublisher" kindref="compound">WorldPublisher</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_world_models.py" line="156" column="1" bodyfile="scripts/publish_world_models.py" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="scripts/publish_world_models.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

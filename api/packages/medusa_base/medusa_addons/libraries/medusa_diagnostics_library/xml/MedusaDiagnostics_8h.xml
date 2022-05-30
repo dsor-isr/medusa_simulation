@@ -6,6 +6,9 @@
     <includes local="no">diagnostic_msgs/DiagnosticArray.h</includes>
     <includedby refid="MedusaDiagnostics_8cpp" local="yes">src/MedusaDiagnostics.cpp</includedby>
     <incdepgraph>
+      <node id="3">
+        <label>diagnostic_msgs/DiagnosticArray.h</label>
+      </node>
       <node id="1">
         <label>include/medusa_diagnostics_library/MedusaDiagnostics.h</label>
         <link refid="MedusaDiagnostics_8h"/>
@@ -13,9 +16,6 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>diagnostic_msgs/DiagnosticArray.h</label>
       </node>
       <node id="2">
         <label>ros/ros.h</label>

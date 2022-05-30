@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="classgazebo_1_1AccelerationsTestPlugin" kind="class"><name>gazebo::AccelerationsTestPlugin</name>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1a0ca115f72985faf7538a4af8761ace97" kind="variable"><name>updateConnection</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1ae3fb62216782f354834b5000ffb290fc" kind="variable"><name>world</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1affe319c6bc7669cadac84a248a0113ad" kind="variable"><name>model</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1a78096f01be7e0804b178f565862315bf" kind="variable"><name>node</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1af0c72cd442cedea70084db09fef483ad" kind="variable"><name>link</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1a491b199de59266f1e559ab0667cdc602" kind="variable"><name>pub_accel_b_gazebo</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1af15a43ec01edd5d0d0d5c00ecc93bbfe" kind="variable"><name>pub_accel_b_numeric</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1a51d748b8442b3856eeff4de3d8fbc83a" kind="variable"><name>pub_accel_w_gazebo</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1aa2bf1016615f64d5cb4d29592af494f7" kind="variable"><name>pub_accel_w_numeric</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1a0829056785ddad0daad41f40b61b1421" kind="variable"><name>last_w_v_w_b</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1afedb74b4ade15db6baf2cc9fdcef5e7c" kind="variable"><name>lastTime</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1a64e0f2c7bd3e1d1a05746ddd42c00b26" kind="variable"><name>rosNode</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1a55aab0da39c4400e84646b11caa72507" kind="function"><name>AccelerationsTestPlugin</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1a6e91ba8c0d0817eea3f16480f5b5137b" kind="function"><name>~AccelerationsTestPlugin</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1a8122bf6caafdee89d84f6a17059f1864" kind="function"><name>Load</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1a44dd56d9db03bd76aae7dee71d186a56" kind="function"><name>Init</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1affd8910814c560e28e926827fa70e70c" kind="function"><name>Update</name></member>
+    <member refid="classgazebo_1_1AccelerationsTestPlugin_1afbfdb6e1ed425f0f4194f32fd69e36d0" kind="function"><name>Connect</name></member>
+  </compound>
+  <compound refid="classgazebo_1_1CustomBatteryConsumerROSPlugin" kind="class"><name>gazebo::CustomBatteryConsumerROSPlugin</name>
+    <member refid="classgazebo_1_1CustomBatteryConsumerROSPlugin_1a849c350038fc65f0b6618daa9bff2d5a" kind="variable"><name>rosNode</name></member>
+    <member refid="classgazebo_1_1CustomBatteryConsumerROSPlugin_1a5f4ab26681042a3704d0854c80179ccb" kind="variable"><name>deviceStateSub</name></member>
+    <member refid="classgazebo_1_1CustomBatteryConsumerROSPlugin_1aab63a2fd9601f9ed588cd310a31d166d" kind="variable"><name>battery</name></member>
+    <member refid="classgazebo_1_1CustomBatteryConsumerROSPlugin_1adb9208bcb12e204be32cdafbd4dedece" kind="variable"><name>isDeviceOn</name></member>
+    <member refid="classgazebo_1_1CustomBatteryConsumerROSPlugin_1a2a77576499d0d9a4121df0ab26263999" kind="variable"><name>powerLoad</name></member>
+    <member refid="classgazebo_1_1CustomBatteryConsumerROSPlugin_1afa8963cf588440f8a65a40709ee87f1b" kind="variable"><name>consumerID</name></member>
+    <member refid="classgazebo_1_1CustomBatteryConsumerROSPlugin_1aab7c22693c5544d155fe5e3a193d9848" kind="variable"><name>linkName</name></member>
+    <member refid="classgazebo_1_1CustomBatteryConsumerROSPlugin_1aabf460331c052e75d5bdfd801832e67c" kind="variable"><name>batteryName</name></member>
+    <member refid="classgazebo_1_1CustomBatteryConsumerROSPlugin_1ac88de3b1d146e46df3352b5769a86b81" kind="variable"><name>rosPublishConnection</name></member>
+    <member refid="classgazebo_1_1CustomBatteryConsumerROSPlugin_1a1dfc5cbec8fb4bb7c398b5f92ebfe025" kind="function"><name>CustomBatteryConsumerROSPlugin</name></member>
+    <member refid="classgazebo_1_1CustomBatteryConsumerROSPlugin_1ad874654e87502adee138a375c59096a5" kind="function"><name>~CustomBatteryConsumerROSPlugin</name></member>
+    <member refid="classgazebo_1_1CustomBatteryConsumerROSPlugin_1a092657cb2832d56f4f4f9037e29de22f" kind="function"><name>Load</name></member>
+    <member refid="classgazebo_1_1CustomBatteryConsumerROSPlugin_1a884a9bccf2a5f4a5a935b67a133a18a2" kind="function"><name>UpdateDeviceState</name></member>
+    <member refid="classgazebo_1_1CustomBatteryConsumerROSPlugin_1aa0f068f722eb00582d21cd0c69379a2f" kind="function"><name>UpdatePowerLoad</name></member>
+  </compound>
+  <compound refid="classuuv__simulator__ros_1_1FinROSPlugin" kind="class"><name>uuv_simulator_ros::FinROSPlugin</name>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1a8f3391ddeebd99253df82d716de930dc" kind="variable"><name>rosNode</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1a34ce97e912a8d8bc15a4b57f232aa085" kind="variable"><name>subReference</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1a86f9bac3d63f124b891859761c796bb9" kind="variable"><name>pubState</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1a23c8b6cdc707a36863c13c03696ecd10" kind="variable"><name>pubFinForce</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1a58070e5454b0c3a781c42271fb906329" kind="variable"><name>rosPublishConnection</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1ae9ee787b7a9d9df4559aa096e0edb56d" kind="variable"><name>rosPublishPeriod</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1a5e4416ecba8d6577533679c4e18bad83" kind="variable"><name>services</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1a8f4cfe11c85edd46c4f99ba4634350f8" kind="variable"><name>lastRosPublishTime</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1ab36ec9a6e6cf420763695f9e91cc155b" kind="function"><name>FinROSPlugin</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1a424574c4b915a5af56a5c8daec47e626" kind="function"><name>~FinROSPlugin</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1a0f70780cf0a115dc47cd4a21f6a62f60" kind="function"><name>Load</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1a2aa520188b885575965a7675f62d78c8" kind="function"><name>RosPublishStates</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1a09703d436ca89cd2c7c75d110cdc5b7a" kind="function"><name>SetReference</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1ac5c561a272971295a1a0a2a79928732c" kind="function"><name>GetLiftDragParams</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1aba957637565587cf7fc8114e951024a8" kind="function"><name>GetRosPublishPeriod</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1a2ad58a55300e951a3a3f4b2d7dd61133" kind="function"><name>SetRosPublishRate</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1a3984861d97812ec447b20fd6edb90d26" kind="function"><name>Init</name></member>
+    <member refid="classuuv__simulator__ros_1_1FinROSPlugin_1a423e0b46d5d38b327c6122ecd99665b4" kind="function"><name>Reset</name></member>
+  </compound>
+  <compound refid="classuuv__simulator__ros_1_1JointStatePublisher" kind="class"><name>uuv_simulator_ros::JointStatePublisher</name>
+    <member refid="classuuv__simulator__ros_1_1JointStatePublisher_1a2823d971757201c12f2e73089e3b8c6a" kind="variable"><name>world</name></member>
+    <member refid="classuuv__simulator__ros_1_1JointStatePublisher_1a5d8fb03dccf590de2961ffc3832325e8" kind="variable"><name>model</name></member>
+    <member refid="classuuv__simulator__ros_1_1JointStatePublisher_1a0f43bcbd8715f36fb1ffc9cb567ad7d9" kind="variable"><name>updateConnection</name></member>
+    <member refid="classuuv__simulator__ros_1_1JointStatePublisher_1a69867bb09695b11e480906548d2c7909" kind="variable"><name>node</name></member>
+    <member refid="classuuv__simulator__ros_1_1JointStatePublisher_1ae120383bb63a668369ca2758d88f3402" kind="variable"><name>robotNamespace</name></member>
+    <member refid="classuuv__simulator__ros_1_1JointStatePublisher_1ac69fab5908266fc9eaa281c77b5a17f4" kind="variable"><name>movingJoints</name></member>
+    <member refid="classuuv__simulator__ros_1_1JointStatePublisher_1a1f35650a48fbcba7ac0e17204a162837" kind="variable"><name>updateRate</name></member>
+    <member refid="classuuv__simulator__ros_1_1JointStatePublisher_1ab9e1564bc516fe35be07e0d0891a8df5" kind="variable"><name>updatePeriod</name></member>
+    <member refid="classuuv__simulator__ros_1_1JointStatePublisher_1a9c873494bc7cb4bd91839f06f7e4d982" kind="variable"><name>lastUpdate</name></member>
+    <member refid="classuuv__simulator__ros_1_1JointStatePublisher_1ae85c1f8dbc05db8bc8d586c73882b18d" kind="variable"><name>jointStatePub</name></member>
+    <member refid="classuuv__simulator__ros_1_1JointStatePublisher_1a8845851dbc4b8416f8d6e142ad4361c3" kind="function"><name>JointStatePublisher</name></member>
+    <member refid="classuuv__simulator__ros_1_1JointStatePublisher_1a795abdb7e09dda4ff9e7aa404c1e642f" kind="function"><name>~JointStatePublisher</name></member>
+    <member refid="classuuv__simulator__ros_1_1JointStatePublisher_1a68a2588c08f13a8286e7d9bb5cc2546e" kind="function"><name>Load</name></member>
+    <member refid="classuuv__simulator__ros_1_1JointStatePublisher_1af075fe8b44c6ee07f5a578b1bee99800" kind="function"><name>OnUpdate</name></member>
+    <member refid="classuuv__simulator__ros_1_1JointStatePublisher_1a3c00e22e725df8df3b3f314edd87cce6" kind="function"><name>PublishJointStates</name></member>
+    <member refid="classuuv__simulator__ros_1_1JointStatePublisher_1aaa5dc6a7f2f814a4164c34facb34e1e8" kind="function"><name>IsIgnoredJoint</name></member>
+  </compound>
+  <compound refid="classgazebo_1_1LinearBatteryROSPlugin" kind="class"><name>gazebo::LinearBatteryROSPlugin</name>
+    <member refid="classgazebo_1_1LinearBatteryROSPlugin_1ac079f1d2cb6edb06f4432c69f165a0a4" kind="variable"><name>rosNode</name></member>
+    <member refid="classgazebo_1_1LinearBatteryROSPlugin_1ae9469d16486e6a1730d6ba881caef006" kind="variable"><name>robotNamespace</name></member>
+    <member refid="classgazebo_1_1LinearBatteryROSPlugin_1a44c22f944534c81519677c63c78c7701" kind="variable"><name>batteryStateMsg</name></member>
+    <member refid="classgazebo_1_1LinearBatteryROSPlugin_1ac1ba8a2811bbcf5f5700a2505f7a63d9" kind="variable"><name>updateTimer</name></member>
+    <member refid="classgazebo_1_1LinearBatteryROSPlugin_1af14e05608e903a5b5194fda61329615f" kind="variable"><name>batteryStatePub</name></member>
+    <member refid="classgazebo_1_1LinearBatteryROSPlugin_1aabebb4f5b17d524e9c3d74dd0cb1acdd" kind="function"><name>LinearBatteryROSPlugin</name></member>
+    <member refid="classgazebo_1_1LinearBatteryROSPlugin_1a46c86524f2df0f027533d1806c32a47e" kind="function"><name>~LinearBatteryROSPlugin</name></member>
+    <member refid="classgazebo_1_1LinearBatteryROSPlugin_1a224ee323f756ae606c9836493f1ff494" kind="function"><name>Load</name></member>
+    <member refid="classgazebo_1_1LinearBatteryROSPlugin_1aedd9b7053962837e687826e7e06ac249" kind="function"><name>Init</name></member>
+    <member refid="classgazebo_1_1LinearBatteryROSPlugin_1a869ec61ac6792894bff98f7fc3b7fae0" kind="function"><name>Reset</name></member>
+    <member refid="classgazebo_1_1LinearBatteryROSPlugin_1af7dd1d4bd4f0b220d8c815bdb8e38679" kind="function"><name>PublishBatteryState</name></member>
+  </compound>
+  <compound refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle" kind="class"><name>test_default_fossen_vehicle::TestDefaultFossenVehicle</name>
+    <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a524d7488b289013edb28c26f2a678f66" kind="function"><name>test_get_model_parameters</name></member>
+    <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a61a96006a2f2319722f0c3d385ad5813" kind="function"><name>test_set_fluid_density</name></member>
+    <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1ac1e19467c96c1be3697817d24d2a52e8" kind="function"><name>test_volume_offset</name></member>
+    <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a32ea112608f211771d63414f256068a5" kind="function"><name>test_added_mass_scaling</name></member>
+    <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a8bf154f6ef54a120918fb0ec9e63341e" kind="function"><name>test_damping_scaling</name></member>
+    <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a2cf96bbbd9ec6d5500c6e08fccad266f" kind="function"><name>test_volume_scaling</name></member>
+    <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a24c942fc0b26a48811d66eab0a4d329e" kind="function"><name>test_added_mass_offset</name></member>
+    <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a62f09ac3da01f070730222dacdae4c5f" kind="function"><name>test_linear_damping_offset</name></member>
+    <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a82f15e3e35c998556a3a0cb02e5249b5" kind="function"><name>test_linear_forward_speed_damping_offset</name></member>
+    <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a82f15e3e35c998556a3a0cb02e5249b5" kind="function"><name>test_linear_forward_speed_damping_offset</name></member>
+  </compound>
+  <compound refid="classtest__sphere__vehicle_1_1TestSphereVehicle" kind="class"><name>test_sphere_vehicle::TestSphereVehicle</name>
+    <member refid="classtest__sphere__vehicle_1_1TestSphereVehicle_1a127f64f85508f72abf55c89f4528c34e" kind="function"><name>test_get_model_parameters</name></member>
+    <member refid="classtest__sphere__vehicle_1_1TestSphereVehicle_1aa35c004da91064665b1fe57a9d85cc1c" kind="function"><name>test_added_mass_coefs</name></member>
+    <member refid="classtest__sphere__vehicle_1_1TestSphereVehicle_1a778e75a8c7a474358d959c144ca1fa00" kind="function"><name>test_nonlinear_damping_coefs</name></member>
+  </compound>
+  <compound refid="classtest__thrusters_1_1TestThrusters" kind="class"><name>test_thrusters::TestThrusters</name>
+    <member refid="classtest__thrusters_1_1TestThrusters_1a80e39ca1de5e38ea28d0f647e85e56bb" kind="variable"><name>thruster_input_pub</name></member>
+    <member refid="classtest__thrusters_1_1TestThrusters_1aae347e5c7ac825914e5f0259a9cbac5e" kind="function"><name>__init__</name></member>
+    <member refid="classtest__thrusters_1_1TestThrusters_1adad9e2d942d4069545a88a3715c61a99" kind="function"><name>test_input_output_topics_exist</name></member>
+    <member refid="classtest__thrusters_1_1TestThrusters_1a52d931f8194f3769811f7778b5a903a7" kind="function"><name>test_convertion_fcn_parameters</name></member>
+    <member refid="classtest__thrusters_1_1TestThrusters_1a84e0827fc5d36d2941497f26dd755c93" kind="function"><name>test_change_thruster_state</name></member>
+    <member refid="classtest__thrusters_1_1TestThrusters_1a0a44c9100649b587dd922a28da7ce034" kind="function"><name>test_change_thrust_efficiency</name></member>
+    <member refid="classtest__thrusters_1_1TestThrusters_1aff485c831f1a9583063a18a17ade7909" kind="function"><name>test_change_dyn_state_efficiency</name></member>
+  </compound>
+  <compound refid="classgazebo_1_1ThrusterManagerROSPlugin" kind="class"><name>gazebo::ThrusterManagerROSPlugin</name>
+    <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a6598c526d3f059e828fae7715c7b2988" kind="variable"><name>rosNode</name></member>
+    <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1aacac9b073d224730df72be9bed0586f5" kind="variable"><name>node</name></member>
+    <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a9e7f69b76ac2a3401372198c267e3946" kind="variable"><name>updateConnection</name></member>
+    <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a3d935dc1a49afc9feb5fcfa4595f2ef2" kind="variable"><name>thrusterStackSubscriber</name></member>
+    <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a9d48b219094998a32f4d1261e5255531" kind="variable"><name>thrustInputPublisher</name></member>
+    <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a1aa6350f07c1a561c2ca7411e4dd6e30" kind="variable"><name>thrustersNumber</name></member>
+    <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a6ad0636d6e77419a410a9da1262e64bc" kind="variable"><name>dsorTopicThrusters</name></member>
+    <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1ae7b2220e9350d8c6621971d4e9472ebc" kind="variable"><name>thrustVector</name></member>
+    <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a245f029f6b34f47388e0264ddb1a4580" kind="function"><name>ThrusterManagerROSPlugin</name></member>
+    <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a3ed48ea870b1ab31ff506f3315b42bdf" kind="function"><name>~ThrusterManagerROSPlugin</name></member>
+    <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1ab43e47ed628a19980295ecbe9b8ac086" kind="function"><name>Load</name></member>
+    <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1ab7cef88187e03e2e351bddfa60eef17d" kind="function"><name>Update</name></member>
+    <member refid="classgazebo_1_1ThrusterManagerROSPlugin_1a18c74da30a38a27cdf953bba2ed3fdb4" kind="function"><name>SetThrustReference</name></member>
+  </compound>
+  <compound refid="classuuv__simulator__ros_1_1ThrusterROSPlugin" kind="class"><name>uuv_simulator_ros::ThrusterROSPlugin</name>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a7aa85e4dbfa4dc1d6f88e68f9e6ca524" kind="variable"><name>services</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1ae42cd5917e98b723384e12da25be88b2" kind="variable"><name>rosNode</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a723ce90c4bb833c7951eceaedb622af4" kind="variable"><name>subThrustReference</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a7ab4a1a6d988bd53e2130f2ce1254057" kind="variable"><name>pubThrust</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1af5ad0d71190e33b1dfcf5ea333acac33" kind="variable"><name>pubThrustWrench</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a9ab8101063f39867da58a3bbbe5c0a52" kind="variable"><name>pubThrusterState</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a9c8ab96192f72180e99a1f503b20cfdd" kind="variable"><name>pubThrustForceEff</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a99cd5a0654868c5479802af2ea202827" kind="variable"><name>pubDynamicStateEff</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a4610fce7622a5c12ae9c9891308c6428" kind="variable"><name>rosPublishConnection</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a4e10c2e88e554f2d5d320071a5c043a4" kind="variable"><name>rosPublishPeriod</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a2a4326e8bf21585483404f9ca6d18766" kind="variable"><name>lastRosPublishTime</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a96d5b46e81d42adc6f1bedc129b56a92" kind="function"><name>ThrusterROSPlugin</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a25fab91375decd55eec8a8ee3bd4079e" kind="function"><name>~ThrusterROSPlugin</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1ab1b70d05c87212176d1237817bf9ddf5" kind="function"><name>Load</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1ab3d7f21cabcbb88d9551860182e50096" kind="function"><name>RosPublishStates</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1ac3f8c621ead1c6fe22809c3abf284a68" kind="function"><name>SetThrustReference</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a61b52a4fbc5871061f3b8f4639596e32" kind="function"><name>GetRosPublishPeriod</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1adb8206d74cba2e15a209db4284198db8" kind="function"><name>SetRosPublishRate</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a670f0befa3efac82bcff5d187fe6cbb3" kind="function"><name>Init</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a525a9a8ea9be37c4542137640c4a2fbc" kind="function"><name>Reset</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a9d65e6dda76939e59df4b18226f893b0" kind="function"><name>SetThrustForceEfficiency</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a4a73039a9b93090462da51189a83b85b" kind="function"><name>GetThrustForceEfficiency</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a10f86f23ba017986e816a83dbd217a5a" kind="function"><name>SetDynamicStateEfficiency</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a585e5327b2d1fd93d8bacce6e95e623c" kind="function"><name>GetDynamicStateEfficiency</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1ad8b0158748c2ae0950851e257d811988" kind="function"><name>SetThrusterState</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1a03f9489a29bf669efb23ecc9df28f95b" kind="function"><name>GetThrusterState</name></member>
+    <member refid="classuuv__simulator__ros_1_1ThrusterROSPlugin_1af012be49e3598405ceb764190838789c" kind="function"><name>GetThrusterConversionFcn</name></member>
+  </compound>
+  <compound refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin" kind="class"><name>uuv_simulator_ros::UnderwaterObjectROSPlugin</name>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1aa34a635c2e4e9b4763a2c0a36a597afc" kind="variable"><name>rosNode</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a2d9a170accccd0525d312d65e560033d" kind="variable"><name>subLocalCurVel</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a1a7611c320c5befa54a1f4f5d5cc2735" kind="variable"><name>rosHydroPub</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a61626d49fdaf7b2b18195772268ec71c" kind="variable"><name>services</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a16ae9795226a870981cd2abc54569c04" kind="variable"><name>nedTransform</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a91757da19c259ff0c135ba658dbf2724" kind="variable"><name>tfBroadcaster</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a6d26a8a5c08e79c0a149a07cf61209e0" kind="function"><name>UnderwaterObjectROSPlugin</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1ae1eb17f91cb1383400138b6ef241a06f" kind="function"><name>~UnderwaterObjectROSPlugin</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a86c5be6309611c623757fca4565051c9" kind="function"><name>Load</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a3401922bc6e94cfcb5db27a99d2e4f0a" kind="function"><name>Init</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1ae0316192f5b26fa321f3e64dd46287b7" kind="function"><name>Reset</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a8f81a22f771bc1203365de1438452e7a" kind="function"><name>Update</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a8796c2736835dc203cb7f9c7e84a923e" kind="function"><name>UpdateLocalCurrentVelocity</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a038402f422a3940e426eec798f6a0d39" kind="function"><name>SetUseGlobalCurrentVel</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a36c121c67de5ba30cd0770fc9b60ea26" kind="function"><name>GetModelProperties</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a5d6cd010fa2f18ae91147c03ee9d1408" kind="function"><name>SetScalingAddedMass</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1ad8ee29496336a958fa59c6fc35026729" kind="function"><name>GetScalingAddedMass</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a67861c1e99ee10a9c64f96d6401b221d" kind="function"><name>SetScalingDamping</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1adc480b2b52d0da8a9c1d1b700d7bacd6" kind="function"><name>GetScalingDamping</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a2569924791d708d8d879c0fec853b5f4" kind="function"><name>SetScalingVolume</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a9eb2881a288725f83c9924b7be498c81" kind="function"><name>GetScalingVolume</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1ac254edcbd59acb26fd70b70acad679c9" kind="function"><name>SetFluidDensity</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a92c568850087edd355359e967f42d966" kind="function"><name>GetFluidDensity</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a473e7dae4ba36e061389cf4d193ce80d" kind="function"><name>SetOffsetVolume</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a70d64b6da3a18257bb1b4b1edc9afb3b" kind="function"><name>GetOffsetVolume</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1ae062c4867e24ba3daf56032728fb3e9a" kind="function"><name>SetOffsetAddedMass</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a317123306ae032c3cfb408553ed0706c" kind="function"><name>GetOffsetAddedMass</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a9b3127ae45a4972927bd7becc61a4cf4" kind="function"><name>SetOffsetLinearDamping</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a979a847fb03c318d23809ef7e516f980" kind="function"><name>GetOffsetLinearDamping</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a85a1221c40202088731e56f1d7736bf1" kind="function"><name>SetOffsetLinearForwardSpeedDamping</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a8c63d709fc992f899ffbe1eced7b6cd8" kind="function"><name>GetOffsetLinearForwardSpeedDamping</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a972ab56e380c00dcc489c0d9e9a4d0de" kind="function"><name>SetOffsetNonLinearDamping</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1abc734c754de497bf62b13de980649f70" kind="function"><name>GetOffsetNonLinearDamping</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1adf2dd5f72380c281f9176bd0e4e98f59" kind="function"><name>PublishRestoringForce</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a22cd26dfdc7d64c8fa3b0a8d5ac40682" kind="function"><name>PublishHydrodynamicWrenches</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a62b50fa4ff5d5b36b78a2160bad1d500" kind="function"><name>GenWrenchMsg</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1a5dbdc863b0902d14f77a3f31b585d0f8" kind="function"><name>InitDebug</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1ae2defd15b338fe56edbbc87bfe364b6c" kind="function"><name>PublishCurrentVelocityMarker</name></member>
+    <member refid="classuuv__simulator__ros_1_1UnderwaterObjectROSPlugin_1afa9d2c09358d243270ee454905dcdb23" kind="function"><name>PublishIsSubmerged</name></member>
+  </compound>
+  <compound refid="namespacegazebo" kind="namespace"><name>gazebo</name>
+    <member refid="namespacegazebo_1a5463c8c5b3e3efe4238a6ab8d7a7488c" kind="function"><name>accelFromEigen</name></member>
+    <member refid="namespacegazebo_1ac2ca911914770b251917b341cab3341c" kind="function"><name>Matrix3ToEigen</name></member>
+  </compound>
+  <compound refid="namespacetest__default__fossen__vehicle" kind="namespace"><name>test_default_fossen_vehicle</name>
+    <member refid="test__default__fossen__vehicle_8py_1a6a3226685927c0b30ba1ed6e8bbfb7af" kind="variable"><name>PKG</name></member>
+    <member refid="test__default__fossen__vehicle_8py_1a1d187bf7cb4d9d9651bb08bbd747adb3" kind="variable"><name>NAME</name></member>
+  </compound>
+  <compound refid="namespacetest__sphere__vehicle" kind="namespace"><name>test_sphere_vehicle</name>
+    <member refid="test__sphere__vehicle_8py_1a1846b6568dd27f888d9ff409c79868d0" kind="variable"><name>PKG</name></member>
+    <member refid="test__sphere__vehicle_8py_1a1cd935619ca31947cbec3417125f5887" kind="variable"><name>NAME</name></member>
+    <member refid="test__sphere__vehicle_8py_1aedc60654ae668aadd5ad6d15ce0787b2" kind="variable"><name>RADIUS</name></member>
+    <member refid="test__sphere__vehicle_8py_1ab2bff7f82fdae42a691030e43e95146f" kind="variable"><name>CD</name></member>
+  </compound>
+  <compound refid="namespacetest__thrusters" kind="namespace"><name>test_thrusters</name>
+    <member refid="test__thrusters_8py_1aa00c71a16f4f84ac432da806f3dd8d37" kind="variable"><name>PKG</name></member>
+    <member refid="test__thrusters_8py_1a9bce6a482ae04f9339dcd2ef148c8f80" kind="variable"><name>NAME</name></member>
+  </compound>
+  <compound refid="namespaceuuv__gazebo__ros__plugins__msgs_1_1srv" kind="namespace"><name>uuv_gazebo_ros_plugins_msgs::srv</name>
+  </compound>
+  <compound refid="namespaceuuv__simulator__ros" kind="namespace"><name>uuv_simulator_ros</name>
+  </compound>
+  <compound refid="AccelerationsTestPlugin_8hh" kind="file"><name>AccelerationsTestPlugin.hh</name>
+  </compound>
+  <compound refid="CustomBatteryConsumerROSPlugin_8hh" kind="file"><name>CustomBatteryConsumerROSPlugin.hh</name>
+  </compound>
+  <compound refid="FinROSPlugin_8hh" kind="file"><name>FinROSPlugin.hh</name>
+  </compound>
+  <compound refid="JointStatePublisher_8hh" kind="file"><name>JointStatePublisher.hh</name>
+  </compound>
+  <compound refid="LinearBatteryROSPlugin_8hh" kind="file"><name>LinearBatteryROSPlugin.hh</name>
+  </compound>
+  <compound refid="ThrusterManagerROSPlugin_8hh" kind="file"><name>ThrusterManagerROSPlugin.hh</name>
+  </compound>
+  <compound refid="ThrusterROSPlugin_8hh" kind="file"><name>ThrusterROSPlugin.hh</name>
+  </compound>
+  <compound refid="UnderwaterObjectROSPlugin_8hh" kind="file"><name>UnderwaterObjectROSPlugin.hh</name>
+  </compound>
+  <compound refid="AccelerationsTestPlugin_8cc" kind="file"><name>AccelerationsTestPlugin.cc</name>
+    <member refid="namespacegazebo_1a5463c8c5b3e3efe4238a6ab8d7a7488c" kind="function"><name>accelFromEigen</name></member>
+    <member refid="namespacegazebo_1ac2ca911914770b251917b341cab3341c" kind="function"><name>Matrix3ToEigen</name></member>
+  </compound>
+  <compound refid="CustomBatteryConsumerROSPlugin_8cc" kind="file"><name>CustomBatteryConsumerROSPlugin.cc</name>
+  </compound>
+  <compound refid="FinROSPlugin_8cc" kind="file"><name>FinROSPlugin.cc</name>
+  </compound>
+  <compound refid="JointStatePublisher_8cc" kind="file"><name>JointStatePublisher.cc</name>
+  </compound>
+  <compound refid="LinearBatteryROSPlugin_8cc" kind="file"><name>LinearBatteryROSPlugin.cc</name>
+  </compound>
+  <compound refid="ThrusterManagerROSPlugin_8cc" kind="file"><name>ThrusterManagerROSPlugin.cc</name>
+  </compound>
+  <compound refid="ThrusterROSPlugin_8cc" kind="file"><name>ThrusterROSPlugin.cc</name>
+  </compound>
+  <compound refid="UnderwaterObjectROSPlugin_8cc" kind="file"><name>UnderwaterObjectROSPlugin.cc</name>
+  </compound>
+  <compound refid="test__default__fossen__vehicle_8py" kind="file"><name>test_default_fossen_vehicle.py</name>
+    <member refid="test__default__fossen__vehicle_8py_1a6a3226685927c0b30ba1ed6e8bbfb7af" kind="variable"><name>PKG</name></member>
+    <member refid="test__default__fossen__vehicle_8py_1a1d187bf7cb4d9d9651bb08bbd747adb3" kind="variable"><name>NAME</name></member>
+  </compound>
+  <compound refid="test__sphere__vehicle_8py" kind="file"><name>test_sphere_vehicle.py</name>
+    <member refid="test__sphere__vehicle_8py_1a1846b6568dd27f888d9ff409c79868d0" kind="variable"><name>PKG</name></member>
+    <member refid="test__sphere__vehicle_8py_1a1cd935619ca31947cbec3417125f5887" kind="variable"><name>NAME</name></member>
+    <member refid="test__sphere__vehicle_8py_1aedc60654ae668aadd5ad6d15ce0787b2" kind="variable"><name>RADIUS</name></member>
+    <member refid="test__sphere__vehicle_8py_1ab2bff7f82fdae42a691030e43e95146f" kind="variable"><name>CD</name></member>
+  </compound>
+  <compound refid="test__thrusters_8py" kind="file"><name>test_thrusters.py</name>
+    <member refid="test__thrusters_8py_1aa00c71a16f4f84ac432da806f3dd8d37" kind="variable"><name>PKG</name></member>
+    <member refid="test__thrusters_8py_1a9bce6a482ae04f9339dcd2ef148c8f80" kind="variable"><name>NAME</name></member>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_13e138d54eb8818da29c3992edef070a" kind="dir"><name>test</name>
+  </compound>
+  <compound refid="dir_acb707371df93f51fc894ca4ed70aa5d" kind="dir"><name>include/uuv_gazebo_ros_plugins</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacetest__sphere__vehicle" kind="namespace" language="Python">
+    <compoundname>test_sphere_vehicle</compoundname>
+    <innerclass refid="classtest__sphere__vehicle_1_1TestSphereVehicle" prot="public">test_sphere_vehicle::TestSphereVehicle</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="test__sphere__vehicle_8py_1a1846b6568dd27f888d9ff409c79868d0" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string test_sphere_vehicle.PKG</definition>
+        <argsstring></argsstring>
+        <name>PKG</name>
+        <initializer>=  &apos;uuv_gazebo_ros_plugins&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_sphere_vehicle.py" line="24" column="1" bodyfile="test/test_sphere_vehicle.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test__sphere__vehicle_8py_1a1cd935619ca31947cbec3417125f5887" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string test_sphere_vehicle.NAME</definition>
+        <argsstring></argsstring>
+        <name>NAME</name>
+        <initializer>=  &apos;test_sphere_vehicle&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_sphere_vehicle.py" line="25" column="1" bodyfile="test/test_sphere_vehicle.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test__sphere__vehicle_8py_1aedc60654ae668aadd5ad6d15ce0787b2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float test_sphere_vehicle.RADIUS</definition>
+        <argsstring></argsstring>
+        <name>RADIUS</name>
+        <initializer>=  0.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_sphere_vehicle.py" line="30" column="1" bodyfile="test/test_sphere_vehicle.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test__sphere__vehicle_8py_1ab2bff7f82fdae42a691030e43e95146f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float test_sphere_vehicle.CD</definition>
+        <argsstring></argsstring>
+        <name>CD</name>
+        <initializer>=  0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_sphere_vehicle.py" line="32" column="1" bodyfile="test/test_sphere_vehicle.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="test/test_sphere_vehicle.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

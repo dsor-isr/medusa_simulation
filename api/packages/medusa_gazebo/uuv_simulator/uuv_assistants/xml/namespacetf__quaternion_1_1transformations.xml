@@ -1,0 +1,1553 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacetf__quaternion_1_1transformations" kind="namespace" language="Python">
+    <compoundname>tf_quaternion::transformations</compoundname>
+    <innerclass refid="classtf__quaternion_1_1transformations_1_1Arcball" prot="public">tf_quaternion::transformations::Arcball</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="transformations_8py_1a8f98c51a8dbb0040df423b3e95251742" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string tf_quaternion::transformations.__docformat__</definition>
+        <argsstring></argsstring>
+        <name>__docformat__</name>
+        <initializer>=  &quot;restructuredtext en&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="177" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="transformations_8py_1aca8c1677f4855c116dccf15a1069a214" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tf_quaternion::transformations._EPS</definition>
+        <argsstring></argsstring>
+        <name>_EPS</name>
+        <initializer>=  numpy.finfo(float).eps * 4.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1515" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1515" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="transformations_8py_1abde28de04278a5015a87827d22b24853" prot="private" static="no" mutable="no">
+        <type>list</type>
+        <definition>list tf_quaternion::transformations._NEXT_AXIS</definition>
+        <argsstring></argsstring>
+        <name>_NEXT_AXIS</name>
+        <initializer>=  [1, 2, 0, 1]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1518" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1518" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="transformations_8py_1ae1be9b7bcd1bd7cfa1e21d299df5140f" prot="private" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary tf_quaternion::transformations._AXES2TUPLE</definition>
+        <argsstring></argsstring>
+        <name>_AXES2TUPLE</name>
+        <initializer>=  {
+    &apos;sxyz&apos;: (0, 0, 0, 0), &apos;sxyx&apos;: (0, 0, 1, 0), &apos;sxzy&apos;: (0, 1, 0, 0),
+    &apos;sxzx&apos;: (0, 1, 1, 0), &apos;syzx&apos;: (1, 0, 0, 0), &apos;syzy&apos;: (1, 0, 1, 0),
+    &apos;syxz&apos;: (1, 1, 0, 0), &apos;syxy&apos;: (1, 1, 1, 0), &apos;szxy&apos;: (2, 0, 0, 0),
+    &apos;szxz&apos;: (2, 0, 1, 0), &apos;szyx&apos;: (2, 1, 0, 0), &apos;szyz&apos;: (2, 1, 1, 0),
+    &apos;rzyx&apos;: (0, 0, 0, 1), &apos;rxyx&apos;: (0, 0, 1, 1), &apos;ryzx&apos;: (0, 1, 0, 1),
+    &apos;rxzx&apos;: (0, 1, 1, 1), &apos;rxzy&apos;: (1, 0, 0, 1), &apos;ryzy&apos;: (1, 0, 1, 1),
+    &apos;rzxy&apos;: (1, 1, 0, 1), &apos;ryxy&apos;: (1, 1, 1, 1), &apos;ryxz&apos;: (2, 0, 0, 1),
+    &apos;rzxz&apos;: (2, 0, 1, 1), &apos;rxyz&apos;: (2, 1, 0, 1), &apos;rzyz&apos;: (2, 1, 1, 1)}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1521" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1521" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="transformations_8py_1ac0a93d1940eec963a74e0d6badec1a90" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>tf_quaternion::transformations._TUPLE2AXES</definition>
+        <argsstring></argsstring>
+        <name>_TUPLE2AXES</name>
+        <initializer>=  dict((v, k) for k, v in _AXES2TUPLE.items())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1531" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1531" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="transformations_8py_1a0ceebd60027b2bec83db4147e89b73a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.identity_matrix</definition>
+        <argsstring>()</argsstring>
+        <name>identity_matrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return 4x4 identity/unit matrix.
+
+&gt;&gt;&gt; I = identity_matrix()
+&gt;&gt;&gt; numpy.allclose(I, numpy.dot(I, I))
+True
+&gt;&gt;&gt; numpy.sum(I), numpy.trace(I)
+(4.0, 4.0)
+&gt;&gt;&gt; numpy.allclose(I, numpy.identity(4, dtype=numpy.float64))
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="180" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="180" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a3cb4f7e536525863b6221d26333d524a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.translation_matrix</definition>
+        <argsstring>(direction)</argsstring>
+        <name>translation_matrix</name>
+        <param>
+          <type>direction</type>
+          <defname>direction</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return matrix to translate by direction vector.
+
+&gt;&gt;&gt; v = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; numpy.allclose(v, translation_matrix(v)[:3, 3])
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="195" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="195" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a3b0a3b0170dce13e8e92fa9b44a970c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.translation_from_matrix</definition>
+        <argsstring>(matrix)</argsstring>
+        <name>translation_from_matrix</name>
+        <param>
+          <type>matrix</type>
+          <defname>matrix</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return translation vector from translation matrix.
+
+&gt;&gt;&gt; v0 = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; v1 = translation_from_matrix(translation_matrix(v0))
+&gt;&gt;&gt; numpy.allclose(v0, v1)
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="208" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="208" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a3bfce81ccb8e161c495d461759c5ba9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.reflection_matrix</definition>
+        <argsstring>(point, normal)</argsstring>
+        <name>reflection_matrix</name>
+        <param>
+          <type>point</type>
+          <defname>point</defname>
+        </param>
+        <param>
+          <type>normal</type>
+          <defname>normal</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return matrix to mirror at plane defined by point and normal vector.
+
+&gt;&gt;&gt; v0 = numpy.random.random(4) - 0.5
+&gt;&gt;&gt; v0[3] = 1.0
+&gt;&gt;&gt; v1 = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; R = reflection_matrix(v0, v1)
+&gt;&gt;&gt; numpy.allclose(2., numpy.trace(R))
+True
+&gt;&gt;&gt; numpy.allclose(v0, numpy.dot(R, v0))
+True
+&gt;&gt;&gt; v2 = v0.copy()
+&gt;&gt;&gt; v2[:3] += v1
+&gt;&gt;&gt; v3 = v0.copy()
+&gt;&gt;&gt; v2[:3] -= v1
+&gt;&gt;&gt; numpy.allclose(v2, numpy.dot(R, v3))
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="220" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="220" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1aceb13a95688b97f6f1dba9bc5c08c18e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.reflection_from_matrix</definition>
+        <argsstring>(matrix)</argsstring>
+        <name>reflection_from_matrix</name>
+        <param>
+          <type>matrix</type>
+          <defname>matrix</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return mirror plane point and normal vector from reflection matrix.
+
+&gt;&gt;&gt; v0 = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; v1 = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; M0 = reflection_matrix(v0, v1)
+&gt;&gt;&gt; point, normal = reflection_from_matrix(M0)
+&gt;&gt;&gt; M1 = reflection_matrix(point, normal)
+&gt;&gt;&gt; is_same_transform(M0, M1)
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="246" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="246" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1abc7e6dd1fd132816083ac3428b8a69b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.rotation_matrix</definition>
+        <argsstring>(angle, direction, point=None)</argsstring>
+        <name>rotation_matrix</name>
+        <param>
+          <type>angle</type>
+          <defname>angle</defname>
+        </param>
+        <param>
+          <type>direction</type>
+          <defname>direction</defname>
+        </param>
+        <param>
+          <type>point</type>
+          <defname>point</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return matrix to rotate about axis defined by point and direction.
+
+&gt;&gt;&gt; angle = (random.random() - 0.5) * (2*math.pi)
+&gt;&gt;&gt; direc = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; point = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; R0 = rotation_matrix(angle, direc, point)
+&gt;&gt;&gt; R1 = rotation_matrix(angle-2*math.pi, direc, point)
+&gt;&gt;&gt; is_same_transform(R0, R1)
+True
+&gt;&gt;&gt; R0 = rotation_matrix(angle, direc, point)
+&gt;&gt;&gt; R1 = rotation_matrix(-angle, -direc, point)
+&gt;&gt;&gt; is_same_transform(R0, R1)
+True
+&gt;&gt;&gt; I = numpy.identity(4, numpy.float64)
+&gt;&gt;&gt; numpy.allclose(I, rotation_matrix(math.pi*2, direc))
+True
+&gt;&gt;&gt; numpy.allclose(2., numpy.trace(rotation_matrix(math.pi/2,
+...                                                direc, point)))
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="275" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="275" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1aaeb471e12c3ec3b54e508a6c22ffd46c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.rotation_from_matrix</definition>
+        <argsstring>(matrix)</argsstring>
+        <name>rotation_from_matrix</name>
+        <param>
+          <type>matrix</type>
+          <defname>matrix</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return rotation angle and axis from rotation matrix.
+
+&gt;&gt;&gt; angle = (random.random() - 0.5) * (2*math.pi)
+&gt;&gt;&gt; direc = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; point = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; R0 = rotation_matrix(angle, direc, point)
+&gt;&gt;&gt; angle, direc, point = rotation_from_matrix(R0)
+&gt;&gt;&gt; R1 = rotation_matrix(angle, direc, point)
+&gt;&gt;&gt; is_same_transform(R0, R1)
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="319" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="319" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a9f9c41cbb1f45fd91b50bb50300bcde9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.scale_matrix</definition>
+        <argsstring>(factor, origin=None, direction=None)</argsstring>
+        <name>scale_matrix</name>
+        <param>
+          <type>factor</type>
+          <defname>factor</defname>
+        </param>
+        <param>
+          <type>origin</type>
+          <defname>origin</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>direction</type>
+          <defname>direction</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return matrix to scale by factor around origin in direction.
+
+Use factor -1 for point symmetry.
+
+&gt;&gt;&gt; v = (numpy.random.rand(4, 5) - 0.5) * 20.0
+&gt;&gt;&gt; v[3] = 1.0
+&gt;&gt;&gt; S = scale_matrix(-1.234)
+&gt;&gt;&gt; numpy.allclose(numpy.dot(S, v)[:3], -1.234*v[:3])
+True
+&gt;&gt;&gt; factor = random.random() * 10 - 5
+&gt;&gt;&gt; origin = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; direct = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; S = scale_matrix(factor, origin)
+&gt;&gt;&gt; S = scale_matrix(factor, origin, direct)</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="359" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="359" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a6c59458c4346180a260d955564770070" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.scale_from_matrix</definition>
+        <argsstring>(matrix)</argsstring>
+        <name>scale_from_matrix</name>
+        <param>
+          <type>matrix</type>
+          <defname>matrix</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return scaling factor, origin and direction from scaling matrix.
+
+&gt;&gt;&gt; factor = random.random() * 10 - 5
+&gt;&gt;&gt; origin = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; direct = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; S0 = scale_matrix(factor, origin)
+&gt;&gt;&gt; factor, origin, direction = scale_from_matrix(S0)
+&gt;&gt;&gt; S1 = scale_matrix(factor, origin, direction)
+&gt;&gt;&gt; is_same_transform(S0, S1)
+True
+&gt;&gt;&gt; S0 = scale_matrix(factor, origin, direct)
+&gt;&gt;&gt; factor, origin, direction = scale_from_matrix(S0)
+&gt;&gt;&gt; S1 = scale_matrix(factor, origin, direction)
+&gt;&gt;&gt; is_same_transform(S0, S1)
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="396" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="396" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1abc5f035f1804af5c2836d8cec8a9d61b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.projection_matrix</definition>
+        <argsstring>(point, normal, direction=None, perspective=None, pseudo=False)</argsstring>
+        <name>projection_matrix</name>
+        <param>
+          <type>point</type>
+          <defname>point</defname>
+        </param>
+        <param>
+          <type>normal</type>
+          <defname>normal</defname>
+        </param>
+        <param>
+          <type>direction</type>
+          <defname>direction</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>perspective</type>
+          <defname>perspective</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>pseudo</type>
+          <defname>pseudo</defname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return matrix to project onto plane defined by point and normal.
+
+Using either perspective point, projection direction, or none of both.
+
+If pseudo is True, perspective projections will preserve relative depth
+such that Perspective = dot(Orthogonal, PseudoPerspective).
+
+&gt;&gt;&gt; P = projection_matrix((0, 0, 0), (1, 0, 0))
+&gt;&gt;&gt; numpy.allclose(P[1:, 1:], numpy.identity(4)[1:, 1:])
+True
+&gt;&gt;&gt; point = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; normal = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; direct = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; persp = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; P0 = projection_matrix(point, normal)
+&gt;&gt;&gt; P1 = projection_matrix(point, normal, direction=direct)
+&gt;&gt;&gt; P2 = projection_matrix(point, normal, perspective=persp)
+&gt;&gt;&gt; P3 = projection_matrix(point, normal, perspective=persp, pseudo=True)
+&gt;&gt;&gt; is_same_transform(P2, numpy.dot(P0, P3))
+True
+&gt;&gt;&gt; P = projection_matrix((3, 0, 0), (1, 1, 0), (1, 0, 0))
+&gt;&gt;&gt; v0 = (numpy.random.rand(4, 5) - 0.5) * 20.0
+&gt;&gt;&gt; v0[3] = 1.0
+&gt;&gt;&gt; v1 = numpy.dot(P, v0)
+&gt;&gt;&gt; numpy.allclose(v1[1], v0[1])
+True
+&gt;&gt;&gt; numpy.allclose(v1[0], 3.0-v1[1])
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="437" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="437" bodyend="498"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1acba3493f821ded8dea8e22fa73a979dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.projection_from_matrix</definition>
+        <argsstring>(matrix, pseudo=False)</argsstring>
+        <name>projection_from_matrix</name>
+        <param>
+          <type>matrix</type>
+          <defname>matrix</defname>
+        </param>
+        <param>
+          <type>pseudo</type>
+          <defname>pseudo</defname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return projection plane and perspective point from projection matrix.
+
+Return values are same as arguments for projection_matrix function:
+point, normal, direction, perspective, and pseudo.
+
+&gt;&gt;&gt; point = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; normal = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; direct = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; persp = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; P0 = projection_matrix(point, normal)
+&gt;&gt;&gt; result = projection_from_matrix(P0)
+&gt;&gt;&gt; P1 = projection_matrix(*result)
+&gt;&gt;&gt; is_same_transform(P0, P1)
+True
+&gt;&gt;&gt; P0 = projection_matrix(point, normal, direct)
+&gt;&gt;&gt; result = projection_from_matrix(P0)
+&gt;&gt;&gt; P1 = projection_matrix(*result)
+&gt;&gt;&gt; is_same_transform(P0, P1)
+True
+&gt;&gt;&gt; P0 = projection_matrix(point, normal, perspective=persp, pseudo=False)
+&gt;&gt;&gt; result = projection_from_matrix(P0, pseudo=False)
+&gt;&gt;&gt; P1 = projection_matrix(*result)
+&gt;&gt;&gt; is_same_transform(P0, P1)
+True
+&gt;&gt;&gt; P0 = projection_matrix(point, normal, perspective=persp, pseudo=True)
+&gt;&gt;&gt; result = projection_from_matrix(P0, pseudo=True)
+&gt;&gt;&gt; P1 = projection_matrix(*result)
+&gt;&gt;&gt; is_same_transform(P0, P1)
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="499" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="499" bodyend="571"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a3172f76374952e85851ddcd58e6dfaf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.clip_matrix</definition>
+        <argsstring>(left, right, bottom, top, near, far, perspective=False)</argsstring>
+        <name>clip_matrix</name>
+        <param>
+          <type>left</type>
+          <defname>left</defname>
+        </param>
+        <param>
+          <type>right</type>
+          <defname>right</defname>
+        </param>
+        <param>
+          <type>bottom</type>
+          <defname>bottom</defname>
+        </param>
+        <param>
+          <type>top</type>
+          <defname>top</defname>
+        </param>
+        <param>
+          <type>near</type>
+          <defname>near</defname>
+        </param>
+        <param>
+          <type>far</type>
+          <defname>far</defname>
+        </param>
+        <param>
+          <type>perspective</type>
+          <defname>perspective</defname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return matrix to obtain normalized device coordinates from frustrum.
+
+The frustrum bounds are axis-aligned along x (left, right),
+y (bottom, top) and z (near, far).
+
+Normalized device coordinates are in range [-1, 1] if coordinates are
+inside the frustrum.
+
+If perspective is True the frustrum is a truncated pyramid with the
+perspective point at origin and direction along z axis, otherwise an
+orthographic canonical view volume (a box).
+
+Homogeneous coordinates transformed by the perspective clip matrix
+need to be dehomogenized (devided by w coordinate).
+
+&gt;&gt;&gt; frustrum = numpy.random.rand(6)
+&gt;&gt;&gt; frustrum[1] += frustrum[0]
+&gt;&gt;&gt; frustrum[3] += frustrum[2]
+&gt;&gt;&gt; frustrum[5] += frustrum[4]
+&gt;&gt;&gt; M = clip_matrix(*frustrum, perspective=False)
+&gt;&gt;&gt; numpy.dot(M, [frustrum[0], frustrum[2], frustrum[4], 1.0])
+array([-1., -1., -1.,  1.])
+&gt;&gt;&gt; numpy.dot(M, [frustrum[1], frustrum[3], frustrum[5], 1.0])
+array([ 1.,  1.,  1.,  1.])
+&gt;&gt;&gt; M = clip_matrix(*frustrum, perspective=True)
+&gt;&gt;&gt; v = numpy.dot(M, [frustrum[0], frustrum[2], frustrum[4], 1.0])
+&gt;&gt;&gt; v / v[3]
+array([-1., -1., -1.,  1.])
+&gt;&gt;&gt; v = numpy.dot(M, [frustrum[1], frustrum[3], frustrum[4], 1.0])
+&gt;&gt;&gt; v / v[3]
+array([ 1.,  1., -1.,  1.])</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="572" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="572" bodyend="623"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1ae0ee96fd2d288b16425589ba6726f44c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.shear_matrix</definition>
+        <argsstring>(angle, direction, point, normal)</argsstring>
+        <name>shear_matrix</name>
+        <param>
+          <type>angle</type>
+          <defname>angle</defname>
+        </param>
+        <param>
+          <type>direction</type>
+          <defname>direction</defname>
+        </param>
+        <param>
+          <type>point</type>
+          <defname>point</defname>
+        </param>
+        <param>
+          <type>normal</type>
+          <defname>normal</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return matrix to shear by angle along direction vector on shear plane.
+
+The shear plane is defined by a point and normal vector. The direction
+vector must be orthogonal to the plane&apos;s normal vector.
+
+A point P is transformed by the shear matrix into P&quot; such that
+the vector P-P&quot; is parallel to the direction vector and its extent is
+given by the angle of P-P&apos;-P&quot;, where P&apos; is the orthogonal projection
+of P onto the shear plane.
+
+&gt;&gt;&gt; angle = (random.random() - 0.5) * 4*math.pi
+&gt;&gt;&gt; direct = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; point = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; normal = numpy.cross(direct, numpy.random.random(3))
+&gt;&gt;&gt; S = shear_matrix(angle, direct, point, normal)
+&gt;&gt;&gt; numpy.allclose(1.0, numpy.linalg.det(S))
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="624" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="624" bodyend="654"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a383e045035fb4b9a25962b52f4e25c43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.shear_from_matrix</definition>
+        <argsstring>(matrix)</argsstring>
+        <name>shear_from_matrix</name>
+        <param>
+          <type>matrix</type>
+          <defname>matrix</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return shear angle, direction and plane from shear matrix.
+
+&gt;&gt;&gt; angle = (random.random() - 0.5) * 4*math.pi
+&gt;&gt;&gt; direct = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; point = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; normal = numpy.cross(direct, numpy.random.random(3))
+&gt;&gt;&gt; S0 = shear_matrix(angle, direct, point, normal)
+&gt;&gt;&gt; angle, direct, point, normal = shear_from_matrix(S0)
+&gt;&gt;&gt; S1 = shear_matrix(angle, direct, point, normal)
+&gt;&gt;&gt; is_same_transform(S0, S1)
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="655" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="655" bodyend="699"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a550fa629e0d87f0889a45fbc50d7b188" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.decompose_matrix</definition>
+        <argsstring>(matrix)</argsstring>
+        <name>decompose_matrix</name>
+        <param>
+          <type>matrix</type>
+          <defname>matrix</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return sequence of transformations from transformation matrix.
+
+matrix : array_like
+    Non-degenerative homogeneous transformation matrix
+
+Return tuple of:
+    scale : vector of 3 scaling factors
+    shear : list of shear factors for x-y, x-z, y-z axes
+    angles : list of Euler angles about static x, y, z axes
+    translate : translation vector along x, y, z axes
+    perspective : perspective partition of matrix
+
+Raise ValueError if matrix is of wrong type or degenerative.
+
+&gt;&gt;&gt; T0 = translation_matrix((1, 2, 3))
+&gt;&gt;&gt; scale, shear, angles, trans, persp = decompose_matrix(T0)
+&gt;&gt;&gt; T1 = translation_matrix(trans)
+&gt;&gt;&gt; numpy.allclose(T0, T1)
+True
+&gt;&gt;&gt; S = scale_matrix(0.123)
+&gt;&gt;&gt; scale, shear, angles, trans, persp = decompose_matrix(S)
+&gt;&gt;&gt; scale[0]
+0.123
+&gt;&gt;&gt; R0 = euler_matrix(1, 2, 3)
+&gt;&gt;&gt; scale, shear, angles, trans, persp = decompose_matrix(R0)
+&gt;&gt;&gt; R1 = euler_matrix(*angles)
+&gt;&gt;&gt; numpy.allclose(R0, R1)
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="700" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="700" bodyend="784"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a863b70b2670453bdd6b826122675265e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.compose_matrix</definition>
+        <argsstring>(scale=None, shear=None, angles=None, translate=None, perspective=None)</argsstring>
+        <name>compose_matrix</name>
+        <param>
+          <type>scale</type>
+          <defname>scale</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>shear</type>
+          <defname>shear</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>angles</type>
+          <defname>angles</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>translate</type>
+          <defname>translate</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>perspective</type>
+          <defname>perspective</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return transformation matrix from sequence of transformations.
+
+This is the inverse of the decompose_matrix function.
+
+Sequence of transformations:
+    scale : vector of 3 scaling factors
+    shear : list of shear factors for x-y, x-z, y-z axes
+    angles : list of Euler angles about static x, y, z axes
+    translate : translation vector along x, y, z axes
+    perspective : perspective partition of matrix
+
+&gt;&gt;&gt; scale = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; shear = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; angles = (numpy.random.random(3) - 0.5) * (2*math.pi)
+&gt;&gt;&gt; trans = numpy.random.random(3) - 0.5
+&gt;&gt;&gt; persp = numpy.random.random(4) - 0.5
+&gt;&gt;&gt; M0 = compose_matrix(scale, shear, angles, trans, persp)
+&gt;&gt;&gt; result = decompose_matrix(M0)
+&gt;&gt;&gt; M1 = compose_matrix(*result)
+&gt;&gt;&gt; is_same_transform(M0, M1)
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="785" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="785" bodyend="837"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1aca261660a4ec7d31fff1815f272e057a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.orthogonalization_matrix</definition>
+        <argsstring>(lengths, angles)</argsstring>
+        <name>orthogonalization_matrix</name>
+        <param>
+          <type>lengths</type>
+          <defname>lengths</defname>
+        </param>
+        <param>
+          <type>angles</type>
+          <defname>angles</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return orthogonalization matrix for crystallographic cell coordinates.
+
+Angles are expected in degrees.
+
+The de-orthogonalization matrix is the inverse.
+
+&gt;&gt;&gt; O = orthogonalization_matrix((10., 10., 10.), (90., 90., 90.))
+&gt;&gt;&gt; numpy.allclose(O[:3, :3], numpy.identity(3, float) * 10)
+True
+&gt;&gt;&gt; O = orthogonalization_matrix([9.8, 12.0, 15.5], [87.2, 80.7, 69.7])
+&gt;&gt;&gt; numpy.allclose(numpy.sum(O), 43.063229)
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="838" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="838" bodyend="865"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1ab7c794efa1f22053d9c2b9ed84fee5dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.superimposition_matrix</definition>
+        <argsstring>(v0, v1, scaling=False, usesvd=True)</argsstring>
+        <name>superimposition_matrix</name>
+        <param>
+          <type>v0</type>
+          <defname>v0</defname>
+        </param>
+        <param>
+          <type>v1</type>
+          <defname>v1</defname>
+        </param>
+        <param>
+          <type>scaling</type>
+          <defname>scaling</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>usesvd</type>
+          <defname>usesvd</defname>
+          <defval>True</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return matrix to transform given vector set into second vector set.
+
+v0 and v1 are shape (3, \*) or (4, \*) arrays of at least 3 vectors.
+
+If usesvd is True, the weighted sum of squared deviations (RMSD) is
+minimized according to the algorithm by W. Kabsch [8]. Otherwise the
+quaternion based algorithm by B. Horn [9] is used (slower when using
+this Python implementation).
+
+The returned matrix performs rotation, translation and uniform scaling
+(if specified).
+
+&gt;&gt;&gt; v0 = numpy.random.rand(3, 10)
+&gt;&gt;&gt; M = superimposition_matrix(v0, v0)
+&gt;&gt;&gt; numpy.allclose(M, numpy.identity(4))
+True
+&gt;&gt;&gt; R = random_rotation_matrix(numpy.random.random(3))
+&gt;&gt;&gt; v0 = ((1,0,0), (0,1,0), (0,0,1), (1,1,1))
+&gt;&gt;&gt; v1 = numpy.dot(R, v0)
+&gt;&gt;&gt; M = superimposition_matrix(v0, v1)
+&gt;&gt;&gt; numpy.allclose(v1, numpy.dot(M, v0))
+True
+&gt;&gt;&gt; v0 = (numpy.random.rand(4, 100) - 0.5) * 20.0
+&gt;&gt;&gt; v0[3] = 1.0
+&gt;&gt;&gt; v1 = numpy.dot(R, v0)
+&gt;&gt;&gt; M = superimposition_matrix(v0, v1)
+&gt;&gt;&gt; numpy.allclose(v1, numpy.dot(M, v0))
+True
+&gt;&gt;&gt; S = scale_matrix(random.random())
+&gt;&gt;&gt; T = translation_matrix(numpy.random.random(3)-0.5)
+&gt;&gt;&gt; M = concatenate_matrices(T, R, S)
+&gt;&gt;&gt; v1 = numpy.dot(M, v0)
+&gt;&gt;&gt; v0[:3] += numpy.random.normal(0.0, 1e-9, 300).reshape(3, -1)
+&gt;&gt;&gt; M = superimposition_matrix(v0, v1, scaling=True)
+&gt;&gt;&gt; numpy.allclose(v1, numpy.dot(M, v0))
+True
+&gt;&gt;&gt; M = superimposition_matrix(v0, v1, scaling=True, usesvd=False)
+&gt;&gt;&gt; numpy.allclose(v1, numpy.dot(M, v0))
+True
+&gt;&gt;&gt; v = numpy.empty((4, 100, 3), dtype=numpy.float64)
+&gt;&gt;&gt; v[:, :, 0] = v0
+&gt;&gt;&gt; M = superimposition_matrix(v0, v1, scaling=True, usesvd=False)
+&gt;&gt;&gt; numpy.allclose(v1, numpy.dot(M, v[:, :, 0]))
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="866" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="866" bodyend="967"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a5c046126e0cbc8f2da3a5d07aeb39d2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.euler_matrix</definition>
+        <argsstring>(ai, aj, ak, axes=&apos;sxyz&apos;)</argsstring>
+        <name>euler_matrix</name>
+        <param>
+          <type>ai</type>
+          <defname>ai</defname>
+        </param>
+        <param>
+          <type>aj</type>
+          <defname>aj</defname>
+        </param>
+        <param>
+          <type>ak</type>
+          <defname>ak</defname>
+        </param>
+        <param>
+          <type>axes</type>
+          <defname>axes</defname>
+          <defval>&apos;sxyz&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return homogeneous rotation matrix from Euler angles and axis sequence.
+
+ai, aj, ak : Euler&apos;s roll, pitch and yaw angles
+axes : One of 24 axis sequences as string or encoded tuple
+
+&gt;&gt;&gt; R = euler_matrix(1, 2, 3, &apos;syxz&apos;)
+&gt;&gt;&gt; numpy.allclose(numpy.sum(R[0]), -1.34786452)
+True
+&gt;&gt;&gt; R = euler_matrix(1, 2, 3, (0, 1, 0, 1))
+&gt;&gt;&gt; numpy.allclose(numpy.sum(R[0]), -0.383436184)
+True
+&gt;&gt;&gt; ai, aj, ak = (4.0*math.pi) * (numpy.random.random(3) - 0.5)
+&gt;&gt;&gt; for axes in _AXES2TUPLE.keys():
+...    R = euler_matrix(ai, aj, ak, axes)
+&gt;&gt;&gt; for axes in _TUPLE2AXES.keys():
+...    R = euler_matrix(ai, aj, ak, axes)</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="968" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="968" bodyend="1030"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a1b492d74b08953c2e821b7bb33137e95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.euler_from_matrix</definition>
+        <argsstring>(matrix, axes=&apos;sxyz&apos;)</argsstring>
+        <name>euler_from_matrix</name>
+        <param>
+          <type>matrix</type>
+          <defname>matrix</defname>
+        </param>
+        <param>
+          <type>axes</type>
+          <defname>axes</defname>
+          <defval>&apos;sxyz&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return Euler angles from rotation matrix for specified axis sequence.
+
+axes : One of 24 axis sequences as string or encoded tuple
+
+Note that many Euler angle triplets can describe one matrix.
+
+&gt;&gt;&gt; R0 = euler_matrix(1, 2, 3, &apos;syxz&apos;)
+&gt;&gt;&gt; al, be, ga = euler_from_matrix(R0, &apos;syxz&apos;)
+&gt;&gt;&gt; R1 = euler_matrix(al, be, ga, &apos;syxz&apos;)
+&gt;&gt;&gt; numpy.allclose(R0, R1)
+True
+&gt;&gt;&gt; angles = (4.0*math.pi) * (numpy.random.random(3) - 0.5)
+&gt;&gt;&gt; for axes in _AXES2TUPLE.keys():
+...    R0 = euler_matrix(axes=axes, *angles)
+...    R1 = euler_matrix(axes=axes, *euler_from_matrix(R0, axes))
+...    if not numpy.allclose(R0, R1): print axes, &quot;failed&quot;</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1031" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1031" bodyend="1088"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a647d42e9806bfb441de2dc184d03ee3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.euler_from_quaternion</definition>
+        <argsstring>(quaternion, axes=&apos;sxyz&apos;)</argsstring>
+        <name>euler_from_quaternion</name>
+        <param>
+          <type>quaternion</type>
+          <defname>quaternion</defname>
+        </param>
+        <param>
+          <type>axes</type>
+          <defname>axes</defname>
+          <defval>&apos;sxyz&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return Euler angles from quaternion for specified axis sequence.
+
+&gt;&gt;&gt; angles = euler_from_quaternion([0.06146124, 0, 0, 0.99810947])
+&gt;&gt;&gt; numpy.allclose(angles, [0.123, 0, 0])
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1089" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1089" bodyend="1099"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1adb8a5dd06da77f1d19d558989cbc3fdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.quaternion_from_euler</definition>
+        <argsstring>(ai, aj, ak, axes=&apos;sxyz&apos;)</argsstring>
+        <name>quaternion_from_euler</name>
+        <param>
+          <type>ai</type>
+          <defname>ai</defname>
+        </param>
+        <param>
+          <type>aj</type>
+          <defname>aj</defname>
+        </param>
+        <param>
+          <type>ak</type>
+          <defname>ak</defname>
+        </param>
+        <param>
+          <type>axes</type>
+          <defname>axes</defname>
+          <defval>&apos;sxyz&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return quaternion from Euler angles and axis sequence.
+
+ai, aj, ak : Euler&apos;s roll, pitch and yaw angles
+axes : One of 24 axis sequences as string or encoded tuple
+
+&gt;&gt;&gt; q = quaternion_from_euler(1, 2, 3, &apos;ryxz&apos;)
+&gt;&gt;&gt; numpy.allclose(q, [0.310622, -0.718287, 0.444435, 0.435953])
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1100" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1100" bodyend="1156"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a78f59ddfe9567599b9494ffd29a350c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.quaternion_about_axis</definition>
+        <argsstring>(angle, axis)</argsstring>
+        <name>quaternion_about_axis</name>
+        <param>
+          <type>angle</type>
+          <defname>angle</defname>
+        </param>
+        <param>
+          <type>axis</type>
+          <defname>axis</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return quaternion for rotation about axis.
+
+&gt;&gt;&gt; q = quaternion_about_axis(0.123, (1, 0, 0))
+&gt;&gt;&gt; numpy.allclose(q, [0.06146124, 0, 0, 0.99810947])
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1157" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1157" bodyend="1173"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1ac170aed6f2003d0d8206940f4bde5291" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.quaternion_matrix</definition>
+        <argsstring>(quaternion)</argsstring>
+        <name>quaternion_matrix</name>
+        <param>
+          <type>quaternion</type>
+          <defname>quaternion</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return homogeneous rotation matrix from quaternion.
+
+&gt;&gt;&gt; R = quaternion_matrix([0.06146124, 0, 0, 0.99810947])
+&gt;&gt;&gt; numpy.allclose(R, rotation_matrix(0.123, (1, 0, 0)))
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1174" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1174" bodyend="1195"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a40037a8e565b0243eefb03ae416e9784" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.quaternion_from_matrix</definition>
+        <argsstring>(matrix)</argsstring>
+        <name>quaternion_from_matrix</name>
+        <param>
+          <type>matrix</type>
+          <defname>matrix</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return quaternion from rotation matrix.
+
+&gt;&gt;&gt; R = rotation_matrix(0.123, (1, 2, 3))
+&gt;&gt;&gt; q = quaternion_from_matrix(R)
+&gt;&gt;&gt; numpy.allclose(q, [0.0164262, 0.0328524, 0.0492786, 0.9981095])
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1196" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1196" bodyend="1227"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a8412bbeec08fdd07d7c48b1a47f6896c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.quaternion_multiply</definition>
+        <argsstring>(quaternion1, quaternion0)</argsstring>
+        <name>quaternion_multiply</name>
+        <param>
+          <type>quaternion1</type>
+          <defname>quaternion1</defname>
+        </param>
+        <param>
+          <type>quaternion0</type>
+          <defname>quaternion0</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return multiplication of two quaternions.
+
+&gt;&gt;&gt; q = quaternion_multiply([1, -2, 3, 4], [-5, 6, 7, 8])
+&gt;&gt;&gt; numpy.allclose(q, [-44, -14, 48, 28])
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1228" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1228" bodyend="1244"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a73655cff53941b7dd174d373c14817eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.quaternion_conjugate</definition>
+        <argsstring>(quaternion)</argsstring>
+        <name>quaternion_conjugate</name>
+        <param>
+          <type>quaternion</type>
+          <defname>quaternion</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return conjugate of quaternion.
+
+&gt;&gt;&gt; q0 = random_quaternion()
+&gt;&gt;&gt; q1 = quaternion_conjugate(q0)
+&gt;&gt;&gt; q1[3] == q0[3] and all(q1[:3] == -q0[:3])
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1245" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1245" bodyend="1257"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a4bc632e877fa688fdbb7c2efde05d517" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.quaternion_inverse</definition>
+        <argsstring>(quaternion)</argsstring>
+        <name>quaternion_inverse</name>
+        <param>
+          <type>quaternion</type>
+          <defname>quaternion</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return inverse of quaternion.
+
+&gt;&gt;&gt; q0 = random_quaternion()
+&gt;&gt;&gt; q1 = quaternion_inverse(q0)
+&gt;&gt;&gt; numpy.allclose(quaternion_multiply(q0, q1), [0, 0, 0, 1])
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1258" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1258" bodyend="1269"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a61ec085d5aacaeb3ce13f630963ef1ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.quaternion_slerp</definition>
+        <argsstring>(quat0, quat1, fraction, spin=0, shortestpath=True)</argsstring>
+        <name>quaternion_slerp</name>
+        <param>
+          <type>quat0</type>
+          <defname>quat0</defname>
+        </param>
+        <param>
+          <type>quat1</type>
+          <defname>quat1</defname>
+        </param>
+        <param>
+          <type>fraction</type>
+          <defname>fraction</defname>
+        </param>
+        <param>
+          <type>spin</type>
+          <defname>spin</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>shortestpath</type>
+          <defname>shortestpath</defname>
+          <defval>True</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return spherical linear interpolation between two quaternions.
+
+&gt;&gt;&gt; q0 = random_quaternion()
+&gt;&gt;&gt; q1 = random_quaternion()
+&gt;&gt;&gt; q = quaternion_slerp(q0, q1, 0.0)
+&gt;&gt;&gt; numpy.allclose(q, q0)
+True
+&gt;&gt;&gt; q = quaternion_slerp(q0, q1, 1.0, 1)
+&gt;&gt;&gt; numpy.allclose(q, q1)
+True
+&gt;&gt;&gt; q = quaternion_slerp(q0, q1, 0.5)
+&gt;&gt;&gt; angle = math.acos(numpy.dot(q0, q))
+&gt;&gt;&gt; numpy.allclose(2.0, math.acos(numpy.dot(q0, q1)) / angle) or \
+    numpy.allclose(2.0, math.acos(-numpy.dot(q0, q1)) / angle)
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1270" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1270" bodyend="1310"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a05e108e1db608b4603207bf5fef6acde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.random_quaternion</definition>
+        <argsstring>(rand=None)</argsstring>
+        <name>random_quaternion</name>
+        <param>
+          <type>rand</type>
+          <defname>rand</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return uniform random unit quaternion.
+
+rand: array like or None
+    Three independent random variables that are uniformly distributed
+    between 0 and 1.
+
+&gt;&gt;&gt; q = random_quaternion()
+&gt;&gt;&gt; numpy.allclose(1.0, vector_norm(q))
+True
+&gt;&gt;&gt; q = random_quaternion(numpy.random.random(3))
+&gt;&gt;&gt; q.shape
+(4,)</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1311" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1311" bodyend="1340"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a5a4a89e9cd0468d67aab9ffcb2e38111" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.random_rotation_matrix</definition>
+        <argsstring>(rand=None)</argsstring>
+        <name>random_rotation_matrix</name>
+        <param>
+          <type>rand</type>
+          <defname>rand</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return uniform random rotation matrix.
+
+rnd: array like
+    Three independent random variables that are uniformly distributed
+    between 0 and 1 for each returned quaternion.
+
+&gt;&gt;&gt; R = random_rotation_matrix()
+&gt;&gt;&gt; numpy.allclose(numpy.dot(R.T, R), numpy.identity(4))
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1341" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1341" bodyend="1355"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a68ac9633586d22e9aa43efe3f5e7b6db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.arcball_map_to_sphere</definition>
+        <argsstring>(point, center, radius)</argsstring>
+        <name>arcball_map_to_sphere</name>
+        <param>
+          <type>point</type>
+          <defname>point</defname>
+        </param>
+        <param>
+          <type>center</type>
+          <defname>center</defname>
+        </param>
+        <param>
+          <type>radius</type>
+          <defname>radius</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return unit sphere coordinates from window coordinates.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1472" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1472" bodyend="1484"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a3d4007f9a3d05ced25c10c65f612aae3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.arcball_constrain_to_axis</definition>
+        <argsstring>(point, axis)</argsstring>
+        <name>arcball_constrain_to_axis</name>
+        <param>
+          <type>point</type>
+          <defname>point</defname>
+        </param>
+        <param>
+          <type>axis</type>
+          <defname>axis</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return sphere point perpendicular to axis.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1485" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1485" bodyend="1500"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a568dde02ef0503be0dccc33c51377386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.arcball_nearest_axis</definition>
+        <argsstring>(point, axes)</argsstring>
+        <name>arcball_nearest_axis</name>
+        <param>
+          <type>point</type>
+          <defname>point</defname>
+        </param>
+        <param>
+          <type>axes</type>
+          <defname>axes</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return axis, which arc is nearest to point.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1501" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1501" bodyend="1514"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a5889ee689ebc692689d5aee4e65894ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.vector_norm</definition>
+        <argsstring>(data, axis=None, out=None)</argsstring>
+        <name>vector_norm</name>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <param>
+          <type>axis</type>
+          <defname>axis</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>out</type>
+          <defname>out</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return length, i.e. eucledian norm, of ndarray along axis.
+
+&gt;&gt;&gt; v = numpy.random.random(3)
+&gt;&gt;&gt; n = vector_norm(v)
+&gt;&gt;&gt; numpy.allclose(n, numpy.linalg.norm(v))
+True
+&gt;&gt;&gt; v = numpy.random.rand(6, 5, 3)
+&gt;&gt;&gt; n = vector_norm(v, axis=-1)
+&gt;&gt;&gt; numpy.allclose(n, numpy.sqrt(numpy.sum(v*v, axis=2)))
+True
+&gt;&gt;&gt; n = vector_norm(v, axis=1)
+&gt;&gt;&gt; numpy.allclose(n, numpy.sqrt(numpy.sum(v*v, axis=1)))
+True
+&gt;&gt;&gt; v = numpy.random.rand(5, 4, 3)
+&gt;&gt;&gt; n = numpy.empty((5, 3), dtype=numpy.float64)
+&gt;&gt;&gt; vector_norm(v, axis=1, out=n)
+&gt;&gt;&gt; numpy.allclose(n, numpy.sqrt(numpy.sum(v*v, axis=1)))
+True
+&gt;&gt;&gt; vector_norm([])
+0.0
+&gt;&gt;&gt; vector_norm([1.0])
+1.0</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1535" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1535" bodyend="1573"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a293fa487fec0f1da974f3abd9db338f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.unit_vector</definition>
+        <argsstring>(data, axis=None, out=None)</argsstring>
+        <name>unit_vector</name>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <param>
+          <type>axis</type>
+          <defname>axis</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>out</type>
+          <defname>out</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return ndarray normalized by length, i.e. eucledian norm, along axis.
+
+&gt;&gt;&gt; v0 = numpy.random.random(3)
+&gt;&gt;&gt; v1 = unit_vector(v0)
+&gt;&gt;&gt; numpy.allclose(v1, v0 / numpy.linalg.norm(v0))
+True
+&gt;&gt;&gt; v0 = numpy.random.rand(5, 4, 3)
+&gt;&gt;&gt; v1 = unit_vector(v0, axis=-1)
+&gt;&gt;&gt; v2 = v0 / numpy.expand_dims(numpy.sqrt(numpy.sum(v0*v0, axis=2)), 2)
+&gt;&gt;&gt; numpy.allclose(v1, v2)
+True
+&gt;&gt;&gt; v1 = unit_vector(v0, axis=1)
+&gt;&gt;&gt; v2 = v0 / numpy.expand_dims(numpy.sqrt(numpy.sum(v0*v0, axis=1)), 1)
+&gt;&gt;&gt; numpy.allclose(v1, v2)
+True
+&gt;&gt;&gt; v1 = numpy.empty((5, 4, 3), dtype=numpy.float64)
+&gt;&gt;&gt; unit_vector(v0, axis=1, out=v1)
+&gt;&gt;&gt; numpy.allclose(v1, v2)
+True
+&gt;&gt;&gt; list(unit_vector([]))
+[]
+&gt;&gt;&gt; list(unit_vector([1.0]))
+[1.0]</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1574" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1574" bodyend="1617"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a88041497124f1de6cc2732a740fe9c40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.random_vector</definition>
+        <argsstring>(size)</argsstring>
+        <name>random_vector</name>
+        <param>
+          <type>size</type>
+          <defname>size</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return array of random doubles in the half-open interval [0.0, 1.0).
+
+&gt;&gt;&gt; v = random_vector(10000)
+&gt;&gt;&gt; numpy.all(v &gt;= 0.0) and numpy.all(v &lt; 1.0)
+True
+&gt;&gt;&gt; v0 = random_vector(10)
+&gt;&gt;&gt; v1 = random_vector(10)
+&gt;&gt;&gt; numpy.any(v0 == v1)
+False</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1618" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1618" bodyend="1632"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1aaec4eed41c25944bbe6ee60474d76de2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.inverse_matrix</definition>
+        <argsstring>(matrix)</argsstring>
+        <name>inverse_matrix</name>
+        <param>
+          <type>matrix</type>
+          <defname>matrix</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return inverse of square transformation matrix.
+
+&gt;&gt;&gt; M0 = random_rotation_matrix()
+&gt;&gt;&gt; M1 = inverse_matrix(M0.T)
+&gt;&gt;&gt; numpy.allclose(M1, numpy.linalg.inv(M0.T))
+True
+&gt;&gt;&gt; for size in range(1, 7):
+...     M0 = numpy.random.rand(size, size)
+...     M1 = inverse_matrix(M0)
+...     if not numpy.allclose(M1, numpy.linalg.inv(M0)): print size</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1633" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1633" bodyend="1648"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a38b5284fea916d3bcf541510b485b5c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.concatenate_matrices</definition>
+        <argsstring>(*matrices)</argsstring>
+        <name>concatenate_matrices</name>
+        <param>
+          <type>*</type>
+          <declname>matrices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return concatenation of series of transformation matrices.
+
+&gt;&gt;&gt; M = numpy.random.rand(16).reshape((4, 4)) - 0.5
+&gt;&gt;&gt; numpy.allclose(M, concatenate_matrices(M))
+True
+&gt;&gt;&gt; numpy.allclose(numpy.dot(M, M.T), concatenate_matrices(M, M.T))
+True</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1649" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1649" bodyend="1664"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a95289fd1bc1dab7bffa6ec0211012daa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations.is_same_transform</definition>
+        <argsstring>(matrix0, matrix1)</argsstring>
+        <name>is_same_transform</name>
+        <param>
+          <type>matrix0</type>
+          <defname>matrix0</defname>
+        </param>
+        <param>
+          <type>matrix1</type>
+          <defname>matrix1</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return True if two matrices perform same transformation.
+
+&gt;&gt;&gt; is_same_transform(numpy.identity(4), numpy.identity(4))
+True
+&gt;&gt;&gt; is_same_transform(numpy.identity(4), random_rotation_matrix())
+False</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1665" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1665" bodyend="1680"/>
+      </memberdef>
+      <memberdef kind="function" id="transformations_8py_1a40c1a45d26b42ef9823f1c1363127001" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tf_quaternion.transformations._import_module</definition>
+        <argsstring>(module_name, warn=True, prefix=&apos;_py_&apos;, ignore=&apos;_&apos;)</argsstring>
+        <name>_import_module</name>
+        <param>
+          <type>module_name</type>
+          <defname>module_name</defname>
+        </param>
+        <param>
+          <type>warn</type>
+          <defname>warn</defname>
+          <defval>True</defval>
+        </param>
+        <param>
+          <type>prefix</type>
+          <defname>prefix</defname>
+          <defval>&apos;_py_&apos;</defval>
+        </param>
+        <param>
+          <type>ignore</type>
+          <defname>ignore</defname>
+          <defval>&apos;_&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Try import all public attributes from module into global namespace.
+
+Existing attributes with name clashes are renamed with prefix.
+Attributes starting with underscore are ignored by default.
+
+Return True on successful import.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tf_quaternion/transformations.py" line="1681" column="1" bodyfile="src/tf_quaternion/transformations.py" bodystart="1681" bodyend="1706"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/tf_quaternion/transformations.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceterrain__generator" kind="namespace" language="Python">
+    <compoundname>terrain_generator</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceterrain__generator_1a0b9fb1fe63f31694f7bd6b6db9a15cfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def terrain_generator.main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/terrain_generator.py" line="21" column="1" bodyfile="scripts/terrain_generator.py" bodystart="21" bodyend="75"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Convert .mat files with that into the corresponding .npy and .stl files
+@author: Marcelo Fialho Jacinto
+@email: marcelo.jacinto@tecnico.ulisboa.pt
+@date: 06/03/2021
+</verbatim> </para>
+    </detaileddescription>
+    <location file="scripts/terrain_generator.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

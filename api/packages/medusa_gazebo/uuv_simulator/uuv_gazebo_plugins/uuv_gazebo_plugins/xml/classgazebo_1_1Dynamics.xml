@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classgazebo_1_1Dynamics" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>gazebo::Dynamics</compoundname>
+    <derivedcompoundref refid="classgazebo_1_1DynamicsFirstOrder" prot="public" virt="non-virtual">gazebo::DynamicsFirstOrder</derivedcompoundref>
+    <derivedcompoundref refid="classgazebo_1_1DynamicsZeroOrder" prot="public" virt="non-virtual">gazebo::DynamicsZeroOrder</derivedcompoundref>
+    <derivedcompoundref refid="classgazebo_1_1ThrusterDynamicsBessa" prot="public" virt="non-virtual">gazebo::ThrusterDynamicsBessa</derivedcompoundref>
+    <derivedcompoundref refid="classgazebo_1_1ThrusterDynamicsYoerger" prot="public" virt="non-virtual">gazebo::ThrusterDynamicsYoerger</derivedcompoundref>
+    <includes refid="Dynamics_8hh" local="no">Dynamics.hh</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgazebo_1_1Dynamics_1a27de443c5e85c6ab6ddcbb31e880d4b2" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gazebo::Dynamics::prevTime</definition>
+        <argsstring></argsstring>
+        <name>prevTime</name>
+        <briefdescription>
+<para>Time of last state update. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="49" column="21" bodyfile="include/uuv_gazebo_plugins/Dynamics.hh" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1Dynamics_1a4c2f128d2d0ef4d312936f66106cf229" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gazebo::Dynamics::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+<para>Latest state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="52" column="21" bodyfile="include/uuv_gazebo_plugins/Dynamics.hh" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgazebo_1_1Dynamics_1a4e590f9f7264d3d7e22c08d9b7737f1a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gazebo::Dynamics::Dynamics</definition>
+        <argsstring>()</argsstring>
+        <name>Dynamics</name>
+        <briefdescription>
+<para>Protected constructor: Use the factory for object creation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="32" column="14" bodyfile="include/uuv_gazebo_plugins/Dynamics.hh" bodystart="32" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgazebo_1_1Dynamics_1a93c023678bcde05d9cc280afe071b889" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual gazebo::Dynamics::~Dynamics</definition>
+        <argsstring>()</argsstring>
+        <name>~Dynamics</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="35" column="19" bodyfile="include/uuv_gazebo_plugins/Dynamics.hh" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1Dynamics_1ae9efe1854032da39ab230063c0303549" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string gazebo::Dynamics::GetType</definition>
+        <argsstring>()=0</argsstring>
+        <name>GetType</name>
+        <reimplementedby refid="classgazebo_1_1DynamicsZeroOrder_1a1a4108039cf597688a76c54c75272822">GetType</reimplementedby>
+        <reimplementedby refid="classgazebo_1_1DynamicsFirstOrder_1a976f58c938b8ca01939d2e9590b75998">GetType</reimplementedby>
+        <reimplementedby refid="classgazebo_1_1ThrusterDynamicsYoerger_1a71e827ac4c6ed26139b35d0fb72f5c3e">GetType</reimplementedby>
+        <reimplementedby refid="classgazebo_1_1ThrusterDynamicsBessa_1a141b10b080998366163f31793fd93a78">GetType</reimplementedby>
+        <briefdescription>
+<para>Return (derived) type of thruster dynamics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="38" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1Dynamics_1a7cae772ac89944d52757c7883d75f93a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double gazebo::Dynamics::update</definition>
+        <argsstring>(double _cmd, double _t)=0</argsstring>
+        <name>update</name>
+        <reimplementedby refid="classgazebo_1_1DynamicsZeroOrder_1ae65354f33fab89db306180c59cb60090">update</reimplementedby>
+        <reimplementedby refid="classgazebo_1_1DynamicsFirstOrder_1af22a9290175ba3af09ef326bd136dd7f">update</reimplementedby>
+        <reimplementedby refid="classgazebo_1_1ThrusterDynamicsYoerger_1a0d43ff9c18a4caa3b056c50f4997de85">update</reimplementedby>
+        <reimplementedby refid="classgazebo_1_1ThrusterDynamicsBessa_1a4eaffe57006894124ec0f62987785996">update</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>_cmd</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>_t</declname>
+        </param>
+        <briefdescription>
+<para>Update the dynamic model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">_cmd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The commanded value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time stamp of command. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="43" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1Dynamics_1a4ca9ecc33bdd2e3cf8a42a928a9eec8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gazebo::Dynamics::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="46" column="24" bodyfile="src/Dynamics.cc" bodystart="22" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstract base class for thruster dynamics. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>gazebo::ThrusterDynamicsYoerger</label>
+        <link refid="classgazebo_1_1ThrusterDynamicsYoerger"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gazebo::DynamicsZeroOrder</label>
+        <link refid="classgazebo_1_1DynamicsZeroOrder"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gazebo::DynamicsFirstOrder</label>
+        <link refid="classgazebo_1_1DynamicsFirstOrder"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>gazebo::ThrusterDynamicsBessa</label>
+        <link refid="classgazebo_1_1ThrusterDynamicsBessa"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gazebo::Dynamics</label>
+        <link refid="classgazebo_1_1Dynamics"/>
+      </node>
+    </inheritancegraph>
+    <location file="include/uuv_gazebo_plugins/Dynamics.hh" line="30" column="15" bodyfile="include/uuv_gazebo_plugins/Dynamics.hh" bodystart="30" bodyend="53"/>
+    <listofallmembers>
+      <member refid="classgazebo_1_1Dynamics_1a4e590f9f7264d3d7e22c08d9b7737f1a" prot="protected" virt="non-virtual"><scope>gazebo::Dynamics</scope><name>Dynamics</name></member>
+      <member refid="classgazebo_1_1Dynamics_1ae9efe1854032da39ab230063c0303549" prot="public" virt="pure-virtual"><scope>gazebo::Dynamics</scope><name>GetType</name></member>
+      <member refid="classgazebo_1_1Dynamics_1a27de443c5e85c6ab6ddcbb31e880d4b2" prot="protected" virt="non-virtual"><scope>gazebo::Dynamics</scope><name>prevTime</name></member>
+      <member refid="classgazebo_1_1Dynamics_1a4ca9ecc33bdd2e3cf8a42a928a9eec8f" prot="public" virt="virtual"><scope>gazebo::Dynamics</scope><name>Reset</name></member>
+      <member refid="classgazebo_1_1Dynamics_1a4c2f128d2d0ef4d312936f66106cf229" prot="protected" virt="non-virtual"><scope>gazebo::Dynamics</scope><name>state</name></member>
+      <member refid="classgazebo_1_1Dynamics_1a7cae772ac89944d52757c7883d75f93a" prot="public" virt="pure-virtual"><scope>gazebo::Dynamics</scope><name>update</name></member>
+      <member refid="classgazebo_1_1Dynamics_1a93c023678bcde05d9cc280afe071b889" prot="public" virt="virtual"><scope>gazebo::Dynamics</scope><name>~Dynamics</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

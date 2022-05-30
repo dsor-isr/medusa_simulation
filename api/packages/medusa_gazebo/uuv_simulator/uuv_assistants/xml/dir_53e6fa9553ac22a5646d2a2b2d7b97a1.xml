@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_53e6fa9553ac22a5646d2a2b2d7b97a1" kind="dir">
+    <compoundname>scripts</compoundname>
+    <innerfile refid="publish__footprints_8py">publish_footprints.py</innerfile>
+    <innerfile refid="publish__vehicle__footprint_8py">publish_vehicle_footprint.py</innerfile>
+    <innerfile refid="publish__world__models_8py">publish_world_models.py</innerfile>
+    <innerfile refid="set__simulation__timer_8py">set_simulation_timer.py</innerfile>
+    <innerfile refid="unpause__simulation_8py">unpause_simulation.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="scripts/"/>
+  </compounddef>
+</doxygen>

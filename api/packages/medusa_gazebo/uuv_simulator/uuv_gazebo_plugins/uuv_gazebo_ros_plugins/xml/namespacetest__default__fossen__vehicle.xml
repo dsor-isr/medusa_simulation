@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacetest__default__fossen__vehicle" kind="namespace" language="Python">
+    <compoundname>test_default_fossen_vehicle</compoundname>
+    <innerclass refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle" prot="public">test_default_fossen_vehicle::TestDefaultFossenVehicle</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="test__default__fossen__vehicle_8py_1a6a3226685927c0b30ba1ed6e8bbfb7af" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string test_default_fossen_vehicle.PKG</definition>
+        <argsstring></argsstring>
+        <name>PKG</name>
+        <initializer>=  &apos;uuv_gazebo_ros_plugins&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_default_fossen_vehicle.py" line="24" column="1" bodyfile="test/test_default_fossen_vehicle.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test__default__fossen__vehicle_8py_1a1d187bf7cb4d9d9651bb08bbd747adb3" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string test_default_fossen_vehicle.NAME</definition>
+        <argsstring></argsstring>
+        <name>NAME</name>
+        <initializer>=  &apos;test_default_fossen_vehicle&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_default_fossen_vehicle.py" line="25" column="1" bodyfile="test/test_default_fossen_vehicle.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="test/test_default_fossen_vehicle.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

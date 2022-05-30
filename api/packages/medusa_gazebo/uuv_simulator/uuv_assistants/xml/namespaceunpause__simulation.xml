@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceunpause__simulation" kind="namespace" language="Python">
+    <compoundname>unpause_simulation</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="unpause__simulation_8py_1a25fab93e2b47348f931cc392129209d2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>unpause_simulation.timeout</definition>
+        <argsstring></argsstring>
+        <name>timeout</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/unpause_simulation.py" line="29" column="1" bodyfile="scripts/unpause_simulation.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unpause__simulation_8py_1a6f6c4219da54c6fdf42c3dd49c05e9ec" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>unpause_simulation.start_time</definition>
+        <argsstring></argsstring>
+        <name>start_time</name>
+        <initializer>=  time.time()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/unpause_simulation.py" line="37" column="1" bodyfile="scripts/unpause_simulation.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unpause__simulation_8py_1a6d12a63aea80c773131c0b5e22841a61" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>unpause_simulation.unpause</definition>
+        <argsstring></argsstring>
+        <name>unpause</name>
+        <initializer>=  rospy.ServiceProxy(&apos;/gazebo/unpause_physics&apos;, Empty)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/unpause_simulation.py" line="44" column="1" bodyfile="scripts/unpause_simulation.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="scripts/unpause_simulation.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

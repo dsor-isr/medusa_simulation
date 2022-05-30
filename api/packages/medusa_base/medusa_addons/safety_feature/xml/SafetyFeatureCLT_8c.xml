@@ -27,6 +27,12 @@
       <node id="5">
         <label>string.h</label>
       </node>
+      <node id="4">
+        <label>unistd.h</label>
+      </node>
+      <node id="7">
+        <label>time.h</label>
+      </node>
       <node id="1">
         <label>src/Client/SafetyFeatureCLT.c</label>
         <link refid="SafetyFeatureCLT_8c"/>
@@ -48,12 +54,6 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-      </node>
-      <node id="4">
-        <label>unistd.h</label>
-      </node>
-      <node id="7">
-        <label>time.h</label>
       </node>
       <node id="8">
         <label>sys/socket.h</label>

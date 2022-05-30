@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacegazebo" kind="namespace" language="C++">
+    <compoundname>gazebo</compoundname>
+    <innerclass refid="classgazebo_1_1AltimeterROSPlugin" prot="public">gazebo::AltimeterROSPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1CPCROSPlugin" prot="public">gazebo::CPCROSPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1DVLROSPlugin" prot="public">gazebo::DVLROSPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1GazeboRosImageSonar" prot="public">gazebo::GazeboRosImageSonar</innerclass>
+    <innerclass refid="classgazebo_1_1GPSROSPlugin" prot="public">gazebo::GPSROSPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1GstCameraPlugin" prot="public">gazebo::GstCameraPlugin</innerclass>
+    <innerclass refid="structgazebo_1_1IMUParameters" prot="public">gazebo::IMUParameters</innerclass>
+    <innerclass refid="classgazebo_1_1IMUROSPlugin" prot="public">gazebo::IMUROSPlugin</innerclass>
+    <innerclass refid="structgazebo_1_1MagnetometerParameters" prot="public">gazebo::MagnetometerParameters</innerclass>
+    <innerclass refid="classgazebo_1_1MagnetometerROSPlugin" prot="public">gazebo::MagnetometerROSPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1modemPlugin" prot="public">gazebo::modemPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1PoseGTROSPlugin" prot="public">gazebo::PoseGTROSPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1ROSBaseModelPlugin" prot="public">gazebo::ROSBaseModelPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1ROSBasePlugin" prot="public">gazebo::ROSBasePlugin</innerclass>
+    <innerclass refid="classgazebo_1_1ROSBaseSensorPlugin" prot="public">gazebo::ROSBaseSensorPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1RPTROSPlugin" prot="public">gazebo::RPTROSPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1SubseaPressureROSPlugin" prot="public">gazebo::SubseaPressureROSPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1UnderwaterCameraROSPlugin" prot="public">gazebo::UnderwaterCameraROSPlugin</innerclass>
+    <innerclass refid="classgazebo_1_1usblPlugin" prot="public">gazebo::usblPlugin</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacegazebo_1acd5769609414bbc3be35ee1457d0d417" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool gazebo::GetSDFParam</definition>
+        <argsstring>(sdf::ElementPtr sdf, const std::string &amp;name, T &amp;param, const T &amp;default_value, const bool &amp;verbose=false)</argsstring>
+        <name>GetSDFParam</name>
+        <param>
+          <type>sdf::ElementPtr</type>
+          <declname>sdf</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>default_value</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>verbose</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Obtains a parameter from sdf. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sdf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the sdf object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Param Variable to write the parameter to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">default_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default value, if the parameter not available. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, gzerror if the parameter is not available. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/Common.hh" line="47" column="6" bodyfile="include/uuv_sensor_ros_plugins/Common.hh" bodystart="47" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Jose Capriles.</para>
+</simplesect>
+<simplesect kind="author"><para>Jose Capriles, Bence Magyar. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="include/uuv_sensor_ros_plugins/AltimeterROSPlugin.hh" line="66" column="1"/>
+  </compounddef>
+</doxygen>

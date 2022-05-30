@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacepublish__footprints" kind="namespace" language="Python">
+    <compoundname>publish_footprints</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="publish__footprints_8py_1aebd6fe0f1e154840140f552ed17e05c4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>publish_footprints.vehicle_pub</definition>
+        <argsstring></argsstring>
+        <name>vehicle_pub</name>
+        <initializer>=  dict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_footprints.py" line="28" column="1" bodyfile="scripts/publish_footprints.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="publish__footprints_8py_1a2731a3a1e340b5d337afb1a5fc102124" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>publish_footprints.odom_sub</definition>
+        <argsstring></argsstring>
+        <name>odom_sub</name>
+        <initializer>=  dict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_footprints.py" line="30" column="1" bodyfile="scripts/publish_footprints.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="publish__footprints_8py_1a735cc4747f3f8f7b8e7d61592e4845bf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>publish_footprints.get_world_props</definition>
+        <argsstring></argsstring>
+        <name>get_world_props</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_footprints.py" line="32" column="1" bodyfile="scripts/publish_footprints.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="publish__footprints_8py_1aeca54681adcdd214daaeb538f31c7218" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>publish_footprints.get_model_props</definition>
+        <argsstring></argsstring>
+        <name>get_model_props</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_footprints.py" line="34" column="1" bodyfile="scripts/publish_footprints.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="publish__footprints_8py_1a2467426f1ff47bf75e3ed7011906aab2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>publish_footprints.marker</definition>
+        <argsstring></argsstring>
+        <name>marker</name>
+        <initializer>=  np.array([[0, 0.75], [-0.5, -0.25], [0.5, -0.25]])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_footprints.py" line="36" column="1" bodyfile="scripts/publish_footprints.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="publish__footprints_8py_1a91337627afe40b5a3d17d1b568f4b7b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def publish_footprints.rot</definition>
+        <argsstring>(alpha)</argsstring>
+        <name>rot</name>
+        <param>
+          <type>alpha</type>
+          <defname>alpha</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_footprints.py" line="38" column="1" bodyfile="scripts/publish_footprints.py" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="publish__footprints_8py_1a053f2b98be7c5cd697fc5a6901c61592" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def publish_footprints.odometry_callback</definition>
+        <argsstring>(msg, name)</argsstring>
+        <name>odometry_callback</name>
+        <param>
+          <type>msg</type>
+          <defname>msg</defname>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_footprints.py" line="42" column="1" bodyfile="scripts/publish_footprints.py" bodystart="42" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="publish__footprints_8py_1a820780a6a74008edd6ff5ae38a2108be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def publish_footprints.get_topics</definition>
+        <argsstring>(name)</argsstring>
+        <name>get_topics</name>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_footprints.py" line="75" column="1" bodyfile="scripts/publish_footprints.py" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="publish__footprints_8py_1ab8416926d37fdd6815025cbba6cc683d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def publish_footprints.sub_odometry_topic</definition>
+        <argsstring>(name)</argsstring>
+        <name>sub_odometry_topic</name>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_footprints.py" line="78" column="1" bodyfile="scripts/publish_footprints.py" bodystart="78" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="publish__footprints_8py_1ac22d62099bc8f88da575c02c7b023116" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def publish_footprints.update_vehicle_list</definition>
+        <argsstring>(event)</argsstring>
+        <name>update_vehicle_list</name>
+        <param>
+          <type>event</type>
+          <defname>event</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Call list of models in the Gazebo simulation and filter out the
+marine crafts.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_footprints.py" line="87" column="1" bodyfile="scripts/publish_footprints.py" bodystart="87" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="publish__footprints_8py_1abf0e2b31a43b0072b000629a60e8eed3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def publish_footprints.main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_footprints.py" line="126" column="1" bodyfile="scripts/publish_footprints.py" bodystart="126" bodyend="128"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="scripts/publish_footprints.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

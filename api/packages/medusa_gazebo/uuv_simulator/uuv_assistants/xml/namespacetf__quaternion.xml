@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacetf__quaternion" kind="namespace" language="Python">
+    <compoundname>tf_quaternion</compoundname>
+    <innernamespace refid="namespacetf__quaternion_1_1transformations">tf_quaternion::transformations</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/tf_quaternion/__init__.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

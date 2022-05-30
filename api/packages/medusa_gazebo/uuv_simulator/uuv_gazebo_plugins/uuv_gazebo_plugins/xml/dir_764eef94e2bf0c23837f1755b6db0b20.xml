@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_764eef94e2bf0c23837f1755b6db0b20" kind="dir">
+    <compoundname>include/uuv_gazebo_plugins</compoundname>
+    <innerfile refid="BuoyantObject_8hh">BuoyantObject.hh</innerfile>
+    <innerfile refid="Def_8hh">Def.hh</innerfile>
+    <innerfile refid="Dynamics_8hh">Dynamics.hh</innerfile>
+    <innerfile refid="FinPlugin_8hh">FinPlugin.hh</innerfile>
+    <innerfile refid="HydrodynamicModel_8hh">HydrodynamicModel.hh</innerfile>
+    <innerfile refid="LiftDragModel_8hh">LiftDragModel.hh</innerfile>
+    <innerfile refid="ThrusterConversionFcn_8hh">ThrusterConversionFcn.hh</innerfile>
+    <innerfile refid="ThrusterPlugin_8hh">ThrusterPlugin.hh</innerfile>
+    <innerfile refid="UmbilicalModel_8hh">UmbilicalModel.hh</innerfile>
+    <innerfile refid="UmbilicalPlugin_8hh">UmbilicalPlugin.hh</innerfile>
+    <innerfile refid="UnderwaterObjectPlugin_8hh">UnderwaterObjectPlugin.hh</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uuv_gazebo_plugins/"/>
+  </compounddef>
+</doxygen>

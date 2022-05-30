@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_583e838cff260b3a1716d89eb89809a6" kind="dir">
+    <compoundname>include/uuv_sensor_ros_plugins</compoundname>
+    <innerfile refid="AltimeterROSPlugin_8hh">AltimeterROSPlugin.hh</innerfile>
+    <innerfile refid="Common_8hh">Common.hh</innerfile>
+    <innerfile refid="CPCROSPlugin_8hh">CPCROSPlugin.hh</innerfile>
+    <innerfile refid="DVLROSPlugin_8hh">DVLROSPlugin.hh</innerfile>
+    <innerfile refid="gazebo__gst__camera__plugin_8hh">gazebo_gst_camera_plugin.hh</innerfile>
+    <innerfile refid="gazebo__ros__image__sonar_8hh">gazebo_ros_image_sonar.hh</innerfile>
+    <innerfile refid="GPSROSPlugin_8hh">GPSROSPlugin.hh</innerfile>
+    <innerfile refid="IMUROSPlugin_8hh">IMUROSPlugin.hh</innerfile>
+    <innerfile refid="MagnetometerROSPlugin_8hh">MagnetometerROSPlugin.hh</innerfile>
+    <innerfile refid="modemPlugin_8hh">modemPlugin.hh</innerfile>
+    <innerfile refid="PoseGTROSPlugin_8hh">PoseGTROSPlugin.hh</innerfile>
+    <innerfile refid="ROSBaseModelPlugin_8hh">ROSBaseModelPlugin.hh</innerfile>
+    <innerfile refid="ROSBasePlugin_8hh">ROSBasePlugin.hh</innerfile>
+    <innerfile refid="ROSBaseSensorPlugin_8hh">ROSBaseSensorPlugin.hh</innerfile>
+    <innerfile refid="RPTROSPlugin_8hh">RPTROSPlugin.hh</innerfile>
+    <innerfile refid="SubseaPressureROSPlugin_8hh">SubseaPressureROSPlugin.hh</innerfile>
+    <innerfile refid="UnderwaterCameraROSPlugin_8hh">UnderwaterCameraROSPlugin.hh</innerfile>
+    <innerfile refid="usblPlugin_8hh">usblPlugin.hh</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uuv_sensor_ros_plugins/"/>
+  </compounddef>
+</doxygen>

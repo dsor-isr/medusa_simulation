@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_d520494d914db9c94cd3f1db6b5d46a9" kind="dir">
+    <compoundname>include/uuv_world_ros_plugins</compoundname>
+    <innerfile refid="SphericalCoordinatesROSInterfacePlugin_8hh">SphericalCoordinatesROSInterfacePlugin.hh</innerfile>
+    <innerfile refid="UnderwaterCurrentROSPlugin_8hh">UnderwaterCurrentROSPlugin.hh</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uuv_world_ros_plugins/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,515 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="DVLROSPlugin_8cc" kind="file" language="C++">
+    <compoundname>DVLROSPlugin.cc</compoundname>
+    <includes refid="DVLROSPlugin_8hh" local="no">uuv_sensor_ros_plugins/DVLROSPlugin.hh</includes>
+    <includes local="no">dsor_utils/frames.hpp</includes>
+    <incdepgraph>
+      <node id="32">
+        <label>uuv_sensor_ros_plugins_msgs/DVL.h</label>
+      </node>
+      <node id="11">
+        <label>gazebo/common/Plugin.hh</label>
+      </node>
+      <node id="14">
+        <label>gazebo/common/common.hh</label>
+      </node>
+      <node id="27">
+        <label>functional</label>
+      </node>
+      <node id="6">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="39">
+        <label>SensorDvl.pb.h</label>
+      </node>
+      <node id="34">
+        <label>message_filters/subscriber.h</label>
+      </node>
+      <node id="7">
+        <label>geometry_msgs/TwistWithCovarianceStamped.h</label>
+      </node>
+      <node id="30">
+        <label>tf/transform_listener.h</label>
+      </node>
+      <node id="31">
+        <label>tf/transform_broadcaster.h</label>
+      </node>
+      <node id="37">
+        <label>dsor_msgs/Measurement.h</label>
+      </node>
+      <node id="18">
+        <label>std_msgs/Bool.h</label>
+      </node>
+      <node id="38">
+        <label>Eigen/Geometry</label>
+      </node>
+      <node id="13">
+        <label>uuv_sensor_ros_plugins/ROSBasePlugin.hh</label>
+        <link refid="ROSBasePlugin_8hh_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>string</label>
+      </node>
+      <node id="40">
+        <label>dsor_utils/frames.hpp</label>
+      </node>
+      <node id="26">
+        <label>map</label>
+      </node>
+      <node id="23">
+        <label>tf/tf.h</label>
+      </node>
+      <node id="1">
+        <label>src/DVLROSPlugin.cc</label>
+        <link refid="DVLROSPlugin_8cc"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gazebo/gazebo.hh</label>
+      </node>
+      <node id="33">
+        <label>uuv_sensor_ros_plugins_msgs/DVLBeam.h</label>
+      </node>
+      <node id="25">
+        <label>random</label>
+      </node>
+      <node id="17">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="20">
+        <label>geometry_msgs/TransformStamped.h</label>
+      </node>
+      <node id="29">
+        <label>tf/transform_datatypes.h</label>
+      </node>
+      <node id="8">
+        <label>geometry_msgs/PoseStamped.h</label>
+      </node>
+      <node id="21">
+        <label>gazebo/sensors/Noise.hh</label>
+      </node>
+      <node id="9">
+        <label>sensor_msgs/Range.h</label>
+      </node>
+      <node id="36">
+        <label>vector</label>
+      </node>
+      <node id="35">
+        <label>message_filters/time_synchronizer.h</label>
+      </node>
+      <node id="2">
+        <label>uuv_sensor_ros_plugins/DVLROSPlugin.hh</label>
+        <link refid="DVLROSPlugin_8hh_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>uuv_sensor_ros_plugins_msgs/ChangeSensorState.h</label>
+      </node>
+      <node id="10">
+        <label>uuv_sensor_ros_plugins/ROSBaseModelPlugin.hh</label>
+        <link refid="ROSBaseModelPlugin_8hh_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="15">
+        <label>uuv_sensor_ros_plugins/Common.hh</label>
+        <link refid="Common_8hh_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>boost/bind.hpp</label>
+      </node>
+      <node id="24">
+        <label>chrono</label>
+      </node>
+      <node id="12">
+        <label>gazebo/physics/physics.hh</label>
+      </node>
+      <node id="22">
+        <label>tf/tfMessage.h</label>
+      </node>
+      <node id="28">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacegazebo">gazebo</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2016<sp/>The<sp/>UUV<sp/>Simulator<sp/>Authors.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uuv_sensor_ros_plugins/DVLROSPlugin.hh&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Used<sp/>to<sp/>conver<sp/>between<sp/>ENU<sp/>and<sp/>NED<sp/>velocities</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dsor_utils/frames.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacegazebo" kindref="compound">gazebo</ref><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="classgazebo_1_1DVLROSPlugin_1aad4cc11ec091d06a2be743656c7bbcce" kindref="member">DVLROSPlugin::DVLROSPlugin</ref>()<sp/>:<sp/>ROSBaseModelPlugin(),<sp/>beamTransformsInitialized(false)<sp/>{}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><ref refid="classgazebo_1_1DVLROSPlugin_1a5941c8fe25d52a179799bb526dfd96de" kindref="member">DVLROSPlugin::~DVLROSPlugin</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1DVLROSPlugin_1ad64840822bab803a6f89d589fe6c0a9f" kindref="member">DVLROSPlugin::Load</ref>(physics::ModelPtr<sp/>_model,<sp/>sdf::ElementPtr<sp/>_sdf)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><ref refid="classgazebo_1_1ROSBaseModelPlugin_1a9201b96ddee1a64ce43e59f3cf1ff2e9" kindref="member">ROSBaseModelPlugin::Load</ref>(_model,<sp/>_sdf);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>the<sp/>link<sp/>names<sp/>for<sp/>all<sp/>the<sp/>beams</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>std::string<sp/>beamLinkName;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>GetSDFParam&lt;std::string&gt;(_sdf,<sp/></highlight><highlight class="stringliteral">&quot;beam_link_name_0&quot;</highlight><highlight class="normal">,<sp/>beamLinkName,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>GZ_ASSERT(!beamLinkName.empty(),<sp/></highlight><highlight class="stringliteral">&quot;Beam<sp/>0<sp/>link<sp/>name<sp/>empty&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1ad08e09dd6d967aa9a2696065213c3493" kindref="member">beamsLinkNames</ref>.push_back(beamLinkName);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>GetSDFParam&lt;std::string&gt;(_sdf,<sp/></highlight><highlight class="stringliteral">&quot;beam_link_name_1&quot;</highlight><highlight class="normal">,<sp/>beamLinkName,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>GZ_ASSERT(!beamLinkName.empty(),<sp/></highlight><highlight class="stringliteral">&quot;Beam<sp/>1<sp/>link<sp/>name<sp/>empty&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1ad08e09dd6d967aa9a2696065213c3493" kindref="member">beamsLinkNames</ref>.push_back(beamLinkName);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>GetSDFParam&lt;std::string&gt;(_sdf,<sp/></highlight><highlight class="stringliteral">&quot;beam_link_name_2&quot;</highlight><highlight class="normal">,<sp/>beamLinkName,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>GZ_ASSERT(!beamLinkName.empty(),<sp/></highlight><highlight class="stringliteral">&quot;Beam<sp/>2<sp/>link<sp/>name<sp/>empty&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1ad08e09dd6d967aa9a2696065213c3493" kindref="member">beamsLinkNames</ref>.push_back(beamLinkName);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>GetSDFParam&lt;std::string&gt;(_sdf,<sp/></highlight><highlight class="stringliteral">&quot;beam_link_name_3&quot;</highlight><highlight class="normal">,<sp/>beamLinkName,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>GZ_ASSERT(!beamLinkName.empty(),<sp/></highlight><highlight class="stringliteral">&quot;Beam<sp/>3<sp/>link<sp/>name<sp/>empty&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1ad08e09dd6d967aa9a2696065213c3493" kindref="member">beamsLinkNames</ref>.push_back(beamLinkName);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>the<sp/>beam<sp/>output<sp/>topic<sp/>names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>std::string<sp/>beamTopic;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>GetSDFParam&lt;std::string&gt;(_sdf,<sp/></highlight><highlight class="stringliteral">&quot;beam_topic_0&quot;</highlight><highlight class="normal">,<sp/>beamTopic,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>GZ_ASSERT(!beamTopic.empty(),<sp/></highlight><highlight class="stringliteral">&quot;Beam<sp/>0<sp/>topic<sp/>name<sp/>empty&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a4f5c496dc3d8efa87aadfa2f7d7b4c97" kindref="member">beamTopics</ref>.push_back(beamTopic);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>GetSDFParam&lt;std::string&gt;(_sdf,<sp/></highlight><highlight class="stringliteral">&quot;beam_topic_1&quot;</highlight><highlight class="normal">,<sp/>beamTopic,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>GZ_ASSERT(!beamTopic.empty(),<sp/></highlight><highlight class="stringliteral">&quot;Beam<sp/>1<sp/>topic<sp/>name<sp/>empty&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a4f5c496dc3d8efa87aadfa2f7d7b4c97" kindref="member">beamTopics</ref>.push_back(beamTopic);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>GetSDFParam&lt;std::string&gt;(_sdf,<sp/></highlight><highlight class="stringliteral">&quot;beam_topic_2&quot;</highlight><highlight class="normal">,<sp/>beamTopic,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>GZ_ASSERT(!beamTopic.empty(),<sp/></highlight><highlight class="stringliteral">&quot;Beam<sp/>2<sp/>topic<sp/>name<sp/>empty&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a4f5c496dc3d8efa87aadfa2f7d7b4c97" kindref="member">beamTopics</ref>.push_back(beamTopic);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>GetSDFParam&lt;std::string&gt;(_sdf,<sp/></highlight><highlight class="stringliteral">&quot;beam_topic_3&quot;</highlight><highlight class="normal">,<sp/>beamTopic,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>GZ_ASSERT(!beamTopic.empty(),<sp/></highlight><highlight class="stringliteral">&quot;Beam<sp/>3<sp/>topic<sp/>name<sp/>empty&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a4f5c496dc3d8efa87aadfa2f7d7b4c97" kindref="member">beamTopics</ref>.push_back(beamTopic);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>beam<sp/>subscribers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>this-&gt;beamSub0.reset(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>message_filters::Subscriber&lt;sensor_msgs::Range&gt;(*this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a6b907bcd7669d3907f3c78e654fcca88" kindref="member">rosNode</ref>.get(),<sp/>this-&gt;beamTopics[0],<sp/>1));</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>this-&gt;beamSub1.reset(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>message_filters::Subscriber&lt;sensor_msgs::Range&gt;(*this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a6b907bcd7669d3907f3c78e654fcca88" kindref="member">rosNode</ref>.get(),<sp/>this-&gt;beamTopics[1],<sp/>1));</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>this-&gt;beamSub2.reset(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>message_filters::Subscriber&lt;sensor_msgs::Range&gt;(*this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a6b907bcd7669d3907f3c78e654fcca88" kindref="member">rosNode</ref>.get(),<sp/>this-&gt;beamTopics[2],<sp/>1));</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>this-&gt;beamSub3.reset(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>message_filters::Subscriber&lt;sensor_msgs::Range&gt;(*this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a6b907bcd7669d3907f3c78e654fcca88" kindref="member">rosNode</ref>.get(),<sp/>this-&gt;beamTopics[3],<sp/>1));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>4;<sp/>i++)<sp/>this-&gt;dvlBeamMsgs.push_back(uuv_sensor_ros_plugins_msgs::DVLBeam());</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Synchronize<sp/>the<sp/>beam<sp/>topics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>this-&gt;syncBeamMessages.reset(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>message_filters::TimeSynchronizer&lt;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_msgs::Range,<sp/>sensor_msgs::Range,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_msgs::Range,<sp/>sensor_msgs::Range&gt;(*this-&gt;beamSub0.get(),<sp/>*this-&gt;beamSub1.get(),<sp/>*this-&gt;beamSub2.get(),<sp/>*this-&gt;beamSub3.get(),<sp/>10));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>synchronized<sp/>callback<sp/>function<sp/>for<sp/>the<sp/>DVL<sp/>beams</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>this-&gt;syncBeamMessages-&gt;registerCallback(boost::bind(&amp;<ref refid="classgazebo_1_1DVLROSPlugin_1a6196f3792d05d27c197321fa760b6e0f" kindref="member">DVLROSPlugin::OnBeamCallback</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1,<sp/>_2,<sp/>_3,<sp/>_4));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>default<sp/>DVL<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1aff7eafda5f899aa2304a870d1418a300" kindref="member">rosSensorOutputPub</ref><sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a6b907bcd7669d3907f3c78e654fcca88" kindref="member">rosNode</ref>-&gt;advertise&lt;uuv_sensor_ros_plugins_msgs::DVL&gt;(this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a818f107bc9e165a3cc8016fd6859f86a" kindref="member">sensorOutputTopic</ref>,<sp/>1);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1ac2f169c3c79a3514cfdf497ce6a74e2d" kindref="member">twistPub</ref><sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a6b907bcd7669d3907f3c78e654fcca88" kindref="member">rosNode</ref>-&gt;advertise&lt;geometry_msgs::TwistWithCovarianceStamped&gt;(this-&gt;sensorOutputTopic<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;_twist&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Advertise<sp/>an<sp/>DVL<sp/>+<sp/>Altimeter<sp/>topics<sp/>(for<sp/>the<sp/>medusa<sp/>stack)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>std::string<sp/>dvlStackTopic<sp/>=<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal"><sp/>+<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a9a9e059aec0a41dd012223d3ea3c9fe9" kindref="member">robotNamespace</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/measurement/velocity&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a1767906cce2bf65ad1a47fb7590c2b61" kindref="member">medusaStackDVLPub</ref><sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a6b907bcd7669d3907f3c78e654fcca88" kindref="member">rosNode</ref>-&gt;advertise&lt;dsor_msgs::Measurement&gt;(dvlStackTopic,<sp/>1);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>the<sp/>link&apos;s<sp/>frame<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a81fb6aaf15da16ca61e98ef9794a0835" kindref="member">dvlROSMsg</ref>.header.frame_id<sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBaseModelPlugin_1ac405387fd2fcf90b48b368104031367d" kindref="member">link</ref>-&gt;GetName();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1afaaaa0dcc7b097b488f60b7098ff8ec5" kindref="member">twistROSMsg</ref>.header.frame_id<sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBaseModelPlugin_1ac405387fd2fcf90b48b368104031367d" kindref="member">link</ref>-&gt;GetName();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a9188a23e5c2833e0e824d7e688738dd6" kindref="member">dvlMeasurementMsg</ref>.header.frame_id<sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a9a9e059aec0a41dd012223d3ea3c9fe9" kindref="member">robotNamespace</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;_dvl_bt&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>covariance<sp/>for<sp/>the<sp/>regular<sp/>DVL<sp/>topic<sp/>(with<sp/>the<sp/>beams)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>variance<sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1aef76766a171b7b9c0c236ff5987800f9" kindref="member">noiseSigma</ref><sp/>*<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1aef76766a171b7b9c0c236ff5987800f9" kindref="member">noiseSigma</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>9;<sp/>i++)<sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a81fb6aaf15da16ca61e98ef9794a0835" kindref="member">dvlROSMsg</ref>.velocity_covariance[i]<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>this-&gt;dvlROSMsg.velocity_covariance[0]<sp/>=<sp/>variance;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>this-&gt;dvlROSMsg.velocity_covariance[4]<sp/>=<sp/>variance;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>this-&gt;dvlROSMsg.velocity_covariance[8]<sp/>=<sp/>variance;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>covariance<sp/>for<sp/>the<sp/>regular<sp/>DVL<sp/>topic<sp/>(with<sp/>the<sp/>linear<sp/>velocities)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>for<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>36;<sp/>i++)<sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1afaaaa0dcc7b097b488f60b7098ff8ec5" kindref="member">twistROSMsg</ref>.twist.covariance[i]<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>this-&gt;twistROSMsg.twist.covariance[0]<sp/>=<sp/>variance;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>this-&gt;twistROSMsg.twist.covariance[7]<sp/>=<sp/>variance;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>this-&gt;twistROSMsg.twist.covariance[14]<sp/>=<sp/>variance;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>this-&gt;twistROSMsg.twist.covariance[21]<sp/>=<sp/>-1;<sp/><sp/></highlight><highlight class="comment">//<sp/>not<sp/>available</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>this-&gt;twistROSMsg.twist.covariance[28]<sp/>=<sp/>-1;<sp/><sp/></highlight><highlight class="comment">//<sp/>not<sp/>available</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>this-&gt;twistROSMsg.twist.covariance[35]<sp/>=<sp/>-1;<sp/><sp/></highlight><highlight class="comment">//<sp/>not<sp/>available</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>covariance<sp/>for<sp/>the<sp/>DVL<sp/>topic<sp/>(used<sp/>by<sp/>medusa<sp/>stack)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>3;<sp/>i++)<sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a9188a23e5c2833e0e824d7e688738dd6" kindref="member">dvlMeasurementMsg</ref>.noise.push_back(variance);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1DVLROSPlugin_1a2ce9099e6bd976d4d845bc9c16741125" kindref="member">DVLROSPlugin::OnUpdate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>common::UpdateInfo&amp;<sp/>_info)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Publish<sp/>sensor<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a0185c958f2ce8b30a1c5dc078bbd7b0e" kindref="member">PublishState</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>sensor<sp/>is<sp/>not<sp/>enabled,<sp/>just<sp/>return<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1af12a92a0ddf7c3c07163d32d6d95c655" kindref="member">EnableMeasurement</ref>(_info))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>ignition::math::Vector3d<sp/>bodyVel;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1aafc0126ca7732b8f01ca383dc3ace22f" kindref="member">UpdateBeamTransforms</ref>())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>true<sp/>body<sp/>velocity<sp/>of<sp/>the<sp/>DVL<sp/>sensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>bodyVel<sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBaseModelPlugin_1ac405387fd2fcf90b48b368104031367d" kindref="member">link</ref>-&gt;RelativeLinearVel();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>white<sp/>gaussian<sp/>noise<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>bodyVel.X()<sp/>+=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1ae1fd5e5059943e83865efa837e52e3a7" kindref="member">GetGaussianNoise</ref>(this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a6a7695e4dc91f9504a3ee88d5da94102" kindref="member">noiseAmp</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>bodyVel.Y()<sp/>+=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1ae1fd5e5059943e83865efa837e52e3a7" kindref="member">GetGaussianNoise</ref>(this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a6a7695e4dc91f9504a3ee88d5da94102" kindref="member">noiseAmp</ref>);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>bodyVel.Z()<sp/>+=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1ae1fd5e5059943e83865efa837e52e3a7" kindref="member">GetGaussianNoise</ref>(this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a6a7695e4dc91f9504a3ee88d5da94102" kindref="member">noiseAmp</ref>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Since<sp/>the<sp/>DVL<sp/>is<sp/>rotated,<sp/>get<sp/>its<sp/>orientation,<sp/>relative<sp/>to<sp/>the<sp/>body<sp/>frame<sp/>of<sp/>the<sp/>vehicle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>ignition::math::Quaterniond<sp/>dvl_enu_relative_to_vehicle_enu;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>Eigen::Quaterniond<sp/>q;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>dvl_enu_relative_to_vehicle_enu<sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBaseModelPlugin_1ac405387fd2fcf90b48b368104031367d" kindref="member">link</ref>-&gt;SDFPoseRelativeToParent().Rot();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>q.x()<sp/>=<sp/>dvl_enu_relative_to_vehicle_enu.X();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>q.y()<sp/>=<sp/>dvl_enu_relative_to_vehicle_enu.Y();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>q.z()<sp/>=<sp/>dvl_enu_relative_to_vehicle_enu.Z();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>q.w()<sp/>=<sp/>dvl_enu_relative_to_vehicle_enu.W();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Rotate<sp/>the<sp/>angular<sp/>velocities<sp/>from<sp/>the<sp/>DVL<sp/>arbitrary<sp/>frame<sp/>to<sp/>&quot;quasi&quot;-body<sp/>frame<sp/>of<sp/>the<sp/>vehicle<sp/>in<sp/>ENU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>note<sp/>that,<sp/>I<sp/>mention<sp/>&quot;quasi&quot;<sp/>because<sp/>the<sp/>DVL<sp/>is<sp/>not<sp/>in<sp/>the<sp/>center<sp/>of<sp/>mass<sp/>of<sp/>the<sp/>vehicle<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>Eigen::Vector3d<sp/>velocity_dvl_enu<sp/>=<sp/>Eigen::Vector3d(bodyVel.X(),<sp/>bodyVel.Y(),<sp/>bodyVel.Z());</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>Eigen::Vector3d<sp/>velocity_vehicle_enu;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>velocity_vehicle_enu<sp/>=<sp/>DSOR::transform_vect_between_arbitrary_ref(velocity_dvl_enu,<sp/>q);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Rotate<sp/>the<sp/>velocity<sp/>from<sp/>vehicle_ENU<sp/>(aka<sp/>body<sp/>ENU)<sp/>to<sp/>vehicle_NED<sp/>(aka<sp/>body<sp/>NED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>Eigen::Vector3d<sp/>velocity_vehicle_ned;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>velocity_vehicle_ned<sp/>=<sp/>DSOR::transform_vect_body_enu_ned(velocity_vehicle_enu);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>current<sp/>ROS<sp/>time<sp/>(can<sp/>be<sp/>different<sp/>from<sp/>simulation<sp/>time<sp/>-<sp/>ROS<sp/>uses<sp/>the<sp/>computer<sp/>seconds<sp/>time<sp/>since<sp/>unix<sp/>was<sp/>created)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>ros::Time<sp/>currentROSTime<sp/>=<sp/>ros::Time().now();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Publish<sp/>ROS<sp/>DVL<sp/>message<sp/>for<sp/>the<sp/>beams<sp/>(using<sp/>NED<sp/>standard<sp/>in<sp/>vehicle<sp/>body<sp/>frame)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a81fb6aaf15da16ca61e98ef9794a0835" kindref="member">dvlROSMsg</ref>.header.stamp.sec<sp/>=<sp/>currentROSTime.sec;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a81fb6aaf15da16ca61e98ef9794a0835" kindref="member">dvlROSMsg</ref>.header.stamp.nsec<sp/>=<sp/>currentROSTime.nsec;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a81fb6aaf15da16ca61e98ef9794a0835" kindref="member">dvlROSMsg</ref>.altitude<sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1af131a2d137189651208e48467bdbad39" kindref="member">altitude</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a81fb6aaf15da16ca61e98ef9794a0835" kindref="member">dvlROSMsg</ref>.beams<sp/>=<sp/>this-&gt;dvlBeamMsgs;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a81fb6aaf15da16ca61e98ef9794a0835" kindref="member">dvlROSMsg</ref>.velocity.x<sp/>=<sp/>velocity_vehicle_ned.x();</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a81fb6aaf15da16ca61e98ef9794a0835" kindref="member">dvlROSMsg</ref>.velocity.y<sp/>=<sp/>velocity_vehicle_ned.y();</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a81fb6aaf15da16ca61e98ef9794a0835" kindref="member">dvlROSMsg</ref>.velocity.z<sp/>=<sp/>velocity_vehicle_ned.z();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1aff7eafda5f899aa2304a870d1418a300" kindref="member">rosSensorOutputPub</ref>.publish(this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a81fb6aaf15da16ca61e98ef9794a0835" kindref="member">dvlROSMsg</ref>);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Publish<sp/>ROS<sp/>DVL<sp/>twist<sp/>message<sp/>(using<sp/>NED<sp/>standard<sp/>in<sp/>vehicle<sp/>body<sp/>frame)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1afaaaa0dcc7b097b488f60b7098ff8ec5" kindref="member">twistROSMsg</ref>.header.stamp<sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a81fb6aaf15da16ca61e98ef9794a0835" kindref="member">dvlROSMsg</ref>.header.stamp;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1afaaaa0dcc7b097b488f60b7098ff8ec5" kindref="member">twistROSMsg</ref>.twist.twist.linear.x<sp/>=<sp/>velocity_vehicle_ned.x();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1afaaaa0dcc7b097b488f60b7098ff8ec5" kindref="member">twistROSMsg</ref>.twist.twist.linear.y<sp/>=<sp/>velocity_vehicle_ned.y();</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1afaaaa0dcc7b097b488f60b7098ff8ec5" kindref="member">twistROSMsg</ref>.twist.twist.linear.z<sp/>=<sp/>velocity_vehicle_ned.z();</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>this-&gt;twistPub.publish(this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1afaaaa0dcc7b097b488f60b7098ff8ec5" kindref="member">twistROSMsg</ref>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>the<sp/>ROS<sp/>Measurement<sp/>message<sp/>(using<sp/>NED<sp/>standard)<sp/>to<sp/>be<sp/>used<sp/>by<sp/>the<sp/>Medusa<sp/>stack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a9188a23e5c2833e0e824d7e688738dd6" kindref="member">dvlMeasurementMsg</ref>.header.stamp.sec<sp/>=<sp/>currentROSTime.sec;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a9188a23e5c2833e0e824d7e688738dd6" kindref="member">dvlMeasurementMsg</ref>.header.stamp.nsec<sp/>=<sp/>currentROSTime.nsec;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a9188a23e5c2833e0e824d7e688738dd6" kindref="member">dvlMeasurementMsg</ref>.value.clear();</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a9188a23e5c2833e0e824d7e688738dd6" kindref="member">dvlMeasurementMsg</ref>.value.push_back(velocity_vehicle_ned.x());</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a9188a23e5c2833e0e824d7e688738dd6" kindref="member">dvlMeasurementMsg</ref>.value.push_back(velocity_vehicle_ned.y());</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a9188a23e5c2833e0e824d7e688738dd6" kindref="member">dvlMeasurementMsg</ref>.value.push_back(velocity_vehicle_ned.z());</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a1767906cce2bf65ad1a47fb7590c2b61" kindref="member">medusaStackDVLPub</ref>.publish(this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1a9188a23e5c2833e0e824d7e688738dd6" kindref="member">dvlMeasurementMsg</ref>);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>the<sp/>current<sp/>simulation<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1ac3798d56f9ea70175d99ab80106b4319" kindref="member">lastMeasurementTime</ref><sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBasePlugin_1a24f910550057c819c246f5c3f74dae5a" kindref="member">world</ref>-&gt;SimTime();</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1DVLROSPlugin_1a6196f3792d05d27c197321fa760b6e0f" kindref="member">DVLROSPlugin::OnBeamCallback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sensor_msgs::RangeConstPtr&amp;<sp/>_range0,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sensor_msgs::RangeConstPtr&amp;<sp/>_range1,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sensor_msgs::RangeConstPtr&amp;<sp/>_range2,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sensor_msgs::RangeConstPtr&amp;<sp/>_range3)<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_range0-&gt;range<sp/>==<sp/>_range0-&gt;min_range<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_range1-&gt;range<sp/>==<sp/>_range1-&gt;min_range<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_range2-&gt;range<sp/>==<sp/>_range2-&gt;min_range<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_range3-&gt;range<sp/>==<sp/>_range3-&gt;min_range)<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1af131a2d137189651208e48467bdbad39" kindref="member">altitude</ref><sp/>=<sp/>ALTITUDE_OUT_OF_RANGE;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_range0-&gt;range<sp/>==<sp/>_range0-&gt;max_range<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_range1-&gt;range<sp/>==<sp/>_range1-&gt;max_range<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_range2-&gt;range<sp/>==<sp/>_range2-&gt;max_range<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_range3-&gt;range<sp/>==<sp/>_range3-&gt;max_range)<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1af131a2d137189651208e48467bdbad39" kindref="member">altitude</ref><sp/>=<sp/>ALTITUDE_OUT_OF_RANGE;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Compute<sp/>the<sp/>altitude<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>vehicle&apos;s<sp/>orientation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1af131a2d137189651208e48467bdbad39" kindref="member">altitude</ref><sp/>=<sp/>0.25<sp/>*<sp/>(_range0-&gt;range<sp/>+<sp/>_range1-&gt;range<sp/>+<sp/>_range2-&gt;range<sp/>+<sp/>_range3-&gt;range);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>this-&gt;dvlBeamMsgs[0].range<sp/>=<sp/>_range0-&gt;range;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/>this-&gt;dvlBeamMsgs[1].range<sp/>=<sp/>_range1-&gt;range;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/>this-&gt;dvlBeamMsgs[2].range<sp/>=<sp/>_range2-&gt;range;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/>this-&gt;dvlBeamMsgs[3].range<sp/>=<sp/>_range3-&gt;range;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1DVLROSPlugin_1aafc0126ca7732b8f01ca383dc3ace22f" kindref="member">DVLROSPlugin::UpdateBeamTransforms</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1ad8ac639cddfd52b709b8e77712c72762" kindref="member">beamPoses</ref>.size()<sp/>==<sp/>4)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/>tf::StampedTransform<sp/>beamTransform;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/>std::string<sp/>targetFrame,<sp/>sourceFrame;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>success<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>For<sp/>each<sp/>beam<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1ad08e09dd6d967aa9a2696065213c3493" kindref="member">beamsLinkNames</ref>.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>the<sp/>name<sp/>of<sp/>the<sp/>beam<sp/>frame<sp/>to<sp/>the<sp/>DVL<sp/>frame<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>sourceFrame<sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1ad08e09dd6d967aa9a2696065213c3493" kindref="member">beamsLinkNames</ref>[i];</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>targetFrame<sp/>=<sp/>this-&gt;<ref refid="classgazebo_1_1ROSBaseModelPlugin_1ac405387fd2fcf90b48b368104031367d" kindref="member">link</ref>-&gt;GetName();</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Try<sp/>to<sp/>get<sp/>the<sp/>transform<sp/>from<sp/>the<sp/>beam<sp/>frame<sp/>to<sp/>the<sp/>DVL<sp/>frame<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ros::Time<sp/>now<sp/>=<sp/>ros::Time::now();</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;transformListener.lookupTransform(targetFrame,<sp/>sourceFrame,<sp/>ros::Time(0),<sp/>beamTransform);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal">(tf::TransformException<sp/>&amp;ex)<sp/>{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>success<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>the<sp/>pose<sp/>of<sp/>the<sp/>beam<sp/>in<sp/>the<sp/>&quot;ENU<sp/>body&quot;<sp/>frame<sp/>of<sp/>the<sp/>DVL<sp/>sensor<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>ignition::math::Pose3d<sp/>pose;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>pose.Pos()<sp/>=<sp/>ignition::math::Vector3d(beamTransform.getOrigin().x(),<sp/>beamTransform.getOrigin().y(),<sp/>beamTransform.getOrigin().z());</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>pose.Rot()<sp/>=<sp/>ignition::math::Quaterniond(beamTransform.getRotation().getW(),<sp/>beamTransform.getRotation().getAxis().x(),<sp/>beamTransform.getRotation().getAxis().y(),<sp/>beamTransform.getRotation().getAxis().z());</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;dvlBeamMsgs[i].pose<sp/>=<sp/>geometry_msgs::PoseStamped();</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;dvlBeamMsgs[i].pose.header.stamp<sp/>=<sp/>ros::Time::now();</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;dvlBeamMsgs[i].pose.header.frame_id<sp/>=<sp/>sourceFrame;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;dvlBeamMsgs[i].pose.pose.position.x<sp/>=<sp/>beamTransform.getOrigin().x();</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;dvlBeamMsgs[i].pose.pose.position.y<sp/>=<sp/>beamTransform.getOrigin().y();</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;dvlBeamMsgs[i].pose.pose.position.z<sp/>=<sp/>beamTransform.getOrigin().z();</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;dvlBeamMsgs[i].pose.pose.orientation.x<sp/>=<sp/>beamTransform.getRotation().getAxis().x();</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;dvlBeamMsgs[i].pose.pose.orientation.y<sp/>=<sp/>beamTransform.getRotation().getAxis().y();</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;dvlBeamMsgs[i].pose.pose.orientation.z<sp/>=<sp/>beamTransform.getRotation().getAxis().z();</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;dvlBeamMsgs[i].pose.pose.orientation.w<sp/>=<sp/>beamTransform.getRotation().getW();</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classgazebo_1_1DVLROSPlugin_1ad8ac639cddfd52b709b8e77712c72762" kindref="member">beamPoses</ref>.push_back(pose);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>success;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal">GZ_REGISTER_MODEL_PLUGIN(DVLROSPlugin)</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/DVLROSPlugin.cc"/>
+  </compounddef>
+</doxygen>

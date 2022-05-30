@@ -16,12 +16,6 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="2">
-        <label>wp_loose.h</label>
-        <link refid="wp__loose_8h_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
       <node id="3">
         <label>wp_controller.h</label>
         <link refid="wp__controller_8h_source"/>
@@ -44,6 +38,12 @@
       </node>
       <node id="4">
         <label>iostream</label>
+      </node>
+      <node id="2">
+        <label>wp_loose.h</label>
+        <link refid="wp__loose_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <briefdescription>

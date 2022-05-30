@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="classtest__urdf__files_1_1TestRexROVURDFFiles" kind="class"><name>test_urdf_files::TestRexROVURDFFiles</name>
+    <member refid="classtest__urdf__files_1_1TestRexROVURDFFiles_1af9dd26cd2e21687b875c9ed4a8836a4b" kind="function"><name>test_xacro</name></member>
+  </compound>
+  <compound refid="namespacetest__urdf__files" kind="namespace"><name>test_urdf_files</name>
+    <member refid="test__urdf__files_8py_1a68184102c61ac7e73ba03d92907af407" kind="variable"><name>PKG</name></member>
+    <member refid="test__urdf__files_8py_1ad4ebb2ab8b06be236cc055450ec4463c" kind="variable"><name>NAME</name></member>
+    <member refid="test__urdf__files_8py_1a241d0f71a7db084279bc1c84aeec1306" kind="function"><name>call_xacro</name></member>
+  </compound>
+  <compound refid="test__urdf__files_8py" kind="file"><name>test_urdf_files.py</name>
+    <member refid="test__urdf__files_8py_1a68184102c61ac7e73ba03d92907af407" kind="variable"><name>PKG</name></member>
+    <member refid="test__urdf__files_8py_1ad4ebb2ab8b06be236cc055450ec4463c" kind="variable"><name>NAME</name></member>
+    <member refid="test__urdf__files_8py_1a241d0f71a7db084279bc1c84aeec1306" kind="function"><name>call_xacro</name></member>
+  </compound>
+  <compound refid="dir_13e138d54eb8818da29c3992edef070a" kind="dir"><name>test</name>
+  </compound>
+</doxygenindex>

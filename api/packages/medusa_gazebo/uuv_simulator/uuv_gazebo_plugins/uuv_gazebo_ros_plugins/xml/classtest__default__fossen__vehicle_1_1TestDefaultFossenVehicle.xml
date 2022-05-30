@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle" kind="class" language="Python" prot="public">
+    <compoundname>test_default_fossen_vehicle::TestDefaultFossenVehicle</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TestCase</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a524d7488b289013edb28c26f2a678f66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_default_fossen_vehicle.TestDefaultFossenVehicle.test_get_model_parameters</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_get_model_parameters</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_default_fossen_vehicle.py" line="36" column="1" bodyfile="test/test_default_fossen_vehicle.py" bodystart="36" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a61a96006a2f2319722f0c3d385ad5813" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_default_fossen_vehicle.TestDefaultFossenVehicle.test_set_fluid_density</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_set_fluid_density</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_default_fossen_vehicle.py" line="103" column="1" bodyfile="test/test_default_fossen_vehicle.py" bodystart="103" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1ac1e19467c96c1be3697817d24d2a52e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_default_fossen_vehicle.TestDefaultFossenVehicle.test_volume_offset</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_volume_offset</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_default_fossen_vehicle.py" line="115" column="1" bodyfile="test/test_default_fossen_vehicle.py" bodystart="115" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a32ea112608f211771d63414f256068a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_default_fossen_vehicle.TestDefaultFossenVehicle.test_added_mass_scaling</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_added_mass_scaling</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_default_fossen_vehicle.py" line="137" column="1" bodyfile="test/test_default_fossen_vehicle.py" bodystart="137" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a8bf154f6ef54a120918fb0ec9e63341e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_default_fossen_vehicle.TestDefaultFossenVehicle.test_damping_scaling</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_damping_scaling</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_default_fossen_vehicle.py" line="149" column="1" bodyfile="test/test_default_fossen_vehicle.py" bodystart="149" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a2cf96bbbd9ec6d5500c6e08fccad266f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_default_fossen_vehicle.TestDefaultFossenVehicle.test_volume_scaling</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_volume_scaling</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_default_fossen_vehicle.py" line="161" column="1" bodyfile="test/test_default_fossen_vehicle.py" bodystart="161" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a24c942fc0b26a48811d66eab0a4d329e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_default_fossen_vehicle.TestDefaultFossenVehicle.test_added_mass_offset</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_added_mass_offset</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_default_fossen_vehicle.py" line="173" column="1" bodyfile="test/test_default_fossen_vehicle.py" bodystart="173" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a62f09ac3da01f070730222dacdae4c5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_default_fossen_vehicle.TestDefaultFossenVehicle.test_linear_damping_offset</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_linear_damping_offset</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_default_fossen_vehicle.py" line="186" column="1" bodyfile="test/test_default_fossen_vehicle.py" bodystart="186" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a82f15e3e35c998556a3a0cb02e5249b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_default_fossen_vehicle.TestDefaultFossenVehicle.test_linear_forward_speed_damping_offset</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_linear_forward_speed_damping_offset</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_default_fossen_vehicle.py" line="198" column="1" bodyfile="test/test_default_fossen_vehicle.py" bodystart="198" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a82f15e3e35c998556a3a0cb02e5249b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_default_fossen_vehicle.TestDefaultFossenVehicle.test_linear_forward_speed_damping_offset</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_linear_forward_speed_damping_offset</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_default_fossen_vehicle.py" line="210" column="1" bodyfile="test/test_default_fossen_vehicle.py" bodystart="210" bodyend="222"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>test_default_fossen_vehicle.TestDefaultFossenVehicle</label>
+        <link refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TestCase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>test_default_fossen_vehicle.TestDefaultFossenVehicle</label>
+        <link refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TestCase</label>
+      </node>
+    </collaborationgraph>
+    <location file="test/test_default_fossen_vehicle.py" line="30" column="1" bodyfile="test/test_default_fossen_vehicle.py" bodystart="30" bodyend="223"/>
+    <listofallmembers>
+      <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a24c942fc0b26a48811d66eab0a4d329e" prot="public" virt="non-virtual"><scope>test_default_fossen_vehicle::TestDefaultFossenVehicle</scope><name>test_added_mass_offset</name></member>
+      <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a32ea112608f211771d63414f256068a5" prot="public" virt="non-virtual"><scope>test_default_fossen_vehicle::TestDefaultFossenVehicle</scope><name>test_added_mass_scaling</name></member>
+      <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a8bf154f6ef54a120918fb0ec9e63341e" prot="public" virt="non-virtual"><scope>test_default_fossen_vehicle::TestDefaultFossenVehicle</scope><name>test_damping_scaling</name></member>
+      <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a524d7488b289013edb28c26f2a678f66" prot="public" virt="non-virtual"><scope>test_default_fossen_vehicle::TestDefaultFossenVehicle</scope><name>test_get_model_parameters</name></member>
+      <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a62f09ac3da01f070730222dacdae4c5f" prot="public" virt="non-virtual"><scope>test_default_fossen_vehicle::TestDefaultFossenVehicle</scope><name>test_linear_damping_offset</name></member>
+      <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a82f15e3e35c998556a3a0cb02e5249b5" prot="public" virt="non-virtual"><scope>test_default_fossen_vehicle::TestDefaultFossenVehicle</scope><name>test_linear_forward_speed_damping_offset</name></member>
+      <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a82f15e3e35c998556a3a0cb02e5249b5" prot="public" virt="non-virtual"><scope>test_default_fossen_vehicle::TestDefaultFossenVehicle</scope><name>test_linear_forward_speed_damping_offset</name></member>
+      <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a61a96006a2f2319722f0c3d385ad5813" prot="public" virt="non-virtual"><scope>test_default_fossen_vehicle::TestDefaultFossenVehicle</scope><name>test_set_fluid_density</name></member>
+      <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1ac1e19467c96c1be3697817d24d2a52e8" prot="public" virt="non-virtual"><scope>test_default_fossen_vehicle::TestDefaultFossenVehicle</scope><name>test_volume_offset</name></member>
+      <member refid="classtest__default__fossen__vehicle_1_1TestDefaultFossenVehicle_1a2cf96bbbd9ec6d5500c6e08fccad266f" prot="public" virt="non-virtual"><scope>test_default_fossen_vehicle::TestDefaultFossenVehicle</scope><name>test_volume_scaling</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

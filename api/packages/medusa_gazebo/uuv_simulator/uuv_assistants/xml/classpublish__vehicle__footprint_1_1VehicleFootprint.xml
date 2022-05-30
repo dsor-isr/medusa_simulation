@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classpublish__vehicle__footprint_1_1VehicleFootprint" kind="class" language="Python" prot="public">
+    <compoundname>publish_vehicle_footprint::VehicleFootprint</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classpublish__vehicle__footprint_1_1VehicleFootprint_1acbd1fc242b73a4bdfe3ca8e4eb013875" prot="public" static="yes" mutable="no">
+        <type></type>
+        <definition>publish_vehicle_footprint.VehicleFootprint::MARKER</definition>
+        <argsstring></argsstring>
+        <name>MARKER</name>
+        <initializer>=  np.array([[0, 0.75], [-0.5, -0.25], [0.5, -0.25]])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_vehicle_footprint.py" line="27" column="1" bodyfile="scripts/publish_vehicle_footprint.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpublish__vehicle__footprint_1_1VehicleFootprint_1afe1185045a678edbbbebcc39d9e4ff71" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>publish_vehicle_footprint.VehicleFootprint::_namespace</definition>
+        <argsstring></argsstring>
+        <name>_namespace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_vehicle_footprint.py" line="30" column="1" bodyfile="scripts/publish_vehicle_footprint.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpublish__vehicle__footprint_1_1VehicleFootprint_1abd6b15680d44ad47d476d2c746403206" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>publish_vehicle_footprint.VehicleFootprint::_scale_footprint</definition>
+        <argsstring></argsstring>
+        <name>_scale_footprint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_vehicle_footprint.py" line="32" column="1" bodyfile="scripts/publish_vehicle_footprint.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpublish__vehicle__footprint_1_1VehicleFootprint_1a076769d50bc9177dc8dae79b9599060a" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>publish_vehicle_footprint.VehicleFootprint::_scale_label</definition>
+        <argsstring></argsstring>
+        <name>_scale_label</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_vehicle_footprint.py" line="43" column="1" bodyfile="scripts/publish_vehicle_footprint.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpublish__vehicle__footprint_1_1VehicleFootprint_1aa8324d79a3b682c0e3669c04a245e08c" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>publish_vehicle_footprint.VehicleFootprint::_label_x_offset</definition>
+        <argsstring></argsstring>
+        <name>_label_x_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_vehicle_footprint.py" line="54" column="1" bodyfile="scripts/publish_vehicle_footprint.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>publish_vehicle_footprint.VehicleFootprint::_label_marker</definition>
+        <argsstring></argsstring>
+        <name>_label_marker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_vehicle_footprint.py" line="58" column="1" bodyfile="scripts/publish_vehicle_footprint.py" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpublish__vehicle__footprint_1_1VehicleFootprint_1a1c46f786dec384f8f650633f4f537a64" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>publish_vehicle_footprint.VehicleFootprint::_odom_sub</definition>
+        <argsstring></argsstring>
+        <name>_odom_sub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_vehicle_footprint.py" line="78" column="1" bodyfile="scripts/publish_vehicle_footprint.py" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpublish__vehicle__footprint_1_1VehicleFootprint_1a01b24ff6e16df254648097bfac1e9291" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>publish_vehicle_footprint.VehicleFootprint::_footprint_pub</definition>
+        <argsstring></argsstring>
+        <name>_footprint_pub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_vehicle_footprint.py" line="80" column="1" bodyfile="scripts/publish_vehicle_footprint.py" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpublish__vehicle__footprint_1_1VehicleFootprint_1aa3d64fc33f44435d5a8c96ed9652d036" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>publish_vehicle_footprint.VehicleFootprint::_label_pub</definition>
+        <argsstring></argsstring>
+        <name>_label_pub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_vehicle_footprint.py" line="82" column="1" bodyfile="scripts/publish_vehicle_footprint.py" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpublish__vehicle__footprint_1_1VehicleFootprint_1ad7a259c65385f232276839446b30820f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def publish_vehicle_footprint.VehicleFootprint.__init__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_vehicle_footprint.py" line="29" column="1" bodyfile="scripts/publish_vehicle_footprint.py" bodystart="29" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classpublish__vehicle__footprint_1_1VehicleFootprint_1afe9b4dffe099f5b57091ef2f9602059b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def publish_vehicle_footprint.VehicleFootprint.odometry_callback</definition>
+        <argsstring>(self, msg)</argsstring>
+        <name>odometry_callback</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>msg</type>
+          <defname>msg</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_vehicle_footprint.py" line="89" column="1" bodyfile="scripts/publish_vehicle_footprint.py" bodystart="89" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classpublish__vehicle__footprint_1_1VehicleFootprint_1a7a1a792325fec2848b7a1d94b5a14258" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def publish_vehicle_footprint.VehicleFootprint.rot</definition>
+        <argsstring>(alpha)</argsstring>
+        <name>rot</name>
+        <param>
+          <type>alpha</type>
+          <defname>alpha</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_vehicle_footprint.py" line="85" column="1" bodyfile="scripts/publish_vehicle_footprint.py" bodystart="85" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="scripts/publish_vehicle_footprint.py" line="26" column="1" bodyfile="scripts/publish_vehicle_footprint.py" bodystart="26" bodyend="128"/>
+    <listofallmembers>
+      <member refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1ad7a259c65385f232276839446b30820f" prot="public" virt="non-virtual"><scope>publish_vehicle_footprint::VehicleFootprint</scope><name>__init__</name></member>
+      <member refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a01b24ff6e16df254648097bfac1e9291" prot="private" virt="non-virtual"><scope>publish_vehicle_footprint::VehicleFootprint</scope><name>_footprint_pub</name></member>
+      <member refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" prot="private" virt="non-virtual"><scope>publish_vehicle_footprint::VehicleFootprint</scope><name>_label_marker</name></member>
+      <member refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1aa3d64fc33f44435d5a8c96ed9652d036" prot="private" virt="non-virtual"><scope>publish_vehicle_footprint::VehicleFootprint</scope><name>_label_pub</name></member>
+      <member refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1aa8324d79a3b682c0e3669c04a245e08c" prot="private" virt="non-virtual"><scope>publish_vehicle_footprint::VehicleFootprint</scope><name>_label_x_offset</name></member>
+      <member refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1afe1185045a678edbbbebcc39d9e4ff71" prot="private" virt="non-virtual"><scope>publish_vehicle_footprint::VehicleFootprint</scope><name>_namespace</name></member>
+      <member refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a1c46f786dec384f8f650633f4f537a64" prot="private" virt="non-virtual"><scope>publish_vehicle_footprint::VehicleFootprint</scope><name>_odom_sub</name></member>
+      <member refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1abd6b15680d44ad47d476d2c746403206" prot="private" virt="non-virtual"><scope>publish_vehicle_footprint::VehicleFootprint</scope><name>_scale_footprint</name></member>
+      <member refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a076769d50bc9177dc8dae79b9599060a" prot="private" virt="non-virtual"><scope>publish_vehicle_footprint::VehicleFootprint</scope><name>_scale_label</name></member>
+      <member refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1acbd1fc242b73a4bdfe3ca8e4eb013875" prot="public" virt="non-virtual"><scope>publish_vehicle_footprint::VehicleFootprint</scope><name>MARKER</name></member>
+      <member refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1afe9b4dffe099f5b57091ef2f9602059b" prot="public" virt="non-virtual"><scope>publish_vehicle_footprint::VehicleFootprint</scope><name>odometry_callback</name></member>
+      <member refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a7a1a792325fec2848b7a1d94b5a14258" prot="public" virt="non-virtual"><scope>publish_vehicle_footprint::VehicleFootprint</scope><name>rot</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

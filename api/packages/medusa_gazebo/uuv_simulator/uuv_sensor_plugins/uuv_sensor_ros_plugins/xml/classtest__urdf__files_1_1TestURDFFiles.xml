@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classtest__urdf__files_1_1TestURDFFiles" kind="class" language="Python" prot="public">
+    <compoundname>test_urdf_files::TestURDFFiles</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TestCase</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtest__urdf__files_1_1TestURDFFiles_1afe48c464349533f8d1c965c32c23eea6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_urdf_files.TestURDFFiles.test_xacro</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_xacro</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/test_urdf_files.py" line="42" column="1" bodyfile="test/test_urdf_files.py" bodystart="42" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>unittest::TestCase</label>
+      </node>
+      <node id="1">
+        <label>test_urdf_files.TestURDFFiles</label>
+        <link refid="classtest__urdf__files_1_1TestURDFFiles"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>unittest::TestCase</label>
+      </node>
+      <node id="1">
+        <label>test_urdf_files.TestURDFFiles</label>
+        <link refid="classtest__urdf__files_1_1TestURDFFiles"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="test/test_urdf_files.py" line="41" column="1" bodyfile="test/test_urdf_files.py" bodystart="41" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classtest__urdf__files_1_1TestURDFFiles_1afe48c464349533f8d1c965c32c23eea6" prot="public" virt="non-virtual"><scope>test_urdf_files::TestURDFFiles</scope><name>test_xacro</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

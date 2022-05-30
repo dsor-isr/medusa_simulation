@@ -1,0 +1,468 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="HydrodynamicModel_8hh" kind="file" language="C++">
+    <compoundname>HydrodynamicModel.hh</compoundname>
+    <includes local="no">gazebo/gazebo.hh</includes>
+    <includes local="no">gazebo/physics/Link.hh</includes>
+    <includes local="no">gazebo/physics/Model.hh</includes>
+    <includes local="no">gazebo/physics/Collision.hh</includes>
+    <includes local="no">gazebo/physics/Shape.hh</includes>
+    <includes local="no">eigen3/Eigen/Core</includes>
+    <includes local="no">eigen3/Eigen/Geometry</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <includes refid="Def_8hh" local="no">uuv_gazebo_plugins/Def.hh</includes>
+    <includes refid="BuoyantObject_8hh" local="no">uuv_gazebo_plugins/BuoyantObject.hh</includes>
+    <includedby refid="UnderwaterObjectPlugin_8hh" local="no">include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh</includedby>
+    <includedby refid="HydrodynamicModel_8cc" local="no">src/HydrodynamicModel.cc</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>uuv_gazebo_plugins/Def.hh</label>
+        <link refid="Def_8hh"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>uuv_gazebo_plugins/BuoyantObject.hh</label>
+        <link refid="BuoyantObject_8hh"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>gazebo/physics/Collision.hh</label>
+      </node>
+      <node id="9">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>map</label>
+      </node>
+      <node id="1">
+        <label>include/uuv_gazebo_plugins/HydrodynamicModel.hh</label>
+        <link refid="HydrodynamicModel_8hh"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gazebo/gazebo.hh</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+      <node id="6">
+        <label>gazebo/physics/Shape.hh</label>
+      </node>
+      <node id="4">
+        <label>gazebo/physics/Model.hh</label>
+      </node>
+      <node id="7">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="3">
+        <label>gazebo/physics/Link.hh</label>
+      </node>
+      <node id="8">
+        <label>eigen3/Eigen/Geometry</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/uuv_gazebo_plugins/HydrodynamicModel.hh</label>
+        <link refid="HydrodynamicModel_8hh"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/uuv_gazebo_plugins/UnderwaterObjectPlugin.hh</label>
+        <link refid="UnderwaterObjectPlugin_8hh"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgazebo_1_1HydrodynamicModel" prot="public">gazebo::HydrodynamicModel</innerclass>
+    <innerclass refid="classgazebo_1_1HydrodynamicModelFactory" prot="public">gazebo::HydrodynamicModelFactory</innerclass>
+    <innerclass refid="classgazebo_1_1HMFossen" prot="public">gazebo::HMFossen</innerclass>
+    <innerclass refid="classgazebo_1_1HMSphere" prot="public">gazebo::HMSphere</innerclass>
+    <innerclass refid="classgazebo_1_1HMCylinder" prot="public">gazebo::HMCylinder</innerclass>
+    <innerclass refid="classgazebo_1_1HMSpheroid" prot="public">gazebo::HMSpheroid</innerclass>
+    <innerclass refid="classgazebo_1_1HMBox" prot="public">gazebo::HMBox</innerclass>
+    <innernamespace refid="namespacegazebo">gazebo</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="HydrodynamicModel_8hh_1a4f8c2caa967436437bdfd62b94509794" prot="public" static="no">
+        <name>REGISTER_HYDRODYNAMICMODEL</name>
+        <param><defname>type</defname></param>
+        <initializer>static const bool registeredWithFactory</initializer>
+        <briefdescription>
+<para>Use the following macro within a HydrodynamicModel declaration: </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/HydrodynamicModel.hh" line="129" column="9" bodyfile="include/uuv_gazebo_plugins/HydrodynamicModel.hh" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="HydrodynamicModel_8hh_1abdb9e8724ddd754aaa5445bfe88674c4" prot="public" static="no">
+        <name>REGISTER_HYDRODYNAMICMODEL_CREATOR</name>
+        <param><defname>type</defname></param>
+        <param><defname>creator</defname></param>
+        <initializer>const bool type::registeredWithFactory = HydrodynamicModelFactory::GetInstance().RegisterCreator(type::IDENTIFIER, creator);</initializer>
+        <briefdescription>
+<para>Use the following macro before a HydrodynamicModel&apos;s definition: </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/HydrodynamicModel.hh" line="132" column="9" bodyfile="include/uuv_gazebo_plugins/HydrodynamicModel.hh" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="HydrodynamicModel_8hh_1ac3d40f881974fa3ee643322148d4e320" prot="public" static="no">
+        <type>ignition::math::AxisAlignedBox</type>
+        <definition>using AxisAlignedBox =  ignition::math::AxisAlignedBox</definition>
+        <argsstring></argsstring>
+        <name>AxisAlignedBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/HydrodynamicModel.hh" line="41" column="1" bodyfile="include/uuv_gazebo_plugins/HydrodynamicModel.hh" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="HydrodynamicModel_8hh_1ab7e72448c3e86f93ab214d73c0cd4414" prot="public" static="no">
+        <type>boost::shared_ptr&lt; HydrodynamicModel &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;HydrodynamicModel&gt; gazebo::HydrodynamicModelPtr</definition>
+        <argsstring></argsstring>
+        <name>HydrodynamicModelPtr</name>
+        <briefdescription>
+<para>Pointer to model. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/HydrodynamicModel.hh" line="104" column="27" bodyfile="include/uuv_gazebo_plugins/HydrodynamicModel.hh" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="HydrodynamicModel_8hh_1a194f8f65c5742548df2f40575c3a243a" prot="public" static="no">
+        <type>HydrodynamicModel *(*</type>
+        <definition>typedef HydrodynamicModel*(* gazebo::HydrodynamicModelCreator) (sdf::ElementPtr, physics::LinkPtr)</definition>
+        <argsstring>)(sdf::ElementPtr, physics::LinkPtr)</argsstring>
+        <name>HydrodynamicModelCreator</name>
+        <briefdescription>
+<para>Function pointer to create a certain a model. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/HydrodynamicModel.hh" line="107" column="9" bodyfile="include/uuv_gazebo_plugins/HydrodynamicModel.hh" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file contains the definition for different classes of hydrodynamic models for submerged objects. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2016<sp/>The<sp/>UUV<sp/>Simulator<sp/>Authors.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__UUV_GAZEBO_HYDRO_MODEL_HH__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__UUV_GAZEBO_HYDRO_MODEL_HH__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gazebo/gazebo.hh&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gazebo/physics/Link.hh&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gazebo/physics/Model.hh&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gazebo/physics/Collision.hh&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gazebo/physics/Shape.hh&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;eigen3/Eigen/Core&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;eigen3/Eigen/Geometry&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="Def_8hh" kindref="compound">uuv_gazebo_plugins/Def.hh</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="BuoyantObject_8hh" kindref="compound">uuv_gazebo_plugins/BuoyantObject.hh</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>ignition-math6<sp/>Box<sp/>has<sp/>been<sp/>renamed<sp/>to<sp/>AxisAlignedBox<sp/>and<sp/>a<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>new<sp/>Box<sp/>class<sp/>with<sp/>different<sp/>properties<sp/>has<sp/>been<sp/>created.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>AxisAlignedBox<sp/>=<sp/>ignition::math::AxisAlignedBox;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">gazebo</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45" refid="classgazebo_1_1HydrodynamicModel" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgazebo_1_1HydrodynamicModel" kindref="compound">HydrodynamicModel</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1BuoyantObject" kindref="compound">BuoyantObject</ref><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="classgazebo_1_1HydrodynamicModel_1aac68d5a44688757965ccf0e9d648c8b8" kindref="member">HydrodynamicModel</ref>(sdf::ElementPtr<sp/>_sdf,<sp/>physics::LinkPtr<sp/>_link);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classgazebo_1_1HydrodynamicModel_1a16e39024389414178442d4278c16222a" kindref="member">GetType</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel_1a365a5ea0d71ad3ec3d79f985c42c2417" kindref="member">ApplyHydrodynamicForces</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ignition::math::Vector3d<sp/>&amp;_flowVelWorld)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel_1aead6d1b6eefebe5034bb86adcbf1169a" kindref="member">Print</ref>(std::string<sp/>_paramName,<sp/>std::string<sp/>_message<sp/>=<sp/>std::string())<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel_1ac123271c564f843fb280713704d20f7e" kindref="member">GetParam</ref>(std::string<sp/>_tag,<sp/>std::vector&lt;double&gt;&amp;<sp/>_output)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel_1ac123271c564f843fb280713704d20f7e" kindref="member">GetParam</ref>(std::string<sp/>_tag,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>_output)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel_1a173db3079e94e656abcaf44d61ea3ba2" kindref="member">SetParam</ref>(std::string<sp/>_tag,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_input)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel_1abb6cf4e433202d163b1276d67434ace2" kindref="member">ComputeAcc</ref>(<ref refid="Def_8hh_1a09219f5e0b822edbf24b125e0e2a4fe0" kindref="member">Eigen::Vector6d</ref><sp/>_velRel,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_time,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_alpha<sp/>=<sp/>0.3);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel_1a729f90fa3933d2fd9aeed5fdb7838f1b" kindref="member">CheckParams</ref>(sdf::ElementPtr<sp/>_sdf);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>ignition::math::Vector3d<sp/><ref refid="classgazebo_1_1HydrodynamicModel_1a46a25bbc280aa3d466268756c7362809" kindref="member">ToNED</ref>(ignition::math::Vector3d<sp/>_vec);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>ignition::math::Vector3d<sp/><ref refid="classgazebo_1_1HydrodynamicModel_1a715caa11d851a41265d0d682301e3781" kindref="member">FromNED</ref>(ignition::math::Vector3d<sp/>_vec);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classgazebo_1_1HydrodynamicModel_1a9d402a541867397d32247de6746ab5de" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="Def_8hh_1a09219f5e0b822edbf24b125e0e2a4fe0" kindref="member">Eigen::Vector6d</ref><sp/><ref refid="classgazebo_1_1HydrodynamicModel_1a9d402a541867397d32247de6746ab5de" kindref="member">filteredAcc</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classgazebo_1_1HydrodynamicModel_1a212a914dc81067558c637d308773e23e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel_1a212a914dc81067558c637d308773e23e" kindref="member">lastTime</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classgazebo_1_1HydrodynamicModel_1affd2dff3e08a26ac9e00ee2ebaff6016" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="Def_8hh_1a09219f5e0b822edbf24b125e0e2a4fe0" kindref="member">Eigen::Vector6d</ref><sp/><ref refid="classgazebo_1_1HydrodynamicModel_1affd2dff3e08a26ac9e00ee2ebaff6016" kindref="member">lastVelRel</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="classgazebo_1_1HydrodynamicModel_1a6152abe7eda7e10157ed72696d87be38" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classgazebo_1_1HydrodynamicModel_1a6152abe7eda7e10157ed72696d87be38" kindref="member">params</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="classgazebo_1_1HydrodynamicModel_1ae82075119ebbf0d7f3f0ea13b6aeb6cf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel_1ae82075119ebbf0d7f3f0ea13b6aeb6cf" kindref="member">Re</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="classgazebo_1_1HydrodynamicModel_1adf0cb47bd32f552c285f4cf5eeec9d36" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel_1adf0cb47bd32f552c285f4cf5eeec9d36" kindref="member">temperature</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="HydrodynamicModel_8hh_1ab7e72448c3e86f93ab214d73c0cd4414" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::shared_ptr&lt;HydrodynamicModel&gt;<sp/><ref refid="HydrodynamicModel_8hh_1ab7e72448c3e86f93ab214d73c0cd4414" kindref="member">HydrodynamicModelPtr</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="HydrodynamicModel_8hh_1a194f8f65c5742548df2f40575c3a243a" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel" kindref="compound">HydrodynamicModel</ref>*<sp/>(*HydrodynamicModelCreator)(sdf::ElementPtr,<sp/>physics::LinkPtr);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classgazebo_1_1HydrodynamicModelFactory" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgazebo_1_1HydrodynamicModelFactory" kindref="compound">HydrodynamicModelFactory</ref><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/><ref refid="classgazebo_1_1HydrodynamicModel" kindref="compound">HydrodynamicModel</ref>*<sp/><ref refid="classgazebo_1_1HydrodynamicModelFactory_1a4113b1faaf8277574e4a4b3854f51884" kindref="member">CreateHydrodynamicModel</ref>(sdf::ElementPtr<sp/>_sdf,<sp/>physics::LinkPtr<sp/>_link);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModelFactory" kindref="compound">HydrodynamicModelFactory</ref>&amp;<sp/><ref refid="classgazebo_1_1HydrodynamicModelFactory_1a8281e8722c60237ee137347d4ddfe668" kindref="member">GetInstance</ref>();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModelFactory_1acc1cc6c8730ee4e0d558d4fbfa96ecb5" kindref="member">RegisterCreator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>_identifier,<sp/><ref refid="HydrodynamicModel_8hh_1a194f8f65c5742548df2f40575c3a243a" kindref="member">HydrodynamicModelCreator</ref><sp/>_creator);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:<sp/><ref refid="classgazebo_1_1HydrodynamicModelFactory" kindref="compound">HydrodynamicModelFactory</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:<sp/>std::map&lt;std::string,<sp/>HydrodynamicModelCreator&gt;<sp/>creators_;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="HydrodynamicModel_8hh_1a4f8c2caa967436437bdfd62b94509794" refkind="member"><highlight class="preprocessor">#define<sp/>REGISTER_HYDRODYNAMICMODEL(type)<sp/>static<sp/>const<sp/>bool<sp/>registeredWithFactory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="HydrodynamicModel_8hh_1abdb9e8724ddd754aaa5445bfe88674c4" refkind="member"><highlight class="preprocessor">#define<sp/>REGISTER_HYDRODYNAMICMODEL_CREATOR(type,<sp/>creator)<sp/>const<sp/>bool<sp/>type::registeredWithFactory<sp/>=<sp/>HydrodynamicModelFactory::GetInstance().RegisterCreator(type::IDENTIFIER,<sp/>creator);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="classgazebo_1_1HMFossen" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgazebo_1_1HMFossen" kindref="compound">HMFossen</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel" kindref="compound">HydrodynamicModel</ref><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel" kindref="compound">HydrodynamicModel</ref>*<sp/><ref refid="classgazebo_1_1HMFossen_1a4473fe62590315c62a74d57a49561c3d" kindref="member">create</ref>(sdf::ElementPtr<sp/>_sdf,<sp/>physics::LinkPtr<sp/>_link);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="classgazebo_1_1HMFossen_1aab89ea21b6813039f229fc7b9a8fcc0d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classgazebo_1_1HMFossen_1aab89ea21b6813039f229fc7b9a8fcc0d" kindref="member">GetType</ref>()<sp/>{<sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen_1a0b7a8b504cbf1075e53a0960b2563f4a" kindref="member">IDENTIFIER</ref>;<sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen_1abd8c4e6caecac0a09fdbfa4d7d6b3b54" kindref="member">Print</ref>(std::string<sp/>_paramName,<sp/>std::string<sp/>_message<sp/>=<sp/>std::string());</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen_1aef89b7d0c921eed479aea9f825de8883" kindref="member">GetParam</ref>(std::string<sp/>_tag,<sp/>std::vector&lt;double&gt;&amp;<sp/>_output);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen_1aef89b7d0c921eed479aea9f825de8883" kindref="member">GetParam</ref>(std::string<sp/>_tag,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>_output);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen_1ad312189912d8613083fc53570ed07ae0" kindref="member">SetParam</ref>(std::string<sp/>_tag,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_input);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="classgazebo_1_1HMFossen_1ab3a59be3a5e9037575ee6f4878e96d8b" kindref="member">REGISTER_HYDRODYNAMICMODEL</ref>(<ref refid="classgazebo_1_1HMFossen" kindref="compound">HMFossen</ref>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="classgazebo_1_1HMFossen_1a0b7a8b504cbf1075e53a0960b2563f4a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classgazebo_1_1HMFossen_1a0b7a8b504cbf1075e53a0960b2563f4a" kindref="member">IDENTIFIER</ref>;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="classgazebo_1_1HMFossen" kindref="compound">HMFossen</ref>(sdf::ElementPtr<sp/>_sdf,<sp/>physics::LinkPtr<sp/>_link);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen_1ad13894a8127a248f9c8c79678266ed07" kindref="member">ApplyHydrodynamicForces</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ignition::math::Vector3d<sp/>&amp;_flowVelWorld);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen_1afe97af45fc44777a04b4f1c81519b07b" kindref="member">ComputeAddedCoriolisMatrix</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="Def_8hh_1a09219f5e0b822edbf24b125e0e2a4fe0" kindref="member">Eigen::Vector6d</ref>&amp;<sp/>_vel,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="Def_8hh_1ab6f8b8b11b0f6350ed45e7cd3437207f" kindref="member">Eigen::Matrix6d</ref>&amp;<sp/>_Ma,<sp/><ref refid="Def_8hh_1ab6f8b8b11b0f6350ed45e7cd3437207f" kindref="member">Eigen::Matrix6d</ref><sp/>&amp;_Ca)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen_1a19624761792eac92864647ebee971196" kindref="member">ComputeDampingMatrix</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="Def_8hh_1a09219f5e0b822edbf24b125e0e2a4fe0" kindref="member">Eigen::Vector6d</ref>&amp;<sp/>_vel,<sp/><ref refid="Def_8hh_1ab6f8b8b11b0f6350ed45e7cd3437207f" kindref="member">Eigen::Matrix6d</ref><sp/>&amp;_D)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="Def_8hh_1ab6f8b8b11b0f6350ed45e7cd3437207f" kindref="member">Eigen::Matrix6d</ref><sp/><ref refid="classgazebo_1_1HMFossen_1a555bb01ef30396e3b39fa26bf6a79848" kindref="member">GetAddedMass</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="classgazebo_1_1HMFossen_1a2a31c659331c826a6d80abe7755e473e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="Def_8hh_1ab6f8b8b11b0f6350ed45e7cd3437207f" kindref="member">Eigen::Matrix6d</ref><sp/><ref refid="classgazebo_1_1HMFossen_1a2a31c659331c826a6d80abe7755e473e" kindref="member">Ma</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="classgazebo_1_1HMFossen_1ada6f90d47445047d905e8fe3794885ac" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen_1ada6f90d47445047d905e8fe3794885ac" kindref="member">scalingAddedMass</ref>;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="classgazebo_1_1HMFossen_1ab326125b3b49893d7492f4778d6ace55" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen_1ab326125b3b49893d7492f4778d6ace55" kindref="member">offsetAddedMass</ref>;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="classgazebo_1_1HMFossen_1aafd51761404afd9b1e98f0b1ecb0b14f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="Def_8hh_1ab6f8b8b11b0f6350ed45e7cd3437207f" kindref="member">Eigen::Matrix6d</ref><sp/><ref refid="classgazebo_1_1HMFossen_1aafd51761404afd9b1e98f0b1ecb0b14f" kindref="member">Ca</ref>;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="classgazebo_1_1HMFossen_1a20df2ff4d0a155b41c275d37e621e32f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="Def_8hh_1ab6f8b8b11b0f6350ed45e7cd3437207f" kindref="member">Eigen::Matrix6d</ref><sp/><ref refid="classgazebo_1_1HMFossen_1a20df2ff4d0a155b41c275d37e621e32f" kindref="member">D</ref>;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="classgazebo_1_1HMFossen_1a5d5f9e75be8dbbd2b8bbfbc81ba55cf3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen_1a5d5f9e75be8dbbd2b8bbfbc81ba55cf3" kindref="member">scalingDamping</ref>;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="classgazebo_1_1HMFossen_1adc9dd4195791aab3ebaf12bdbe2e293e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen_1adc9dd4195791aab3ebaf12bdbe2e293e" kindref="member">offsetLinearDamping</ref>;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="classgazebo_1_1HMFossen_1a1c9074d7810329daca5f3ea42e6307cb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen_1a1c9074d7810329daca5f3ea42e6307cb" kindref="member">offsetLinForwardSpeedDamping</ref>;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="classgazebo_1_1HMFossen_1a6e2bfe2801f2697f0e0c087a45158ff3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen_1a6e2bfe2801f2697f0e0c087a45158ff3" kindref="member">offsetNonLinDamping</ref>;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="classgazebo_1_1HMFossen_1a1301b0130643ce7d55b8ff238afdc264" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="Def_8hh_1ab6f8b8b11b0f6350ed45e7cd3437207f" kindref="member">Eigen::Matrix6d</ref><sp/><ref refid="classgazebo_1_1HMFossen_1a1301b0130643ce7d55b8ff238afdc264" kindref="member">DLin</ref>;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="classgazebo_1_1HMFossen_1a9a2cc66ad71a7fc9ce904f5cc27a36f0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="Def_8hh_1ab6f8b8b11b0f6350ed45e7cd3437207f" kindref="member">Eigen::Matrix6d</ref><sp/><ref refid="classgazebo_1_1HMFossen_1a9a2cc66ad71a7fc9ce904f5cc27a36f0" kindref="member">DLinForwardSpeed</ref>;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226" refid="classgazebo_1_1HMFossen_1a3219a54c0be1a8a1e186b33dde95d6b5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="Def_8hh_1ab6f8b8b11b0f6350ed45e7cd3437207f" kindref="member">Eigen::Matrix6d</ref><sp/><ref refid="classgazebo_1_1HMFossen_1a3219a54c0be1a8a1e186b33dde95d6b5" kindref="member">DNonLin</ref>;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="classgazebo_1_1HMFossen_1aaaee5e4e341d1f3fccba9c832429712d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>std::vector&lt;double&gt;<sp/><ref refid="classgazebo_1_1HMFossen_1aaaee5e4e341d1f3fccba9c832429712d" kindref="member">linearDampCoef</ref>;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="classgazebo_1_1HMFossen_1a062e26123041365e16822bc2059fe3d1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>std::vector&lt;double&gt;<sp/><ref refid="classgazebo_1_1HMFossen_1a062e26123041365e16822bc2059fe3d1" kindref="member">quadDampCoef</ref>;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="classgazebo_1_1HMSphere" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgazebo_1_1HMSphere" kindref="compound">HMSphere</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen" kindref="compound">HMFossen</ref><sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel" kindref="compound">HydrodynamicModel</ref>*<sp/><ref refid="classgazebo_1_1HMSphere_1aba02ae4b4e986947c89b3552b2661ddf" kindref="member">create</ref>(sdf::ElementPtr<sp/>_sdf,<sp/>physics::LinkPtr<sp/>_link);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="classgazebo_1_1HMSphere_1a6ee346960d84c9013955972feb52cc8b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classgazebo_1_1HMSphere_1a6ee346960d84c9013955972feb52cc8b" kindref="member">GetType</ref>()<sp/>{<sp/></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMSphere_1ac6fe680806e0da29a77c3dd9996a1763" kindref="member">IDENTIFIER</ref>;<sp/></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMSphere_1acd4564627261d2b9b3008760a4a478d7" kindref="member">Print</ref>(std::string<sp/>_paramName,<sp/>std::string<sp/>_message<sp/>=<sp/>std::string());</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="classgazebo_1_1HMSphere_1aeaadb6a68613b17755780a3de522ff5c" kindref="member">REGISTER_HYDRODYNAMICMODEL</ref>(<ref refid="classgazebo_1_1HMSphere" kindref="compound">HMSphere</ref>);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255" refid="classgazebo_1_1HMSphere_1ac6fe680806e0da29a77c3dd9996a1763" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classgazebo_1_1HMSphere_1ac6fe680806e0da29a77c3dd9996a1763" kindref="member">IDENTIFIER</ref>;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="classgazebo_1_1HMSphere" kindref="compound">HMSphere</ref>(sdf::ElementPtr<sp/>_sdf,<sp/>physics::LinkPtr<sp/>_link);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="classgazebo_1_1HMSphere_1a53a9704c540fd283d50118a870d9a8b1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMSphere_1a53a9704c540fd283d50118a870d9a8b1" kindref="member">radius</ref>;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263" refid="classgazebo_1_1HMSphere_1a61c1e959e29f452df6dda720e5f6b5c1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMSphere_1a61c1e959e29f452df6dda720e5f6b5c1" kindref="member">Cd</ref>;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266" refid="classgazebo_1_1HMSphere_1a5081baf0c9306d417ad644e227687b68" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMSphere_1a5081baf0c9306d417ad644e227687b68" kindref="member">areaSection</ref>;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272" refid="classgazebo_1_1HMCylinder" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgazebo_1_1HMCylinder" kindref="compound">HMCylinder</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen" kindref="compound">HMFossen</ref><sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel" kindref="compound">HydrodynamicModel</ref>*<sp/><ref refid="classgazebo_1_1HMCylinder_1a76f0a8d44b4bb95f0b6d4f854ce2be21" kindref="member">create</ref>(sdf::ElementPtr<sp/>_sdf,<sp/>physics::LinkPtr<sp/>_link);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278" refid="classgazebo_1_1HMCylinder_1af03d6bf3387a364000b7f40fca710ec5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classgazebo_1_1HMCylinder_1af03d6bf3387a364000b7f40fca710ec5" kindref="member">GetType</ref>()<sp/>{<sp/></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMCylinder_1a87cc88906d52e7d431e1b55bea1854df" kindref="member">IDENTIFIER</ref>;<sp/></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMCylinder_1afacc200562d7f89d6b04bf18a1d0cfb7" kindref="member">Print</ref>(std::string<sp/>_paramName,<sp/>std::string<sp/>_message<sp/>=<sp/>std::string());</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:<sp/>REGISTER_HYDRODYNAMICMODEL(<ref refid="classgazebo_1_1HMCylinder" kindref="compound">HMCylinder</ref>);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289" refid="classgazebo_1_1HMCylinder_1a87cc88906d52e7d431e1b55bea1854df" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classgazebo_1_1HMCylinder_1a87cc88906d52e7d431e1b55bea1854df" kindref="member">IDENTIFIER</ref>;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="classgazebo_1_1HMCylinder" kindref="compound">HMCylinder</ref>(sdf::ElementPtr<sp/>_sdf,<sp/>physics::LinkPtr<sp/>_link);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294" refid="classgazebo_1_1HMCylinder_1a396afa964665d8f0702391b2cfdf6cc4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMCylinder_1a396afa964665d8f0702391b2cfdf6cc4" kindref="member">length</ref>;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297" refid="classgazebo_1_1HMCylinder_1aba2dc883b09294d82f9a87cc197e4a25" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMCylinder_1aba2dc883b09294d82f9a87cc197e4a25" kindref="member">radius</ref>;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300" refid="classgazebo_1_1HMCylinder_1ae872f7cb144c935dd22e84e33b1cdf7e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/>std::string<sp/><ref refid="classgazebo_1_1HMCylinder_1ae872f7cb144c935dd22e84e33b1cdf7e" kindref="member">axis</ref>;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303" refid="classgazebo_1_1HMCylinder_1af173fe2078a149180c5bd7a36c746265" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMCylinder_1af173fe2078a149180c5bd7a36c746265" kindref="member">dimRatio</ref>;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306" refid="classgazebo_1_1HMCylinder_1af6ee1fcee5b899e82b5ffdd114d01c49" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMCylinder_1af6ee1fcee5b899e82b5ffdd114d01c49" kindref="member">cdCirc</ref>;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309" refid="classgazebo_1_1HMCylinder_1a2c81fea33f924981d87c7213d75916fe" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMCylinder_1a2c81fea33f924981d87c7213d75916fe" kindref="member">cdLength</ref>;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316" refid="classgazebo_1_1HMSpheroid" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgazebo_1_1HMSpheroid" kindref="compound">HMSpheroid</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen" kindref="compound">HMFossen</ref><sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel" kindref="compound">HydrodynamicModel</ref>*<sp/><ref refid="classgazebo_1_1HMSpheroid_1acca3b046f41e6fc364d744bc3e6d0486" kindref="member">create</ref>(sdf::ElementPtr<sp/>_sdf,<sp/>physics::LinkPtr<sp/>_link);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322" refid="classgazebo_1_1HMSpheroid_1a2af19270ed7d89121ad909c2d295d2ff" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classgazebo_1_1HMSpheroid_1a2af19270ed7d89121ad909c2d295d2ff" kindref="member">GetType</ref>()<sp/>{<sp/></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMSpheroid_1a5429fc186631bdebff6e8f12e60b1eb1" kindref="member">IDENTIFIER</ref>;<sp/></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMSpheroid_1a76aa73929b7c32a19d578bea07dea1f1" kindref="member">Print</ref>(std::string<sp/>_paramName,<sp/>std::string<sp/>_message<sp/>=<sp/>std::string());</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:<sp/>REGISTER_HYDRODYNAMICMODEL(<ref refid="classgazebo_1_1HMSpheroid" kindref="compound">HMSpheroid</ref>);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333" refid="classgazebo_1_1HMSpheroid_1a5429fc186631bdebff6e8f12e60b1eb1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classgazebo_1_1HMSpheroid_1a5429fc186631bdebff6e8f12e60b1eb1" kindref="member">IDENTIFIER</ref>;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="classgazebo_1_1HMSpheroid" kindref="compound">HMSpheroid</ref>(sdf::ElementPtr<sp/>_sdf,<sp/>physics::LinkPtr<sp/>_link);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338" refid="classgazebo_1_1HMSpheroid_1a3de304ad70f38d3ef85501c5533c39a3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMSpheroid_1a3de304ad70f38d3ef85501c5533c39a3" kindref="member">length</ref>;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341" refid="classgazebo_1_1HMSpheroid_1a1aab5b64e948769bf729157ce0f3ae8d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMSpheroid_1a1aab5b64e948769bf729157ce0f3ae8d" kindref="member">radius</ref>;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347" refid="classgazebo_1_1HMBox" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgazebo_1_1HMBox" kindref="compound">HMBox</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMFossen" kindref="compound">HMFossen</ref><sp/>{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HydrodynamicModel" kindref="compound">HydrodynamicModel</ref>*<sp/><ref refid="classgazebo_1_1HMBox_1a7e70ec74041e24838fb2597020444bc3" kindref="member">create</ref>(sdf::ElementPtr<sp/>_sdf,<sp/>physics::LinkPtr<sp/>_link);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353" refid="classgazebo_1_1HMBox_1a6617b9acdab36fa004feb27b7a05f6ef" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classgazebo_1_1HMBox_1a6617b9acdab36fa004feb27b7a05f6ef" kindref="member">GetType</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMBox_1a13bd1620bd19b2ae8096decc6502a1e7" kindref="member">IDENTIFIER</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMBox_1a56a3123563c1f6dfa78a4f124d495c72" kindref="member">Print</ref>(std::string<sp/>_paramName,<sp/>std::string<sp/>_message<sp/>=<sp/>std::string());</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:<sp/>REGISTER_HYDRODYNAMICMODEL(<ref refid="classgazebo_1_1HMBox" kindref="compound">HMBox</ref>);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362" refid="classgazebo_1_1HMBox_1a13bd1620bd19b2ae8096decc6502a1e7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classgazebo_1_1HMBox_1a13bd1620bd19b2ae8096decc6502a1e7" kindref="member">IDENTIFIER</ref>;</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><ref refid="classgazebo_1_1HMBox_1af1d27f2047dbcfa9b979179f5f3ef870" kindref="member">HMBox</ref>(sdf::ElementPtr<sp/>_sdf,<sp/>physics::LinkPtr<sp/>_link);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368" refid="classgazebo_1_1HMBox_1ac2c2cc1ea1fbb98b17f47ebede1261e3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMBox_1ac2c2cc1ea1fbb98b17f47ebede1261e3" kindref="member">Cd</ref>;</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371" refid="classgazebo_1_1HMBox_1a13e4a2034e9c0b727087c2525bd84acf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMBox_1a13e4a2034e9c0b727087c2525bd84acf" kindref="member">length</ref>;</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374" refid="classgazebo_1_1HMBox_1ab0d0b9465a2f7f595d5922d3ed45a9c4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMBox_1ab0d0b9465a2f7f595d5922d3ed45a9c4" kindref="member">width</ref>;</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377" refid="classgazebo_1_1HMBox_1a73325f0d7d5098892963503f5b6c3149" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgazebo_1_1HMBox_1a73325f0d7d5098892963503f5b6c3149" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="378"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="379"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>__UUV_GAZEBO_HYDRO_MODEL_HH__</highlight></codeline>
+    </programlisting>
+    <location file="include/uuv_gazebo_plugins/HydrodynamicModel.hh"/>
+  </compounddef>
+</doxygen>

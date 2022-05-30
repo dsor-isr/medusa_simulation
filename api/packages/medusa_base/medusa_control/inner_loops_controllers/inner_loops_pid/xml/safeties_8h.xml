@@ -12,9 +12,6 @@
       <node id="3">
         <label>medusa_gimmicks_library/MedusaGimmicks.h</label>
       </node>
-      <node id="2">
-        <label>auv_msgs/NavigationStatus.h</label>
-      </node>
       <node id="1">
         <label>include/ros/safeties.h</label>
         <link refid="safeties_8h"/>
@@ -26,6 +23,9 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+      </node>
+      <node id="2">
+        <label>auv_msgs/NavigationStatus.h</label>
       </node>
       <node id="5">
         <label>std_msgs/Float64.h</label>

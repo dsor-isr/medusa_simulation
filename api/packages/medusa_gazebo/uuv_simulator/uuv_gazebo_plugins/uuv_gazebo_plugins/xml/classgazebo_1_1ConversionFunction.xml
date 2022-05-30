@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classgazebo_1_1ConversionFunction" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>gazebo::ConversionFunction</compoundname>
+    <derivedcompoundref refid="classgazebo_1_1ConversionFunctionBasic" prot="public" virt="non-virtual">gazebo::ConversionFunctionBasic</derivedcompoundref>
+    <derivedcompoundref refid="classgazebo_1_1ConversionFunctionBessa" prot="public" virt="non-virtual">gazebo::ConversionFunctionBessa</derivedcompoundref>
+    <derivedcompoundref refid="classgazebo_1_1ConversionFunctionLinearInterp" prot="public" virt="non-virtual">gazebo::ConversionFunctionLinearInterp</derivedcompoundref>
+    <includes refid="ThrusterConversionFcn_8hh" local="no">ThrusterConversionFcn.hh</includes>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgazebo_1_1ConversionFunction_1a70689912f6f1f316a84f2dea2e10050d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gazebo::ConversionFunction::ConversionFunction</definition>
+        <argsstring>()</argsstring>
+        <name>ConversionFunction</name>
+        <briefdescription>
+<para>Protected constructor: Use the factory instead. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/ThrusterConversionFcn.hh" line="33" column="14" bodyfile="include/uuv_gazebo_plugins/ThrusterConversionFcn.hh" bodystart="33" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgazebo_1_1ConversionFunction_1afc13b3997ac95f70425ec5fc830d927c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual gazebo::ConversionFunction::~ConversionFunction</definition>
+        <argsstring>()</argsstring>
+        <name>~ConversionFunction</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/ThrusterConversionFcn.hh" line="36" column="19" bodyfile="include/uuv_gazebo_plugins/ThrusterConversionFcn.hh" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1ConversionFunction_1ac0d2640de379ea86c087491c70bc6189" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string gazebo::ConversionFunction::GetType</definition>
+        <argsstring>()=0</argsstring>
+        <name>GetType</name>
+        <reimplementedby refid="classgazebo_1_1ConversionFunctionBasic_1a2ce48db471c7706abede19a724ef08fe">GetType</reimplementedby>
+        <reimplementedby refid="classgazebo_1_1ConversionFunctionBessa_1a31637f978fdc895689920238998b7926">GetType</reimplementedby>
+        <reimplementedby refid="classgazebo_1_1ConversionFunctionLinearInterp_1a949ed2e6176730ef0322a25a1a86c92c">GetType</reimplementedby>
+        <briefdescription>
+<para>Return (derived) type of conversion function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/ThrusterConversionFcn.hh" line="39" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1ConversionFunction_1a18c78fd782a8603afa893adc2a26f1a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool gazebo::ConversionFunction::GetParam</definition>
+        <argsstring>(std::string _tag, double &amp;_output)=0</argsstring>
+        <name>GetParam</name>
+        <reimplementedby refid="classgazebo_1_1ConversionFunctionBasic_1a943dbcaa6720093a775ebb7f3a1e3bea">GetParam</reimplementedby>
+        <reimplementedby refid="classgazebo_1_1ConversionFunctionBessa_1ad47b4e53609b493924d3f0e76626f133">GetParam</reimplementedby>
+        <reimplementedby refid="classgazebo_1_1ConversionFunctionLinearInterp_1aa443515bbf8913e8d5fef758a6f21b71">GetParam</reimplementedby>
+        <param>
+          <type>std::string</type>
+          <declname>_tag</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>_output</declname>
+        </param>
+        <briefdescription>
+<para>Return paramater in vector form for the given tag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/ThrusterConversionFcn.hh" line="42" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1ConversionFunction_1a9e0c3b99751eeaf95f96dd49ed0351a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::map&lt; double, double &gt;</type>
+        <definition>virtual std::map&lt;double, double&gt; gazebo::ConversionFunction::GetTable</definition>
+        <argsstring>()</argsstring>
+        <name>GetTable</name>
+        <reimplementedby refid="classgazebo_1_1ConversionFunctionLinearInterp_1a2252ec3701319511a8d7ef2bbdf25a70">GetTable</reimplementedby>
+        <briefdescription>
+<para>Return input and output vectors of the lookup table. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/ThrusterConversionFcn.hh" line="46" column="28" bodyfile="include/uuv_gazebo_plugins/ThrusterConversionFcn.hh" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1ConversionFunction_1ac71ae91ae6e91ae177b8255477a2b950" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double gazebo::ConversionFunction::convert</definition>
+        <argsstring>(double _cmd)=0</argsstring>
+        <name>convert</name>
+        <reimplementedby refid="classgazebo_1_1ConversionFunctionBasic_1a8f10f33118aeda7560214d915cee892e">convert</reimplementedby>
+        <reimplementedby refid="classgazebo_1_1ConversionFunctionBessa_1a2e863ecdfdeb289ada6d9045783d17a0">convert</reimplementedby>
+        <reimplementedby refid="classgazebo_1_1ConversionFunctionLinearInterp_1ae0bfc703bbbe5eef389fedf5565b10c1">convert</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>_cmd</declname>
+        </param>
+        <briefdescription>
+<para>Convert thruster state (e.g. angular velocity) to thrust force. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_gazebo_plugins/ThrusterConversionFcn.hh" line="51" column="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstact base class for a thruster conversion function. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>gazebo::ConversionFunction</label>
+        <link refid="classgazebo_1_1ConversionFunction"/>
+      </node>
+      <node id="3">
+        <label>gazebo::ConversionFunctionBessa</label>
+        <link refid="classgazebo_1_1ConversionFunctionBessa"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>gazebo::ConversionFunctionLinearInterp</label>
+        <link refid="classgazebo_1_1ConversionFunctionLinearInterp"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gazebo::ConversionFunctionBasic</label>
+        <link refid="classgazebo_1_1ConversionFunctionBasic"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="include/uuv_gazebo_plugins/ThrusterConversionFcn.hh" line="31" column="25" bodyfile="include/uuv_gazebo_plugins/ThrusterConversionFcn.hh" bodystart="31" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classgazebo_1_1ConversionFunction_1a70689912f6f1f316a84f2dea2e10050d" prot="protected" virt="non-virtual"><scope>gazebo::ConversionFunction</scope><name>ConversionFunction</name></member>
+      <member refid="classgazebo_1_1ConversionFunction_1ac71ae91ae6e91ae177b8255477a2b950" prot="public" virt="pure-virtual"><scope>gazebo::ConversionFunction</scope><name>convert</name></member>
+      <member refid="classgazebo_1_1ConversionFunction_1a18c78fd782a8603afa893adc2a26f1a4" prot="public" virt="pure-virtual"><scope>gazebo::ConversionFunction</scope><name>GetParam</name></member>
+      <member refid="classgazebo_1_1ConversionFunction_1a9e0c3b99751eeaf95f96dd49ed0351a2" prot="public" virt="virtual"><scope>gazebo::ConversionFunction</scope><name>GetTable</name></member>
+      <member refid="classgazebo_1_1ConversionFunction_1ac0d2640de379ea86c087491c70bc6189" prot="public" virt="pure-virtual"><scope>gazebo::ConversionFunction</scope><name>GetType</name></member>
+      <member refid="classgazebo_1_1ConversionFunction_1afc13b3997ac95f70425ec5fc830d927c" prot="public" virt="virtual"><scope>gazebo::ConversionFunction</scope><name>~ConversionFunction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

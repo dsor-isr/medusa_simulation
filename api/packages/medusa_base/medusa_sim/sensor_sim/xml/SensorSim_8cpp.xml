@@ -4,6 +4,63 @@
     <compoundname>SensorSim.cpp</compoundname>
     <includes refid="SensorSim_8h" local="yes">SensorSim.h</includes>
     <incdepgraph>
+      <node id="18">
+        <label>medusa_gimmicks_library/MedusaGimmicks.h</label>
+      </node>
+      <node id="8">
+        <label>dsor_msgs/Measurement.h</label>
+      </node>
+      <node id="9">
+        <label>dsor_msgs/Thruster.h</label>
+      </node>
+      <node id="7">
+        <label>nav_msgs/Odometry.h</label>
+      </node>
+      <node id="12">
+        <label>auv_msgs/NavigationStatus.h</label>
+      </node>
+      <node id="1">
+        <label>src/SensorSim.cpp</label>
+        <link refid="SensorSim_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>tf2_geometry_msgs/tf2_geometry_msgs.h</label>
+      </node>
+      <node id="19">
+        <label>GeographicLib/UTMUPS.hpp</label>
+      </node>
+      <node id="13">
+        <label>geometry_msgs/TransformStamped.h</label>
+      </node>
+      <node id="14">
+        <label>std_srvs/SetBool.h</label>
+      </node>
+      <node id="17">
+        <label>std_msgs/Empty.h</label>
+      </node>
+      <node id="6">
+        <label>sensor_msgs/NavSatFix.h</label>
+      </node>
+      <node id="3">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="16">
+        <label>std_msgs/String.h</label>
+      </node>
+      <node id="11">
+        <label>medusa_msgs/mThrusterStatus.h</label>
+      </node>
+      <node id="4">
+        <label>tf2_ros/transform_listener.h</label>
+      </node>
+      <node id="10">
+        <label>medusa_msgs/mUSBLFix.h</label>
+      </node>
+      <node id="15">
+        <label>std_msgs/Int8.h</label>
+      </node>
       <node id="2">
         <label>SensorSim.h</label>
         <link refid="SensorSim_8h_source"/>
@@ -41,63 +98,6 @@
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
-      </node>
-      <node id="18">
-        <label>medusa_gimmicks_library/MedusaGimmicks.h</label>
-      </node>
-      <node id="8">
-        <label>dsor_msgs/Measurement.h</label>
-      </node>
-      <node id="9">
-        <label>dsor_msgs/Thruster.h</label>
-      </node>
-      <node id="7">
-        <label>nav_msgs/Odometry.h</label>
-      </node>
-      <node id="12">
-        <label>auv_msgs/NavigationStatus.h</label>
-      </node>
-      <node id="5">
-        <label>tf2_geometry_msgs/tf2_geometry_msgs.h</label>
-      </node>
-      <node id="19">
-        <label>GeographicLib/UTMUPS.hpp</label>
-      </node>
-      <node id="13">
-        <label>geometry_msgs/TransformStamped.h</label>
-      </node>
-      <node id="14">
-        <label>std_srvs/SetBool.h</label>
-      </node>
-      <node id="1">
-        <label>src/SensorSim.cpp</label>
-        <link refid="SensorSim_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="17">
-        <label>std_msgs/Empty.h</label>
-      </node>
-      <node id="6">
-        <label>sensor_msgs/NavSatFix.h</label>
-      </node>
-      <node id="3">
-        <label>ros/ros.h</label>
-      </node>
-      <node id="16">
-        <label>std_msgs/String.h</label>
-      </node>
-      <node id="11">
-        <label>medusa_msgs/mThrusterStatus.h</label>
-      </node>
-      <node id="4">
-        <label>tf2_ros/transform_listener.h</label>
-      </node>
-      <node id="10">
-        <label>medusa_msgs/mUSBLFix.h</label>
-      </node>
-      <node id="15">
-        <label>std_msgs/Int8.h</label>
       </node>
     </incdepgraph>
       <sectiondef kind="func">

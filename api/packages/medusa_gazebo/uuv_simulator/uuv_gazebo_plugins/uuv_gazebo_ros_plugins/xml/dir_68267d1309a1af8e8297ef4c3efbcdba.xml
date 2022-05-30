@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="AccelerationsTestPlugin_8cc">AccelerationsTestPlugin.cc</innerfile>
+    <innerfile refid="CustomBatteryConsumerROSPlugin_8cc">CustomBatteryConsumerROSPlugin.cc</innerfile>
+    <innerfile refid="FinROSPlugin_8cc">FinROSPlugin.cc</innerfile>
+    <innerfile refid="JointStatePublisher_8cc">JointStatePublisher.cc</innerfile>
+    <innerfile refid="LinearBatteryROSPlugin_8cc">LinearBatteryROSPlugin.cc</innerfile>
+    <innerfile refid="ThrusterManagerROSPlugin_8cc">ThrusterManagerROSPlugin.cc</innerfile>
+    <innerfile refid="ThrusterROSPlugin_8cc">ThrusterROSPlugin.cc</innerfile>
+    <innerfile refid="UnderwaterObjectROSPlugin_8cc">UnderwaterObjectROSPlugin.cc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

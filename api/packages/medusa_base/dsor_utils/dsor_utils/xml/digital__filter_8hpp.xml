@@ -40,14 +40,6 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2">
-        <label>include/dsor_utils/filters/differentiator.hpp</label>
-        <link refid="differentiator_8hpp_source"/>
-      </node>
-      <node id="3">
-        <label>include/dsor_utils/filters/highpass_filter.hpp</label>
-        <link refid="highpass__filter_8hpp_source"/>
-      </node>
       <node id="1">
         <label>include/dsor_utils/filters/digital_filter.hpp</label>
         <link refid="digital__filter_8hpp"/>
@@ -60,13 +52,21 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>include/dsor_utils/filters/moving_average_filter.hpp</label>
-        <link refid="moving__average__filter_8hpp_source"/>
+      <node id="2">
+        <label>include/dsor_utils/filters/differentiator.hpp</label>
+        <link refid="differentiator_8hpp_source"/>
       </node>
       <node id="4">
         <label>include/dsor_utils/filters/lowpass_filter.hpp</label>
         <link refid="lowpass__filter_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>include/dsor_utils/filters/moving_average_filter.hpp</label>
+        <link refid="moving__average__filter_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>include/dsor_utils/filters/highpass_filter.hpp</label>
+        <link refid="highpass__filter_8hpp_source"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classDigitalFilter" prot="public">DigitalFilter</innerclass>

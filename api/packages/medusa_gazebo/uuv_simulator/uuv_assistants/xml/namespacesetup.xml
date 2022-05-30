@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacesetup" kind="namespace" language="Python">
+    <compoundname>setup</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="setup_8py_1a504ffa482edfe0eff08f64b2f5dff0e9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>setup.setup_args</definition>
+        <argsstring></argsstring>
+        <name>setup_args</name>
+        <initializer>=  generate_distutils_setup(
+    packages=[&apos;tf_quaternion&apos;],
+    package_dir={&apos;&apos;: &apos;src&apos;},
+    requires=[]
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="setup.py" line="7" column="1" bodyfile="setup.py" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="setup.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

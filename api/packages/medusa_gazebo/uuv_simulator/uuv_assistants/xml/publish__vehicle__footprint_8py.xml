@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="publish__vehicle__footprint_8py" kind="file" language="Python">
+    <compoundname>publish_vehicle_footprint.py</compoundname>
+    <innerclass refid="classpublish__vehicle__footprint_1_1VehicleFootprint" prot="public">publish_vehicle_footprint::VehicleFootprint</innerclass>
+    <innernamespace refid="namespacepublish__vehicle__footprint">publish_vehicle_footprint</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="publish__vehicle__footprint_8py_1a135ce28508b65937e92f4e4031d4fcf5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>publish_vehicle_footprint.node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <initializer>=  VehicleFootprint()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/publish_vehicle_footprint.py" line="133" column="1" bodyfile="scripts/publish_vehicle_footprint.py" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">#!/usr/bin/env<sp/>python</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Copyright<sp/>(c)<sp/>2016<sp/>The<sp/>UUV<sp/>Simulator<sp/>Authors.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">#<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">#<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">#<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">#<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">#<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">#<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">#<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>__future__<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>print_function</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>rospy</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>copy<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>deepcopy</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacetf__quaternion_1_1transformations" kindref="compound">tf_quaternion.transformations</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>euler_from_quaternion</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>nav_msgs.msg<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Odometry</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>geometry_msgs.msg<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>PolygonStamped,<sp/>Point32</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>visualization_msgs.msg<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Marker</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>numpy<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>np</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classpublish__vehicle__footprint_1_1VehicleFootprint" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint" kindref="compound">VehicleFootprint</ref>:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>MARKER<sp/>=<sp/>np.array([[0,<sp/>0.75],<sp/>[-0.5,<sp/>-0.25],<sp/>[0.5,<sp/>-0.25]])</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self):</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1afe1185045a678edbbbebcc39d9e4ff71" kindref="member">_namespace</ref><sp/>=<sp/>rospy.get_namespace().replace(</highlight><highlight class="stringliteral">&apos;/&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1abd6b15680d44ad47d476d2c746403206" kindref="member">_scale_footprint</ref><sp/>=<sp/>10</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>rospy.has_param(</highlight><highlight class="stringliteral">&apos;~scale_footprint&apos;</highlight><highlight class="normal">):</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale<sp/>=<sp/>rospy.get_param(</highlight><highlight class="stringliteral">&apos;~scale_footprint&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>scale<sp/>&gt;<sp/>0:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1abd6b15680d44ad47d476d2c746403206" kindref="member">_scale_footprint</ref><sp/>=<sp/>scale</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;Scale<sp/>factor<sp/>should<sp/>be<sp/>greater<sp/>than<sp/>zero&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;Footprint<sp/>marker<sp/>scale<sp/>factor=<sp/>&apos;</highlight><highlight class="normal">,<sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1abd6b15680d44ad47d476d2c746403206" kindref="member">_scale_footprint</ref>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a076769d50bc9177dc8dae79b9599060a" kindref="member">_scale_label</ref><sp/>=<sp/>10</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>rospy.has_param(</highlight><highlight class="stringliteral">&apos;~_scale_label&apos;</highlight><highlight class="normal">):</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale<sp/>=<sp/>rospy.get_param(</highlight><highlight class="stringliteral">&apos;~_scale_label&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>scale<sp/>&gt;<sp/>0:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a076769d50bc9177dc8dae79b9599060a" kindref="member">_scale_label</ref><sp/>=<sp/>scale</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;Scale<sp/>factor<sp/>should<sp/>be<sp/>greater<sp/>than<sp/>zero&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;Label<sp/>marker<sp/>scale<sp/>factor<sp/>=<sp/>&apos;</highlight><highlight class="normal">,<sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a076769d50bc9177dc8dae79b9599060a" kindref="member">_scale_label</ref>)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1aa8324d79a3b682c0e3669c04a245e08c" kindref="member">_label_x_offset</ref><sp/>=<sp/>60</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>rospy.get_param(</highlight><highlight class="stringliteral">&apos;~label_x_offset&apos;</highlight><highlight class="normal">):</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1aa8324d79a3b682c0e3669c04a245e08c" kindref="member">_label_x_offset</ref><sp/>=<sp/>rospy.get_param(</highlight><highlight class="stringliteral">&apos;~label_x_offset&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref><sp/>=<sp/>Marker()</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.header.frame_id<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;world&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.header.stamp<sp/>=<sp/>rospy.Time.now()</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.ns<sp/>=<sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1afe1185045a678edbbbebcc39d9e4ff71" kindref="member">_namespace</ref></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.type<sp/>=<sp/>Marker.TEXT_VIEW_FACING</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.text<sp/>=<sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1afe1185045a678edbbbebcc39d9e4ff71" kindref="member">_namespace</ref></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.action<sp/>=<sp/>Marker.ADD</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.pose.orientation.x<sp/>=<sp/>0.0</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.pose.orientation.y<sp/>=<sp/>0.0</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.pose.orientation.z<sp/>=<sp/>0.0</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.pose.orientation.w<sp/>=<sp/>1.0</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.scale.x<sp/>=<sp/>0.0</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.scale.y<sp/>=<sp/>0.0</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.scale.z<sp/>=<sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a076769d50bc9177dc8dae79b9599060a" kindref="member">_scale_label</ref></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.color.a<sp/>=<sp/>1.0</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.color.r<sp/>=<sp/>0.0</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.color.g<sp/>=<sp/>1.0</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.color.b<sp/>=<sp/>0.0</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Odometry<sp/>subscriber<sp/>(remap<sp/>this<sp/>topic<sp/>in<sp/>the<sp/>launch<sp/>file<sp/>if<sp/>necessary)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a1c46f786dec384f8f650633f4f537a64" kindref="member">_odom_sub</ref><sp/>=<sp/>rospy.Subscriber(</highlight><highlight class="stringliteral">&apos;odom&apos;</highlight><highlight class="normal">,<sp/>Odometry,<sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1afe9b4dffe099f5b57091ef2f9602059b" kindref="member">odometry_callback</ref>)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Footprint<sp/>marker<sp/>publisher<sp/>(remap<sp/>this<sp/>topic<sp/>in<sp/>the<sp/>launch<sp/>file<sp/>if<sp/>necessary)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a01b24ff6e16df254648097bfac1e9291" kindref="member">_footprint_pub</ref><sp/>=<sp/>rospy.Publisher(</highlight><highlight class="stringliteral">&apos;footprint&apos;</highlight><highlight class="normal">,<sp/>PolygonStamped,<sp/>queue_size=1)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Vehicle<sp/>label<sp/>marker<sp/>(remap<sp/>this<sp/>topic<sp/>in<sp/>the<sp/>launch<sp/>file<sp/>if<sp/>necessary)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1aa3d64fc33f44435d5a8c96ed9652d036" kindref="member">_label_pub</ref><sp/>=<sp/>rospy.Publisher(</highlight><highlight class="stringliteral">&apos;label&apos;</highlight><highlight class="normal">,<sp/>Marker,<sp/>queue_size=1)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>@staticmethod</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">rot(alpha):</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>np.array([[np.cos(alpha),<sp/>-np.sin(alpha)],</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[np.sin(alpha),<sp/>np.cos(alpha)]])</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">odometry_callback(self,<sp/>msg):</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>msg.pose.pose.position.x</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>msg.pose.pose.position.y</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>orientation<sp/>=<sp/>np.array([msg.pose.pose.orientation.x,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.pose.pose.orientation.y,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.pose.pose.orientation.z,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.pose.pose.orientation.w])</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>yaw<sp/>=<sp/>euler_from_quaternion(orientation)[2]</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Generating<sp/>the<sp/>vehicle<sp/>footprint<sp/>marker</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_marker<sp/>=<sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1abd6b15680d44ad47d476d2c746403206" kindref="member">_scale_footprint</ref><sp/>*<sp/>deepcopy(self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1acbd1fc242b73a4bdfe3ca8e4eb013875" kindref="member">MARKER</ref>)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>points<sp/>=<sp/>list()</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(new_marker.shape[0]):</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_marker[i,<sp/>:]<sp/>=<sp/>np.dot(self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a7a1a792325fec2848b7a1d94b5a14258" kindref="member">rot</ref>(yaw<sp/>-<sp/>np.pi<sp/>/<sp/>2),<sp/>new_marker[i,<sp/>:])</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_marker[i,<sp/>0]<sp/>+=<sp/>x</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_marker[i,<sp/>1]<sp/>+=<sp/>y</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/>=<sp/>Point32()</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.x<sp/>=<sp/>new_marker[i,<sp/>0]</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.y<sp/>=<sp/>new_marker[i,<sp/>1]</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>points.append(p)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_poly<sp/>=<sp/>PolygonStamped()</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_poly.header.stamp<sp/>=<sp/>rospy.Time.now()</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_poly.header.frame_id<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;world&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_poly.polygon.points<sp/>=<sp/>points</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a01b24ff6e16df254648097bfac1e9291" kindref="member">_footprint_pub</ref>.publish(new_poly)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Generating<sp/>the<sp/>label<sp/>marker</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.pose.position.x<sp/>=<sp/>msg.pose.pose.position.x<sp/>+<sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1aa8324d79a3b682c0e3669c04a245e08c" kindref="member">_label_x_offset</ref></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.pose.position.y<sp/>=<sp/>msg.pose.pose.position.y</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>.pose.position.z<sp/>=<sp/>msg.pose.pose.position.z<sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1aa3d64fc33f44435d5a8c96ed9652d036" kindref="member">_label_pub</ref>.publish(self.<ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint_1a5982a53d085628e8d461855a1758ed62" kindref="member">_label_marker</ref>)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;__main__&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;Generate<sp/>RViz<sp/>footprint<sp/>and<sp/>markers<sp/>for<sp/>2D<sp/>visualization&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.init_node(</highlight><highlight class="stringliteral">&apos;generate_vehicle_footprint&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node<sp/>=<sp/><ref refid="classpublish__vehicle__footprint_1_1VehicleFootprint" kindref="compound">VehicleFootprint</ref>()</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rospy.spin()</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>rospy.ROSInterruptException:</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;caught<sp/>exception&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;exiting&apos;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="scripts/publish_vehicle_footprint.py"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceset__simulation__timer" kind="namespace" language="Python">
+    <compoundname>set_simulation_timer</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="set__simulation__timer_8py_1a8e8ccdc997abb53d399ba823d89d9a2c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>set_simulation_timer.timeout</definition>
+        <argsstring></argsstring>
+        <name>timeout</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/set_simulation_timer.py" line="26" column="1" bodyfile="scripts/set_simulation_timer.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="set__simulation__timer_8py_1ac62326accf197c3b3399fc7105ec2acc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>set_simulation_timer.rate</definition>
+        <argsstring></argsstring>
+        <name>rate</name>
+        <initializer>=  rospy.Rate(100)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/set_simulation_timer.py" line="33" column="1" bodyfile="scripts/set_simulation_timer.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="scripts/set_simulation_timer.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

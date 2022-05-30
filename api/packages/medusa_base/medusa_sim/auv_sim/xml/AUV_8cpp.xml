@@ -8,14 +8,14 @@
     <includes local="no">algorithm</includes>
     <includes local="no">ros/ros.h</includes>
     <incdepgraph>
-      <node id="10">
-        <label>cmath</label>
-      </node>
       <node id="7">
         <label>State.h</label>
         <link refid="State_8h_source"/>
         <childnode refid="8" relation="include">
         </childnode>
+      </node>
+      <node id="10">
+        <label>cmath</label>
       </node>
       <node id="3">
         <label>Eigen/Core</label>
@@ -43,12 +43,6 @@
       <node id="6">
         <label>tuple</label>
       </node>
-      <node id="5">
-        <label>vector</label>
-      </node>
-      <node id="12">
-        <label>ros/ros.h</label>
-      </node>
       <node id="2">
         <label>AUV.h</label>
         <link refid="AUV_8h_source"/>
@@ -62,6 +56,12 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="12">
+        <label>ros/ros.h</label>
       </node>
       <node id="11">
         <label>algorithm</label>

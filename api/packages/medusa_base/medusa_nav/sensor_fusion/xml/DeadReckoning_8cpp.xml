@@ -19,6 +19,18 @@
       <node id="4">
         <label>auv_msgs/NavigationStatus.h</label>
       </node>
+      <node id="5">
+        <label>medusa_msgs/mState.h</label>
+      </node>
+      <node id="3">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="9">
+        <label>math.h</label>
+      </node>
+      <node id="8">
+        <label>std_srvs/Trigger.h</label>
+      </node>
       <node id="2">
         <label>DeadReckoning.h</label>
         <link refid="DeadReckoning_8h"/>
@@ -38,18 +50,6 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-      </node>
-      <node id="5">
-        <label>medusa_msgs/mState.h</label>
-      </node>
-      <node id="3">
-        <label>ros/ros.h</label>
-      </node>
-      <node id="9">
-        <label>math.h</label>
-      </node>
-      <node id="8">
-        <label>std_srvs/Trigger.h</label>
       </node>
       <node id="7">
         <label>std_msgs/Int8.h</label>

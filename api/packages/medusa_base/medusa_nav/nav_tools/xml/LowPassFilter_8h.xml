@@ -16,15 +16,15 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2">
-        <label>include/AuvState2mState.h</label>
-        <link refid="AuvState2mState_8h_source"/>
-      </node>
       <node id="1">
         <label>include/LowPassFilter.h</label>
         <link refid="LowPassFilter_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="2">
+        <label>include/AuvState2mState.h</label>
+        <link refid="AuvState2mState_8h_source"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classLowPassFilter" prot="public">LowPassFilter</innerclass>

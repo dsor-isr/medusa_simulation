@@ -1,0 +1,738 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classgazebo_1_1usblPlugin" kind="class" language="C++" prot="public">
+    <compoundname>gazebo::usblPlugin</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ModelPlugin</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a10601a7f08aff5e9a079c758676906c2" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::usblPlugin::m_namespace</definition>
+        <argsstring></argsstring>
+        <name>m_namespace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="53" column="19" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a122dbcbb7026f99ccd4f0bf689b697dd" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::usblPlugin::m_usblDevice</definition>
+        <argsstring></argsstring>
+        <name>m_usblDevice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="54" column="19" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1abf988e337cc4eb958495f87048237cdc" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::usblPlugin::m_usblID</definition>
+        <argsstring></argsstring>
+        <name>m_usblID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="55" column="19" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a3af762a23776211bb8094b5f9f713632" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::usblPlugin::m_modemAttachedObject</definition>
+        <argsstring></argsstring>
+        <name>m_modemAttachedObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="56" column="19" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1ab13b1bd531b4c3026f739f3faf8a0941" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::usblPlugin::m_usblAttachedObject</definition>
+        <argsstring></argsstring>
+        <name>m_usblAttachedObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="57" column="19" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a69b8cb037b38e08a99f8d3f5fa9f4b27" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::usblPlugin::m_channel</definition>
+        <argsstring></argsstring>
+        <name>m_channel</name>
+        <initializer>= &quot;1&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="58" column="19" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a1a84336468d564a4774bd6420506f168" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::usblPlugin::m_interrogationMode</definition>
+        <argsstring></argsstring>
+        <name>m_interrogationMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="59" column="19" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1aace9bbf956537c0ae9b9af52d74ac214" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::usblPlugin::m_pingerScheduler</definition>
+        <argsstring></argsstring>
+        <name>m_pingerScheduler</name>
+        <initializer>= &quot;1&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="60" column="19" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1ad6ac4dc6f8b9fd0e8c3c73b32ca9b227" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::usblPlugin::m_modemDevice</definition>
+        <argsstring></argsstring>
+        <name>m_modemDevice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="63" column="19" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a2ef4d6c024d1ab8346386288606d7380" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gazebo::usblPlugin::m_temperature</definition>
+        <argsstring></argsstring>
+        <name>m_temperature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="64" column="14" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a6e7558240d204e9811bb0070d9ca05ff" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gazebo::usblPlugin::m_soundSpeed</definition>
+        <argsstring></argsstring>
+        <name>m_soundSpeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="65" column="14" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a0bca4aafe22a4005bbe6d93c36b8f6ae" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; gazebo::usblPlugin::m_deployedmodems</definition>
+        <argsstring></argsstring>
+        <name>m_deployedmodems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="66" column="19" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a7af14c25c2f11ddc2a570a81666873ba" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; gazebo::usblPlugin::m_deployedmodems_frame_ID</definition>
+        <argsstring></argsstring>
+        <name>m_deployedmodems_frame_ID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="67" column="19" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a68dd8225ea30de8459e380d55c5e88ad" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::usblPlugin::aux_modem_id</definition>
+        <argsstring></argsstring>
+        <name>aux_modem_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="68" column="19" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a2ac13df6bda53f9bc4156ac8b9d227fd" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::usblPlugin::aux_modem_frame_id</definition>
+        <argsstring></argsstring>
+        <name>aux_modem_frame_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="69" column="19" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a6162e67981084c99495c568dbb034e2f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gazebo::usblPlugin::m_noiseMu</definition>
+        <argsstring></argsstring>
+        <name>m_noiseMu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="70" column="14" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a3fdb619545d51bfee584782760007851" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gazebo::usblPlugin::m_noiseSigma</definition>
+        <argsstring></argsstring>
+        <name>m_noiseSigma</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="71" column="14" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a34404eec0e2886d185d2f8d7e1ac6c38" prot="private" static="no" mutable="no">
+        <type>ros::Timer</type>
+        <definition>ros::Timer gazebo::usblPlugin::m_timer</definition>
+        <argsstring></argsstring>
+        <name>m_timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="74" column="18" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1ae909e47442328a9992589d8691621a31" prot="private" static="no" mutable="no">
+        <type>physics::ModelPtr</type>
+        <definition>physics::ModelPtr gazebo::usblPlugin::m_model</definition>
+        <argsstring></argsstring>
+        <name>m_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="75" column="25" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1ab27d205c612fc1aa4b3647440ecda4ff" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; ros::NodeHandle &gt;</type>
+        <definition>std::unique_ptr&lt;ros::NodeHandle&gt; gazebo::usblPlugin::m_rosNode</definition>
+        <argsstring></argsstring>
+        <name>m_rosNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="78" column="23" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a9c907334b9041905dd0f94c289578e66" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher gazebo::usblPlugin::m_usbl_fix</definition>
+        <argsstring></argsstring>
+        <name>m_usbl_fix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="81" column="22" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a142032a65ee2f98d619c16f65b9605c0" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher gazebo::usblPlugin::m_trigger_serialization</definition>
+        <argsstring></argsstring>
+        <name>m_trigger_serialization</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="82" column="22" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a95e6a4f88d9651b4bbaa47114b44120b" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher gazebo::usblPlugin::m_payload_to_deserialize</definition>
+        <argsstring></argsstring>
+        <name>m_payload_to_deserialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="83" column="22" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a0ebcb9ec9ed35bcd6120dab11c7882ad" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher gazebo::usblPlugin::m_cisPinger</definition>
+        <argsstring></argsstring>
+        <name>m_cisPinger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="84" column="22" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a31f843461878b295a90369f8b4555800" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, ros::Publisher &gt;</type>
+        <definition>std::unordered_map&lt;std::string, ros::Publisher&gt; gazebo::usblPlugin::m_iisPinger</definition>
+        <argsstring></argsstring>
+        <name>m_iisPinger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="85" column="26" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a62bddc2a751b952c61ef3b8c38e859bf" prot="private" static="no" mutable="no">
+        <type>ros::Subscriber</type>
+        <definition>ros::Subscriber gazebo::usblPlugin::m_interrogationModeSub</definition>
+        <argsstring></argsstring>
+        <name>m_interrogationModeSub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="86" column="23" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a75c2b88f763916af453b818ee30c1a16" prot="private" static="no" mutable="no">
+        <type>ros::Subscriber</type>
+        <definition>ros::Subscriber gazebo::usblPlugin::m_channelSwitchSub</definition>
+        <argsstring></argsstring>
+        <name>m_channelSwitchSub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="87" column="23" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1ab702c6b30792895d887e088de926ce21" prot="private" static="no" mutable="no">
+        <type>ros::Subscriber</type>
+        <definition>ros::Subscriber gazebo::usblPlugin::m_payload_to_transmit</definition>
+        <argsstring></argsstring>
+        <name>m_payload_to_transmit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="88" column="23" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a7f0829f3da0e6b2abc2df9ea8b05bb6e" prot="private" static="no" mutable="no">
+        <type>ros::Subscriber</type>
+        <definition>ros::Subscriber gazebo::usblPlugin::m_start_ping</definition>
+        <argsstring></argsstring>
+        <name>m_start_ping</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="89" column="23" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a2b522fccef33b7a6fef8c1ec018ae6cd" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; ros::Subscriber &gt;</type>
+        <definition>std::vector&lt;ros::Subscriber&gt; gazebo::usblPlugin::m_sub_modem_pos</definition>
+        <argsstring></argsstring>
+        <name>m_sub_modem_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="90" column="19" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1ad4c9de97931c6653bab44f2335963a24" prot="private" static="no" mutable="no">
+        <type>ros::CallbackQueue</type>
+        <definition>ros::CallbackQueue gazebo::usblPlugin::m_rosQueue</definition>
+        <argsstring></argsstring>
+        <name>m_rosQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="91" column="26" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1usblPlugin_1a8371e038e4057d984099da83a71a4c82" prot="private" static="no" mutable="no">
+        <type>std::thread</type>
+        <definition>std::thread gazebo::usblPlugin::m_rosQueueThread</definition>
+        <argsstring></argsstring>
+        <name>m_rosQueueThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="93" column="19" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgazebo_1_1usblPlugin_1a81497fb64121c77cce890c7e7160cea7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>usblPlugin::usblPlugin</definition>
+        <argsstring>()</argsstring>
+        <name>usblPlugin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="37" column="7" bodyfile="src/usblPlugin.cc" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1usblPlugin_1a3c334ef3b253bd0965975cd1133fe1bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>usblPlugin::~usblPlugin</definition>
+        <argsstring>()</argsstring>
+        <name>~usblPlugin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="38" column="7" bodyfile="src/usblPlugin.cc" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1usblPlugin_1a82e08471e8b71fad4f6af812771c3185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usblPlugin::Load</definition>
+        <argsstring>(physics::ModelPtr _model, sdf::ElementPtr _sdf)</argsstring>
+        <name>Load</name>
+        <param>
+          <type>physics::ModelPtr</type>
+          <declname>_model</declname>
+        </param>
+        <param>
+          <type>sdf::ElementPtr</type>
+          <declname>_sdf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>SDF PARAMETERS</para>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="39" column="12" bodyfile="src/usblPlugin.cc" bodystart="17" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1usblPlugin_1a4a8cd4ebbcd2f8380a957953eeeb2ed2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usblPlugin::sendPing</definition>
+        <argsstring>(const ros::TimerEvent &amp;)</argsstring>
+        <name>sendPing</name>
+        <param>
+          <type>const ros::TimerEvent &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="40" column="12" bodyfile="src/usblPlugin.cc" bodystart="318" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1usblPlugin_1a49debed34ff900538d5526a743087cac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usblPlugin::channelSwitchCallback</definition>
+        <argsstring>(const std_msgs::StringConstPtr &amp;msg)</argsstring>
+        <name>channelSwitchCallback</name>
+        <param>
+          <type>const std_msgs::StringConstPtr &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="41" column="12" bodyfile="src/usblPlugin.cc" bodystart="380" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1usblPlugin_1aa7f092c83e86540680dfc3f9e9c6112d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usblPlugin::interrogationModeRosCallback</definition>
+        <argsstring>(const std_msgs::StringConstPtr &amp;msg)</argsstring>
+        <name>interrogationModeRosCallback</name>
+        <param>
+          <type>const std_msgs::StringConstPtr &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="42" column="12" bodyfile="src/usblPlugin.cc" bodystart="388" bodyend="400"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1usblPlugin_1a826c0f157ade1317f6b995f07c2fc8cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usblPlugin::receiveModemPoseCallback</definition>
+        <argsstring>(uuv_sensor_ros_plugins_msgs::modemLocationConstPtr modem_position)</argsstring>
+        <name>receiveModemPoseCallback</name>
+        <param>
+          <type>uuv_sensor_ros_plugins_msgs::modemLocationConstPtr</type>
+          <declname>modem_position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="43" column="12" bodyfile="src/usblPlugin.cc" bodystart="404" bodyend="423"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1usblPlugin_1a4264a12bad66ff0932307ff0e82267d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usblPlugin::publishPosition</definition>
+        <argsstring>(double &amp;bearing, double &amp;range, double &amp;elevation)</argsstring>
+        <name>publishPosition</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>bearing</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>elevation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="44" column="12" bodyfile="src/usblPlugin.cc" bodystart="427" bodyend="469"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1usblPlugin_1ad3919e68b663345cdff588205f670a02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usblPlugin::calcuateRelativePose</definition>
+        <argsstring>(ignition::math::Vector3d position, double &amp;bearing, double &amp;range, double &amp;elevation)</argsstring>
+        <name>calcuateRelativePose</name>
+        <param>
+          <type>ignition::math::Vector3d</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>bearing</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>elevation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="45" column="12" bodyfile="src/usblPlugin.cc" bodystart="471" bodyend="481"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1usblPlugin_1af7d1e2086cfcb4fb1dca09e2ecab9585" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usblPlugin::payloadToTransmitCallback</definition>
+        <argsstring>(const std_msgs::StringConstPtr &amp;payload)</argsstring>
+        <name>payloadToTransmitCallback</name>
+        <param>
+          <type>const std_msgs::StringConstPtr &amp;</type>
+          <declname>payload</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="46" column="12" bodyfile="src/usblPlugin.cc" bodystart="324" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1usblPlugin_1a3f36ef75ad8cb84c6e0bd884c07219fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usblPlugin::enablePingerCallback</definition>
+        <argsstring>(const std_msgs::BoolConstPtr &amp;msg)</argsstring>
+        <name>enablePingerCallback</name>
+        <param>
+          <type>const std_msgs::BoolConstPtr &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="47" column="12" bodyfile="src/usblPlugin.cc" bodystart="367" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1usblPlugin_1a96c8e4f18c72fcb05fd1acb4be866413" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usblPlugin::queueThread</definition>
+        <argsstring>()</argsstring>
+        <name>queueThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="48" column="12" bodyfile="src/usblPlugin.cc" bodystart="484" bodyend="491"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1usblPlugin_1add892dd423c61e45e6270760f8c6363f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int usblPlugin::getIndex</definition>
+        <argsstring>(std::string elem)</argsstring>
+        <name>getIndex</name>
+        <param>
+          <type>std::string</type>
+          <declname>elem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="49" column="11" bodyfile="src/usblPlugin.cc" bodystart="493" bodyend="509"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>gazebo::usblPlugin</label>
+        <link refid="classgazebo_1_1usblPlugin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ModelPlugin</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>gazebo::usblPlugin</label>
+        <link refid="classgazebo_1_1usblPlugin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ModelPlugin</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/uuv_sensor_ros_plugins/usblPlugin.hh" line="35" column="1" bodyfile="include/uuv_sensor_ros_plugins/usblPlugin.hh" bodystart="34" bodyend="94"/>
+    <listofallmembers>
+      <member refid="classgazebo_1_1usblPlugin_1a2ac13df6bda53f9bc4156ac8b9d227fd" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>aux_modem_frame_id</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a68dd8225ea30de8459e380d55c5e88ad" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>aux_modem_id</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1ad3919e68b663345cdff588205f670a02" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>calcuateRelativePose</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a49debed34ff900538d5526a743087cac" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>channelSwitchCallback</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a3f36ef75ad8cb84c6e0bd884c07219fd" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>enablePingerCallback</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1add892dd423c61e45e6270760f8c6363f" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>getIndex</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1aa7f092c83e86540680dfc3f9e9c6112d" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>interrogationModeRosCallback</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a82e08471e8b71fad4f6af812771c3185" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>Load</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a69b8cb037b38e08a99f8d3f5fa9f4b27" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_channel</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a75c2b88f763916af453b818ee30c1a16" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_channelSwitchSub</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a0ebcb9ec9ed35bcd6120dab11c7882ad" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_cisPinger</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a0bca4aafe22a4005bbe6d93c36b8f6ae" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_deployedmodems</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a7af14c25c2f11ddc2a570a81666873ba" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_deployedmodems_frame_ID</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a31f843461878b295a90369f8b4555800" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_iisPinger</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a1a84336468d564a4774bd6420506f168" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_interrogationMode</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a62bddc2a751b952c61ef3b8c38e859bf" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_interrogationModeSub</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1ae909e47442328a9992589d8691621a31" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_model</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a3af762a23776211bb8094b5f9f713632" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_modemAttachedObject</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1ad6ac4dc6f8b9fd0e8c3c73b32ca9b227" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_modemDevice</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a10601a7f08aff5e9a079c758676906c2" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_namespace</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a6162e67981084c99495c568dbb034e2f" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_noiseMu</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a3fdb619545d51bfee584782760007851" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_noiseSigma</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a95e6a4f88d9651b4bbaa47114b44120b" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_payload_to_deserialize</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1ab702c6b30792895d887e088de926ce21" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_payload_to_transmit</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1aace9bbf956537c0ae9b9af52d74ac214" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_pingerScheduler</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1ab27d205c612fc1aa4b3647440ecda4ff" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_rosNode</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1ad4c9de97931c6653bab44f2335963a24" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_rosQueue</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a8371e038e4057d984099da83a71a4c82" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_rosQueueThread</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a6e7558240d204e9811bb0070d9ca05ff" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_soundSpeed</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a7f0829f3da0e6b2abc2df9ea8b05bb6e" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_start_ping</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a2b522fccef33b7a6fef8c1ec018ae6cd" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_sub_modem_pos</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a2ef4d6c024d1ab8346386288606d7380" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_temperature</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a34404eec0e2886d185d2f8d7e1ac6c38" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_timer</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a142032a65ee2f98d619c16f65b9605c0" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_trigger_serialization</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a9c907334b9041905dd0f94c289578e66" prot="private" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_usbl_fix</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1ab13b1bd531b4c3026f739f3faf8a0941" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_usblAttachedObject</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a122dbcbb7026f99ccd4f0bf689b697dd" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_usblDevice</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1abf988e337cc4eb958495f87048237cdc" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>m_usblID</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1af7d1e2086cfcb4fb1dca09e2ecab9585" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>payloadToTransmitCallback</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a4264a12bad66ff0932307ff0e82267d4" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>publishPosition</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a96c8e4f18c72fcb05fd1acb4be866413" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>queueThread</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a826c0f157ade1317f6b995f07c2fc8cc" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>receiveModemPoseCallback</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a4a8cd4ebbcd2f8380a957953eeeb2ed2" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>sendPing</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a81497fb64121c77cce890c7e7160cea7" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>usblPlugin</name></member>
+      <member refid="classgazebo_1_1usblPlugin_1a3c334ef3b253bd0965975cd1133fe1bf" prot="public" virt="non-virtual"><scope>gazebo::usblPlugin</scope><name>~usblPlugin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

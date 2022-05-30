@@ -11,6 +11,9 @@
     <includedby refid="ros__controller_8h" local="yes">include/controllers/ros_controller.h</includedby>
     <includedby refid="pid__controller_8cpp" local="yes">src/controllers/pid_controller.cpp</includedby>
     <incdepgraph>
+      <node id="3">
+        <label>cmath</label>
+      </node>
       <node id="1">
         <label>include/controllers/pid_controller.h</label>
         <link refid="pid__controller_8h"/>
@@ -26,9 +29,6 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>cmath</label>
       </node>
       <node id="4">
         <label>vector</label>

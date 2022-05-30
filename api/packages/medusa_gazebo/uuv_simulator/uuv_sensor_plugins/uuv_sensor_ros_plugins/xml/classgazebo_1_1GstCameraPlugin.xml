@@ -1,0 +1,518 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classgazebo_1_1GstCameraPlugin" kind="class" language="C++" prot="public">
+    <compoundname>gazebo::GstCameraPlugin</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">SensorPlugin</basecompoundref>
+    <includes refid="gazebo__gst__camera__plugin_8hh" local="no">gazebo_gst_camera_plugin.hh</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1a2c783f91d33b4869980299914a01ee60" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gazebo::GstCameraPlugin::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="64" column="27" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1a32f8a00ea73aefec3d427b430c384609" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gazebo::GstCameraPlugin::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="64" column="33" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1a3d96471c8058f472fa496e1d3f77a22f" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gazebo::GstCameraPlugin::depth</definition>
+        <argsstring></argsstring>
+        <name>depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="64" column="40" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1a9aaeac44f51f52603e5e4353b4a09145" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gazebo::GstCameraPlugin::rate</definition>
+        <argsstring></argsstring>
+        <name>rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="65" column="9" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1aac1866ea8804aa2699e323dc59d4511e" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::GstCameraPlugin::format</definition>
+        <argsstring></argsstring>
+        <name>format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="66" column="26" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1abf8a0ee7ecfeb8042c47f52317c774a6" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::GstCameraPlugin::udpHost</definition>
+        <argsstring></argsstring>
+        <name>udpHost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="69" column="17" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1ae739854d9f305db3cdb2e38fa5cc563d" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gazebo::GstCameraPlugin::udpPort</definition>
+        <argsstring></argsstring>
+        <name>udpPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="70" column="9" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1a55c8916b2d6ee8060f6c6087bd9f6eb9" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gazebo::GstCameraPlugin::useRtmp</definition>
+        <argsstring></argsstring>
+        <name>useRtmp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="71" column="10" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1ad2a734787a9bd7632ff1a1203d521f86" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::GstCameraPlugin::rtmpLocation</definition>
+        <argsstring></argsstring>
+        <name>rtmpLocation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="72" column="17" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1af3a8f7efb783a343b6ec1175f2ea580a" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gazebo::GstCameraPlugin::useCuda</definition>
+        <argsstring></argsstring>
+        <name>useCuda</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="73" column="10" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1a6fbb36e9a72beafb3b38dc4f5752af1a" prot="protected" static="no" mutable="no">
+        <type>sensors::CameraSensorPtr</type>
+        <definition>sensors::CameraSensorPtr gazebo::GstCameraPlugin::parentSensor</definition>
+        <argsstring></argsstring>
+        <name>parentSensor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="75" column="39" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1a248ec29a9cd64812cda840005704b0e4" prot="protected" static="no" mutable="no">
+        <type>rendering::CameraPtr</type>
+        <definition>rendering::CameraPtr gazebo::GstCameraPlugin::camera</definition>
+        <argsstring></argsstring>
+        <name>camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="76" column="35" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1aa66e617253c44280f35415a30929342a" prot="private" static="no" mutable="no">
+        <type>event::ConnectionPtr</type>
+        <definition>event::ConnectionPtr gazebo::GstCameraPlugin::newFrameConnection</definition>
+        <argsstring></argsstring>
+        <name>newFrameConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="78" column="33" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1acdb4231cda7dd8250cbddd4bb5699e9a" prot="private" static="no" mutable="no">
+        <type>transport::NodePtr</type>
+        <definition>transport::NodePtr gazebo::GstCameraPlugin::node_handle_</definition>
+        <argsstring></argsstring>
+        <name>node_handle_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="80" column="31" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1a7a76cbeb3542797321fc1a58621efc4e" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gazebo::GstCameraPlugin::namespace_</definition>
+        <argsstring></argsstring>
+        <name>namespace_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="81" column="24" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1ab528d15c1eef6f5d57dda53ea79cc807" prot="private" static="no" mutable="no">
+        <type>transport::SubscriberPtr</type>
+        <definition>transport::SubscriberPtr gazebo::GstCameraPlugin::mVideoSub</definition>
+        <argsstring></argsstring>
+        <name>mVideoSub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="83" column="37" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1adb287ad11ead2770b1f1b2efa50acb87" prot="private" static="no" mutable="no">
+        <type>pthread_t</type>
+        <definition>pthread_t gazebo::GstCameraPlugin::mThreadId</definition>
+        <argsstring></argsstring>
+        <name>mThreadId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="84" column="22" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1a87cb4ef1f12ffc033dc8fe62f6243267" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string gazebo::GstCameraPlugin::mTopicName</definition>
+        <argsstring></argsstring>
+        <name>mTopicName</name>
+        <initializer>= &quot;~/video_stream&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="85" column="30" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1ac1f1f6703c8524607ebc5fab738573b1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gazebo::GstCameraPlugin::mIsActive</definition>
+        <argsstring></argsstring>
+        <name>mIsActive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="86" column="17" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1adc9ea5ca03eac42a3bf30d606d37104f" prot="private" static="no" mutable="no">
+        <type>GMainLoop *</type>
+        <definition>GMainLoop* gazebo::GstCameraPlugin::gst_loop</definition>
+        <argsstring></argsstring>
+        <name>gst_loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="88" column="13" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgazebo_1_1GstCameraPlugin_1a39a2d7a746b2b7330582ae3e4f044bf0" prot="private" static="no" mutable="no">
+        <type>GstElement *</type>
+        <definition>GstElement* gazebo::GstCameraPlugin::source</definition>
+        <argsstring></argsstring>
+        <name>source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="89" column="14" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgazebo_1_1GstCameraPlugin_1a64dfc91557f7ab96d803205fd0d21731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GstCameraPlugin::GstCameraPlugin</definition>
+        <argsstring>()</argsstring>
+        <name>GstCameraPlugin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="46" column="11" bodyfile="src/gazebo_gst_camera_plugin.cc" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1GstCameraPlugin_1a5faa1219287813340ae54038ba34739c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>GstCameraPlugin::~GstCameraPlugin</definition>
+        <argsstring>()</argsstring>
+        <name>~GstCameraPlugin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="48" column="19" bodyfile="src/gazebo_gst_camera_plugin.cc" bodystart="143" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1GstCameraPlugin_1a050549b09eceb0aea78bdc7b655d8844" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GstCameraPlugin::Load</definition>
+        <argsstring>(sensors::SensorPtr sensor, sdf::ElementPtr sdf)</argsstring>
+        <name>Load</name>
+        <param>
+          <type>sensors::SensorPtr</type>
+          <declname>sensor</declname>
+        </param>
+        <param>
+          <type>sdf::ElementPtr</type>
+          <declname>sdf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="50" column="24" bodyfile="src/gazebo_gst_camera_plugin.cc" bodystart="153" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1GstCameraPlugin_1a76724e41db6edb7716355a8b7e5b775b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GstCameraPlugin::OnNewFrame</definition>
+        <argsstring>(const unsigned char *image, unsigned int width, unsigned int height, unsigned int depth, const std::string &amp;format)</argsstring>
+        <name>OnNewFrame</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="52" column="24" bodyfile="src/gazebo_gst_camera_plugin.cc" bodystart="269" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1GstCameraPlugin_1a4ba4fdf9a7974ecad7d986785294b777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GstCameraPlugin::startGstThread</definition>
+        <argsstring>()</argsstring>
+        <name>startGstThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="56" column="16" bodyfile="src/gazebo_gst_camera_plugin.cc" bodystart="45" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1GstCameraPlugin_1a5cee1957194ecc19748dce5e46c56ccb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GstCameraPlugin::stopGstThread</definition>
+        <argsstring>()</argsstring>
+        <name>stopGstThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="57" column="16" bodyfile="src/gazebo_gst_camera_plugin.cc" bodystart="129" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1GstCameraPlugin_1a63b41a50b96d130075b1ce7035e90cab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gazebo::GstCameraPlugin::gstCallback</definition>
+        <argsstring>(GstElement *appsrc)</argsstring>
+        <name>gstCallback</name>
+        <param>
+          <type>GstElement *</type>
+          <declname>appsrc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="58" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1GstCameraPlugin_1a8e2b3f2f71ca8b23477bf6f68ff81220" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GstCameraPlugin::cbVideoStream</definition>
+        <argsstring>(const boost::shared_ptr&lt; const msgs::Int &gt; &amp;_msg)</argsstring>
+        <name>cbVideoStream</name>
+        <param>
+          <type>const boost::shared_ptr&lt; const msgs::Int &gt; &amp;</type>
+          <declname>_msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="60" column="16" bodyfile="src/gazebo_gst_camera_plugin.cc" bodystart="226" bodyend="234"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgazebo_1_1GstCameraPlugin_1a4dcfef41d7cbb974de4b3dfb93f0b2eb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GstCameraPlugin::startStreaming</definition>
+        <argsstring>()</argsstring>
+        <name>startStreaming</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="61" column="17" bodyfile="src/gazebo_gst_camera_plugin.cc" bodystart="237" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="classgazebo_1_1GstCameraPlugin_1a670234a3e2ddc103aa82fb11908a78e8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GstCameraPlugin::stopStreaming</definition>
+        <argsstring>()</argsstring>
+        <name>stopStreaming</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="62" column="17" bodyfile="src/gazebo_gst_camera_plugin.cc" bodystart="253" bodyend="266"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A Gazebo plugin that can be attached to a camera and then streams the video data using gstreamer. It streams to a configurable UDP IP and UDP Port, defaults are respectively 127.0.0.1 and 5600.</para>
+<para>Connect to the stream via command line with: gst-launch-1.0 -v udpsrc port=5600 caps=&apos;application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264&apos; \ ! rtph264depay ! avdec_h264 ! videoconvert ! autovideosink fps-update-interval=1000 sync=false </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>SensorPlugin</label>
+      </node>
+      <node id="1">
+        <label>gazebo::GstCameraPlugin</label>
+        <link refid="classgazebo_1_1GstCameraPlugin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>SensorPlugin</label>
+      </node>
+      <node id="1">
+        <label>gazebo::GstCameraPlugin</label>
+        <link refid="classgazebo_1_1GstCameraPlugin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" line="45" column="1" bodyfile="include/uuv_sensor_ros_plugins/gazebo_gst_camera_plugin.hh" bodystart="44" bodyend="90"/>
+    <listofallmembers>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a248ec29a9cd64812cda840005704b0e4" prot="protected" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>camera</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a8e2b3f2f71ca8b23477bf6f68ff81220" prot="public" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>cbVideoStream</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a3d96471c8058f472fa496e1d3f77a22f" prot="protected" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>depth</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1aac1866ea8804aa2699e323dc59d4511e" prot="protected" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>format</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1adc9ea5ca03eac42a3bf30d606d37104f" prot="private" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>gst_loop</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a63b41a50b96d130075b1ce7035e90cab" prot="public" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>gstCallback</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a64dfc91557f7ab96d803205fd0d21731" prot="public" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>GstCameraPlugin</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a32f8a00ea73aefec3d427b430c384609" prot="protected" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>height</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a050549b09eceb0aea78bdc7b655d8844" prot="public" virt="virtual"><scope>gazebo::GstCameraPlugin</scope><name>Load</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1ac1f1f6703c8524607ebc5fab738573b1" prot="private" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>mIsActive</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1adb287ad11ead2770b1f1b2efa50acb87" prot="private" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>mThreadId</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a87cb4ef1f12ffc033dc8fe62f6243267" prot="private" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>mTopicName</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1ab528d15c1eef6f5d57dda53ea79cc807" prot="private" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>mVideoSub</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a7a76cbeb3542797321fc1a58621efc4e" prot="private" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>namespace_</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1aa66e617253c44280f35415a30929342a" prot="private" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>newFrameConnection</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1acdb4231cda7dd8250cbddd4bb5699e9a" prot="private" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>node_handle_</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a76724e41db6edb7716355a8b7e5b775b" prot="public" virt="virtual"><scope>gazebo::GstCameraPlugin</scope><name>OnNewFrame</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a6fbb36e9a72beafb3b38dc4f5752af1a" prot="protected" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>parentSensor</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a9aaeac44f51f52603e5e4353b4a09145" prot="protected" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>rate</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1ad2a734787a9bd7632ff1a1203d521f86" prot="protected" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>rtmpLocation</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a39a2d7a746b2b7330582ae3e4f044bf0" prot="private" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>source</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a4ba4fdf9a7974ecad7d986785294b777" prot="public" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>startGstThread</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a4dcfef41d7cbb974de4b3dfb93f0b2eb" prot="private" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>startStreaming</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a5cee1957194ecc19748dce5e46c56ccb" prot="public" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>stopGstThread</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a670234a3e2ddc103aa82fb11908a78e8" prot="private" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>stopStreaming</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1abf8a0ee7ecfeb8042c47f52317c774a6" prot="protected" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>udpHost</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1ae739854d9f305db3cdb2e38fa5cc563d" prot="protected" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>udpPort</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1af3a8f7efb783a343b6ec1175f2ea580a" prot="protected" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>useCuda</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a55c8916b2d6ee8060f6c6087bd9f6eb9" prot="protected" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>useRtmp</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a2c783f91d33b4869980299914a01ee60" prot="protected" virt="non-virtual"><scope>gazebo::GstCameraPlugin</scope><name>width</name></member>
+      <member refid="classgazebo_1_1GstCameraPlugin_1a5faa1219287813340ae54038ba34739c" prot="public" virt="virtual"><scope>gazebo::GstCameraPlugin</scope><name>~GstCameraPlugin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

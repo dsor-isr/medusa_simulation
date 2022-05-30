@@ -10,18 +10,6 @@
       <node id="16">
         <label>medusa_gimmicks_library/MedusaGimmicks.h</label>
       </node>
-      <node id="22">
-        <label>dsor_msgs/Measurement.h</label>
-      </node>
-      <node id="10">
-        <label>std_msgs/Bool.h</label>
-      </node>
-      <node id="4">
-        <label>stdlib.h</label>
-      </node>
-      <node id="11">
-        <label>nav_msgs/Odometry.h</label>
-      </node>
       <node id="18">
         <label>FilterGimmicks.h</label>
         <link refid="FilterGimmicks_8h_source"/>
@@ -44,6 +32,18 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
+      <node id="22">
+        <label>dsor_msgs/Measurement.h</label>
+      </node>
+      <node id="10">
+        <label>std_msgs/Bool.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="11">
+        <label>nav_msgs/Odometry.h</label>
+      </node>
       <node id="23">
         <label>Eigen/Eigen</label>
       </node>
@@ -61,12 +61,6 @@
       </node>
       <node id="21">
         <label>eigen3/Eigen/Eigen</label>
-      </node>
-      <node id="15">
-        <label>geometry_msgs/TransformStamped.h</label>
-      </node>
-      <node id="13">
-        <label>geometry_msgs/PoseWithCovarianceStamped.h</label>
       </node>
       <node id="2">
         <label>VerticalFilter.h</label>
@@ -106,6 +100,12 @@
         <childnode refid="23" relation="include">
         </childnode>
       </node>
+      <node id="15">
+        <label>geometry_msgs/TransformStamped.h</label>
+      </node>
+      <node id="13">
+        <label>geometry_msgs/PoseWithCovarianceStamped.h</label>
+      </node>
       <node id="20">
         <label>vector</label>
       </node>
@@ -115,14 +115,14 @@
       <node id="5">
         <label>ros/ros.h</label>
       </node>
-      <node id="6">
-        <label>tf2_ros/transform_listener.h</label>
-      </node>
       <node id="1">
         <label>src/algorithms/VerticalFilter.cpp</label>
         <link refid="VerticalFilter_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="6">
+        <label>tf2_ros/transform_listener.h</label>
       </node>
       <node id="7">
         <label>tf2_ros/transform_broadcaster.h</label>
