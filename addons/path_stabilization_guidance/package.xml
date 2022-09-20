@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>path_stabilization_guidance</name>
+    <version>1.0.0</version>
+    <description>Package that provides the references for cooperative behaviours in the "Path Stabilization" controller</description>
+
+    <license>MIT</license>
+    <author email="andre.potes@gmail.com">André Potes</author>
+    <maintainer email="andre.potes@gmail.com">André Potes</maintainer>
+
+    <buildtool_depend>catkin</buildtool_depend>
+    <depend>rospy</depend>
+
+    <!-- Messages -->
+    <depend>std_msgs</depend>
+    <depend>auv_msgs</depend>
+    <depend>gazebo_msgs</depend>
+    <depend>medusa_msgs</depend>
+    <depend>geometry_msgs</depend>
+
+</package>

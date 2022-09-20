@@ -17,9 +17,11 @@ processes:
           - static_thruster_allocation:= true
           - inner_loops_pid:= true
           - waypoint:= true
+          - path_stabilization:=true
           - path_following:= true
           - dsor_paths:= true
           - auvstate2mstate:= true
+          - vehicle_stabilizer:=true
     dependencies:
           []
   - name: 'bags'

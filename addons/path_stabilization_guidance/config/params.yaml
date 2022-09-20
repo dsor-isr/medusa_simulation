@@ -1,0 +1,18 @@
+guidance_params:
+  # northing - easting utm coordinates
+  map_origin_utm: [6299543.18, 164532.91] 
+
+  # set to false if ignore the mission location and assume mission position is the target position
+  using_mission: True 
+
+  # mission position relative to origin in NED (specify None if no mssion position is to be provided)
+  mission_location: [10.0, 50.0, 20.0] 
+
+  # guidance params related to attitude references
+  attitude:
+    roll_ref: "None"
+    psi_ref: "None"
+    heading_ref:
+      k_psi: 0.1 # transition steepness of the sigmoid function
+      sigma_m: 5.0 # maximum sensor range (when diver is out of range, the vehicle points to desired point in path)
+  

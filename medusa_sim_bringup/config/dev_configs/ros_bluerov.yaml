@@ -104,7 +104,7 @@ inner_loops_pid:
       pitch: "/bluerov/ref/pitch"
       roll: "/bluerov/ref/roll"
       yaw_rate: "/bluerov/ref/yaw_rate"
-      pich_rate: "/bluerov/ref/pitch_rate"
+      pitch_rate: "/bluerov/ref/pitch_rate"
       roll_rate: "/bluerov/ref/roll_rate"
       surge: "/bluerov/ref/surge"
       sway: "/bluerov/ref/sway"
@@ -124,7 +124,9 @@ inner_loops_pid:
         yaw: "/bluerov/pid_debug/yaw"
         yaw_rate: "/bluerov/pid_debug/yaw_rate"
         roll: "/bluerov/pid_debug/roll"
+        roll_rate: "/bluerov/pid_debug/roll_rate"
         pitch: "/bluerov/pid_debug/pitch"
+        pitch_rate: "/bluerov/pid_debug/pitch_rate"
         depth: "/bluerov/pid_debug/depth"
 
 ### Way Point
@@ -145,6 +147,54 @@ waypoint:
       wp_loose: "/bluerov/controls/send_wp_loose"
       wp_heading: "/bluerov/controls/send_wp_heading"
 
+### Path Stabilization
+path_stabilization:
+  node_frequency: 10.0
+  flag: "/bluerov/Flag"
+  topics:
+    subscribers:
+      vehicle_state: "/bluerov/nav/filter/state"
+      target_state: "/bluerov/PStabilization/target_state"
+      references: "/bluerov/PStabilization/references" 
+
+    publishers:
+      # Publishers for linear motion
+      surge: "/bluerov/ref/surge"
+      sway: "/bluerov/ref/sway"
+      heave: "/bluerov/ref/heave"
+
+      # Publishers for angular motion
+      roll: "/bluerov/ref/roll"
+      roll_rate: "/bluerov/ref/roll_rate"
+      pitch: "/bluerov/ref/pitch"
+      pitch_rate: "/bluerov/ref/pitch_rate"
+      yaw: "/bluerov/ref/yaw"
+      yaw_rate: "/bluerov/ref/yaw_rate"
+
+      # Publishers for the virtual target
+      rabbit: "/bluerov/Gamma"
+      
+      # Observer for the currents
+      observer:
+        x: "/bluerov/current/x"
+        y: "/bluerov/current/y"
+
+      # Publish info for plots
+      pstabilization_debug: "/bluerov/PStabilization/debug"
+      
+    # Define here the service names to switch between controllers 
+    services:
+      # Service names to start and stop the path following algorithm
+      start_ps: "/bluerov/PSStart"
+      stop_ps: "/bluerov/PSStop"
+      updates_gains_ps: "/bluerov/PSUpdateGains"
+      reset_vt_ps: "/bluerov/ResetVT"
+
+      # Service names to switch the path following algorithm
+      potes_ps: "/bluerov/PSSetPotes"
+      # Service names related to the waypoint
+      wp_standard: "/bluerov/controls/send_wp_standard"
+
 ### Path Following
 path_following:
   node_frequency: 10.0
@@ -154,11 +204,9 @@ path_following:
       state: "/bluerov/nav/filter/state"
       path: "/bluerov/PathData"
       vc: "/bluerov/PF/vc"
-      mission:
-        pos: "/bluerov/mission/pos"
-      target: 
-        pos: "/bluerov/target/pos"
-        vel: "/bluerov/target/vel"
+      path_stabilization:
+        references: "/bluerov/PF/potes/references"
+
     publishers:
       # Publishers for linear motion
       surge: "/bluerov/ref/surge"

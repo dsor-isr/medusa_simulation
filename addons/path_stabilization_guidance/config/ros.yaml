@@ -1,0 +1,16 @@
+node_frequency: 10
+
+path_stabilization_guidance:
+
+  gazebo:
+    actor_name: "animated_starfish"
+
+  topics:
+  
+    publishers:
+      references: "/bluerov/PStabilization/references" 
+      target_state: "/bluerov/PStabilization/target_state" 
+      
+    subscribers:
+      target_state: "/gazebo/model_states"
+      vehicle_state: "/bluerov/nav/filter/state"

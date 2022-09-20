@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Load the configuration parameters for the topics-->
+    <rosparam command="load" file="$(find path_stabilization_guidance)/config/ros.yaml" />
+
+    <!-- Define the logging format -->
+    <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}]: ${node}: ${message}"/>
+
+    <!-- Launch the actual simulation node -->
+    <node pkg="path_stabilization_guidance" type="GuidanceSystem.py" name="path_stabilization_guidance" respawn="false" output="screen">
+	    <rosparam command="load" file="$(find path_stabilization_guidance)/config/params.yaml" />
+    </node>
+
+</launch>

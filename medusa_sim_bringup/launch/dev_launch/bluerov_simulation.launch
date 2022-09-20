@@ -18,9 +18,11 @@
     <arg name="static_thruster_allocation"    default="false" />
     <arg name="inner_loops_pid"               default="false" />
     <arg name="waypoint"                      default="false" />
+    <arg name="path_stabilization"            default="false" />
     <arg name="path_following"                default="false" />
     <arg name="dsor_paths"                    default="false" />
     <arg name="auvstate2mstate"               default="false" />
+    <arg name="vehicle_stabilizer"            default="false" />
 
     <!--Robot Spawn Location (in ENU inertial frame with orientation of ENU body frame) -->
 	<arg name="x"           default="0.0"/>
@@ -88,6 +90,14 @@
 
     <group if="$(arg path_following)">
         <node pkg="path_following" type="path_following_node" name="path_following" output="screen" />
+    </group>
+
+    <group if="$(arg path_stabilization)">
+        <node pkg="path_stabilization" type="path_stabilization_node" name="path_stabilization" output="screen" />
+    </group>
+
+     <group if="$(arg vehicle_stabilizer)">
+        <node pkg="vehicle_stabilizer" type="vehicle_stabilizer_node" name="vehicle_stabilizer" output="screen" />
     </group>
 
     <group if="$(arg dsor_paths)">

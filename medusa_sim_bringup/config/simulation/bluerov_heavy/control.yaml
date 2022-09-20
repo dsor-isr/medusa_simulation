@@ -1,3 +1,16 @@
+vehicle_stabilizer:
+  # Node that sends pre-determined references to the inner-loops
+  # By default we have configured ros.yaml for: surge, sway, heave, roll, pitch, yaw, roll_rate, pitch_rate, yaw_rate, depth, altitude
+  # But more can be provided, as long as the corresponding topic name is provided in the ros.yaml
+  # If you want to publish no reference, this dictionary should be left empty!
+  references: {'roll': 0.0, 'pitch': 0.0}
+
+open_loop_controller:
+  gain_Fx: 10.0 # surge speed to -> Force Fx N
+  gain_Fy: 10.0 # sway speed to -> Force Fy N
+  gain_Fz: 10.0 # heave speed to -> Force Fz N
+  gain_Tz: 0.10 # yaw-rate speed to -> Torque Tz Nm
+
 static_thruster_allocation:
   thrusters:
     # Allocation matrix
@@ -37,6 +50,29 @@ inner_loops_pid:
 
     # Yaw Params
     controllers:
+        roll_rate:
+            kp: 0.15 #0.002 #100
+            ki: 0.05 #0.0 #1.0
+            kd: 0.02 #0.0 #5.0
+            kff: 0.07
+            max_err:  70.0 # deg
+            min_err: -70.0 # deg  
+            max_out:  70.0  # N.m
+            min_out: -70.0
+            debug: true
+        pitch_rate:
+            kp: 0.0075 #0.2 #0.05
+            #ki: 0.008  #0.0 #0.0 #1.0
+            kd: 0.007 #0.0 #0.3 #5.0
+            kff: 0.0
+            #kff_d: 0.001
+            #kff_lin_drag: 0.005
+            #kff_quad_drag: 0.0
+            max_err:  70.0 # deg
+            min_err: -70.0 # deg  
+            max_out:  70.0  # N.m
+            min_out: -70.0
+            debug: true
         roll:
             kp: 0.002 #0.002 #100
             ki: 0.001 #0.0 #1.0
@@ -74,8 +110,8 @@ inner_loops_pid:
         yaw_rate:
             lpf_fc: 0.5 # low pass filter cutoff frequency
             kp: 0.02
-            ki: 0.0 #0.005
-            kd: 0.005
+            ki: 0.005 #0.005
+            kd: 0.0
             kff: 0.0001 #0.007  = 10/ 10.000
             #kff_d: 0.000125
             #kff_lin_drag: 0.005
@@ -120,9 +156,9 @@ inner_loops_pid:
             debug: true
         # Heave params
         heave:
-            kp: 15.0
-            ki: 0.0
-            kff: 100.0 
+            kp: 20.0
+            ki: 5.0
+            kff: 80.0 
             max_ref:  1.2  # m/s
             min_ref: -1.2  # m/s
             max_err:  0.5  # m/s
@@ -166,6 +202,21 @@ waypoint:
         k1: 0.5
         k2: 0.5
         k3: 0.2
+        
+# Path Stabilization configurations
+path_stabilization:
+  controller_gains:
+    potes:
+        kp: 0.06
+        lambda_p: 0.7
+        k_gamma: 0.5
+        k_gamma_e: 0.1
+        rho_gamma_e: 3.0
+        Kp_omega: [0.1, 0.1, 0.1]
+        Q: [1.2, 0.0, 1.0, 
+            1.0, 1.0, 0.0,
+            0.0, 0.0, 1.1]
+        circle_radius: 4.0
 
 # Path Following configurations
 path_following:
@@ -205,6 +256,7 @@ path_following:
       k3: 0.3
       theta: 0.8
       k_delta: 1.0
+      circle_radius: 4.0
     relative_heading:
        kx: 0.05
        ky: 0.05
