@@ -156,6 +156,7 @@ controls/inner_loops_pid:
             altitude_safety: "/myellow/ref/altitude_safety"
             depth_safety: "/myellow/ref/depth_safety"
             state: "/myellow/nav/filter/state"
+            turn_radius_limiter: "myellow/turn_radius_limiter"
         publishers:
             thrust_body_request: "/myellow/thrust_body_request"
 

@@ -18,6 +18,9 @@ static_thruster_allocation:
 
 
 inner_loops_pid:
+    # maxmimu time allowed for no response with airmar measurements
+    no_water_speed_t_max: 10.0
+
     #minimum altitude safety
     min_alt: 2.0
 
@@ -30,13 +33,14 @@ inner_loops_pid:
     # Yaw Params
     controllers:
         yaw:
-            kp: 0.3
+            kp: 0.05
             ki: 0.001
             kd: 0.02
             max_err:  60.0 # deg
             min_err: -60.0 # deg  
             max_out:  14.0 # N.m
             min_out: -14.0
+            min_turn_radius: 10.0
         # Yaw Rate Params
         yaw_rate:
             kp: 0.16
@@ -45,6 +49,7 @@ inner_loops_pid:
             min_err: -3.0 # deg  
             max_out:  14.0 # N.m
             min_out: -14.0
+            min_turn_radius: 10.0 # m
         # Pitch Params  
         pitch:
             kp: 5.0
